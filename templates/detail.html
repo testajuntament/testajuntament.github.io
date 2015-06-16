@@ -1,0 +1,158 @@
+<div class="container animated-show ng-hide" ng-show="activitat"><!--  -->
+    <div class="row">
+      <div class="col-xs-12">
+        <span class="navegacio-top"><a href ng-click="goBack()"><i class="fa fa-chevron-circle-left"></i>{{'Torna al llistat'|translate}}</a></span>     
+      </div>          
+    </div> 
+    <div class="row">
+
+        <article class="item-obra">
+
+            <div class="col-xs-12">
+                <header class="R-infoFitxa">
+                  <h1 class="titol">{{activitat[$root.titolAttrKey]}}</h1>
+                </header>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="modul-galeria" ng-if="images.length > 0">
+                    <section class="slider">
+                        <flex-slider id="slider" 
+                                    slide="s in images track by $index"
+                                    animation="slide"
+                                    control-nav="false"
+                                    animation-loop="false"
+                                    slideshow="false"
+                                    sync="#carousel-slider"
+                        >
+                            <li>
+                                <img class="pepito" ng-src="{{$root.basePath}}{{s.pathFoto}}" />
+                                <!-- <img class="img-responsive" ng-src="http://zonaretiro.com/wp-content/fotos/2011/09/Mueso-del-Romanticismo.jpg" /> -->
+                                <p class="peu-foto">{{s[$root.peuFotoAttrKey]}}</p>
+                            </li>
+                        </flex-slider>
+                        <flex-slider id="carousel" 
+                                    slide="s in images track by $index"
+                                    animation="slide"
+                                    control-nav="false"
+                                    animation-loop="false"
+                                    slideshow="false"
+                                    item-width="140"
+                                    item-margin="5"
+                                    as-nav-for="#slider-slider">
+                            <li>
+                                <img ng-src="{{$root.basePath}}{{s.pathFoto}}" />
+                            </li>
+                        </flex-slider>
+                    </section>
+                </div>    
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6">
+<!--                 <div class="contingut-top">
+                    <div class="eines-fitxa">
+                        <ul>
+                            <li><a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-file-pdf-o"></i></a></li>
+                            <li><a href="" ng-click="print()" title="Imprimir fitxa"><i class="fa fa-print"></i></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <!-- <div class="descripcio-obra" ng-bind-html="getDescription()">
+                </div> -->
+
+                <div class="datall-info">
+                    <!-- <div class="data-inici" ng-if="activitat.dataInici"></div> -->
+                    <!-- <div class="data-inici" ng-if="!activitat.dataInici && activitat[$root.dataIniciPrevistaAttrKey]"> -->
+                    <!-- <i class="fa fa-calendar" ng-class="obra.estat.cls"></i> -->
+                    
+                    <div class="titol" ng-if="activitat.titol">{{activitat.titol}}</div>
+                    <div class="subtitol" ng-if="activitat.subtitol"><p>{{activitat.subtitol}}</p></div>
+                    <div class="descripcio" ng-if="activitat.descripcio"><p>{{activitat.descripcio}}</p></div>
+
+                    <div class="durada" ng-if="activitat.durada"><p><strong>Durada:</strong> {{activitat.durada}}</p></div>
+                    <div class="preu" ng-if="activitat.preu"><p><strong>Preu:</strong> {{activitat.preu}}</p></div>
+                    <div class="lloc" ng-if="activitat.lloc"><p><strong>Lloc</strong> de realització: {{activitat.lloc}}</p></div>
+
+                    <div class="info-i-reserves">
+                        <p><strong>Informació i reserves:</strong><br> 
+                            {{activitat.info_i_reserves}}
+                        </p>
+                    </div>
+
+                    <div class="info-i-reserves">
+                        <p><strong>Observacions:</strong><br> 
+                        {{activitat.observacions}}</p>
+                    </div>
+                    <div class="info-i-reserves">
+                        <p><strong>Material didàctic:</strong> <br>
+                            {{activitat.material_didactic}}
+                            <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-file-pdf-o"></i></a>
+                            <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-link"></i></a>
+                            <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-file-pdf-o"></i></a>
+                            <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-file-pdf-o"></i></a>
+                        </p>
+                    </div>
+
+                    <div class="taller">
+                        <p>
+                            <strong>Tallers:</strong><br>
+                            <div ng-repeat="taller in tallers">
+                                <strong>Títol:</strong>
+                                <strong>Descripció:</strong>
+                                <strong>Nivell recomanat:</strong>
+                                <strong>Imatge:</strong>
+                            </div>
+                        </p>
+                    </div>
+
+                      <!-- <div class="data-format">
+                        <time>{{activitat[$root.dataIniciPrevistaAttrKey]}}</time>
+                      </div> -->
+                    
+                    <!-- <i class="fa fa-calendar" ng-class="obra.estat.cls"></i> -->
+
+                    <div class="data-fi" ng-if="!activitat.dataFinalitzacio && activitat[$root.dataFiPrevistaAttrKey]">
+                      <span translate>DIA ACTIVITAT</span> <!-- pot ser tambe DATA FI -->                             
+                      <div class="data-format">
+                        <time>{{activitat[$root.dataFiPrevistaAttrKey]}}</time>
+                      </div>
+                    </div>
+
+                    <p>Activitat per a grups amb discapacitat visual<br>
+                    Nombre de persones: 10<br>
+                    Duració: 1.5 hores<br>
+                    Preu:  consulteu el preu</p>
+                </div>
+
+
+                <div class="dades-tec-obra" ng-if="activitat.organitzador">
+                    <h2 class="titol">{{'ORGANITZADOR'|translate}}</h2>
+                    <p>{{activitat.organitzador}}</p>
+                </div>
+
+                <div class="dades-tec-obra" ng-if="activitat.redactorsProjecte">
+                    <h2 class="titol">{{'REDACTORS DEL PROJECTE'|translate}}</h2>
+                    <p>{{activitat.redactorsProjecte}}</p>
+                </div>
+
+                <div class="modul-seguiment-obra" ng-if="activitat.seguiments.length>0 || activitat[$root.afectacionsAttrKey]">
+                  <h2 class="titol">{{'SEGUIMENT DEL PROJECTE:'|translate}}</h2>
+                    <div class="contenidor-llistat">
+                      <ul>
+                        <li class="afectacio" ng-if="activitat[$root.afectacionsAttrKey]">
+                          <span translate>AFECTACIONS</span>
+                          <p>{{activitat[$root.afectacionsAttrKey]}}</p>
+                        </li>
+                        <li ng-repeat="seguiment in activitat.seguiments | orderBy:'-dataSeguiment'">
+                          <time>{{seguiment.dataSeguiment | amDateFormat:'YYYY-MM-DD'}}</time>
+                          <p>{{seguiment[$root.observacionsExternesAttrKey]}}</p>
+                        </li> 
+                      </ul>
+                    </div>
+                </div>
+
+            </div>
+        </article>  
+    </div>       
+</div>

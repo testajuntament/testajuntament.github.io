@@ -1,0 +1,52 @@
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+.loader svg path,
+.loader svg rect{
+  fill: #cc0000;
+}
+
+.loading-container{
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  opacity: 1;
+  position:absolute;
+  width:100%;
+  height:100%;
+  padding-top:10px;
+  text-align:center;  
+}
+
+
+.loading-container.ng-hide {
+  /* this is just another form of hiding an element */
+  display: block!important;
+  position: absolute;
+  opacity: 0;
+}
+
+.ng-hide:not(.ng-hide-animate) {
+  display: block!important;
+}
+
+.animated-show{
+  opacity: 1;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.animated-show.ng-hide {
+  display: block!important;
+  opacity: 0;
+}

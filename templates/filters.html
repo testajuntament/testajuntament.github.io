@@ -1,0 +1,69 @@
+<div class="container">
+
+<!-- <h2 class="cap hidden-xs" ng-class="{'hidden' : $parent.sidebarActive}" translate>Prueba</h2> -->
+
+<div class="row"  ng-class="{'hidden' : $parent.sidebarActive}">
+
+  <div class="col-xs-12 col-sm-4 col-md-3 sidebar-offcanvas">
+    <form action="" ng-controller="FiltersCtrl">
+      <div class="form-group">
+        <div class="filtre-seleccio" ng-if="allNivells" >
+            <div class="banner">
+              <div><span>Tria Nivell</span></div>
+            </div>
+        
+            <ul>
+                <li ng-repeat="nivell in allNivells">
+                    <input type="checkbox" 
+                           id="opcio-nivell-{{nivell.id}}" 
+                           name="" 
+                           value="" 
+                           ng-model="$root.nivellFilterModels[nivell.id]">
+                    <label for="opcio-nivell-{{nivell.id}}" 
+                           title="{{nivell[filterNivellAttrKey]}}">
+                           {{nivell.nom}}
+                    </label>           
+                </li>
+            </ul>
+        </div>
+      </div>
+    </form>  
+  </div>
+
+  <div class="col-xs-12 col-sm-4 col-md-3 sidebar-offcanvas">
+    <form action="" ng-controller="FiltersCtrl">
+        <div class="form-group">
+
+          <div class="filtre-seleccio" ng-if="allAreas" style="overflow: hidden">
+              <div class="banner">
+                <div><span>Tria Àrea</span></div>
+              </div>
+
+              <ul>
+                  <li ng-repeat="area in allAreas">
+                      <input type="checkbox" 
+                             id="opcio-area-{{area.id}}" 
+                             name="" 
+                             value="" 
+                             ng-model="$root.areaFilterModels[area.id]">
+                      <label for="opcio-area-{{area.id}}" 
+                             title="{{area[filterAreaAttrKey]}}">
+                             <i class="fa fa-caret-right area-{{area.id}}"></i> {{area.nom}}
+                      </label>  
+                  </li>
+              </ul>
+          </div>
+
+        </div>
+    </form>
+  </div>
+
+  <div class="col-xs-12 col-sm-4 col-md-6 sidebar-offcanvas">
+    <div class="banner-info">
+      <div>Info y reserves</div>
+    </div>
+  </div>  
+
+</div><!--row-->  
+
+</div>

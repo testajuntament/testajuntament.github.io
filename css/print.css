@@ -1,0 +1,139 @@
+/* -------------------------------------------------------------- 
+  
+ Hartija Css Print  Framework
+   * Version:   1.0 
+	 
+-------------------------------------------------------------- */
+
+body { 
+width:100% !important;
+margin:0 !important;
+padding:0 !important;
+line-height: 1; 
+font-family: sans-serif; 
+color: #000;  
+font-size: 14pt; 
+/*-webkit-print-color-adjust:exact;
+*/}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 { }
+h1{font-size:19pt;}
+h2{font-size:17pt;}
+h3{font-size:15pt;}
+h4,h5,h6{font-size:14pt;}
+
+p, h2, h3 { orphans: 3; widows: 3; }
+
+code { font: 12pt Courier, monospace; } 
+hr { background-color: #ccc; }
+
+/* Images */
+img { margin: 0!important; }
+a img { border: none; }
+
+/* Links */
+a:link, a:visited { background: transparent; font-weight: 700; text-decoration: underline;color:#333; }
+a:link[href^="http://"]:after, a[href^="http://"]:visited:after { content: " (" attr(href) ") "; font-size: 90%; }
+
+abbr[title]:after { content: " (" attr(title) ")"; }
+
+/* Don't show linked images  */
+a[href^="http://"] {color:#fff; }
+a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".gif"]:after, a[href$=".png"]:after { content: " (" attr(href) ") "; display:none; }
+
+/* Don't show links that are fragment identifiers, or use the `javascript:` pseudo protocol .. taken from html5boilerplate */
+a[href^="#"]:after, a[href^="javascript:"]:after {content: "";}
+
+
+  a[href]:after {
+    content: none !important;
+  }
+
+/* Table */
+table { margin: 1px; text-align:left; }
+th { border-bottom: 1px solid #333;  font-weight: bold; }
+td { border-bottom: 1px solid #333; }
+th,td { padding: 4px 10px 4px 0; }
+tfoot { font-style: italic; }
+caption { background: #fff; margin-bottom:2em; text-align:left; }
+thead {display: table-header-group;}
+tr {page-break-inside: avoid;} 
+
+/* Hide various parts from the site
+#header, #footer, #navigation, #rightSideBar, #leftSideBar 
+{display:none;}
+*/
+
+.icones-socials, .idioma, .navegacio-top, .flex-direction-nav, #carousel, .eines-fitxa, .item-obra .data-obra i, .noprint, .jspVerticalBar {
+	display: none;
+}
+.fitxa, .capcalera{
+	background: none!important;
+}
+.item-obra .modul-galeria, .item-obra .modul-posicio-mapa {
+  border: none;
+}
+.item-obra .modul-posicio-mapa #map-canvas {
+
+
+}
+.item-obra .contingut-top .estat-obra .encurs {
+  background: #FF8000;
+}
+.item-obra .data-obra .data-inici .data-format time, .item-obra .data-obra .data-fi .data-format time {
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  display: inherit;
+}
+
+.jspPane{
+	width: 100%;
+}
+
+.item-obra .modul-seguiment-obra .contenidor-llistat {
+  height: auto!important;
+  padding-right: 20px;
+}
+.flexslider .slides > li {
+	display: block!important;
+	width: 100%!important;
+  float: none!important;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  width: 100%;
+  padding: 0;
+}
+.item-obra .modul-galeria #slider li img {
+  width: 500px;
+}
+.peu-foto{
+  width: 10cm;
+  display: none;
+}
+.peu {
+  height: 50px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.flexslider .slides li {
+  margin-bottom: 1cm;
+}
+.item-obra .R-infoFitxa .titol {
+  font-size: 18pt;
+}
+.item-obra .R-infoFitxa img {
+  width: 0.5cm;
+}
+.item-obra .modul-posicio-mapa {
+  width: 800px!important;
+}
+.sectionBrand img{
+  width: 10cm;
+}
+.sectionBrand {
+  border-bottom: #fff solid 2px!important;
+}

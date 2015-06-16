@@ -1,0 +1,24 @@
+<div class="container gab-before"></div>
+
+<div class="container">
+  <div class="row row-offcanvas row-offcanvas-left">
+    <div class="col-xs-12 pull-left visible-xs">
+      <button  ng-click="sidebarActive = !sidebarActive" type="button" class="btn btn-primary cap-xs" data-toggle="offcanvas" translate>Refinar Resultats
+      </button>
+    </div>
+
+    <div class="col-xs-4 col-sm-4 col-md-3 sidebar-offcanvas" id="sidebar" ng-class="{'active':sidebarActive}">
+      <div class="modul-filtres" ng-include="'templates/filters.html'" ng-></div>
+    </div>
+
+    <div class="col-xs-12 col-sm-8 col-md-9" ng-controller="ListCtrl">             
+      <div class="header-resultats">
+          <p translate-n="filteredActivitats.length" translate-plural="Hi ha {{$count}} activitatss" translate>Hi ha <strong>1</strong> activitat</p>
+            <div class="selectorVista" ng-include="'templates/mode-selector.html'"></div>
+      </div>
+      
+      <div class="row" ng-include="'templates/element_list.html'"></div>
+      <paginator></paginator>
+    </div>
+  </div>  
+</div>  

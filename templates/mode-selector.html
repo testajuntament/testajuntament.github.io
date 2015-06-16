@@ -1,0 +1,7 @@
+<!-- <span>Vista:</span> -->
+ <ul class="canviVista" ng-controller="ChangeViewCtrl"> 
+ 	  <li ng-class="{'current' : ($location.path().indexOf('/graella-activitats') !== -1 || $location.path().indexOf('/parrilla') !== -1)}">
+ 	  	<a ng-href="{{$root.getGridPath()}}" title="Vista Graella"><i class="fa fa-th-large"></i></a></li>
+	  <li ng-class="{'current' : ($location.path().indexOf('/llista-activitats') !== -1 || $location.path().indexOf('/llista') !== -1)}">
+  	<a ng-href="{{$root.getListPath()}}" title="Vista Llistat"><i class="fa fa-bars"></i></a></li>
+</ul>

@@ -1,0 +1,18 @@
+<div class="modul-paginacio" ng-class="{'hidden' : paginator.itemCount===0}">
+  <p translate-n="paginator.itemCount" translate-plural="Mostrant {{paginator.firstItemOnPage}}-{{paginator.lastItemOnPage}} de {{$count}} obres" translate>Mostrant 1 activitat</p>
+  <nav>
+    <ul class="pager pagination-lg">
+        <li ng-class="paginator.isFirstPage() && 'disabled'">
+            <a ng-click="paginator.perviousPage()">{{'ANTERIOR'|translate}}</a>
+        </li>
+      <li ng-repeat="i in [] | forLoop:paginator.lowerLimit():paginator.pageCount() | limitTo : paginator.limitPerPage" ng-class="paginator.page==i && 'active'"> 
+        <a ng-click="paginator.setPage(i)"> 
+            <i>{{i+1}}</i> 
+        </a> 
+        </li>
+      <li ng-class="paginator.isLastPage() && 'disabled'" class="last-type">
+        <a ng-click="paginator.nextPage()">{{'SEGÜENT'|translate}}</a>
+    </li>
+    </ul>
+  </nav>
+</div>

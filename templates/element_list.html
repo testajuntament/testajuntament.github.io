@@ -1,0 +1,26 @@
+<div class="col-sm-12" ng-repeat="activitat in $parent.filteredActivitats = (activitats | filter:activitatsFilter) | paginate:rowsPerPage">
+   <article class="modul-obra-llista">
+
+    <header class="R-infoDestacat">
+      <h1 class="titol" ng-if="activitat.titol">
+      	<a ng-href="{{$root.getDetailPath(activitat.codi)}}" title="">
+          <i ng-class="" class="fa fa-calendar-o"></i> {{activitat.titol}}
+        </a>
+      </h1>
+    </header>
+
+    <div class="detalls-obra">
+      <!-- <p><strong>{{'Estat:'|translate}}</strong> {{activitat.estat[$root.estatNomAttrKey]}}</p>
+      <p><strong>{{'Termini d’execució:'|translate}}</strong> -->
+        <time datetime="{{activitat.dataFinalitzacio  | amDateFormat:'YYYY-MM-DD'}}" ng-if="activitat.dataFinalitzacio">{{activitat.dataFinalitzacio  | amDateFormat:'MMMM' | translate }}</time>
+        <time ng-if="!activitat.dataFinalitzacio && activitat[$root.dataFiPrevistaAttrKey]"> {{activitat[$root.dataFiPrevistaAttrKey]}}</time>
+      </p>
+    </div>
+    
+  </article>
+</div>
+
+
+<div class="titol" ng-if="activitat.titol">{{activitat.titol}}</div>
+                    <div class="subtitol" ng-if="activitat.subtitol"><p>{{activitat.subtitol}}</p></div>
+                    <div class="descripcio" ng-if="activitat.descripcio"><p>{{activitat.descripcio}}</p></div>
