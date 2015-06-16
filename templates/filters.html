@@ -4,6 +4,16 @@
 
 <div class="row"  ng-class="{'hidden' : $parent.sidebarActive}">
 
+  <div class="col-xs-12 col-sm-4 col-md-6 sidebar-offcanvas pull-right">
+    <div class="banner-info">
+      <div>
+        <p>Informacio i reserves</p>
+        <p>93 263 96 10</p>
+        <p>museu@gava.cat</p>
+      </div>
+    </div>
+  </div> 
+
   <div class="col-xs-12 col-sm-4 col-md-3 sidebar-offcanvas">
     <form action="" ng-controller="FiltersCtrl">
       <div class="form-group">
@@ -56,13 +66,13 @@
 
         </div>
     </form>
+
+    <div class="form-cercador">
+        <input type="text" name="" value="" ng-model="$root.searchText" placeholder="{{'Cercar activitat'}}">
+    </div>
   </div>
 
-  <div class="col-xs-12 col-sm-4 col-md-6 sidebar-offcanvas">
-    <div class="banner-info">
-      <div>Info y reserves</div>
-    </div>
-  </div>  
+ 
 
 </div><!--row-->  
 
