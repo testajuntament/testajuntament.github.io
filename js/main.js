@@ -324,7 +324,6 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			defer.resolve(allActivitats);
 		} else {
 			$http({
-				// url: 'http://localhost/Escolesgava/activitats.json'
 				url: 'https://activitats.firebaseio.com/.json'
 			}).success(function(response) {
 				allActivitats = [];

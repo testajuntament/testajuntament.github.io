@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html  ng-app="sampleApp">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <style>
+         table td{
+            padding: 3px !important;
+         }
+         table th {
+            width: auto !important ;
+        }
+        td > strong {
+          width: 160px;
+          float: left;
+          margin: 11px 0 0 0;
+        }
+    </style>
+    <meta charset="UTF-8">
+</head>
+<body ng-controller="SampleCtrl">
+        
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Activitats per escoles</h4>
+                <!-- <pre ng-bind="selection.ids | json">
+                    {{newActivitat}}
+                </pre>    -->
+
+<table id="mainTable" class="table table-striped">
+    <!-- <thead>
+        <tr>
+            <th></th>   
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead> -->
+    <tbody>
+    <tr ng-repeat="(id, activitat) in activitats">
+        <td>
+            <strong>Activitat número</strong>
+                {{$index + 1}} 
+            <strong>Codi</strong>
+                <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.codi"  placeholder="{{activitat.codi}}" />
+            <strong>Editar</strong>
+                <a href="#" ng-click="removeActivitat(id)" class="btn btn-danger btn-xs">Borrar</a>
+                <a href="#" ng-click="updateActivitat(id)" class="btn btn-success btn-xs">Guardar</a>
+        </td>
+        
+        <td>
+            <strong>Nivell Educatiu</strong><br>
+            <span ng-repeat="nivelleducatiu in totsnivells">
+              <label for="{{nivelleducatiu.id}}"></label>
+              <input type="checkbox" 
+                     id="{{nivelleducatiu.id}}"
+                     checklist-model="activitat.nivelleducatiu" 
+                     checklist-change="updateActivitat(id)"
+                     checklist-value="nivelleducatiu"> 
+                     {{nivelleducatiu.nom}} <br>
+            </span>
+            <strong>Area de Coneixement</strong>
+            <select ng-model="activitat.area_de_coneixement" 
+                    ng-options="area_de_coneixement.nom for area_de_coneixement in totesarees track by area_de_coneixement.id" 
+                    ng-blur="updateActivitat(id)">
+                    <option value=""></option>
+            </select>
+        </td>
+
+        <td>
+            <strong>Títol</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.titol"       placeholder="{{activitat.titol}}" />
+            <strong>Subtítol</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.subtitol"    placeholder="{{activitat.subtitol}}" />
+            <strong>Descripció</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.descripcio"  placeholder="{{activitat.descripcio}}" />
+        </td>
+        <td>
+            <strong>Nivell recomenat</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.nivell_recomenat" placeholder="{{activitat.nivell_recomenat}}" />
+            <strong>Foto Url</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.foto1.pathFoto" placeholder="{{activitat.foto1.pathFoto}}">
+        </td>
+        
+        <td>
+            <strong>Durada</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.durada"      placeholder="{{activitat.durada}}">
+            <strong>Preu</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.preu"        placeholder="{{activitat.preu}}">
+            <strong>Lloc</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.lloc"        placeholder="{{activitat.lloc}}">
+        </td>
+        <td>
+            <strong>Info i reserves</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.info_i_reserves" placeholder="{{activitat.info_i_reserves}}">
+            <strong>Observacions</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.observacions" placeholder="{{activitat.observacions}}">
+        </td>
+        <td>
+            <strong>Material Didactic</strong>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.material_didactic" placeholder="{{activitat.material_didactic}}"></td>
+        <td>
+            <strong>Tallers</strong>
+            <a href="" ng-click="addTaller(taller)">Nou taller</a>
+            <span ng-repeat="taller in tallers">
+                <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.taller.titol" placeholder="{{activitat.taller.titol}}"><br>
+                <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.taller.descripcio" placeholder="{{activitat.taller.descripcio}}"> <br>           
+                <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.taller.nivell_recomenat" placeholder="{{activitat.taller.nivell_recomenat}}"><br>
+                <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.taller.imatge" placeholder="{{activitat.taller.imatge}}">
+            </span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+                    
+<form class="form-inline" role="form" no-validate ng-submit="addActivitat(activitat)">
+    <div class="form-group">
+        <input type="submit" class="form-control" value="Nova Activitat">
+    </div>
+</form>
+               
+            </div>
+        </div>
+    </div><!--container-->
+  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="mindmup-editabletable.js"></script>
+    <script src="numeric-input-example.js"></script>
+    <script>
+      $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+      $('#textAreaEditor').editableTableWidget({editor: $('<textarea>')});
+      window.prettyPrint && prettyPrint();
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+
+    <script src="./bower_components/checklist-model/checklist-model.js"></script>
+    <script src="main.js"></script>
+      
+</body>
+</html>
