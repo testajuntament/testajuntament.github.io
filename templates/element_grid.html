@@ -1,6 +1,7 @@
 <div class="col-xs-12 col-sm-8 col-lg-9">
 
   <div class="row">
+    
     <div class="col-sm-6 col-md-4" ng-repeat="activitat in $parent.filteredWorks = (activitats | filter:activitatsFilter) | paginate:rowsPerPage">
        <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
         
@@ -13,13 +14,17 @@
             <p>{{activitat.titol}}</p>
           </div>
 
+          <div class="detall-plus">
+            <a class="color-area-{{activitat.area_de_coneixement.id}}" ng-href="{{$root.getDetailPath(activitat.codi)}}" title=""><i class="fa fa-plus-circle"></i></a>
+          </div>
+
           <div class="detalls-obra" ng-class="{'veure-detalls': hover}">
             <p>Nivell: {{activitat.nivell}}<br>
                Durada: {{activitat.durada}}<br>
                Preu: {{activitat.preu}}</p>
-            <span>
+            <!-- <span>
               <a ng-href="{{$root.getDetailPath(activitat.codi)}}" title=""><i class="fa fa-plus-circle"></i></a>
-            </span>
+            </span> -->
           </div> 
 
         </div>
@@ -37,11 +42,3 @@
 <div class="col-xs-12 col-sm-4 col-lg-3">
     <div class="materials">Materials Dicactics</div>
 </div>
-
-     
-
-<!-- <p><strong>{{'Estat:'|translate}}</strong> <i ng-class="activitat.estat.mark"></i></p> -->
-      <!-- <p><strong>{{'Termini d’execució:'|translate}}</strong>
-        <time datetime="{{activitat.dataFinalitzacio  | amDateFormat:'YYYY-MM-DD'}}" ng-if="activitat.dataFinalitzacio">{{activitat.dataFinalitzacio  | amDateFormat:'MMMM' | translate }}</time>
-        <time ng-if="!activitat.dataFinalitzacio && activitat[$root.dataFiPrevistaAttrKey]"> {{activitat[$root.dataFiPrevistaAttrKey]}}</time>
-      </p> -->

@@ -6581,6 +6581,15 @@ button.close {
 .bg-area-3 {
   background-color: rgba(250, 227, 13, 0.54); }
 
+.color-area-1 {
+  color: #E4007D; }
+
+.color-area-2 {
+  color: #148761; }
+
+.color-area-3 {
+  color: #FAE30D; }
+
 .grey {
   background-color: #383838; }
 
@@ -6776,8 +6785,25 @@ body {
   padding: 20px;
   color: #FFF; }
 
+.banner-info-xs {
+  margin: 0;
+  background-color: #383838;
+  color: #FFF;
+  padding: 15px 5px 7px 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600; }
+
+.banner-info {
+  margin: 15px 0px;
+  background-color: #383838;
+  color: #FFF;
+  height: 222px;
+  padding: 18px; }
+
 .modul-filtres {
-  /*FILTERS*/
+  /*FORM CERCADOR*/
   /*FORM GROUP*/ }
   .modul-filtres .cap {
     background-color: #E3001B;
@@ -6787,12 +6813,13 @@ body {
     font-size: 24px;
     color: #fff;
     font-weight: 400; }
-  .modul-filtres .banner-info {
-    margin: 15px 0px;
-    background-color: #383838;
-    color: #FFF;
-    height: 222px;
-    padding: 18px; }
+  .modul-filtres .form-cercador {
+    padding: 20px 0; }
+    .modul-filtres .form-cercador input {
+      width: 100%;
+      border: 1px solid #e3e4e8;
+      background: #FFF url("../img/lupa.png") right 4px no-repeat;
+      padding: 7px 0px 8px 8px; }
   .modul-filtres .form-group {
     margin: 15px 15px 15px 0;
     float: left;
@@ -6806,15 +6833,6 @@ body {
     .modul-filtres .form-group i.fa.fa-caret-right.area-3 {
       color: #FAE30D;
       font-size: 19px; }
-    .modul-filtres .form-group .form-cercador {
-      padding: 20px 0; }
-      .modul-filtres .form-group .form-cercador input {
-        width: 100%;
-        padding: 5px;
-        font-size: 16px;
-        background: #ffffff url("../img/lupa.png") right 2px no-repeat;
-        padding-right: 5px;
-        border: 1px #ccc solid; }
     .modul-filtres .form-group .banner {
       float: left;
       width: 49px;
@@ -6927,7 +6945,8 @@ body {
 
 .header-resultats {
   width: 100%;
-  float: left; }
+  float: left;
+  margin: 10px 0 10px 0; }
   .header-resultats p {
     font-size: 21px;
     font-weight: 200;
@@ -6999,6 +7018,13 @@ body {
     width: 100%;
     color: #FFF;
     padding: 8px 10px 0px; }
+  .modul-obra .detall-plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+    font-size: 31px;
+    margin: -20px -13px; }
   .modul-obra .detalls-obra {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -7457,6 +7483,12 @@ body {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media (min-width: 320px) and (max-width: 480px) {
+  .sidebar-offcanvas {
+    display: none; }
+  .sidebar-offcanvas.active {
+    display: block; }
+  .capcalera {
+    padding: 0px; }
   .retol {
     width: 100%; }
     .retol .retol-text h1 {
@@ -7469,6 +7501,10 @@ body {
       padding: 14px 8px; } }
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .sidebar-offcanvas {
+    display: none; }
+  .sidebar-offcanvas.active {
+    display: block; }
   .retol {
     width: 100%; }
     .retol .retol-text h1 {

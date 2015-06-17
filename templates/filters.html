@@ -1,79 +1,73 @@
 <div class="container">
+  <div class="row"><!-- ng-class="{'hidden' : $parent.sidebarActive}" -->
 
-<!-- <h2 class="cap hidden-xs" ng-class="{'hidden' : $parent.sidebarActive}" translate>Prueba</h2> -->
-
-<div class="row"  ng-class="{'hidden' : $parent.sidebarActive}">
-
-  <div class="col-xs-12 col-sm-4 col-md-6 sidebar-offcanvas pull-right">
-    <div class="banner-info">
-      <div>
-        <p>Informacio i reserves</p>
-        <p>93 263 96 10</p>
-        <p>museu@gava.cat</p>
-      </div>
-    </div>
-  </div> 
-
-  <div class="col-xs-12 col-sm-4 col-md-3 sidebar-offcanvas">
-    <form action="" ng-controller="FiltersCtrl">
-      <div class="form-group">
-        <div class="filtre-seleccio" ng-if="allNivells" >
-            <div class="banner">
-              <div><span>Tria Nivell</span></div>
-            </div>
-        
-            <ul>
-                <li ng-repeat="nivell in allNivells">
-                    <input type="checkbox" 
-                           id="opcio-nivell-{{nivell.id}}" 
-                           name="" 
-                           value="" 
-                           ng-model="$root.nivellFilterModels[nivell.id]">
-                    <label for="opcio-nivell-{{nivell.id}}" 
-                           title="{{nivell[filterNivellAttrKey]}}">
-                           {{nivell.nom}}
-                    </label>           
-                </li>
-            </ul>
+    <div class="col-xs-12 col-sm-4 col-md-6 pull-right visible-sm visible-md visible-lg">
+      <div class="banner-info">
+        <div>
+          <p>Informacio i reserves</p>
+          <p>93 263 96 10</p>
+          <p>museu@gava.cat</p>
         </div>
       </div>
-    </form>  
-  </div>
+    </div> 
 
-  <div class="col-xs-12 col-sm-4 col-md-3 sidebar-offcanvas">
-    <form action="" ng-controller="FiltersCtrl">
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <form action="" ng-controller="FiltersCtrl">
         <div class="form-group">
-
-          <div class="filtre-seleccio" ng-if="allAreas" style="overflow: hidden">
+          <div class="filtre-seleccio" ng-if="allNivells" >
               <div class="banner">
-                <div><span>Tria Àrea</span></div>
+                <div><span>Tria Nivell</span></div>
               </div>
-
+          
               <ul>
-                  <li ng-repeat="area in allAreas">
+                  <li ng-repeat="nivell in allNivells">
                       <input type="checkbox" 
-                             id="opcio-area-{{area.id}}" 
+                             id="opcio-nivell-{{nivell.id}}" 
                              name="" 
                              value="" 
-                             ng-model="$root.areaFilterModels[area.id]">
-                      <label for="opcio-area-{{area.id}}" 
-                             title="{{area[filterAreaAttrKey]}}">
-                             <i class="fa fa-caret-right area-{{area.id}}"></i> {{area.nom}}
-                      </label>  
+                             ng-model="$root.nivellFilterModels[nivell.id]">
+                      <label for="opcio-nivell-{{nivell.id}}" 
+                             title="{{nivell[filterNivellAttrKey]}}">
+                             {{nivell.nom}}
+                      </label>           
                   </li>
               </ul>
           </div>
-
         </div>
-    </form>
-
-    <div class="form-cercador">
-        <input type="text" name="" value="" ng-model="$root.searchText" placeholder="{{'Cercar activitat'}}">
+      </form>  
     </div>
-  </div>
 
- 
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <form action="" ng-controller="FiltersCtrl">
+          <div class="form-group">
 
-</div><!--row-->  
+            <div class="filtre-seleccio" ng-if="allAreas" style="overflow: hidden">
+                <div class="banner">
+                  <div><span>Tria Àrea</span></div>
+                </div>
 
+                <ul>
+                    <li ng-repeat="area in allAreas">
+                        <input type="checkbox" 
+                               id="opcio-area-{{area.id}}" 
+                               name="" 
+                               value="" 
+                               ng-model="$root.areaFilterModels[area.id]">
+                        <label for="opcio-area-{{area.id}}" 
+                               title="{{area[filterAreaAttrKey]}}">
+                               <i class="fa fa-caret-right area-{{area.id}}"></i> {{area.nom}}
+                        </label>  
+                    </li>
+                </ul>
+            </div>
+
+          </div>
+      </form>
+
+      <div class="form-cercador">
+          <input type="text" name="" value="" ng-model="$root.searchText" placeholder="{{'Cercar activitat'}}">
+      </div>
+    </div>
+
+  </div><!--row-->  
 </div>
