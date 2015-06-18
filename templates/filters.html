@@ -2,13 +2,20 @@
   <div class="row"><!-- ng-class="{'hidden' : $parent.sidebarActive}" -->
 
     <div class="col-xs-12 col-sm-4 col-md-6 pull-right visible-sm visible-md visible-lg">
+      
       <div class="banner-info">
-        <div>
-          <p>Informacio i reserves</p>
-          <p>93 263 96 10</p>
-          <p>museu@gava.cat</p>
+        <div class="banner-info-left">
+          <div class="banner-info-round">
+            <p>Informació<br>i<br>reserves</p>
+          </div>
+        </div>
+
+        <div class="banner-info-right">          
+          <p>93 263 96 10<br>&nbsp;<br>
+          museu@gava.cat</p>
         </div>
       </div>
+    
     </div> 
 
     <div class="col-xs-12 col-sm-4 col-md-3">
@@ -54,8 +61,9 @@
                                value="" 
                                ng-model="$root.areaFilterModels[area.id]">
                         <label for="opcio-area-{{area.id}}" 
-                               title="{{area[filterAreaAttrKey]}}">
-                               <i class="fa fa-caret-right area-{{area.id}}"></i> {{area.nom}}
+                               title="{{area[filterAreaAttrKey]}}"
+                               class="color-area-{{area.id}}"
+                               > {{area.nom}}
                         </label>  
                     </li>
                 </ul>

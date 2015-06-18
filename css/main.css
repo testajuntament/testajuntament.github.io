@@ -1,5 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6573,22 +6573,22 @@ button.close {
   content: "\f23a"; }
 
 .bg-area-1 {
-  background-color: rgba(228, 0, 125, 0.45); }
+  background-color: rgba(250, 227, 13, 0.45); }
 
 .bg-area-2 {
-  background-color: rgba(20, 135, 97, 0.59); }
+  background-color: rgba(20, 135, 97, 0.45); }
 
 .bg-area-3 {
-  background-color: rgba(250, 227, 13, 0.54); }
+  background-color: rgba(18, 179, 179, 0.45); }
 
 .color-area-1 {
-  color: #E4007D; }
+  color: #f0a400; }
 
 .color-area-2 {
-  color: #148761; }
+  color: #96a917; }
 
 .color-area-3 {
-  color: #FAE30D; }
+  color: #12b3b3; }
 
 .grey {
   background-color: #383838; }
@@ -6596,24 +6596,28 @@ button.close {
 .white {
   background-color: #fff; }
 
+.red {
+  background-color: #E3001B; }
+
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #F3F3F3; }
+  background-color: #F3F3F3;
+  margin: 0px; }
   body h1, body .h1 {
     font-size: 27px; }
+  body .capcalera-back {
+    background-color: #e3e4e8;
+    padding: 0 0 33px 0; }
 
 /*RETOLS*/
-.arrow-back {
+.home-back {
   margin: 0px;
   display: block;
   width: 49px;
   float: left;
-  background-color: #E3001B; }
-  .arrow-back i.fa.fa-angle-left {
-    font-size: 46px;
-    color: #FFF;
-    padding: 4px 15px;
-    font-weight: 600; }
+  background-color: #E3001B;
+  padding: 13px 16px;
+  height: 48px; }
 
 .retol {
   width: 50%;
@@ -6629,9 +6633,10 @@ body {
       letter-spacing: 0px;
       line-height: 26px;
       margin: 0;
-      font-size: 21px;
+      font-size: 20px;
       font-family: 'Open Sans';
-      padding: 14px 18px; }
+      padding: 11px 8px;
+      color: #383838; }
 
 .retol-2 {
   width: 50%;
@@ -6640,20 +6645,19 @@ body {
   margin: 0px;
   color: #383838; }
   .retol-2 h1 {
-    float: left;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 0px;
     line-height: 26px;
     margin: 0;
-    font-size: 21px;
+    font-size: 20px;
     font-family: 'Open Sans';
-    padding: 14px 23px; }
+    padding: 11px 8px;
+    color: #fff; }
 
 .logo-Ajuntament {
-  margin-top: 5px;
   display: block;
-  margin: 0px 57px 0 0px;
+  margin: 0px;
   width: 116px;
   float: right; }
 
@@ -6752,7 +6756,7 @@ body {
   background-color: #E3001B;
   margin: 11px 0px 7px 0;
   text-align: center;
-  padding: 6px 10px;
+  padding: 4px 36px;
   font-size: 20px;
   color: #FFF;
   background-image: none;
@@ -6778,12 +6782,8 @@ body {
 
 /*BANNERS*/
 .materials {
-  background-color: #383838;
-  float: left;
-  height: 200px;
-  width: 100%;
-  padding: 20px;
-  color: #FFF; }
+  background-color: transparent;
+  float: left; }
 
 .banner-info-xs {
   margin: 0;
@@ -6799,8 +6799,36 @@ body {
   margin: 15px 0px;
   background-color: #383838;
   color: #FFF;
-  height: 222px;
-  padding: 18px; }
+  height: auto;
+  float: left;
+  width: 100%; }
+  .banner-info .banner-info-left {
+    float: left;
+    width: 50%; }
+    .banner-info .banner-info-left .banner-info-round {
+      margin: 23px auto;
+      color: #383838;
+      padding: 21px;
+      text-align: center;
+      width: 144px;
+      height: 144px;
+      background-color: #FFF;
+      border-radius: 50%; }
+      .banner-info .banner-info-left .banner-info-round p {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 23px;
+        margin: 14px 0px; }
+  .banner-info .banner-info-right {
+    float: left;
+    width: 50%; }
+    .banner-info .banner-info-right p {
+      padding: 60px 0;
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+      line-height: 23px;
+      margin: 0 52px 0 0; }
 
 .modul-filtres {
   /*FORM CERCADOR*/
@@ -6825,13 +6853,13 @@ body {
     float: left;
     width: 100%; }
     .modul-filtres .form-group i.fa.fa-caret-right.area-1 {
-      color: #E4007D;
+      color: #f0a400;
       font-size: 19px; }
     .modul-filtres .form-group i.fa.fa-caret-right.area-2 {
-      color: #148761;
+      color: #96a917;
       font-size: 19px; }
     .modul-filtres .form-group i.fa.fa-caret-right.area-3 {
-      color: #FAE30D;
+      color: #12b3b3;
       font-size: 19px; }
     .modul-filtres .form-group .banner {
       float: left;
@@ -6900,8 +6928,7 @@ body {
       padding-left: 35px;
       cursor: pointer;
       font-size: 15px;
-      font-weight: 400;
-      color: #666;
+      font-weight: 600;
       margin: 0;
       padding-top: 3px; }
     .modul-filtres .form-group .filtre-seleccio ul li [type="checkbox"]:not(:checked) + label:before, .modul-filtres .form-group .filtre-seleccio ul li [type="checkbox"]:checked + label:before {
@@ -6927,7 +6954,7 @@ body {
       position: absolute;
       top: 5px;
       left: 4px;
-      color: #000;
+      color: #383838;
       -webkit-transition: all .2s;
               transition: all .2s; }
     .modul-filtres .form-group .filtre-seleccio ul li [type="checkbox"]:not(:checked) + label:after {
@@ -7012,7 +7039,7 @@ body {
     color: #111; }
   .modul-obra .detall-titol {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 10054;
     width: 100%;
@@ -7020,30 +7047,29 @@ body {
     padding: 8px 10px 0px; }
   .modul-obra .detall-plus {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 79%;
+    left: 85%;
     z-index: 10000;
-    font-size: 31px;
+    font-size: 42px;
     margin: -20px -13px; }
   .modul-obra .detalls-obra {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
-    top: 0;
+    top: 60%;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 30px 30px 20px 30px;
-    background-color: rgba(0, 0, 0, 0.5); }
+    padding: 11px 10px 20px 15px; }
   .modul-obra .detalls-obra.veure-detalls {
-    opacity: 1;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    top: 0%;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   .modul-obra .detalls-obra p {
-    font-weight: 400;
+    font-weight: 600;
     color: #FFF;
-    font-size: 15px; }
+    font-size: 14px; }
   .modul-obra .detalls-obra p i.mark-verd {
     background: url("../img/mark-verd.svg") center 0 no-repeat;
     padding: 5px 12px; }
@@ -7493,12 +7519,12 @@ body {
     width: 100%; }
     .retol .retol-text h1 {
       font-size: 15px;
-      padding: 14px 8px; }
+      padding: 11px 8px; }
   .retol-2 {
     width: 100%; }
     .retol-2 .retol-text h1 {
       font-size: 15px;
-      padding: 14px 8px; } }
+      padding: 11px 8px; } }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .sidebar-offcanvas {
@@ -7509,22 +7535,18 @@ body {
     width: 100%; }
     .retol .retol-text h1 {
       font-size: 15px;
-      padding: 14px 13px; }
+      padding: 11px 8px; }
   .retol-2 {
     width: 100%; }
     .retol-2 .retol-text h1 {
       font-size: 15px;
-      padding: 14px 13px; } }
+      padding: 11px 8px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .retol .retol-text h1 {
     font-size: 15px;
-    padding: 14px 12px; }
+    padding: 11px 8px; }
   .retol-2 .retol-text h1 {
     font-size: 16px;
-    padding: 14px 12px; } }
-
-@media (min-width: 992px) {
-  body {
-    margin: 25px 0 0 0; } }
+    padding: 11px 8px; } }
 

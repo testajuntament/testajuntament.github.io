@@ -41,32 +41,35 @@
     </head>
 
     <body class="home" ng-class="$root.bodyClass">
-        <div class="capcalera container">  
+        <div class="capcalera-back">
+            <div class="capcalera container">  
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
 
-                    <div class="retol grey">
-                        <div class="arrow-back">
-                            <a href="/index.html#/" target="_blank" title="Ajuntament de Gavà">
-                                <i class="fa fa-angle-left"></i>
+                    <div class="retol white">
+                        <div class="home-back">
+                            <a href="http://www.patrimonigava.cat/" title="patrimonigava.cat">
+                                <img src="img/home.png">
                             </a>
                         </div> 
                         <div class="retol-text">
                             <h1>Patrimoni Cultural i Natural de Gavà</h1>
-                        </div>    
-                    </div> 
+                        </div>  
 
-                    <div class="retol-2 white">
-                        <div class="logo-Ajuntament">
+                        <div class="logo-Ajuntament hidden-xs">
                             <a href="http://www.gavaciutat.cat" target="_blank" title="Ajuntament de Gavà">
                               <img src="img/gava.png" alt="logotip de l'Ajuntament de Gavà" class="img-responsive" >
                             </a>
-                        </div> 
+                        </div>                             
+                          
+                    </div> 
 
-                        <div class="retol-text pull-right">
+                    <div class="retol-2 red">
+                        <div class="retol-text text-center">
                             <h1>Servei Pedagògic</h1>
                         </div>                               
                     </div>  
+
                 </div><!-- col12-->
             </div> <!--row--> 
             <div class="row">
@@ -78,7 +81,8 @@
                   </div>
                 </div> 
             </div><!--row-->        
-        </div><!--container-->
+            </div><!--container-->
+        </div>
 
         <div class="loading-container" ng-hide="$root.allActivitats" >
           <div class="loader" style="" title="0">

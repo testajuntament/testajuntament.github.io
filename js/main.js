@@ -29,7 +29,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	gettextCatalog.debug = false;
-	$rootScope.basePath =  'http://localhost/Escolesgava/';  
+	// $rootScope.basePath =  'http://localhost/Escolesgava/';  
+	$rootScope.basePath =  'http://testajuntament.github.io/';  
 	$rootScope.historyLink = 'graella';
 
 	$rootScope.changeLanguage = function(language) {
@@ -64,18 +65,13 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 		gettextCatalog.setCurrentLanguage($rootScope.language);
 		$rootScope.titolAttrKey = gettextCatalog.getString('titolCatala');
 		$rootScope.peuFotoAttrKey = gettextCatalog.getString('peuFoto');
-		$rootScope.estatNomAttrKey = gettextCatalog.getString('estatNomAttrKey');
-		$rootScope.dataFiPrevistaAttrKey = gettextCatalog.getString('dataFiPrevista');
-		$rootScope.dataIniciPrevistaAttrKey = gettextCatalog.getString('dataIniciPrevista');
 		$rootScope.descripcioAttrKey = gettextCatalog.getString('descripcioCatala');
 		$rootScope.filterTopicAttrKey = gettextCatalog.getString('nomCatala');
-		$rootScope.observacionsExternesAttrKey = gettextCatalog.getString('observacionsExternesCatala');
-		$rootScope.afectacionsAttrKey = gettextCatalog.getString('afectacionsCatala');
-		$rootScope.filterPlainAttrKey = 'nom';
 
 		$rootScope.filterNivellAttrKey = 'nom';
 		$rootScope.filterAreaAttrKey = 'nom';
 	});
+
 	$rootScope.$on('$locationChangeStart', function(event, next, current) {
 		if (next.indexOf('/mapa') !== -1) {
 			$rootScope.bodyClass = 'home-mapa';
@@ -84,8 +80,6 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 				$rootScope.historyLink = 'llista';
 			} else if (current.indexOf('graella') !== -1 || current.indexOf('parrilla') !== -1) {
 				$rootScope.historyLink = 'graella';
-			} else if (current.indexOf('mapa') !== -1) {
-				$rootScope.historyLink = 'mapa';
 			}
 			$rootScope.bodyClass = 'fitxa';
 		} else {
@@ -116,60 +110,54 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 		return ($rootScope.language === 'ca') ? '#/llista-activitats' : '#/es/lista-actividades';
 	};
 
-	// $rootScope.getMapPath = function() {
-	// 	return ($rootScope.language === 'ca') ? '#/ca/mapa' : '#/es/mapa';
-	// };
-
 	$rootScope.getDetailPath = function(id) {
 		return  '#/fitxa/' + id;
 	};
 
-
 	$rootScope.rowsPerPage = 9;
 	$rootScope.searchText = "";
-	$rootScope.stateFilterModels = {
-		1: true,
-		2: true,
-		3: true
-	};
-	$rootScope.topicFilterModels = [];
-	$rootScope.plainFilterModels = [];
 
 	$rootScope.nivellFilterModels = [];
+	$rootScope.nivellFilterModels[1] = false;
+	$rootScope.nivellFilterModels[2] = false;
+	$rootScope.nivellFilterModels[3] = false;
+	$rootScope.nivellFilterModels[4] = false;
+	$rootScope.nivellFilterModels[5] = false;
+
 	$rootScope.areaFilterModels = [];
 
 	var resetPager = function() {
 		Paginator.page = 0;
 	};
 
-	$rootScope.$watchCollection('stateFilterModels', resetPager, true);
-	$rootScope.$watchCollection('topicFilterModels', resetPager, true);
-	$rootScope.$watchCollection('plainFilterModels', resetPager, true);
-
 	$rootScope.$watchCollection('nivellFilterModels', resetPager, true);
 	$rootScope.$watchCollection('areaFilterModels', resetPager, true);
-
 	$rootScope.$watch('[rowsPerPage,searchText]', resetPager);
 
 	$rootScope.activitatsFilter = function(activitat) {
+		var acceptar = false;
+		var empty = false;
 
-		var result = false;
+		if( $rootScope.nivellFilterModels[1] === false && $rootScope.nivellFilterModels[2] === false && $rootScope.nivellFilterModels[3] === false && $rootScope.nivellFilterModels[4] === false && $rootScope.nivellFilterModels[5] === false){
+			empty = true;
+		}
 
 		angular.forEach(activitat.nivelleducatiu, function(nivelleducatiu){
 			if ($rootScope.nivellFilterModels[nivelleducatiu.id] === true) {
-				result = true;
+				acceptar = true;
 			}
 		});
 
-		if (result === false){
+		if (acceptar === false && empty === false){
 			return false;
 		}
-		
-		// if ($rootScope.nivellFilterModels[activitat.nivelleducatiu[0].id] === false) {
-		// 	return false;
-		// }
+
 		if ($rootScope.areaFilterModels[activitat.area_de_coneixement.id] === false) {
 			return false;
+		}
+
+		if ($rootScope.searchText) {
+			return activitat.titol.toLowerCase().indexOf($rootScope.searchText.toLowerCase()) !== -1 || activitat.titol.toLowerCase().indexOf($rootScope.searchText.toLowerCase()) !== -1;
 		}
 
 		return true;
@@ -186,8 +174,7 @@ app.controller('ListCtrl', function($scope, $routeParams, $rootScope, $timeout, 
 
 		$timeout(function() {
 			$scope.htmlReady();
-		}, 5000);
-
+		}, 4000);
 	});
 });
 
