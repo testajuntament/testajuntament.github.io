@@ -1,0 +1,28 @@
+{
+  "name": "Escolesgava",
+  "version": "0.0.0",
+  "authors": [
+    "alexvijo <alexvicentejose@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "matchHeight": "~0.6.0",
+    "angular-gettext": "~2.0.5",
+    "modernizr": "~2.8.3",
+    "respond": "~1.4.2",
+    "moment": "~2.10.2",
+    "angular-moment": "~0.10.1",
+    "flexslider": "*",
+    "pdfmake": "~0.1.18",
+    "xhr-xdr-adapter": "*",
+    "html5shiv": "~3.7.2"
+  }
+}

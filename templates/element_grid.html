@@ -18,17 +18,15 @@
                Preu: {{activitat.preu}}</p>
 
             <div class="detall-plus" >
-              <a class="color-area-{{activitat.area_de_coneixement.id}}" 
+               <a class="color-area-{{activitat.area_de_coneixement.id}}" 
                  ng-href="{{$root.getDetailPath(activitat.codi)}}" 
-                 title="Veure més detalls."><i class="fa fa-plus-circle"></i></a>
+                 title="Veure més detalls.">
+                 <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
+               </a>
             </div>
           </div>       
 
         </div>
-
-        <header class="R-infoDestacat">
-          <h1 class="titol"><!-- <a ng-href="{{$root.getDetailPath(activitat.codi)}}" title="">{{activitat.titol}}</a> --></h1>
-        </header>
 
       </article>
     </div> 
