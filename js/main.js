@@ -20,6 +20,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		})
 		.when('/fitxa/:id', {
 			controller: 'DetailCtrl',
+			
 			templateUrl: 'templates/detail.html',
 		})
 		.otherwise({
@@ -228,9 +229,9 @@ app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, 
 
 		addFotosFromNode($scope.activitat);
 		
-		for (var i = 0; i < $scope.activitat.seguiments.length; i++) {
-			addFotosFromNode($scope.activitat.seguiments[i]);
-		}
+		// for (var i = 0; i < $scope.activitat.seguiments.length; i++) {
+		// 	addFotosFromNode($scope.activitat.seguiments[i]);
+		// }
 
 		$('html head title').text($scope.shareTitle);
 		$('html head meta[name=description]').attr("content", $scope.shareDescription);
