@@ -1,4 +1,4 @@
-"use strict"; 
+// "use strict"; 
 
 var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo', 'angular-flexslider']);
 //, 'ngMap', 'sn.addthis', 
@@ -30,8 +30,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	gettextCatalog.debug = false;
-	// $rootScope.basePath =  'http://localhost/Escolesgava/';  
-	$rootScope.basePath =  'http://testajuntament.github.io/';  
+	$rootScope.basePath =  'http://localhost/Escolesgava/';  
+	//$rootScope.basePath =  'http://testajuntament.github.io/';  
 	$rootScope.historyLink = 'graella';
 
 	$rootScope.changeLanguage = function(language) {

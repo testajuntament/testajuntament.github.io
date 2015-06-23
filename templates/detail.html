@@ -1,4 +1,4 @@
-<div class="container animated-show ng-hide" ng-show="activitat">
+<div class=" animated-show ng-hide" ng-show="activitat"><!-- container -->
     <div class="row">
       <div class="col-xs-12">
         <div class="navegacio-top">
@@ -97,11 +97,27 @@
             <div class="taller">
                 <p>
                     <div class="titol-tallers">Tallers</div>
-                    <div ng-repeat="taller in tallers">
-                        <strong>Títol:</strong>
-                        <strong>Descripció:</strong>
-                        <strong>Nivell recomanat:</strong>
-                        <strong>Imatge:</strong>
+                    <div class="row">
+
+                        <div class="col-xs-4 col-md-4" ng-repeat="taller in activitat.tallers">
+                            <div class="taller-info">
+                                <div class="taller-foto">
+                                    <img class="img-responsive" ng-src="{{$root.basePath}}{{taller.imatge}}">
+                                    <div class="taller-plus" >
+                                        <a class="color-area-{{activitat.area_de_coneixement.id}}" 
+                                           ng-href="{{$root.getDetailPath(activitat.codi)}}" 
+                                           title="Veure més detalls.">
+                                           <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
+                                        </a>
+                                    </div>
+                                    <div class="taller-titol">{{taller.titol}}</div>
+                                </div>
+                                
+                                <!-- <strong>Descripció: {{taller.descripcio}}</strong> -->
+                                <div class="taller-recomanat">{{taller.nivell_recomenat}}</div>
+                            </div>
+                        </div>
+
                     </div>
                 </p>
             </div>

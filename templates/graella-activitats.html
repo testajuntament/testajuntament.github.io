@@ -1,13 +1,13 @@
-<div class="container gab-before"></div>
+<div class=" gab-before"></div><!-- container -->
 
-<div class="container">
+<div class=""><!-- container -->
     <div class="row row-offcanvas row-offcanvas-left">
       <div class="col-xs-12 col-sm-12 col-md-12 sidebar-offcanvas visible-xs">
         <button  ng-click="sidebarActive = !sidebarActive" type="button" class="btn btn-primary cap-xs" data-toggle="offcanvas" translate>Cercar</button>
       </div>
     </div> 
 
-    <div class="row ">
+    <div class="row">
       <div class="sidebar-offcanvas" id="sidebar" ng-class="{'active':sidebarActive}">
         <div class="modul-filtres" ng-include="'templates/filters.html'"></div>
       </div>
