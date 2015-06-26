@@ -6,17 +6,27 @@
     <style>
          table td{
             padding: 3px !important;
+            width: 20%;
          }
-         table th {
+        table th {
             width: auto !important ;
         }
         td > strong {
-          width: 160px;
+            width: 100%;
           float: left;
           margin: 11px 0 0 0;
         }
         .table-striped>tbody>tr:nth-of-type(odd) {
           background-color: #D8D8D8;
+        }
+        button, input, select, textarea {
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          width: 90%;
+        }
+        input[type=checkbox], input[type=radio] {
+          width: 10%;
         }
     </style>
     <meta charset="UTF-8">
@@ -34,15 +44,16 @@
     <tr ng-repeat="(id, activitat) in activitats">
         <td>
             <strong>Activitat número</strong>
-                {{$index + 1}} 
+            <div>{{$index + 1}}</div> 
+
             <strong>Codi</strong>
-                <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.codi"  placeholder="{{activitat.codi}}" />
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.codi"  placeholder="{{activitat.codi}}" />
+
             <strong>Editar</strong>
+            <div>
                 <a href="#" ng-click="removeActivitat(id)" class="btn btn-danger btn-xs">Borrar</a>
                 <a href="#" ng-click="updateActivitat(id)" class="btn btn-success btn-xs">Guardar</a>
-        </td>
-        
-        <td>
+            </div>    
             <strong>Nivell Educatiu</strong><br>
             <span ng-repeat="nivelleducatiu in totsnivells">
               <label for="{{nivelleducatiu.id}}"></label>
@@ -54,6 +65,7 @@
                      {{nivelleducatiu.nom}} <br>
             </span>
             <strong>Area de Coneixement</strong>
+
             <select ng-model="activitat.area_de_coneixement" 
                     ng-options="area_de_coneixement.nom for area_de_coneixement in totesarees track by area_de_coneixement.id" 
                     ng-blur="updateActivitat(id)">
@@ -67,54 +79,72 @@
             <strong>Subtítol</strong>
             <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.subtitol"    placeholder="{{activitat.subtitol}}" />
             <strong>Descripció</strong>
-            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.descripcio"  placeholder="{{activitat.descripcio}}" />
+            <textarea rows="8" type="text" ng-blur="updateActivitat(id)" ng-model="activitat.descripcio"  placeholder="{{activitat.descripcio}}" ></textarea>
         </td>
+
         <td>
             <strong>Nivell recomenat</strong>
             <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.nivell_recomenat" placeholder="{{activitat.nivell_recomenat}}" />
             <strong>Foto Url</strong>
+            <div style="width:40px; height: auto;">
+            <img class="img-responsive" ng-src="http://testajuntament.github.io/{{activitat.foto1.pathFoto}}"></div>
             <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.foto1.pathFoto" placeholder="{{activitat.foto1.pathFoto}}">
-            <strong>Activitat Destacada</strong>
-            <select ng-model="activitat.activitat_destacada" 
-                    ng-options="nivells_activitat_destacada.prioritat for nivells_activitat_destacada in nivells_activitat_destacada track by nivells_activitat_destacada.id" 
-                    ng-blur="updateActivitat(id)">
-                    <option value=""></option>
-            </select>
-        </td>
-        
-        <td>
             <strong>Durada</strong>
             <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.durada"      placeholder="{{activitat.durada}}">
             <strong>Preu</strong>
             <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.preu"        placeholder="{{activitat.preu}}">
             <strong>Lloc</strong>
-            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.lloc"        placeholder="{{activitat.lloc}}">
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.lloc"        placeholder="{{activitat.lloc}}">            
         </td>
+        
         <td>
             <strong>Info i reserves</strong>
             <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.info_i_reserves" placeholder="{{activitat.info_i_reserves}}">
             <strong>Observacions</strong>
-            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.observacions" placeholder="{{activitat.observacions}}">
-        </td>
-        <td>
+            <input type="text" ng-blur="updateActivitat(id)" ng-model="activitat.observacions" placeholder="{{activitat.observacions}}"> 
             <strong>Material Didactic</strong>
-            <textarea type="text" ng-blur="updateActivitat(id)" ng-model="activitat.material_didactic" placeholder="{{activitat.material_didactic}}"></textarea></td>
+            <textarea rows="8" type="text" ng-blur="updateActivitat(id)" ng-model="activitat.material_didactic" placeholder="{{activitat.material_didactic}}"></textarea>   
+            <strong>Activitat Destacada</strong>
+            <select ng-model="activitat.activitat_destacada" 
+                    ng-options="nivells_activitat_destacada.prioritat for nivells_activitat_destacada in nivells_activitat_destacada track by nivells_activitat_destacada.id" 
+                    ng-blur="updateActivitat(id)">
+                    <option value=""></option>
+            </select>                                
+        </td>
+
         <td>
-            <span ng-repeat="taller in activitat.tallers">
-                <strong>Taller {{id}}</strong>
-                <input type="text" ng-blur="updateTaller(id)" ng-model="taller.titol" placeholder="{{taller.titol}}"><br>
-                <input type="text" ng-blur="updateTaller(id)" ng-model="taller.descripcio" placeholder="{{taller.descripcio}}"> <br>           
-                <input type="text" ng-blur="updateTaller(id)" ng-model="taller.nivell_recomenat" placeholder="{{taller.nivell_recomenat}}"><br>
-                <input type="text" ng-blur="updateTaller(id)" ng-model="taller.imatge" placeholder="{{taller.imatge}}"><br>
-            </span>
-            <!--nou taller-->
-            <form class="form-inline" role="form" no-validate ng-submit="addTaller(taller, activitat.tallers, id)">
+            <div>
+            <strong>Tallers</strong>
+        </div>
+            <div class="panel-group" id="accordion" ng-repeat="(id, taller) in activitat.tallers">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">                
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{id}}">
+                                Taller {{id}}
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-{{id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Títol:
+                            <input type="text" ng-blur="updateTaller(id)" ng-model="taller.titol" placeholder="{{taller.titol}}">
+                            Descripció:
+                            <input type="text" ng-blur="updateTaller(id)" ng-model="taller.descripcio" placeholder="{{taller.descripcio}}"> <br>     
+                            Nivell recomanat:      
+                            <input type="text" ng-blur="updateTaller(id)" ng-model="taller.nivell_recomenat" placeholder="{{taller.nivell_recomenat}}"><br>
+                            ImatgeUrl:
+                            <input type="text" ng-blur="updateTaller(id)" ng-model="taller.imatge" placeholder="{{taller.imatge}}"><br>            
+                        </div>
+                    </div>
+                </div>
+            </div>             
+            <form class="form-inline" role="form" no-validate ><!-- ng-submit="addTaller(taller, activitat.tallers, id)" -->
                 <div class="form-group">
                     <input type="submit" class="form-control" value="Nou taller">
                 </div>
             </form>            
         </td>
-
     </tr>
     </tbody>
 </table>
@@ -124,6 +154,7 @@
         <input type="submit" class="form-control" value="Nova Activitat">
     </div>
 </form>
+
                
             </div>
         </div>

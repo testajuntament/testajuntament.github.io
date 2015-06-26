@@ -244,7 +244,7 @@ body {
   .banner-info {
     margin: 15px 0px;
     color: #FFF;
-    height: auto;
+    height: 200px;
     float: left;
     width: 100%;
     background: rgba(209,209,209,1);
@@ -260,7 +260,7 @@ body {
       width: 50%;
       float: left;
       position: relative;
-      height: 200px;
+      height: 100%;
       padding: 15px 0;
 
       .banner-info-round{
@@ -288,7 +288,7 @@ body {
       width: 50%;
       float: left;
       position: relative;
-      height: 200px;
+      height: 100%;
       p {
         position: absolute;
         top: 50%;
@@ -312,6 +312,40 @@ body {
 
     }
   }
+  .banner-info.detail {
+    height: 121px;
+
+    .banner-info-left {
+      padding: 3% 0;
+      p {
+        position: absolute;
+        top: 50%;
+        z-index: 1000;
+        color: #383838;
+        left: 50%;
+        font-weight: 700;
+        width: initial;
+        text-align: center;
+        font-size: 14px;
+        margin: -22% -27%;
+      }
+    }
+    .banner-info-right {
+      p {
+        position: absolute;
+        top: 50%;
+        z-index: 1000;
+        left: 50%;
+        font-weight: 700;
+        width: initial;
+        text-align: center;
+        margin: -21% -49%;
+        font-size: 14px;
+      }      
+    }
+  }
+
+
 
   /*FILTRES*/
   .modul-filtres {
@@ -603,7 +637,7 @@ body {
 
   .taller{
       padding: 15px;
-      
+
       .titol-tallers{
         font-weight: 600;
         text-align: center;
