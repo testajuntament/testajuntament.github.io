@@ -9,20 +9,20 @@ app.controller("SampleCtrl", function($scope, ActivitatsService) {
 	
 	$scope.newActivitat = {
 		codi: "",
-		activitat_destacada: false,		
+		activitat_destacada: {id: 10, prioritat: "10"},		
 		nivell_recomenat: 'Primaria',
-		nivelleducatiu: [],
-		area_de_coneixement: { id: '', nom: ''},
+		nivelleducatiu: [{ id: 1, nom:"Educació infantil"}],
+		area_de_coneixement: { id: 1, nom: "Socials" },
 	    foto1: { id: '', peuFoto: "", publicarWeb: true, pathFoto: "fotos-activitats/i1.jpg" },
-		titol: 'Això és el títol', 
+		titol: 'Títol de la activitat al parc arqueològic de les mines de Gavà', 
 		subtitol: 'Això pot ser un subtítol',
-		descripcio: '',
+		descripcio: 'Hashtag keffiyeh synth street art, fixie Neutra food truck sriracha kogi Odd Future organic disrupt gentrify. Echo Park aesthetic trust fund freegan, cold-pressed mixtape pop-up. Blog disrupt four dollar toast plaid Austin, Echo Park 90\'s vegan art party mlkshk ugh 8-bit. Selvage fashion axe quinoa messenger bag farm-to-table occupy. Photo booth Helvetica pour-over hella XOXO, bitters authentic dreamcatcher food truck DIY banjo twee fap. Actually forage small batch squid, Bushwick dreamcatcher swag. Disrupt Tumblr cliche, selfies street art Schlitz lumbersexual banh mi gastropub cray.',
 		durada: '1h 30m',
 		preu: '20€',
-		lloc: 'Barcelona',
+		lloc: '<a href="https://es.wikipedia.org/wiki/Barcelona" target="_blank">Barcelona</a>',
 		info_i_reserves: 'info_i_reserves',
-		observacions: 'observacions',
-		material_didactic: 'material_didactic',
+		observacions: 'Hashtag keffiyeh synth street art, fixie Neutra food truck sriracha kogi Odd Future organic disrupt gentrify. Echo Park aesthetic trust fund freegan, cold-pressed mixtape pop-up.',
+		material_didactic: 'Material .pdf<br> Material <a href="">link</a><br>Altres materials.',
 		tallers:[
 			{   
 				id:'1', 
@@ -69,6 +69,19 @@ app.controller("SampleCtrl", function($scope, ActivitatsService) {
 		{ id: 2, nom: "Naturals" },
 		{ id: 3, nom: "Treball de síntesi" }
 	];	
+
+	$scope.nivells_activitat_destacada = [ 
+		{id: 1, prioritat: "1"},
+		{id: 2, prioritat: "2"},
+		{id: 3, prioritat: "3"},
+		{id: 4, prioritat: "4"},
+		{id: 5, prioritat: "5"},
+		{id: 6, prioritat: "6"},
+		{id: 7, prioritat: "7"},
+		{id: 8, prioritat: "8"},
+		{id: 9, prioritat: "9"},
+		{id: 10, prioritat: "10"},
+	];
 
 	$scope.activitats = ActivitatsService.getActivitats();
 

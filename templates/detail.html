@@ -65,7 +65,7 @@
                 </div>
                 
                 <div class="data-info" ng-if="activitat.lloc">
-                    <div><span class="key-info">Lloc de realització:</span> <span class="valor-info">{{activitat.lloc}}</span></div>
+                    <div><span class="key-info">Lloc de realitzación:</span> <span class="valor-info" ng-bind-html="activitat.lloc"></span></div>
                 </div>
             </div>
                     
@@ -104,18 +104,34 @@
                                 <div class="taller-foto">
                                     <img class="img-responsive" ng-src="{{$root.basePath}}{{taller.imatge}}">
                                     <div class="taller-plus" >
-                                        <a class="color-area-{{activitat.area_de_coneixement.id}}" 
-                                           ng-href="{{$root.getDetailPath(activitat.codi)}}" 
-                                           title="Veure més detalls.">
-                                           <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
+                                        <a  class="color-area-{{activitat.area_de_coneixement.id}}" 
+                                            ng-href="{{$root.getDetailPath(activitat.codi)}}" 
+                                            title="Veure més detalls."
+                                            data-container="body"
+                                            class="btn btn-lg btn-danger" 
+                                            data-toggle="popover" 
+                                            data-placement="bottom"
+                                            title="{{taller.titol}}" 
+                                            data-content="{{activitat.descripcio}}">
+                                            <i class="glyphicon glyphicon-plus-sign">
+                                                <div class="back-white"></div>
+                                            </i>
                                         </a>
                                     </div>
                                     <div class="taller-titol">{{taller.titol}}</div>
                                 </div>
-                                
-                                <!-- <strong>Descripció: {{taller.descripcio}}</strong> -->
+            
                                 <div class="taller-recomanat">{{taller.nivell_recomenat}}</div>
                             </div>
+
+<script>
+$( document ).ready(function() {
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    })
+});
+</script>
+
                         </div>
 
                     </div>
@@ -141,7 +157,7 @@
                 <div class="titol-observacions bg-solid-area-{{activitat.area_de_coneixement.id}}">
                     <div class="arrow-up border-area-{{activitat.area_de_coneixement.id}}"></div>
                     Material didàctic</div> 
-                <div class="text-observacions"><p>{{activitat.material_didactic}}</p></div>
+                <div class="text-observacions"><p ng-bind-html="activitat.material_didactic"></p></div>
             </div>
                     
         </div>

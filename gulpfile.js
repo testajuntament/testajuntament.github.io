@@ -18,7 +18,21 @@ var uglify = require('gulp-uglify');
 
 var paths = {
   scripts: [
-  	'js/*.*'
+    'bower_components/angular/angular.js',
+    'bower_components/angular-resource/angular-resource.min.js',
+    'bower_components/angular-route/angular-route.min.js',
+    'bower_components/angular-locale_es-es/angular-locale_es-es.js',
+    'bower_components/angular-sanitize/angular-sanitize.js',
+    'js/vendor/jquery.matchHeight-min.js',
+    'js/vendor/jquery.flexslider-min.js',
+    'js/vendor/angular-flexslider.js',
+    'js/vendor/angular-paginator.js',
+    'js/vendor/moment/min/moment-with-langs.js',
+    'js/vendor/angular-moment/angular-moment.js',
+    // 'js/*.*'
+    // 'js/main.js*'
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+  	'js/main.js*'
   ],
   // images: 'assets/img/**/*s',
   styles: [
@@ -32,13 +46,16 @@ gulp.task('clean', function(cb) {
 
 gulp.task('styles', function() {
   return gulp.src(paths.styles)
+    // .pipe(compass({
+    //   sass: 'sass'
+    // }))
 		.pipe(sass({
 			includePaths: [
 			'./bower_components/bootstrap-sass/assets/stylesheets/',
 			'./bower_components/font-awesome/scss/'
 			]
 		}))
-		// .on('error', function (err) { console.log(err.message); })
+		.on('error', function (err) { console.log(err.message); })
 		.on('error', gutil.log )
 		.pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
 		.pipe(concat('main.css'))
@@ -54,8 +71,8 @@ gulp.task('scripts', function() {
         .pipe(jshint.reporter('default'))
         .pipe(concat('app.js'))
 	    // .pipe(uglify()).pipe(uglify().on('error', gutil.log))
-	    .pipe(rename({suffix:'.min'}))
-	    .pipe(gulp.dest('./buildjs'))
+	      .pipe(rename({suffix:'.min'}))
+	      .pipe(gulp.dest('./buildjs'))
         .pipe(notify({ message: 'Scripts task complete' }));
 });
 

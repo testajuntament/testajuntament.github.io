@@ -1,15 +1,14 @@
 // @import url("http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
-@import "compass";
 
-$ContainerPhone: 430px;
-$screen-is: 430px;
-$screen-is-min: ($screen-is);
-$screen-is-max: 767px;
-$screen-xs-max: ($screen-is-min - 1);
+// $ContainerPhone: 430px;
+// $screen-is: 430px;
+// $screen-is-min: ($screen-is);
+// $screen-is-max: 767px;
+// $screen-xs-max: ($screen-is-min - 1);
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "_grids.scss";  
+// @import "_grids.scss";  
 @import "../bower_components/font-awesome/scss/font-awesome.scss";
 
 $red-color: #D20019;//#E3001B;
@@ -58,6 +57,9 @@ body {
 
   h1, .h1 {
     font-size: 27px;
+  }
+  p{
+      overflow: hidden;
   }
 
   .capcalera-back{
@@ -268,19 +270,19 @@ body {
         background-size: contain;
         background-position: center;
         background-image: url('../img/white-circle-np.png');
-        p {
-          position: absolute;
-          top: 50%;
-          z-index: 1000;
-          color: $grey-color;
-          left: 50%;
-          font-weight: 700;
-          width: 100px;
-          text-align: center;
-          margin: -36px -50px;
-          font-size: 18px;
-        }
-      }    
+      }   
+      p {
+        position: absolute;
+        top: 50%;
+        z-index: 1000;
+        color: #383838;
+        left: 50%;
+        font-weight: 700;
+        width: initial;
+        text-align: center;
+        font-size: 18px;
+        margin: -13% -18%;
+      }       
     }
     .banner-info-right {
       width: 50%;
@@ -293,9 +295,9 @@ body {
         z-index: 1000;
         left: 50%;
         font-weight: 700;
-        width: 181px;
+        width: initial;
         text-align: center;
-        margin: -14% -45%;
+        margin: -13% -38%;
         font-size: 18px;
         a{
           color: #fff;
@@ -550,6 +552,13 @@ body {
     padding: 23px 15px 15px;
     color: #fff;
     font-weight: 700;
+    a{
+      color: #FFF;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }      
+    }
+
 
     .data-info {
       margin: 0 0 16px 0;
@@ -592,55 +601,66 @@ body {
     }
   }
 
-  .titol-tallers{
-    font-weight: 600;
-    text-align: center;
-    background-color: $grey-color;
-    color: #FFF;
-    padding: 6px 12px;
-    margin: 0 0px;
-    font-size: 17px;
-  }
-
-  .taller-info {
-    margin: 13px 0;
-    position: relative;
-    .taller-foto {
-      position: relative;
-      .taller-plus {
-        position: absolute;
-        top: 6%;
-        right: 14%;
-        .glyphicon {
-          position: relative;
-          top: 1px;
-          display: inline-block;
-          font-family: 'Glyphicons Halflings';
-          font-style: normal;
-          font-weight: normal;
-          line-height: 1;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          .back-white {
-            z-index: -1;
-            background-color: #FFF;
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            top: 19%;
-            left: 19%;
-          }        
-        }
-
-      }
-      .taller-titol.ng-binding {
-        position: absolute;
+  .taller{
+      padding: 15px;
+      
+      .titol-tallers{
+        font-weight: 600;
+        text-align: center;
+        background-color: $grey-color;
         color: #FFF;
-        bottom: 9%;
-        left: 7%;
+        padding: 6px 12px;
+        margin: 0 0px;
+        font-size: 17px;
       }
-    }
+
+      .taller-info {
+        margin: 13px 0;
+        position: relative;
+        .taller-foto {
+          position: relative;
+          .taller-plus {
+            position: absolute;
+            top: 6%;
+            right: 14%;
+            .glyphicon {
+              position: relative;
+              top: 1px;
+              display: inline-block;
+              font-family: 'Glyphicons Halflings';
+              font-style: normal;
+              font-weight: normal;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              .back-white {
+                z-index: -1;
+                background-color: #FFF;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 19%;
+                left: 19%;
+              }        
+            }
+
+          }
+          .taller-titol {
+            position: absolute;
+            color: #FFF;
+            bottom: 9%;
+            left: 7%;
+            font-weight: 700;
+          }
+        }
+        .taller-recomanat {
+          background-color: #808080;
+          color: #FFF;
+          padding: 10px 8px;
+        }
+      }    
   }
+
 
   /*RIGHT COL DETALL*/
   .titol-bar{
@@ -842,9 +862,8 @@ body {
 
 
   .modul-paginacio {
-    margin: 50px 0;
-    border-top: 1px #ccc solid;
-    padding-top: 20px;
+    margin: 20px 0;
+    padding-top: 0px;
   }
   .modul-paginacio p {
     text-align: center;
@@ -879,138 +898,19 @@ body {
   }
 
 
-
+  .peu-back{
+    background-color: $soft-grey;
+  }
   .peu {
     height: 200px;
     margin-top: 100px;
-    // background: #f0f0f0 url("../img/bg-peu.svg") center 0 no-repeat;
-    padding-top: 80px;
+    padding-top: 53px;
   }
   .peu .logo-Ajuntament {
     margin: 0 auto;
     display: block;
     width: 120px;
   }
-  // .home-mapa .header-resultats {
-  //   margin-bottom: 20px;
-  //   border-bottom: none;
-  // }
-  // .home-mapa .mapa {
-  //   padding: 0;
-  //   position: relative;
-  // }
-  // .home-mapa .mapa #map-canvas {
-  //   height: 800px;
-  //   width: 100%;
-  //   margin: 0;
-  //   padding: 0px;
-  //   margin-bottom: 40px;
-  // }
-  // .home-mapa .mapa #map-canvas .markerLabels {
-  //   margin-top: -29px !important;
-  // }
-  // .home-mapa .mapa .content-filtres {
-  //   position: absolute;
-  //   top: 20px;
-  //   left: 20%;
-  //   z-index: 9999;
-  //   width: 300px;
-  // }
-  // .home-mapa .mapa .content-filtres .cap-xs {
-  //   margin-bottom: 0;
-  // }
-  // .home-mapa .mapa .content-filtres .sidebar-offcanvas {
-  //   display: none;
-  // }
-  // .home-mapa .mapa .content-filtres .sidebar-offcanvas.active {
-  //   display: block;
-  // }
-  // .home-mapa .mapa .content-filtres .sidebar-offcanvas .form-group {
-  //   padding: 10px 20px;
-  // }
-  // .home-mapa .modul-obra {
-  //   position: static;
-  //   overflow: hidden;
-  //   margin-bottom: 30px;
-  // }
-  // .home-mapa .modul-obra .col-sm-5,
-  // .home-mapa .modul-obra .col-sm-7 {
-  //   padding-left: 5px;
-  //   padding-right: 5px;
-  // }
-  // .home-mapa .modul-obra .imatge-modul-obra {
-  //   background-color: #F9F9F9;
-  //   padding: 0px;
-  // }
-  // .home-mapa .modul-obra .imatge-modul-obra:hover {
-  //   border: 1px #666 solid;
-  // }
-  // .home-mapa .modul-obra .R-infoDestacat {
-  //   display: table;
-  // }
-  // .home-mapa .modul-obra .R-infoDestacat .titol {
-  //   margin: 10px 0;
-  //   font-size: 16px;
-  //   font-weight: 500;
-  //   color: #111;
-  //   line-height: 1.25;
-  //   display: table-cell;
-  //   padding-left: 5px;
-  // }
-  // .home-mapa .modul-obra .R-infoDestacat .titol a {
-  //   color: #111;
-  // }
-  // .home-mapa .modul-obra .R-infoDestacat i {
-  //   text-align: center;
-  //   padding: 10px 5px 0;
-  //   font-size: 12px;
-  //   font-weight: 700;
-  //   width: 36px;
-  //   height: 32px;
-  //   display: table-cell;
-  //   background-size: contain!important;
-  // }
-  // .home-mapa .modul-obra .R-infoDestacat i.mark-verd {
-  //   background: url("../img/mark-verd.svg") center 0 no-repeat;
-  // }
-  // .home-mapa .modul-obra .R-infoDestacat i.mark-taronja {
-  //   background: url("../img/mark-taronja.svg") center 0 no-repeat;
-  // }
-  // .home-mapa .modul-obra .R-infoDestacat i.mark-vermell {
-  //   background: url("../img/mark-vermell.svg") center 0 no-repeat;
-  // }
-  // .globus .titol {
-  //   margin: 10px 0;
-  //   font-size: 16px;
-  //   font-weight: 500;
-  //   color: #111;
-  //   line-height: 1.25;
-  // }
-  // .globus .titol a {
-  //   color: #111;
-  // }
-  // .globus .detalls-obra p {
-  //   font-size: 14px;
-  //   font-weight: 400;
-  // }
-  // .globus .detalls-obra span {
-  //   display: block;
-  //   background-color: $red-color;
-  //   margin: 46px auto;
-  //   text-align: center;
-  // }
-  // .globus .detalls-obra span a {
-  //   color: #fff;
-  //   display: block;
-  //   padding: 10px;
-  //   height: auto;
-  //   text-decoration: none;
-  // }
-  // .globus .detalls-obra span a:hover {
-  //   background-color: #000;
-  // }
-
-
 
 
 
@@ -1042,172 +942,7 @@ body {
     display: table;
     width: 100%;
   }
-  // .item-obra .R-infoFitxa .titol {
-  //   font-size: 32px;
-  //   color: #000;
-  //   font-weight: 400;
-  //   display: table-cell;
-  //   padding-right: 20px;
-  // }
-  // .item-obra .R-infoFitxa .juntsFemBarri {
-  //   display: table-cell;
-  //   vertical-align: bottom;
-  // }
-  // .item-obra .modul-galeria {
-  //   // background-color: #fff;
-  //   // border: 1px #DBDDE3 solid;
-  //   // padding: 3px;
-  //   // margin-bottom: 30px;
-  // }
-  // .item-obra .modul-galeria #slider li img {
-  //   position: relative;
-  // }
-  // .item-obra .modul-galeria #slider li .peu-foto {
-  //   position: absolute;
-  //   bottom: 0;
-  //   padding: 10px 20px;
-  //   color: #fff;
-  //   margin: 0;
-  //   width: 99%;
-  //   background: rgba(0, 0, 0, 0.6);
-  //   font-size: 14px;
-  // }
-  // .item-obra .modul-galeria #carousel li {
-  //   margin-right: 5px;
-  // }
-  // .item-obra .modul-galeria #carousel .flex-active-slide img {
-  //   opacity: 1;
-  //   cursor: default;
-  // }
-  // .item-obra .modul-galeria #carousel img {
-  //   display: block;
-  //   opacity: .5;
-  //   cursor: pointer;
-  // }
-  // .item-obra .modul-posicio-mapa {
-  //   background-color: #fff;
-  //   border: 1px #DBDDE3 solid;
-  //   padding: 5px;
-  //   margin-bottom: 30px;
-  // }
-  // .item-obra .modul-posicio-mapa #map-canvas {
-  //   height: 500px;
-  //   width: 100%;
-  //   margin: 0;
-  //   padding: 0px;
-  // }
-  // .item-obra .contingut-top {
-  //   margin-bottom: 20px;
-  //   overflow: hidden;
-  // }
-  // .item-obra .contingut-top .estat-obra {
-  //   float: left;
-  // }
-  // .item-obra .contingut-top .estat-obra span {
-  //   padding: 10px;
-  //   display: block;
-  //   color: #fff;
-  //   font-size: 16px;
-  //   font-weight: 500;
-  //   text-transform: uppercase;
-  // }
-  // .item-obra .contingut-top .estat-obra span.pendent {
-  //   background-color: #FF0000;
-  // }
-  // .item-obra .contingut-top .estat-obra span.encurs {
-  //   background-color: #FF8000;
-  // }
-  // .item-obra .contingut-top .estat-obra span.finalitzat {
-  //   background-color: #2DB200;
-  // }
-  // .item-obra .contingut-top .estat-obra span i {
-  //   margin-right: 5px;
-  //   font-size: 22px;
-  // }
-  // .item-obra .contingut-top .eines-fitxa {
-  //   float: right;
-  // }
-  // .item-obra .contingut-top .eines-fitxa ul {
-  //   margin: 0;
-  //   list-style-type: none;
-  // }
-  // .item-obra .contingut-top .eines-fitxa ul li {
-  //   float: left;
-  //   margin-left: 10px;
-  // }
-  // .item-obra .contingut-top .eines-fitxa ul li:first-child {
-  //   border-right: 1px #DBDDE3 solid;
-  //   padding-right: 10px;
-  //   /*
-  //   display: none; 
-  //   */
-  // }
-  // .item-obra .contingut-top .eines-fitxa ul li a {
-  //   color: #ccc;
-  //   display: block;
-  // }
-  // .item-obra .contingut-top .eines-fitxa ul li a:hover {
-  //   color: #000;
-  // }
-  // .item-obra .contingut-top .eines-fitxa ul li a i {
-  //   font-size: 36px;
-  // }
-  // .item-obra .descripcio-obra {
-  //   padding: 10px 0;
-  //   border-bottom: 1px #DBDDE3 solid;
-  // }
-  // .item-obra .descripcio-obra p {
-  //   font-size: 16px;
-  //   color: #999;
-  //   font-weight: 400;
-  // }
 
-  // .item-obra .modul-compartir {
-  //   padding: 15px 0;
-  // }
-  // .item-obra .modul-seguiment-obra {
-  //   padding: 15px 0;
-  // }
-  // .item-obra .modul-seguiment-obra .titol {
-  //   font-size: 20px;
-  //   color: #000;
-  //   margin: 0;
-  //   border-bottom: 1px #DBDDE3 solid;
-  //   padding-bottom: 5px;
-  // }
-  // .item-obra .modul-seguiment-obra .contenidor-llistat {
-  //   margin: 20px 0;
-  //   height: 500px;
-  //   overflow-y: auto;
-  //   padding-right: 20px;
-  // }
-  // .item-obra .modul-seguiment-obra .contenidor-llistat ul {
-  //   list-style-type: none;
-  //   margin: 0;
-  //   padding: 0;
-  // }
-  // .item-obra .modul-seguiment-obra .contenidor-llistat ul li {
-  //   padding: 10px;
-  //   border: 1px #DBDDE3 solid;
-  //   margin-bottom: 10px;
-  //   font-size: 14px;
-  //   color: #111;
-  //   font-weight: 400;
-  //   -webkit-box-shadow: 3px 3px 0px 0px #e0e0e0;
-  //   -moz-box-shadow: 3px 3px 0px 0px #e0e0e0;
-  //   box-shadow: 3px 3px 0px 0px #e0e0e0;
-  // }
-  // .item-obra .modul-seguiment-obra .contenidor-llistat ul li.afectacio {
-  //   background-color: $red-color;
-  //   border: 1px $red-color solid;
-  //   color: #fff;
-  //   -webkit-box-shadow: 3px 3px 0px 0px #e00202;
-  //   -moz-box-shadow: 3px 3px 0px 0px #e00202;
-  //   box-shadow: 3px 3px 0px 0px #e00202;
-  // }
-  // .item-obra .modul-seguiment-obra .contenidor-llistat ul li span {
-  //   font-weight: 500;
-  // }
 
   .loader {
     margin: 0 0 2em;
@@ -1226,106 +961,64 @@ body {
 
 
 
+/*MEDIA QUERIES*/
+@media only screen and (min-width: 430px) and (max-width:479px){
+  .container{
+    width: 100%;
+    &.capcalera{
+      padding: 0;
+    }
+  }
 
-@media(min-width: 320px) and (max-width:429px){
-  .no-pad{
-    padding: 0;
+  .retol{
+    width: 100%;
+    .retol-text{
+      h1{
+        padding: 11px 8px;
+      }
+    }
   }
-  .detalls-obra p {
-    font-weight: 600;
-    color: #FFF;
-    font-size: 24px;
+  .retol-2{
+    width: 100%;
   }
+
   .sidebar-offcanvas {
     display: none;
   }
   .sidebar-offcanvas.active {
+    @include transition(0.2s);
     display: block;
   }
 
-  .retol{
-      width: 100%;
-      .retol-text h1 {
-        font-size: 15px;
-        padding: 11px 8px;
-      }
-  }
-  .retol-2{
-      width: 100%;
-      border-bottom: 1px solid #9C0416;
-      .retol-text h1 {
-        font-size: 15px;
-        padding: 11px 8px;
-      }    
-  }  
-  .banner-info{ 
-    border-bottom: 1px solid #121212;
-    margin: 0;
-
-    .banner-info-left .banner-info-round {
-      margin: 0 auto;
-      background-repeat: no-repeat;
-      height: 100%;
-      background-size: contain;
-      background-position: center;
-      background-image: url('../img/white-circle-np.png');
-      p{
-          font-size: 13px;
-          margin: -26px -50px;
-      }
-    }
-    .banner-info-right p {
-      position: absolute;
-      top: 50%;
-      z-index: 1000;
-      left: 50%;
-      font-weight: 700;
-      width: 181px;
-      text-align: center;
-      margin: -17% -66%;
-      font-size: 15px;
-    }
-
-  }
-}
-
-@media(min-width: 430px) and (max-width:479px){
-  .container{
-    width: 100%;
-  }
-
-  .retol{
-    width: 100%;
-  }
-  .retol-2{
-    width: 100%;
-  }
   .banner-info{
-    margin: 0px;
-    border-top: 1px solid #D5D5D5;;
-    .banner-info-left {
-      width: 50%;
-      float: left;
-      position: relative;
-      height: 100px;
-      padding: 5px 0;
+    margin: 0;
+    .banner-info-left{
+      height: 130px;
+      .banner-info-round p{
+        margin: -28px -50px;
+        font-size: 14px;
+      }
     }
-    .banner-info-right {
-      width: 50%;
-      float: left;
-      position: relative;
-      height: 100px;
+    .banner-info-right{
+      height: 130px;
+      p{
+        margin: -14% -64%;
+        font-size: 14px;
+      }
     }
-  }
+  }  
 
   .modul-obra {
     margin-bottom: 30px;
   }
 }
 
-@media(min-width: 480px) and (max-width:767px){
+@media only screen and (min-width: 480px) and (max-width:767px){
   .container{
     width: 100%;
+    &.capcalera{
+      padding: 0;
+    }
   }
   .loader {
     margin: 0 0 2em;
@@ -1341,33 +1034,6 @@ body {
   .loader svg rect {
     fill: #cc0000;
   }
-
-
-
-  .banner-info .banner-info-left {
-    float: left;
-    width: 100%;
-
-    .banner-info-round p {
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 23px;
-      margin: 14px 0px;
-    }
-  }
-  .banner-info .banner-info-right {
-    float: left;
-    width: 100%;
-    p {
-      padding: 1% 0 14%;
-      font-weight: 600;
-      font-size: 20px;
-      text-align: center;
-      line-height: 23px;
-      margin: 0 auto;
-    }
-  }
-
 
   .detalls-obra p {
     font-weight: 600;
@@ -1390,68 +1056,59 @@ body {
       }
   }
   .retol-2{
-      width: 100%;
-      .retol-text h1 {
-        font-size: 15px;
-        padding: 11px 8px;
-      }      
-  }    
-}
+    width: 100%;
+    .retol-text h1 {
+      font-size: 15px;
+      padding: 11px 8px;
+    }      
+  }
+  .banner-info{
+    margin: 0;
+    .banner-info-left{
+      height: 130px;
+      .banner-info-round p{
+        margin: -28px -50px;
+        font-size: 14px;
+      }
+    }
+    .banner-info-right{
+      height: 130px;
+      p{
+        margin: -14% -64%;
+        font-size: 14px;
+      }
+    }  
+  }
 
-@media(min-width:768px) and (max-width:991px){
+}
+@media (min-width:768px) and (max-width:991px){
   .container{
     margin-right: auto;
     margin-left: auto;
     width: 100%;
+    &.capcalera{
+      padding: 0;
+    }
   }
-  /*BANNER INFO*/
-  .banner-info .banner-info-left {
-    float: left;
-    width: 100%;
 
-    .banner-info-round p {
-      display: block;
-      top: 50%;
-      left: 50%;
-      position: absolute;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 23px;
-      width: 114px;
-      margin: -35px 0 0 -57px;
-      text-align: center;
+  .retol{
+      .retol-text h1 {
+        font-size: 15px;
+        padding: 11px 8px;
       }
   }
-  .banner-info .banner-info-right {
-    float: left;
-    width: 100%;
-    p {
-      padding: 1% 0 14%;
-      font-weight: 600;
-      font-size: 20px;
-      text-align: center;
-      line-height: 23px;
-      margin: -14% -45%;
-    }
-  }
-
-    .retol{
-        .retol-text h1 {
-          font-size: 15px;
-          padding: 11px 8px;
-        }
-    }
-    .retol-2{
-        .retol-text h1 {
-          font-size: 16px;
-          padding: 11px 8px;
-        }      
-    }     
+  .retol-2{
+      .retol-text h1 {
+        font-size: 16px;
+        padding: 11px 8px;
+      }      
+  }     
 }
 
-@media(min-width:992px) and (max-width:1199px){
+@media (min-width:992px) and (max-width:1199px){
 
 }
-@media(min-width:1200px){
+@media (min-width:1200px){
 
 }
+

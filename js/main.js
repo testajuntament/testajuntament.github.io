@@ -1,7 +1,7 @@
 // "use strict"; 
 
-var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo', 'angular-flexslider']);
-//, 'ngMap', 'sn.addthis', 
+var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo','ngSanitize']);
+//, 'ngMap', 'sn.addthis', , 'angular-flexslider'
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	//$locationProvider.html5Mode(true);
 	//$locationProvider.hashPrefix('!');
@@ -30,7 +30,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	gettextCatalog.debug = false;
-	$rootScope.basePath =  'http://localhost/Escolesgava/';  
+	$rootScope.basePath =  'http://localhost/testajuntament/';  
 	//$rootScope.basePath =  'http://testajuntament.github.io/';  
 	$rootScope.historyLink = 'graella';
 
