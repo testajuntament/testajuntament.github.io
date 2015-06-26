@@ -8,7 +8,7 @@ app.constant('FIREBASE_URL', "https://activitats.firebaseio.com/")
 app.controller("SampleCtrl", function($scope, ActivitatsService) {
 	
 	$scope.newActivitat = {
-		codi: "",
+		codi: ActivitatsService.getActivitats().length + 1,
 		activitat_destacada: {id: 10, prioritat: "10"},		
 		nivell_recomenat: 'Primaria',
 		nivelleducatiu: [{ id: 1, nom:"Educació infantil"}],

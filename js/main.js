@@ -30,8 +30,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	gettextCatalog.debug = false;
-	$rootScope.basePath =  'http://localhost/testajuntament/';  
-	//$rootScope.basePath =  'http://testajuntament.github.io/';  
+	// $rootScope.basePath =  'http://localhost/testajuntament/';  
+	$rootScope.basePath =  'http://testajuntament.github.io/';  
 	$rootScope.historyLink = 'graella';
 
 	$rootScope.changeLanguage = function(language) {
