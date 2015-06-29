@@ -1,4 +1,4 @@
-// "use strict"; 
+"use strict"; 
 
 var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo','ngSanitize']);
 //, 'ngMap', 'sn.addthis', , 'angular-flexslider'
@@ -31,6 +31,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	gettextCatalog.debug = false;
 	// $rootScope.basePath =  'http://localhost/testajuntament/';  
+	// $rootScope.basePath =  'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model';  
 	$rootScope.basePath =  'http://testajuntament.github.io/';  
 	$rootScope.historyLink = 'graella';
 

@@ -31,7 +31,7 @@ var paths = {
     'js/vendor/angular-moment/angular-moment.js',
     // 'js/*.*'
     // 'js/main.js*'
-    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
   	'js/main.js*'
   ],
   // images: 'assets/img/**/*s',

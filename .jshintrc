@@ -1,6 +1,7 @@
 {
   "globalstrict": false,
   "globals": {
+    "use strict": false,
     "$": false,
     "angular": false,
     "describe": false,

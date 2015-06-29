@@ -53,7 +53,7 @@
                 <div class="arrow-up border-area-{{activitat.area_de_coneixement.id}}"></div>
                 
                 <div class="data-info" ng-if="activitat.nivell_recomenat">
-                    <div><span class="key-info">Nivell recomanat:</span><br> <span class="valor-info">{{activitat.nivell_recomenat}}</span></div>
+                    <div><span class="key-info">Nivell recomanat:</span> <span class="valor-info">{{activitat.nivell_recomenat}}</span></div>
                 </div>
 
                 <div class="data-info" ng-if="activitat.durada">
@@ -83,37 +83,40 @@
                 </p>
                 </div>
               </div>
+        </div>
 
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <div class="detall-info">
+                <div class="titol" ng-if="activitat.titol">{{activitat.titol}}</div>
+            </div>    
         </div>
 
         <!--middle col -->
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
             <div class="detall-info">
-                <div class="titol" ng-if="activitat.titol">{{activitat.titol}}</div>
                 <div class="subtitol" ng-if="activitat.subtitol"><p>{{activitat.subtitol}}</p></div>
                 <div class="descripcio" ng-if="activitat.descripcio"><p>{{activitat.descripcio}}</p></div>
             </div>
                 
             <div class="taller">
                 <p>
-                    <div class="titol-tallers">Tallers</div>
+                    <div class="titol-tallers">Tallers {{activitat.area_de_coneixement.id}}</div>
                     <div class="row">
 
-                        <div class="col-xs-4 col-md-4" ng-repeat="taller in activitat.tallers">
+                        <div class="col-xs-4 col-md-4 " ng-repeat="taller in activitat.tallers">
                             <div class="taller-info">
                                 <div class="taller-foto">
                                     <img class="img-responsive" ng-src="{{$root.basePath}}{{taller.imatge}}">
                                     <div class="taller-plus" >
                                         <a  class="color-area-{{activitat.area_de_coneixement.id}}" 
-                                            ng-href="{{$root.getDetailPath(activitat.codi)}}" 
-                                            title="Veure més detalls."
+                                            title="{{taller.titol}}"
+                                            data-content="{{activitat.descripcio}}"
                                             data-container="body"
-                                            class="btn btn-lg btn-danger" 
                                             data-toggle="popover" 
                                             data-placement="bottom"
-                                            title="{{taller.titol}}" 
-                                            data-content="{{activitat.descripcio}}">
+                                            html=true
+                                            >
                                             <i class="glyphicon glyphicon-plus-sign">
                                                 <div class="back-white"></div>
                                             </i>
@@ -125,27 +128,62 @@
                                 <div class="taller-recomanat">{{taller.nivell_recomenat}}</div>
                             </div>
 
-<script>
-$( document ).ready(function() {
-    $(function () {
-      $('[data-toggle="popover"]').popover();
-    })
-});
-</script>
+                            <!-- <div class="popover">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title bg-solid-area-{{activitat.area_de_coneixement.id}}" >titulo</h3>
+                                <div class="popover-content"></div>
+                                <div class="popover-footer">
+                                    <button type="button" class="btn btn-primary popover-submit">
+                                        <i class="icon-ok icon-white"></i>
+                                    </button>&nbsp;
+                                    <button type="button" class="btn btn-default popover-cancel">
+                                        <i class="icon-remove"></i>
+                                    </button>
+                                </div>
+                            </div> -->
+
+                        <script>
+                        $( document ).ready(function() {                     
+
+
+                            $('[data-toggle="popover"]').popover({
+                                trigger : 'click',  
+                                placement : 'bottom', 
+                                html: 'true', 
+                         
+                            })
+                            //   .on('shown', function() {
+                            //     //hide any visible comment-popover
+                            //     $("[rel=comments]").not(this).popover('hide');
+                            //     var $this = $(this);
+                            //     //attach link text
+                            //     $('.popover-textarea').val($this.text()).focus();
+                            //     //close on cancel
+                            //     $('.popover-cancel').click(function() {
+                            //         $this.popover('hide');
+                            //     });
+                            //     //update link text on submit
+                            //     $('.popover-submit').click(function() {
+                            //         $this.text($('.popover-textarea').val());
+                            //         $this.popover('hide');
+                            //     });
+                            //  });
+
+                        });
+                        </script>
 
                         </div>
 
                     </div>
                 </p>
             </div>
-
         </div>
 
         <!--right col-->
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
             <div class="" ng-if="activitat.observacions">
-                <div class="titol-bar">&nbsp</div>
+                <!-- <div class="titol-bar">&nbsp</div> -->
                 
                 <div class="titol-observacions bg-solid-area-{{activitat.area_de_coneixement.id}}">
                     <div class="arrow-up border-area-{{activitat.area_de_coneixement.id}}"></div>
@@ -162,10 +200,6 @@ $( document ).ready(function() {
             </div>
                     
         </div>
-                    <!-- <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-file-pdf-o"></i></a>
-                    <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-link"></i></a>
-                    <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-file-pdf-o"></i></a>
-                    <a ng-href="{{pdfLink()}}" title="Guardar en pdf"><i class="fa fa-file-pdf-o"></i></a> -->
  
     </div>       
 </div>

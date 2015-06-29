@@ -10,7 +10,7 @@
             </a>
 
             <div class="detalls-obra bg-area-{{activitat.area_de_coneixement.id}}" ng-class="{'veure-detalls': hover}">
-              <div class="detall-titol"><p>{{activitat.titol}}<p></div>
+              <div class="detall-titol"><p>{{activitat.titol | limitTo: 70}}{{activitat.titol.length > 70 ? ' ...' : ''}}<p></div>
               <div class="detall">
                 <p ng-if="activitat.nivell_recomenat">Nivell: {{activitat.nivell_recomenat}}</p>
                 <p ng-if="activitat.durada">Durada: {{activitat.durada}}</p>

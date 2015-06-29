@@ -1,14 +1,13 @@
-// @import url("http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 
-// $ContainerPhone: 430px;
-// $screen-is: 430px;
-// $screen-is-min: ($screen-is);
-// $screen-is-max: 767px;
-// $screen-xs-max: ($screen-is-min - 1);
+$ContainerPhone: 460px;
+$screen-is: 480px;
+$screen-is-min: ($screen-is);
+$screen-is-max: 767px;
+$screen-xs-max: ($screen-is-min - 1);
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// @import "_grids.scss";  
+@import "_grids.scss";  
 @import "../bower_components/font-awesome/scss/font-awesome.scss";
 
 $red-color: #D20019;//#E3001B;
@@ -50,6 +49,7 @@ $color-area-3:  #12b3b3; //blau
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #F3F3F3;
+  font-size: 13px;
 
   a.color-area-1:hover{ color: darken($color-area-1, 7%);}
   a.color-area-2:hover{ color: darken($color-area-2, 7%);}
@@ -206,14 +206,15 @@ body {
   }
   .cap-xs {
     background-color: $red-color;
-    margin: 11px 0px 7px 0;
+    margin: 6px 0px 5px 0;
     text-align: center;
-    padding: 4px 36px;
-    font-size: 20px;
+    padding: 4px 20px;
+    font-size: 17px;
     color: #FFF;
     background-image: none;
     border: none;
     margin-bottom: 0px;
+    float: right;
     &:hover,
     &:focus {
       background-color: $red-color;
@@ -261,7 +262,7 @@ body {
       float: left;
       position: relative;
       height: 100%;
-      padding: 15px 0;
+      padding: 6% 0;
 
       .banner-info-round{
         margin: 0 auto;
@@ -278,10 +279,10 @@ body {
         color: #383838;
         left: 50%;
         font-weight: 700;
-        width: initial;
+        width: 50%;
         text-align: center;
         font-size: 18px;
-        margin: -13% -18%;
+        margin: -16% -25%;
       }       
     }
     .banner-info-right {
@@ -297,7 +298,7 @@ body {
         font-weight: 700;
         width: initial;
         text-align: center;
-        margin: -13% -38%;
+        margin: -16% -38%;
         font-size: 18px;
         a{
           color: #fff;
@@ -519,12 +520,12 @@ body {
     margin: 10px 0 10px 0;
 
     p {
-      font-size: 21px;
+      font-size: 17px;
       font-weight: 200;
       margin: 0;
       float: left;
       strong {
-        font-weight: 500;
+        font-weight: 400;
       }
     }
    
@@ -618,12 +619,12 @@ body {
       font-size: 17px;
       background-color:$red-color;
       color: #FFF;
-      padding: 11px 15px;
+      padding: 9px 15px;
       line-height: 1.2;
     }
     .subtitol{
       padding: 10px 15px 5px;
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 600;
     }
     .descripcio{
@@ -657,6 +658,8 @@ body {
             position: absolute;
             top: 6%;
             right: 14%;
+            font-size: 36px;
+            z-index: 1000;
             .glyphicon {
               position: relative;
               top: 1px;
@@ -702,14 +705,14 @@ body {
     font-size: 17px;
     background-color:$red-color;
     color: #FFF;
-    padding: 11px 15px;
+    padding: 9px 15px;
     line-height: 1.2;
   }
   .titol-observacions{
     position: relative;
     text-align: center;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 15px;
     color: #fff;
     padding: 11px 15px;
     line-height: 1.2;  
@@ -819,41 +822,6 @@ body {
       top: 0%;
       @include transition(0.2s);
     }
-    // .detalls-obra p i.mark-verd {
-    //   background: url("../img/mark-verd.svg") center 0 no-repeat;
-    //   padding: 5px 12px;
-    // }
-    // .detalls-obra p i.mark-taronja {
-    //   background: url("../img/mark-taronja.svg") center 0 no-repeat;
-    //   padding: 5px 12px;
-    // }
-    // .detalls-obra p i.mark-vermell {
-    //   background: url("../img/mark-vermell.svg") center 0 no-repeat;
-    //   padding: 5px 12px;
-    // }
-    // .detalls-obra span {
-    //   display: block;
-    //   background-color: $red-color;
-    //   margin: 46px auto;
-    //   text-align: center;
-    //   color: #fff;
-    //   text-decoration: none;
-    //   height: auto;
-    //   padding: 10px;
-    //   @include transition(0.3s);
-    //   &:hover {
-    //     background-color: #000;
-    //     @include transition(0.3s);
-    //   }    
-    //   a{
-    //     color: #fff;
-    //     &:hover{
-    //       text-decoration: none;
-    //     }
-
-    //   }
-
-    // }
 
   .modul-obra-llista {
     margin-bottom: 20px;
@@ -861,29 +829,6 @@ body {
     border-bottom: 1px #eee solid;
   }
 
-  // .modul-obra-llista .R-infoDestacat i {
-  //   margin-right: 5px;
-  //   padding: 15px 12px;
-  // }
-  // .modul-obra-llista .R-infoDestacat i.mark-verd {
-  //   background: url("../img/mark-verd.svg") center 0 no-repeat;
-  // }
-  // .modul-obra-llista .R-infoDestacat i.mark-taronja {
-  //   background: url("../img/mark-taronja.svg") center 0 no-repeat;
-  // }
-  // .modul-obra-llista .R-infoDestacat i.mark-vermell {
-  //   background: url("../img/mark-vermell.svg") center 0 no-repeat;
-  // }
-  // .modul-obra-llista .R-infoDestacat .titol {
-  //   margin: 10px 0;
-  //   font-size: 20px;
-  //   font-weight: 500;
-  //   color: #111;
-  //   line-height: 1.25;
-  // }
-  // .modul-obra-llista .R-infoDestacat .titol a {
-  //   color: #111;
-  // }
   .modul-obra-llista .detalls-obra {
     margin-left: 30px;
   }
@@ -996,7 +941,9 @@ body {
 
 
 /*MEDIA QUERIES*/
-@media only screen and (min-width: 430px) and (max-width:479px){
+@media (min-width: 0px) and (max-width:479px){
+  .cap-xs{
+  }
   .container{
     width: 100%;
     &.capcalera{
@@ -1009,45 +956,53 @@ body {
     .retol-text{
       h1{
         padding: 11px 8px;
+        font-size: 16px;
       }
     }
   }
   .retol-2{
     width: 100%;
+    border-bottom: 1px solid #AD0318;
+    .retol-text{
+      h1{
+        font-size: 16px;
+      }
+    }
   }
+  .banner-info{
+    height: 95px;
+    margin: 0;
+    .banner-info-left{
+      padding: 1.7% 0;
+      .banner-info-round {}
+      p{
+        margin: -28px -50px;
+        font-size: 12px;
+        margin: -14% -25%
+      }
+    }
+    .banner-info-right{
+      p{
+        margin: -15% -40%;
+        font-size: 13px;
+      }
+    }
+  }    
 
   .sidebar-offcanvas {
     display: none;
   }
   .sidebar-offcanvas.active {
-    @include transition(0.2s);
+    // @include transition(0.2s);
     display: block;
   }
-
-  .banner-info{
-    margin: 0;
-    .banner-info-left{
-      height: 130px;
-      .banner-info-round p{
-        margin: -28px -50px;
-        font-size: 14px;
-      }
-    }
-    .banner-info-right{
-      height: 130px;
-      p{
-        margin: -14% -64%;
-        font-size: 14px;
-      }
-    }
-  }  
 
   .modul-obra {
     margin-bottom: 30px;
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px){
+@media (min-width: 480px) and (max-width:767px){
   .container{
     width: 100%;
     &.capcalera{
@@ -1136,7 +1091,27 @@ body {
         font-size: 16px;
         padding: 11px 8px;
       }      
-  }     
+  }  
+  .banner-info{
+    margin: 0;
+    .banner-info-left{
+      height: 100%;
+      padding: 6% 0;
+      .banner-info-round{
+      } 
+      p{
+        margin: -16% -25%;
+        font-size: 14px;
+      }
+    }
+    .banner-info-right{
+      height: 100%;
+      p{
+        margin: -16% -25%;
+        font-size: 14px;
+      }
+    }  
+  }   
 }
 
 @media (min-width:992px) and (max-width:1199px){
