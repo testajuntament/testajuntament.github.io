@@ -6821,7 +6821,7 @@ body {
   display: block;
   margin: 0px;
   width: 105px;
-  float: left; }
+  float: right; }
 
 .icones-socials {
   float: right;
@@ -6942,7 +6942,7 @@ body {
     float: left;
     position: relative;
     height: 100%;
-    padding: 6% 0; }
+    padding: 5% 0; }
     .banner-info .banner-info-left .banner-info-round {
       margin: 0 auto;
       background-repeat: no-repeat;
@@ -6960,7 +6960,7 @@ body {
       width: 50%;
       text-align: center;
       font-size: 18px;
-      margin: -16% -25%; }
+      margin: -12% -25%; }
   .banner-info .banner-info-right {
     width: 50%;
     float: left;
@@ -6974,7 +6974,7 @@ body {
       font-weight: 700;
       width: initial;
       text-align: center;
-      margin: -16% -38%;
+      margin: -12% -38%;
       font-size: 18px; }
       .banner-info .banner-info-right p a {
         color: #fff; }
@@ -7022,7 +7022,9 @@ body {
   .modul-filtres .form-cercador {
     padding: 20px 0 0; }
     .modul-filtres .form-cercador input {
-      margin: 38px 0 0 0;
+      font-size: 15px;
+      font-weight: 500;
+      margin: 35px 0 0 0;
       width: 100%;
       border: 1px solid #e3e4e8;
       background: #FFF url("../img/lupa.png") right 4px no-repeat;
@@ -7428,7 +7430,7 @@ body {
   width: 120px; }
 
 .navegacio-top {
-  padding: 10px 2px;
+  padding: 4px 2px 5px;
   font-size: 16px;
   margin-bottom: 2px;
   display: block; }
@@ -7437,7 +7439,7 @@ body {
     color: #383838; }
   .navegacio-top i {
     font-size: 17px;
-    margin-right: 5px;
+    margin-right: 0px;
     margin-top: 5px; }
 
 .navegacio-top a:hover {
@@ -7518,7 +7520,7 @@ body {
   .detalls-obra p {
     font-weight: 600;
     color: #FFF;
-    font-size: 24px; }
+    font-size: 14px; }
   .sidebar-offcanvas {
     display: none; }
   .sidebar-offcanvas.active {
