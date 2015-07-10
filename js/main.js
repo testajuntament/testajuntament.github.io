@@ -5,8 +5,8 @@ var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'a
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 	//$locationProvider.html5Mode(true);
 	//$locationProvider.hashPrefix('!');
-	$httpProvider.defaults.useXDomain = true;
-	delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    // $httpProvider.defaults.useXDomain = true;
+    // delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 	$routeProvider
 		.when('/llista-activitats', {
@@ -31,8 +31,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($ro
 }]);
 
 app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
-	gettextCatalog.debug = false;
-	// $rootScope.basePath =  'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model';  
+	gettextCatalog.debug = false; 
 	$rootScope.basePath =  'http://testajuntament.github.io/';  
 	// $rootScope.basePath =  'http://localhost/testajuntament/';  
 	$rootScope.historyLink = 'graella';
@@ -311,9 +310,11 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			defer.resolve(allActivitats);
 		} else {
 			// url: 'https://activitats.firebaseio.com/.json' ?callback=JSON_CALLBACK
-			// url: 'org.gava.model.activitat.json'
+			// url: 'activitats.json'
+			// url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
 			$http({
-				url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
+				'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
+				// url: 'http://localhost/testajuntament/activitats.json'
 			}).success(function(response) {
 				allActivitats = [];
 				angular.forEach(response, function(activitat) {
@@ -334,7 +335,6 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		this.getAllActivitats().then(function(activitats) {
 			angular.forEach(activitats, function(activitat){
 				if (activitat.id === number){
-					console.log('eureka id!!: ' + number);
 					defer.resolve(activitat);
 					return;
 				}

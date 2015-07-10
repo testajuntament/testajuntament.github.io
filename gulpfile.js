@@ -29,8 +29,6 @@ var paths = {
     'js/vendor/angular-paginator.js',
     'js/vendor/moment/min/moment-with-langs.js',
     'js/vendor/angular-moment/angular-moment.js',
-    // 'js/*.*'
-    // 'js/main.js*'
     'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
   	'js/main.js*'
   ],
