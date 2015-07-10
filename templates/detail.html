@@ -44,16 +44,16 @@
                 </section>
             </div>  -->
 
-            <div ng-if="images.length > 0">
-                <img class="img-responsive" ng-src="{{$root.basePath}}{{images[0].pathFoto}}" />
+            <div ><!-- ng-if="images.length > 0" -->
+                <img class="img-responsive" ng-src="http://portals.ajuntament.gava.cat/{{activitat.pathFoto}}" />
             </div>
 
-            <div class="detall-img-info bg-solid-area-{{activitat.area_de_coneixement.id}}">
+            <div class="detall-img-info bg-solid-area-{{activitat.areaConeixement.id}}">
                 
-                <div class="arrow-up border-area-{{activitat.area_de_coneixement.id}}"></div>
+                <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
                 
-                <div class="data-info" ng-if="activitat.nivell_recomenat">
-                    <div><span class="key-info">Nivell recomanat:</span> <span class="valor-info">{{activitat.nivell_recomenat}}</span></div>
+                <div class="data-info" ng-if="activitat.nivellRecomanat">
+                    <div><span class="key-info">Nivell recomanat:</span> <span class="valor-info">{{activitat.nivellRecomanat}}</span></div>
                 </div>
 
                 <div class="data-info" ng-if="activitat.durada">
@@ -64,30 +64,32 @@
                     <div><span class="key-info">Preu:</span> <span class="valor-info">{{activitat.preu}}</span></div>
                 </div>
                 
-                <div class="data-info" ng-if="activitat.lloc">
-                    <div><span class="key-info">Lloc de realitzación:</span> <span class="valor-info" ng-bind-html="activitat.lloc"></span></div>
+                <div class="data-info" ng-if="activitat.llocRealitzacio">
+                    <div><span class="key-info">Lloc de realització:</span> <span class="valor-info" ng-bind-html="activitat.llocRealitzacio"></span></div>
                 </div>
             </div>
               
               <div class="banner-info detail" >
                 <div class="banner-info-left">
                   <div class="banner-info-round"></div>
-                  <p>Informació<br>i<br>reserves</p>
+                    <p>Informació<br>i<br>reserves</p>
                 </div>
 
                 <div class="banner-info-right">          
-                  <p>
-                    <a href="telto:+34932639610">93 263 96 10</a><br>
+                    <p>
+                    <!-- <a href="telto:+34932639610">93 263 96 10</a> <br> -->
+                    <span ng-if="activitat.telefonInformacioReserves" ng-bind-html="activitat.telefonInformacioReserves"></span>
                     &nbsp;<br>
-                  <a href="mailto:museu@gava.cat">museu@gava.cat</a>
-                </p>
+                    <!-- <a href="mailto:museu@gava.cat">museu@gava.cat</a> -->
+                    <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves"></span>
+                    </p>
                 </div>
               </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <div class="detall-info">
-                <div class="titol" ng-if="activitat.titol">{{activitat.titol}}</div>
+                <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol"></div>
             </div>    
         </div>
 
@@ -95,8 +97,8 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
             <div class="detall-info">
-                <div class="subtitol" ng-if="activitat.subtitol"><p>{{activitat.subtitol}}</p></div>
-                <div class="descripcio" ng-if="activitat.descripcio"><p>{{activitat.descripcio}}</p></div>
+                <div class="subtitol" ng-if="activitat.subtitol"><p ng-bind-html="activitat.subtitol"></p></div>
+                <div class="descripcio" ng-if="activitat.descripcio"><span ng-bind-html="activitat.descripcio"></span></div>
             </div>
                 
             <div class="taller">
@@ -107,7 +109,7 @@
                         <div class="col-xs-4 col-md-4 " ng-repeat="taller in activitat.tallers">
                             <div class="taller-info">
                                 <div class="taller-foto">
-                                    <img class="img-responsive" ng-src="{{$root.basePath}}{{taller.imatge}}">
+                                    <img class="img-responsive" ng-src="http://portals.ajuntament.gava.cat/{{taller.imatge}}">
                                     <div class="taller-plus" >
                                         <a  class="color-area-{{activitat.area_de_coneixement.id}}" 
                                             title="{{taller.titol}}"
@@ -183,20 +185,18 @@
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
             <div class="" ng-if="activitat.observacions">
-                <!-- <div class="titol-bar">&nbsp</div> -->
-                
-                <div class="titol-observacions bg-solid-area-{{activitat.area_de_coneixement.id}}">
-                    <div class="arrow-up border-area-{{activitat.area_de_coneixement.id}}"></div>
+                <div class="titol-observacions bg-solid-area-{{activitat.areaConeixement.id}}">
+                    <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
                     Observacions
                 </div> 
-                <div class="text-observacions"><p>{{activitat.observacions}}</p></div>
+                <div class="text-observacions"><p ng-bind-html="activitat.observacions"></p></div>
             </div>
 
             <div class="" ng-if="activitat.material_didactic">
-                <div class="titol-observacions bg-solid-area-{{activitat.area_de_coneixement.id}}">
-                    <div class="arrow-up border-area-{{activitat.area_de_coneixement.id}}"></div>
+                <div class="titol-observacions bg-solid-area-{{activitat.areaConeixement.id}}">
+                    <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
                     Material didàctic</div> 
-                <div class="text-observacions"><p ng-bind-html="activitat.material_didactic"></p></div>
+                <div class="text-observacions"><p ng-bind-html="activitat.materialDidactics"></p></div>
             </div>
                     
         </div>

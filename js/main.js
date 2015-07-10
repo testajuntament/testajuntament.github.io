@@ -1,10 +1,13 @@
 "use strict"; 
 
 var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo','ngSanitize']);
-//, 'ngMap', 'sn.addthis', , 'angular-flexslider'
-app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
+app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 	//$locationProvider.html5Mode(true);
 	//$locationProvider.hashPrefix('!');
+	$httpProvider.defaults.useXDomain = true;
+	delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
 	$routeProvider
 		.when('/llista-activitats', {
 			controller: 'ListCtrl',
@@ -20,7 +23,6 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		})
 		.when('/fitxa/:id', {
 			controller: 'DetailCtrl',
-			
 			templateUrl: 'templates/detail.html',
 		})
 		.otherwise({
@@ -30,9 +32,9 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	gettextCatalog.debug = false;
-	// $rootScope.basePath =  'http://localhost/testajuntament/';  
 	// $rootScope.basePath =  'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model';  
-	$rootScope.basePath =  'http://testajuntament.github.io/';  
+	// $rootScope.basePath =  'http://testajuntament.github.io/';  
+	$rootScope.basePath =  'http://localhost/testajuntament/';  
 	$rootScope.historyLink = 'graella';
 
 	$rootScope.changeLanguage = function(language) {
@@ -120,13 +122,12 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	$rootScope.searchText = "";
 
 	$rootScope.nivellFilterModels = [];
+	$rootScope.areaFilterModels = [];
 	$rootScope.nivellFilterModels[1] = false;
 	$rootScope.nivellFilterModels[2] = false;
 	$rootScope.nivellFilterModels[3] = false;
 	$rootScope.nivellFilterModels[4] = false;
 	$rootScope.nivellFilterModels[5] = false;
-
-	$rootScope.areaFilterModels = [];
 
 	var resetPager = function() {
 		Paginator.page = 0;
@@ -144,8 +145,8 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 			empty = true;
 		}
 
-		angular.forEach(activitat.nivelleducatiu, function(nivelleducatiu){
-			if ($rootScope.nivellFilterModels[nivelleducatiu.id] === true) {
+		angular.forEach(activitat.nivellsEducatius, function(nivellsEducatius){
+			if ($rootScope.nivellFilterModels[nivellsEducatius.id] === true) {
 				acceptar = true;
 			}
 		});
@@ -154,7 +155,7 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 			return false;
 		}
 
-		if ($rootScope.areaFilterModels[activitat.area_de_coneixement.id] === false) {
+		if ($rootScope.areaFilterModels[activitat.areaConeixement.id] === false) {
 			return false;
 		}
 
@@ -185,8 +186,8 @@ app.controller('FiltersCtrl', function($scope, GavaAPI, gettextCatalog, $rootSco
 	GavaAPI.getAllNivells().then(function(allNivells) {
 		$scope.allNivells = allNivells;
 		if ($rootScope.nivellFilterModels.length === 0) {
-			angular.forEach($scope.allNivells, function(nivelleducatiu) {
-				$rootScope.nivellFilterModels[nivelleducatiu.id] = true;
+			angular.forEach($scope.allNivells, function(nivellsEducatius) {
+				$rootScope.nivellFilterModels[nivellsEducatius.id] = true;
 			});
 		}
 	});	
@@ -194,11 +195,12 @@ app.controller('FiltersCtrl', function($scope, GavaAPI, gettextCatalog, $rootSco
 	GavaAPI.getAllAreas().then(function(allAreas) {
 		$scope.allAreas = allAreas;
 		if ($rootScope.areaFilterModels.length === 0) {
-			angular.forEach($scope.allAreas, function(area_de_coneixement) {
-				$rootScope.areaFilterModels[area_de_coneixement.id] = true;
+			angular.forEach($scope.allAreas, function(areaConeixement) {
+				$rootScope.areaFilterModels[areaConeixement.id] = true;
 			});
 		}
 	});	
+
 });
 
 app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, GavaAPI, gettextCatalog, $rootScope, $sce) {
@@ -207,10 +209,6 @@ app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, 
 	$scope.print = function() {
 		$window.print();
 	};
-
-	// $scope.pdfLink = function() {
-	// 	return $window.location.href.replace('/#', '') + '.pdf';
-	// };
 
 	var addFotosFromNode = function(node) {
 		if (node.foto1) {
@@ -222,27 +220,23 @@ app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, 
 	};
 
 	GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
-		$scope.shareTitle = gettextCatalog.getString('Patrimoni Cultural i Natural de Gavà: ') + activitat[$rootScope.titolAttrKey];
-		$scope.shareDescription = activitat[$rootScope.descripcioAttrKey];
-		$scope.shareURL = $window.location.href.replace('/#','');
-		$scope.activitat = activitat;
-		$scope.images = [];
+		console.log($routeParams.id);
+			$scope.shareTitle = gettextCatalog.getString('Patrimoni Cultural i Natural de Gavà: ') + activitat[$rootScope.titolAttrKey];
+			$scope.shareDescription = activitat[$rootScope.descripcioAttrKey];
+			$scope.shareURL = $window.location.href.replace('/#','');
+			$scope.activitat = activitat;
+			$scope.images = [];
+			addFotosFromNode($scope.activitat);
 
-		addFotosFromNode($scope.activitat);
-		
-		// for (var i = 0; i < $scope.activitat.seguiments.length; i++) {
-		// 	addFotosFromNode($scope.activitat.seguiments[i]);
-		// }
+			$('html head title').text($scope.shareTitle);
+			$('html head meta[name=description]').attr("content", $scope.shareDescription);
 
-		$('html head title').text($scope.shareTitle);
-		$('html head meta[name=description]').attr("content", $scope.shareDescription);
+			// $rootScope.ogTitle = $scope.shareTitle;
+			// $rootScope.ogUrl = $scope.shareURL;
+			// $rootScope.ogDescription = $scope.shareDescription;
+			// $rootScope.ogImage = $rootScope.basePath + $scope.images[0].pathFoto;
 
-		$rootScope.ogTitle = $scope.shareTitle;
-		$rootScope.ogUrl = $scope.shareURL;
-		$rootScope.ogDescription = $scope.shareDescription;
-		$rootScope.ogImage = $rootScope.basePath + $scope.images[0].pathFoto;
-
-		$scope.htmlReady();
+			$scope.htmlReady();
 	}, function() {
 		//console.error('No work');
 	});
@@ -265,6 +259,7 @@ app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, 
 		}
 	};
 });
+
 
 app.directive('matchheight', function() {
 	return {
@@ -312,8 +307,10 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		if (allActivitats) {
 			defer.resolve(allActivitats);
 		} else {
+			// url: 'https://activitats.firebaseio.com/.json' ?callback=JSON_CALLBACK
+			// url: 'org.gava.model.activitat.json'
 			$http({
-				url: 'https://activitats.firebaseio.com/.json'
+				url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
 			}).success(function(response) {
 				allActivitats = [];
 				angular.forEach(response, function(activitat) {
@@ -328,11 +325,11 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		return defer.promise;
 	};
 
-	var getActivitatByCodi = function(codi) {
+	var getActivitatByCodi = function(id) {
 		var defer = $q.defer();
 		this.getAllActivitats().then(function(activitats) {
 			for (var i = activitats.length - 1; i >= 0; i--) {
-				if (activitats[i].codi === codi) {
+				if (activitats[i].id === id) {
 					defer.resolve(activitats[i]);
 					return;
 				}
@@ -342,7 +339,7 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		return defer.promise;
 	};
 
-	//new escoles
+
 	var getAllNivells = function() {
 		var defer = $q.defer();
 		if (allNivells) {
@@ -351,11 +348,9 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			this.getAllActivitats().then(function(activitats) {
 				allNivells = {};
 				angular.forEach(activitats, function(activitat) {
-					angular.forEach(activitat.nivelleducatiu, function(nivelleducatiu) {
-						allNivells[nivelleducatiu.id] = nivelleducatiu;
-					});
-					//allNivells[activitat.nivelleducatiu.id] = activitat.nivelleducatiu; [{"id":1,"nom":"Educació infantil"},{"id":2,"nom":"Educació primària"},{"id":3,"nom":"ESO"}]
-					//allNivells[activitat.nivelleducatiu.id] = activitat;
+					angular.forEach(activitat.nivellsEducatius, function(nivellsEducatius){
+						allNivells[nivellsEducatius.id] = nivellsEducatius;
+					});	
 				});
 				defer.resolve(allNivells);
 			});
@@ -363,19 +358,22 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 
 		return defer.promise;
 
-	};		
+	};	
+
 	var getAllAreas = function() {
 		var defer = $q.defer();
 		if (allAreas) {
 			defer.resolve(allAreas);
 		} else {
 			this.getAllActivitats().then(function(activitats) {
+
 				allAreas = {};
 				angular.forEach(activitats, function(activitat) {
-					allAreas[activitat.area_de_coneixement.id] = activitat.area_de_coneixement;
-				});
+					allAreas[activitat.areaConeixement.id] = activitat.areaConeixement;					
+				});				
 				defer.resolve(allAreas);
 			});
+
 		}
 		return defer.promise;
 	};	

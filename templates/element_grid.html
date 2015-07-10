@@ -5,21 +5,21 @@
       <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
         
           <div style="position:relative; overflow: hidden;">
-            <a ng-href="{{$root.getDetailPath(activitat.codi)}}" title="">
-              <img matchheight ng-src="{{$root.basePath}}{{activitat.foto1.pathFoto}}" alt="" class="imatge-modul-obra img-responsive">
+            <a ng-href="{{$root.getDetailPath(activitat.id)}}" title="">
+              <img matchheight ng-src="http://portals.ajuntament.gava.cat/{{activitat.pathFoto}}" alt="" class="imatge-modul-obra img-responsive">
             </a>
 
-            <div class="detalls-obra bg-area-{{activitat.area_de_coneixement.id}}" ng-class="{'veure-detalls': hover}">
+            <div class="detalls-obra bg-area-{{activitat.areaConeixement.id}}" ng-class="{'veure-detalls': hover}">
               <div class="detall-titol"><p>{{activitat.titol | limitTo: 70}}{{activitat.titol.length > 70 ? ' ...' : ''}}<p></div>
               <div class="detall">
-                <p ng-if="activitat.nivell_recomenat">Nivell: {{activitat.nivell_recomenat}}</p>
+                <p ng-if="activitat.nivellRecomanat">Nivell: {{activitat.nivellRecomanat}}</p>
                 <p ng-if="activitat.durada">Durada: {{activitat.durada}}</p>
                 <p ng-if="activitat.preu">Preu: {{activitat.preu}}</p>
               </div>
 
               <div class="detall-plus" >
-                 <a class="color-area-{{activitat.area_de_coneixement.id}}" 
-                   ng-href="{{$root.getDetailPath(activitat.codi)}}" 
+                 <a class="color-area-{{activitat.areaConeixement.id}}" 
+                   ng-href="{{$root.getDetailPath(activitat.id)}}" 
                    title="Veure més detalls.">
                    <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
                  </a>
