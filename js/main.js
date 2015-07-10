@@ -313,8 +313,7 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			// url: 'activitats.json'
 			// url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
 			$http({
-				'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
-				// url: 'http://localhost/testajuntament/activitats.json'
+				url: 'http://testajuntament.github.io/activitats.json'
 			}).success(function(response) {
 				allActivitats = [];
 				angular.forEach(response, function(activitat) {
