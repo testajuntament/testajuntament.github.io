@@ -53,19 +53,31 @@
                 <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
                 
                 <div class="data-info" ng-if="activitat.nivellRecomanat">
-                    <div><span class="key-info">Nivell recomanat:</span> <span class="valor-info">{{activitat.nivellRecomanat}}</span></div>
+                    <div>
+                        <span class="key-info">Nivell recomanat:</span><br> 
+                        <span class="valor-info"ng-bind-html="activitat.nivellRecomanat"></span>
+                    </div>
                 </div>
 
                 <div class="data-info" ng-if="activitat.durada">
-                    <div><span class="key-info">Durada:</span> <span class="valor-info">{{activitat.durada}}</span></div>
+                    <div>
+                        <span class="key-info">Durada:</span> <br>
+                        <span class="valor-info"ng-bind-html="activitat.durada"></span>
+                    </div>
                 </div>
                 
                 <div class="data-info" ng-if="activitat.preu">
-                    <div><span class="key-info">Preu:</span> <span class="valor-info">{{activitat.preu}}</span></div>
+                    <div>
+                        <span class="key-info">Preu:</span><br> 
+                        <span class="valor-info" ng-bind-html="activitat.preu"></span>
+                    </div>
                 </div>
                 
                 <div class="data-info" ng-if="activitat.llocRealitzacio">
-                    <div><span class="key-info">Lloc de realització:</span> <span class="valor-info" ng-bind-html="activitat.llocRealitzacio"></span></div>
+                    <div>
+                        <span class="key-info">Lloc de realització:</span> 
+                        <span class="valor-info" ng-bind-html="activitat.llocRealitzacio"></span>
+                    </div>
                 </div>
             </div>
               
@@ -76,13 +88,13 @@
                 </div>
 
                 <div class="banner-info-right">          
-                    <p>
+                    <!-- <p> -->
                     <!-- <a href="telto:+34932639610">93 263 96 10</a> <br> -->
                     <span ng-if="activitat.telefonInformacioReserves" ng-bind-html="activitat.telefonInformacioReserves"></span>
                     &nbsp;<br>
                     <!-- <a href="mailto:museu@gava.cat">museu@gava.cat</a> -->
                     <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves"></span>
-                    </p>
+                    <!-- </p> -->
                 </div>
               </div>
         </div>
@@ -103,17 +115,17 @@
                 
             <div class="taller">
                 <p>
-                    <div class="titol-tallers">Tallers {{activitat.area_de_coneixement.id}}</div>
+                    <div class="titol-tallers">Tallers</div>
                     <div class="row">
 
                         <div class="col-xs-4 col-md-4 " ng-repeat="taller in activitat.tallers">
                             <div class="taller-info">
                                 <div class="taller-foto">
-                                    <img class="img-responsive" ng-src="http://portals.ajuntament.gava.cat/{{taller.imatge}}">
+                                    <img class="img-responsive" ng-src="http://portals.ajuntament.gava.cat/{{taller.pathFoto}}">
                                     <div class="taller-plus" >
-                                        <a  class="color-area-{{activitat.area_de_coneixement.id}}" 
+                                        <a  class="color-area-{{activitat.areaConeixement.id}}" 
                                             title="{{taller.titol}}"
-                                            data-content="{{activitat.descripcio}}"
+                                            data-content="{{taller.descripcio}}"
                                             data-container="body"
                                             data-toggle="popover" 
                                             data-placement="bottom"
@@ -127,7 +139,7 @@
                                     <div class="taller-titol">{{taller.titol}}</div>
                                 </div>
             
-                                <div class="taller-recomanat">{{taller.nivell_recomenat}}</div>
+                                <div class="taller-recomanat">{{taller.nivellRecomanat}}</div>
                             </div>
 
                             <!-- <div class="popover">
