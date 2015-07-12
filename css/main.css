@@ -7524,15 +7524,16 @@ body {
     border-bottom: 1px solid #AD0318; }
     .retol-2 .retol-text h1 {
       font-size: 16px; }
-  .banner-info {
+  .banner-info.main {
     height: 95px;
     margin: 0; }
-    .banner-info .banner-info-left {
-      padding: 1.7% 0; }
-      .banner-info .banner-info-left .banner-info-round p {
-        font-size: 12px;
-        margin: -14% -25%; }
-    .banner-info .banner-info-right p {
+    .banner-info.main .banner-info-left {
+      padding: 1% 0; }
+      .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
+        font-size: 13px; }
+        .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p a {
+          font-size: 13px; }
+    .banner-info.main .banner-info-right .banner-info-vertical p {
       font-size: 13px; }
   .sidebar-offcanvas {
     display: none; }

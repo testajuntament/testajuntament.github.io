@@ -1002,22 +1002,28 @@ body {
       }
     }
   }
-  .banner-info{
+  .banner-info.main{
     height: 95px;
     margin: 0;
     .banner-info-left{
-      padding: 1.7% 0;
+      padding: 1% 0;
       .banner-info-round {
-        p{
-          font-size: 12px;
-          margin: -14% -25%
-        }        
+        .banner-info-vertical{
+          p{
+            font-size: 13px;
+            a{
+              font-size: 13px;
+            }
+          } 
+        }         
       }
     }
     .banner-info-right{
-      p{
-        font-size: 13px;
-      }
+      .banner-info-vertical{
+        p{
+          font-size: 13px;
+        }
+      }  
     }
   }    
 
