@@ -220,8 +220,6 @@ app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, 
 	console.log('$routeParams.id!!: '+ $routeParams.id);
 
 	GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
-			console.log('activitat: '+activitat);
-			console.table(activitat);
 		
 			$scope.shareTitle = gettextCatalog.getString('Patrimoni Cultural i Natural de Gavà: ') + activitat[$rootScope.titolAttrKey];
 			$scope.shareDescription = activitat[$rootScope.descripcioAttrKey];
@@ -310,13 +308,14 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			defer.resolve(allActivitats);
 		} else {
 			// url: 'https://activitats.firebaseio.com/.json' ?callback=JSON_CALLBACK
-			// url: 'activitats.json'
-			// url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
-			$http({
-				url: 'http://testajuntament.github.io/activitats.json'
-			}).success(function(response) {
+			// $http({
+			// 	url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
+			// })
+			$http.get('activitats.json')
+			.success(function(response) {
 				allActivitats = [];
 				angular.forEach(response, function(activitat) {
+					console.log('activitat', activitat);
 					allActivitats.push(activitat);
 				});
 				$rootScope.allActivitats = allActivitats;
@@ -352,16 +351,15 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			this.getAllActivitats().then(function(activitats) {
 				allNivells = {};
 				angular.forEach(activitats, function(activitat) {
-					angular.forEach(activitat.nivellsEducatius, function(nivellsEducatius){
+					angular.forEach(activitat.nivellsEducatius, function(nivellsEducatius, key){
+						console.log('nivellsEducatius: ' + nivellsEducatius.id + '| key: '+ key);
 						allNivells[nivellsEducatius.id] = nivellsEducatius;
 					});	
 				});
 				defer.resolve(allNivells);
 			});
 		}
-
 		return defer.promise;
-
 	};	
 
 	var getAllAreas = function() {
@@ -370,17 +368,16 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			defer.resolve(allAreas);
 		} else {
 			this.getAllActivitats().then(function(activitats) {
-
 				allAreas = {};
 				angular.forEach(activitats, function(activitat) {
 					allAreas[activitat.areaConeixement.id] = activitat.areaConeixement;					
 				});				
 				defer.resolve(allAreas);
 			});
-
 		}
 		return defer.promise;
 	};	
+
 	return {
 		'getAllActivitats': getAllActivitats,
 		'getActivitatByCodi': getActivitatByCodi,

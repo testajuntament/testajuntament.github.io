@@ -6771,10 +6771,10 @@ body {
 .home-back {
   margin: 0px;
   display: block;
-  width: 49px;
+  width: 46px;
   float: left;
   background-color: #D20019;
-  padding: 11px 17px;
+  padding: 13px 15px;
   height: 48px;
   border-right: #FF0F2C 1px solid;
   border-bottom: #990113 1px solid; }
@@ -6787,14 +6787,14 @@ body {
   color: #fff; }
   .retol .retol-text {
     float: left;
-    border-left: 1px solid #6C6C6C; }
+    border-left: 1px solid #DFDFDF; }
     .retol .retol-text h1 {
       text-decoration: none;
       letter-spacing: -1px;
       line-height: 26px;
       margin: 0;
       font-size: 18px;
-      padding: 10px 8px;
+      padding: 11px 8px;
       color: #383838;
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
@@ -6926,7 +6926,7 @@ body {
   background-color: transparent;
   float: left; }
 
-.banner-info {
+.banner-info.main {
   margin: 15px 0px;
   color: #FFF;
   height: 200px;
@@ -6937,76 +6937,110 @@ body {
   background: -webkit-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
   background: linear-gradient(to bottom, #d1d1d1 0%, #636363 51%, #383838 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#383838', GradientType=0 ); }
-  .banner-info .banner-info-left {
+  .banner-info.main .banner-info-left {
     width: 50%;
     float: left;
     position: relative;
     height: 100%;
     padding: 5% 0; }
-    .banner-info .banner-info-left .banner-info-round {
+    .banner-info.main .banner-info-left .banner-info-round {
       margin: 0 auto;
       background-repeat: no-repeat;
       height: 100%;
       background-size: contain;
       background-position: center;
       background-image: url('../img/white-circle-np.png'); }
-    .banner-info .banner-info-left p {
-      position: absolute;
+    .banner-info.main .banner-info-left .banner-info-vertical {
+      position: relative;
       top: 50%;
-      z-index: 1000;
-      color: #383838;
-      left: 50%;
-      font-weight: 700;
-      width: 50%;
-      text-align: center;
-      font-size: 18px;
-      margin: -12% -25%; }
-  .banner-info .banner-info-right {
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .banner-info.main .banner-info-left .banner-info-vertical p {
+        color: #383838;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        text-align: center;
+        font-size: 18px; }
+  .banner-info.main .banner-info-right {
     width: 50%;
     float: left;
     position: relative;
     height: 100%; }
-    .banner-info .banner-info-right p {
-      position: absolute;
+    .banner-info.main .banner-info-right .banner-info-vertical {
+      position: relative;
       top: 50%;
-      z-index: 1000;
-      left: 50%;
-      font-weight: 700;
-      width: initial;
-      text-align: center;
-      margin: -12% -38%;
-      font-size: 18px; }
-      .banner-info .banner-info-right p a {
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .banner-info.main .banner-info-right .banner-info-vertical p {
+        margin: 0;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        font-size: 18px;
         color: #fff; }
-    .banner-info .banner-info-right .banner-info-text {
-      padding: 21px 9px;
-      margin: 6% 6%; }
+        .banner-info.main .banner-info-right .banner-info-vertical p a {
+          color: #fff; }
 
 .banner-info.detail {
-  height: 121px; }
+  margin: 15px 0px;
+  color: #FFF;
+  height: 121px;
+  float: left;
+  width: 100%;
+  background: #d1d1d1;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #d1d1d1), color-stop(51%, #636363), color-stop(100%, #383838));
+  background: -webkit-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
+  background: linear-gradient(to bottom, #d1d1d1 0%, #636363 51%, #383838 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#383838', GradientType=0 ); }
   .banner-info.detail .banner-info-left {
+    width: 50%;
+    float: left;
+    position: relative;
+    height: 100%;
     padding: 3% 0; }
-    .banner-info.detail .banner-info-left p {
-      position: absolute;
+    .banner-info.detail .banner-info-left .banner-info-round {
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+      background-image: url('../img/white-circle-np.png'); }
+    .banner-info.detail .banner-info-left .banner-info-vertical {
+      position: relative;
       top: 50%;
-      z-index: 1000;
-      color: #383838;
-      left: 50%;
-      font-weight: 700;
-      width: initial;
-      text-align: center;
-      font-size: 14px;
-      margin: -22% -27%; }
-  .banner-info.detail .banner-info-right p {
-    position: absolute;
-    top: 50%;
-    z-index: 1000;
-    left: 50%;
-    font-weight: 700;
-    width: initial;
-    text-align: center;
-    margin: -21% -49%;
-    font-size: 14px; }
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .banner-info.detail .banner-info-left .banner-info-vertical p {
+        color: #383838;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        text-align: center;
+        font-size: 14px; }
+  .banner-info.detail .banner-info-right {
+    width: 50%;
+    float: left;
+    position: relative;
+    height: 100%; }
+    .banner-info.detail .banner-info-right .banner-info-vertical {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .banner-info.detail .banner-info-right .banner-info-vertical p {
+        margin: 0;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        font-size: 14px;
+        color: #fff; }
+        .banner-info.detail .banner-info-right .banner-info-vertical p a {
+          color: #fff; }
 
 /*FILTRES*/
 .modul-filtres {
@@ -7234,7 +7268,8 @@ body {
     font-size: 17px; }
   .taller .taller-info {
     margin: 13px 0;
-    position: relative; }
+    position: relative;
+    background-color: #808080; }
     .taller .taller-info .taller-foto {
       position: relative; }
       .taller .taller-info .taller-foto .taller-plus {
@@ -7296,6 +7331,11 @@ body {
   padding: 12px 12px 43px;
   font-size: 13px;
   line-height: 22px; }
+  .text-observacions ul {
+    list-style: none;
+    padding: 0; }
+    .text-observacions ul li {
+      margin: 0 0 20px 0; }
 
 /*TRIANGLES*/
 .arrow-up {
@@ -7346,10 +7386,11 @@ body {
   .detalls-obra .detall {
     position: absolute;
     top: 36%;
-    padding: 0 0 0 6%;
-    color: #FFF;
-    font-size: 15px;
-    font-weight: 600; }
+    padding: 0 0 0 6%; }
+    .detalls-obra .detall p {
+      font-size: 13px;
+      color: #FFF;
+      font-weight: 600; }
   .detalls-obra .detall-plus {
     position: absolute;
     top: 79%;
@@ -7391,7 +7432,8 @@ body {
 .modul-paginacio p {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 200;
   color: #666; }
 
 .modul-paginacio .pager li > a, .modul-paginacio .pager li > span {
@@ -7487,12 +7529,10 @@ body {
     margin: 0; }
     .banner-info .banner-info-left {
       padding: 1.7% 0; }
-      .banner-info .banner-info-left p {
-        margin: -28px -50px;
+      .banner-info .banner-info-left .banner-info-round p {
         font-size: 12px;
         margin: -14% -25%; }
     .banner-info .banner-info-right p {
-      margin: -15% -40%;
       font-size: 13px; }
   .sidebar-offcanvas {
     display: none; }
@@ -7540,12 +7580,10 @@ body {
     .banner-info .banner-info-left {
       height: 130px; }
       .banner-info .banner-info-left .banner-info-round p {
-        margin: -28px -50px;
         font-size: 14px; }
     .banner-info .banner-info-right {
       height: 130px; }
       .banner-info .banner-info-right p {
-        margin: -14% -64%;
         font-size: 14px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -7566,12 +7604,10 @@ body {
     .banner-info .banner-info-left {
       height: 100%;
       padding: 6% 0; }
-      .banner-info .banner-info-left p {
-        margin: -16% -25%;
+      .banner-info .banner-info-left .banner-info-round p {
         font-size: 14px; }
     .banner-info .banner-info-right {
       height: 100%; }
       .banner-info .banner-info-right p {
-        margin: -16% -25%;
         font-size: 14px; } }
 

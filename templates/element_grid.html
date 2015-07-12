@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
   <div class="row">
     <div class="col-xs-12 col-is-6 col-sm-6 col-md-4 col-lg-4" 
-         ng-repeat="activitat in $parent.filteredWorks = (activitats | filter:activitatsFilter ) | orderBy:'activitat_destacada.id' | paginate:rowsPerPage">
+         ng-repeat="activitat in $parent.filteredWorks = (activitats | filter:activitatsFilter  ) | orderBy: 'prioritat' | paginate:rowsPerPage">
       <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
         
           <div style="position:relative; overflow: hidden;">
@@ -15,6 +15,7 @@
                 <p ng-if="activitat.nivellRecomanat">Nivell: {{activitat.nivellRecomanat}}</p>
                 <p ng-if="activitat.durada">Durada: {{activitat.durada}}</p>
                 <p ng-if="activitat.preu">Preu: {{activitat.preu}}</p>
+                <p ng-if="activitat.prioritat">(Prioritat: {{activitat.prioritat}})</p>
               </div>
 
               <div class="detall-plus" >
@@ -34,7 +35,7 @@
 
 <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
   <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-xs-12 col-is-6 col-sm-6 col-md-4 col-lg-12">
       <div class="materials">
         <img class="img-responsive" src="img/banner-material-didactic.png">
       </div>

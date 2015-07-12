@@ -20,6 +20,7 @@ $color-area-3:  #12b3b3; //blau
 .bg-area-1{ background-color: rgba(240, 164, 0, 0.7); }
 .bg-area-2{ background-color: rgba(150, 169, 23, 0.7); }
 .bg-area-3{ background-color: rgba(18, 179, 179, 0.7); }
+
 .bg-solid-area-1{ background-color: $color-area-1; }
 .bg-solid-area-2{ background-color: $color-area-2; }
 .bg-solid-area-3{ background-color: $color-area-3; }
@@ -43,6 +44,13 @@ $color-area-3:  #12b3b3; //blau
   -ms-transition: all $time ease-in-out;
   -o-transition: all $time ease-in-out;
   transition: all $time ease-in-out;
+}
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 
@@ -73,10 +81,10 @@ body {
   .home-back {
     margin: 0px;
     display: block;
-    width: 49px;
+    width: 46px;
     float: left;
     background-color: $red-color;
-    padding: 11px 17px;
+    padding: 13px 15px;
     height: 48px;
     border-right: #FF0F2C 1px solid;
     border-bottom: #990113 1px solid;
@@ -90,14 +98,14 @@ body {
 
         .retol-text{
           float: left;
-          border-left: 1px solid #6C6C6C;
+          border-left: 1px solid #DFDFDF;
           h1{
             text-decoration: none;
             letter-spacing: -1px;
             line-height: 26px;
             margin: 0;
             font-size: 18px;
-            padding: 10px 8px;
+            padding: 11px 8px;
             color: $grey-color;
             font-family: 'Open Sans', sans-serif;
             font-weight:700;
@@ -242,7 +250,7 @@ body {
     float: left;
   }
 
-  .banner-info {
+  .banner-info.main {
     margin: 15px 0px;
     color: #FFF;
     height: 200px;
@@ -263,7 +271,6 @@ body {
       position: relative;
       height: 100%;
       padding: 5% 0;
-
       .banner-info-round{
         margin: 0 auto;
         background-repeat: no-repeat;
@@ -271,78 +278,100 @@ body {
         background-size: contain;
         background-position: center;
         background-image: url('../img/white-circle-np.png');
-      }   
-      p {
-        position: absolute;
-        top: 50%;
-        z-index: 1000;
-        color: #383838;
-        left: 50%;
-        font-weight: 700;
-        width: 50%;
-        text-align: center;
-        font-size: 18px;
-        margin: -12% -25%;
-      }       
+      }
+      .banner-info-vertical{
+        @include vertical-align;
+        p {
+          color: #383838;
+          font-weight: 700;
+          text-align: center;
+          margin: 0;
+          text-align: center;
+          font-size: 18px;        
+        }        
+      }      
     }
     .banner-info-right {
       width: 50%;
       float: left;
       position: relative;
       height: 100%;
-      p {
-        position: absolute;
-        top: 50%;
-        z-index: 1000;
-        left: 50%;
-        font-weight: 700;
-        width: initial;
-        text-align: center;
-        margin: -12% -38%;
-        font-size: 18px;
-        a{
+      .banner-info-vertical{
+        @include vertical-align;
+        p {
+          margin: 0;
+          text-align: center;
+          font-weight: 700;
+          margin: 0;
+          font-size: 18px;
           color: #fff;
-        }   
+          a{
+            color:#fff;
+          }
+        }         
       }
-
-      .banner-info-text{
-        padding: 21px 9px;
-        margin: 6% 6%; 
-    
-      }
-
     }
   }
   .banner-info.detail {
+    margin: 15px 0px;
+    color: #FFF;
     height: 121px;
-
+    float: left;
+    width: 100%;
+    background: rgba(209,209,209,1);
+    background: -moz-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(99,99,99,1) 51%, rgba(56,56,56,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(209,209,209,1)), color-stop(51%, rgba(99,99,99,1)), color-stop(100%, rgba(56,56,56,1)));
+    background: -webkit-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(99,99,99,1) 51%, rgba(56,56,56,1) 100%);
+    background: -o-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(99,99,99,1) 51%, rgba(56,56,56,1) 100%);
+    background: -ms-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(99,99,99,1) 51%, rgba(56,56,56,1) 100%);
+    background: linear-gradient(to bottom, rgba(209,209,209,1) 0%, rgba(99,99,99,1) 51%, rgba(56,56,56,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#383838', GradientType=0 );    
+    
     .banner-info-left {
+      width: 50%;
+      float: left;
+      position: relative;
+      height: 100%;
       padding: 3% 0;
-      p {
-        position: absolute;
-        top: 50%;
-        z-index: 1000;
-        color: #383838;
-        left: 50%;
-        font-weight: 700;
-        width: initial;
-        text-align: center;
-        font-size: 14px;
-        margin: -22% -27%;
+      .banner-info-round{
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../img/white-circle-np.png');
+      }
+      .banner-info-vertical{
+        @include vertical-align;
+        p {
+          color: #383838;
+          font-weight: 700;
+          text-align: center;
+          margin: 0;
+          text-align: center;
+          font-size: 14px;        
+        }        
       }
     }
     .banner-info-right {
-      p {
-        position: absolute;
-        top: 50%;
-        z-index: 1000;
-        left: 50%;
-        font-weight: 700;
-        width: initial;
-        text-align: center;
-        margin: -21% -49%;
-        font-size: 14px;
-      }      
+      width: 50%;
+      float: left;
+      position: relative;
+      height: 100%;
+      .banner-info-vertical{
+        @include vertical-align;
+        p {
+          margin: 0;
+          text-align: center;
+          font-weight: 700;
+          margin: 0;
+          font-size: 14px;
+          color: #fff;
+          a{
+            color:#fff;
+          }
+        }         
+      }
     }
   }
 
@@ -654,6 +683,7 @@ body {
       .taller-info {
         margin: 13px 0;
         position: relative;
+        background-color: #808080;
         .taller-foto {
           position: relative;
           .taller-plus {
@@ -725,6 +755,13 @@ body {
     padding: 12px 12px 43px;
     font-size: 13px;
     line-height: 22px;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin: 0 0 20px 0;
+      }
+    }
   }
 
   /*TRIANGLES*/
@@ -762,16 +799,6 @@ body {
       color: #111;
     }
 
-    // .detall-titol {
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: 0;
-    //   z-index: 10054;
-    //   width: 100%;
-    //   color: #FFF;
-    //   padding: 8px 10px 0px;
-    // }
-
     }
     .detalls-obra {
       @include transition(0.3s);
@@ -797,9 +824,11 @@ body {
         position: absolute;
         top: 36%;
         padding: 0 0 0 6%;
-        color: #FFF;
-        font-size: 15px;
-        font-weight: 600;
+        p{
+          font-size: 13px;
+          color: #FFF;
+          font-weight: 600;          
+        }
       } 
       .detall-plus {
         position: absolute;
@@ -849,7 +878,8 @@ body {
   .modul-paginacio p {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 200;
     color: #666;
   }
   .modul-paginacio .pager li > a,
@@ -977,16 +1007,15 @@ body {
     margin: 0;
     .banner-info-left{
       padding: 1.7% 0;
-      .banner-info-round {}
-      p{
-        margin: -28px -50px;
-        font-size: 12px;
-        margin: -14% -25%
+      .banner-info-round {
+        p{
+          font-size: 12px;
+          margin: -14% -25%
+        }        
       }
     }
     .banner-info-right{
       p{
-        margin: -15% -40%;
         font-size: 13px;
       }
     }
@@ -1059,14 +1088,14 @@ body {
     .banner-info-left{
       height: 130px;
       .banner-info-round p{
-        margin: -28px -50px;
+        // margin: -28px -50px;
         font-size: 14px;
       }
     }
     .banner-info-right{
       height: 130px;
       p{
-        margin: -14% -64%;
+        // margin: -14% -64%;
         font-size: 14px;
       }
     }  
@@ -1101,16 +1130,16 @@ body {
       height: 100%;
       padding: 6% 0;
       .banner-info-round{
+        p{
+          // margin: -16% -25%;
+          font-size: 14px;
+        }        
       } 
-      p{
-        margin: -16% -25%;
-        font-size: 14px;
-      }
     }
     .banner-info-right{
       height: 100%;
       p{
-        margin: -16% -25%;
+        // margin: -16% -25%;
         font-size: 14px;
       }
     }  
