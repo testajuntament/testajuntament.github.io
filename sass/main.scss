@@ -827,7 +827,8 @@ body {
         p{
           font-size: 13px;
           color: #FFF;
-          font-weight: 600;          
+          font-weight: 600; 
+          margin: 0px 0 4px 0;         
         }
       } 
       .detall-plus {
@@ -1089,7 +1090,7 @@ body {
       padding: 11px 8px;
     }      
   }
-  .banner-info{
+  .banner-info.main{
     margin: 0;
     .banner-info-left{
       height: 130px;
@@ -1106,7 +1107,23 @@ body {
       }
     }  
   }
-
+  .banner-info.detail{
+    margin: 0;
+    .banner-info-left{
+      height: 130px;
+      padding: 5% 0;
+      .banner-info-round p{
+        font-size: 14px;
+      }
+    }
+    .banner-info-right{
+      height: 130px;
+      p{
+        // margin: -14% -64%;
+        font-size: 14px;
+      }
+    }  
+  }
 }
 @media (min-width:768px) and (max-width:991px){
   .container{
@@ -1130,11 +1147,11 @@ body {
         padding: 11px 8px;
       }      
   }  
-  .banner-info{
+  .banner-info.detail{
     margin: 0;
     .banner-info-left{
       height: 100%;
-      padding: 6% 0;
+      padding: 4% 0;
       .banner-info-round{
         p{
           // margin: -16% -25%;
@@ -1149,10 +1166,49 @@ body {
         font-size: 14px;
       }
     }  
-  }   
+  }
+  .banner-info{
+    margin: 0;
+    .banner-info-left{
+      height: 100%;
+      padding: 4% 0;
+      .banner-info-round{
+        p{
+          font-size: 13px;
+        }        
+      } 
+    }
+    .banner-info-right{
+      height: 100%;
+      p{
+        font-size: 13px;
+      }
+    }  
+  }     
 }
 
 @media (min-width:992px) and (max-width:1199px){
+
+  .banner-info.detail{
+    margin: 0;
+    .banner-info-left{
+      height: 100%;
+      padding: 5% 0;
+      .banner-info-round{
+        .banner-info-vertical p{
+            font-size: 13px;        
+        }        
+      } 
+    }
+    .banner-info-right{
+      height: 100%;
+      .banner-info-vertical{
+        p{
+          font-size: 13px;
+        }
+      }  
+    }  
+  }
 
 }
 @media (min-width:1200px){
