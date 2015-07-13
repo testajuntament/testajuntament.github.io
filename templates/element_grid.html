@@ -1,33 +1,34 @@
 <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
   <div class="row">
     <div class="col-xs-12 col-is-6 col-sm-6 col-md-4 col-lg-4" 
-         ng-repeat="activitat in $parent.filteredWorks = (activitats | filter:activitatsFilter  ) | orderBy: 'prioritat' | paginate:rowsPerPage">
+         ng-repeat="activitat in $parent.filteredWorks = (activitats | filter:activitatsFilter  )  | paginate:rowsPerPage"><!-- | orderBy: 'prioritat' -->
+      
       <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
-        
-          <div style="position:relative; overflow: hidden;">
-            <!-- <a ng-href="{{$root.getDetailPath(activitat.id)}}" title=""> -->
-              <img matchheight ng-src="http://portals.ajuntament.gava.cat/{{activitat.pathFoto}}" alt="" class="imatge-modul-obra img-responsive">
-            <!-- </a> -->
+        <div style="position:relative; overflow: hidden;">
+          <!-- <a ng-href="{{$root.getDetailPath(activitat.id)}}" title=""> -->
+            <img matchheight ng-src="http://portals.ajuntament.gava.cat/{{activitat.pathFoto}}" alt="" class="imatge-modul-obra img-responsive">
+          <!-- </a> -->
 
-            <div class="detalls-obra bg-area-{{activitat.areaConeixement.id}}" ng-class="{'veure-detalls': hover}">
-              <div class="detall-titol"><p>{{activitat.titol | limitTo: 65}}{{activitat.titol.length > 70 ? ' ...' : ''}}<p></div>
-              <div class="detall">
-                <p ng-if="activitat.nivellRecomanat">Nivell: {{activitat.nivellRecomanat}}</p>
-                <p ng-if="activitat.durada">Durada: {{activitat.durada}}</p>
-                <p ng-if="activitat.preu">Preu: {{activitat.preu}}</p>
-                <p ng-if="activitat.prioritat">(Prioritat: {{activitat.prioritat}})</p>
-              </div>
+          <div class="detalls-obra bg-area-{{activitat.areaConeixement.id}}" ng-class="{'veure-detalls': hover}">
+            <div class="detall-titol"><p>{{activitat.titol | limitTo: 65}}{{activitat.titol.length > 64 ? ' ...' : ''}}<p></div>
+            
+            <div class="detall">
+              <p ng-if="activitat.nivellRecomanat">Nivell: {{activitat.nivellRecomanat}}</p>
+              <p ng-if="activitat.durada">Durada: {{activitat.durada}}</p>
+              <p ng-if="activitat.preu">Preu: {{activitat.preu}}</p>
+              <p ng-if="activitat.prioritat">(Prioritat: {{activitat.prioritat}})</p>
+            </div>
 
-              <div class="detall-plus" >
-                 <a class="color-area-{{activitat.areaConeixement.id}}" 
-                   ng-href="{{$root.getDetailPath(activitat.id)}}" 
-                   title="Veure més detalls.">
-                   <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
-                 </a>
-              </div>
-            </div>       
+            <div class="detall-plus" >
+               <a class="color-area-{{activitat.areaConeixement.id}}" 
+                 ng-href="{{$root.getDetailPath(activitat.id)}}" 
+                 title="Veure més detalls.">
+                 <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
+               </a>
+            </div>
+          </div>       
 
-          </div>
+        </div>
       </article>
     </div> 
   </div> <!--row-->
@@ -37,7 +38,10 @@
   <div class="row">
     <div class="col-xs-12 col-is-6 col-sm-12 col-md-12 col-lg-12">
       <div class="materials">
-        <img class="img-responsive" src="img/banner-material-didactic.png">
+        <a ng-href="{{$root.getMaterialsPath}}" >
+          <img class="img-responsive" src="img/banner-material-didactic.png">
+        </a>
+        
       </div>
     </div>  
   </div>  

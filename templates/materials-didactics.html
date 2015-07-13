@@ -1,0 +1,38 @@
+<div class="animated-show ng-hide" ng-show="activitat"><!-- container -->
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="navegacio-top">
+            <a href ng-click="goBack()">
+               <i class="fa fa-chevron-left"></i> {{'Torna al llistat'}}
+            </a>
+        </div>     
+      </div>          
+    </div> 
+
+    <div class="row">  
+
+        <!--middle col -->
+        <div class="col-xs-12 col-is-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="detall-info">
+                <div class="titol">Materials Didàctics</div>
+            </div>    
+        </div>
+
+    </div>   
+
+    <div class="row"> 
+
+        <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
+            <div ng-repeat="material in activitats">
+                <p ng-bind-html="material.materialDidactics"></p>
+            </div>    
+        </div>
+
+        <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
+            <div ng-repeat="material in activitats">
+                <p ng-bind-html="material.materialDidactics"></p>
+            </div> 
+        </div>
+
+    </div>         
+</div>

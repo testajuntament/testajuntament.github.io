@@ -1,4 +1,4 @@
-<div class=" animated-show ng-hide" ng-show="activitat"><!-- container -->
+<div class="animated-show ng-hide" ng-show="activitat"><!-- container -->
     <div class="row">
       <div class="col-xs-12">
         <div class="navegacio-top">
@@ -121,7 +121,7 @@
                 
             <div class="taller">
                 <p>
-                    <div class="titol-tallers">Tallers</div>
+                    <div ng-if="activitat.tallers" class="titol-tallers">Tallers</div>
                     <div class="row">
                         <div class="col-xs-12 col-is-6 col-sm-6 col-md-4 col-lg-4" ng-repeat="taller in activitat.tallers">
                             <div class="taller-info modul-obra">
@@ -192,7 +192,6 @@
                         </script>
 
                         </div>
-
                     </div>
                 </p>
             </div>
@@ -209,11 +208,34 @@
                 <div class="text-observacions"><p ng-bind-html="activitat.observacions"></p></div>
             </div>
 
-            <div class="" ng-if="activitat.material_didactic">
+            <div class="" ng-if="activitat.materialDidactics">
                 <div class="titol-observacions bg-solid-area-{{activitat.areaConeixement.id}}">
                     <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
-                    Material didàctic</div> 
-                <div class="text-observacions"><p ng-bind-html="activitat.materialDidactics"></p></div>
+                    Materials Didàctics</div> 
+                <div class="text-observacions" ng-repeat="material in activitat.materialDidactics">
+                    <span ng-if="material.categoriaMaterialDidactic.nom">
+                        <p><strong class="color-area-{{activitat.areaConeixement.id}}" ng-bind-html="material.categoriaMaterialDidactic.nom"></strong></p>
+                    </span>
+
+                    <span ng-if="material.titol">
+                        <p class="color-area-{{activitat.areaConeixement.id}}" ng-bind-html="material.titol"></p>
+                    </span>
+
+                    <span ng-if="material.url">
+                        <a class="color-area-{{activitat.areaConeixement.id}}" href="{{material.url}}">{{material.url}}</a>
+                    </span>
+                    
+                    <span ng-if="material.pathFoto">
+                        <img class="img-responsive" ng-src="http://portals.ajuntament.gava.cat{{material.pathFoto}}" />
+                    </span> 
+
+                    <span ng-if="material.pathPdfInformacio">
+                        <a class="color-area-{{activitat.areaConeixement.id}}" 
+                           href="http://portals.ajuntament.gava.cat{{material.pathPdfInformacio}}">
+                           Veure .pdf
+                        </a>
+                    </span>    
+                </div>
             </div>
                     
         </div>
