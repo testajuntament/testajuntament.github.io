@@ -245,11 +245,6 @@ app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, 
 			$('html head title').text($scope.shareTitle);
 			$('html head meta[name=description]').attr("content", $scope.shareDescription);
 
-			// $rootScope.ogTitle = $scope.shareTitle;
-			// $rootScope.ogUrl = $scope.shareURL;
-			// $rootScope.ogDescription = $scope.shareDescription;
-			// $rootScope.ogImage = $rootScope.basePath + $scope.images[0].pathFoto;
-
 			$scope.htmlReady();
 	}, function() {
 		//console.error('No work');
@@ -272,7 +267,6 @@ app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, 
 			return $sce.trustAsHtml($scope.activitat[$rootScope.descripcioAttrKey]);
 		}
 	};
-
 
 });
 
@@ -323,10 +317,10 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 			defer.resolve(allActivitats);
 		} else {
 			// url: 'https://activitats.firebaseio.com/.json' ?callback=JSON_CALLBACK
-			$http({
-				url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
-			})
-			// $http.get('activitats.json')
+			// $http({
+			// 	url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
+			// })
+			$http.get('activitats.json')
 			.success(function(response) {
 				allActivitats = [];
 				angular.forEach(response, function(activitat) {
@@ -398,7 +392,6 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		if (allActivitats) {
 			defer.resolve(allActivitats);
 		} else {
-			// url: 'https://activitats.firebaseio.com/.json' ?callback=JSON_CALLBACK
 			$http({
 				url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic'
 			})
