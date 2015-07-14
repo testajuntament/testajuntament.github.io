@@ -6929,7 +6929,7 @@ body {
 .banner-info.main {
   margin: 15px 0px;
   color: #FFF;
-  height: 200px;
+  height: 180px;
   float: left;
   width: 100%;
   background: #d1d1d1;
@@ -7058,7 +7058,7 @@ body {
     .modul-filtres .form-cercador input {
       font-size: 15px;
       font-weight: 500;
-      margin: 35px 0 0 0;
+      margin: 16px 0 0 0;
       width: 100%;
       border: 1px solid #e3e4e8;
       background: #FFF url("../img/lupa.png") right 4px no-repeat;
@@ -7332,10 +7332,21 @@ body {
   font-size: 13px;
   line-height: 22px; }
   .text-observacions ul {
-    list-style: none;
     padding: 0; }
     .text-observacions ul li {
-      margin: 0 0 20px 0; }
+      margin: 0 0 0px 0; }
+
+.text-materials {
+  background-color: #FFF;
+  padding: 0;
+  font-size: 13px;
+  line-height: 22px; }
+  .text-materials p {
+    margin: 0;
+    padding: 0 12px; }
+    .text-materials p a {
+      display: block;
+      margin: 5px 0; }
 
 /*TRIANGLES*/
 .arrow-up {

@@ -10,7 +10,6 @@
     </div> 
 
     <div class="row">
-
         <!--left col-->
         <div class="col-xs-12 col-is-6 col-sm-5 col-md-3 col-lg-3">
             <!-- <div class="modul-galeria" ng-if="images.length > 0">
@@ -48,7 +47,7 @@
                 <img class="img-responsive" ng-src="http://portals.ajuntament.gava.cat/{{activitat.pathFoto}}" />
             </div>
 
-            <div class="detall-img-info bg-solid-area-{{activitat.areaConeixement.id}}">
+            <div class="detall-img-info" style="background-color: {{activitat.areaConeixement.color}}">
                 
                 <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
                 
@@ -103,8 +102,6 @@
             </div>
         </div>
 
-
-
         <!--middle col -->
         <div class="col-xs-12 col-is-6 col-sm-7 col-md-9 col-lg-9">
             <div class="detall-info">
@@ -113,7 +110,6 @@
         </div>
 
         <div class="col-xs-12 col-is-6 col-sm-7 col-md-6 col-lg-6">
-
             <div class="detall-info">
                 <div class="subtitol" ng-if="activitat.subtitol"><p ng-bind-html="activitat.subtitol"></p></div>
                 <div class="descripcio" ng-if="activitat.descripcio"><span ng-bind-html="activitat.descripcio"></span></div>
@@ -199,45 +195,46 @@
 
         <!--right col-->
         <div class="col-xs-12 col-is-6 col-sm-7 col-md-3 col-lg-3">
-
             <div class="" ng-if="activitat.observacions">
-                <div class="titol-observacions bg-solid-area-{{activitat.areaConeixement.id}}">
-                    <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
+                <div class="titol-observacions" style="background-color:{{activitat.areaConeixement.color}};">
+                    <div class="arrow-up" style="border-bottom: 15px solid {{activitat.areaConeixement.color}};"></div>
                     Observacions
                 </div> 
                 <div class="text-observacions"><p ng-bind-html="activitat.observacions"></p></div>
             </div>
 
             <div class="" ng-if="activitat.materialDidactics">
-                <div class="titol-observacions bg-solid-area-{{activitat.areaConeixement.id}}">
-                    <div class="arrow-up border-area-{{activitat.areaConeixement.id}}"></div>
+                <div class="titol-observacions" style="background-color:{{activitat.areaConeixement.color}};">
+                    <div class="arrow-up" style="border-bottom: 15px solid {{activitat.areaConeixement.color}};"></div>
                     Materials Didàctics</div> 
-                <div class="text-observacions" ng-repeat="material in activitat.materialDidactics">
-                    <span ng-if="material.categoriaMaterialDidactic.nom">
-                        <p><strong class="color-area-{{activitat.areaConeixement.id}}" ng-bind-html="material.categoriaMaterialDidactic.nom"></strong></p>
-                    </span>
+                <div class="text-materials" ng-repeat="material in activitat.materialDidactics">
 
-                    <span ng-if="material.titol">
-                        <p class="color-area-{{activitat.areaConeixement.id}}" ng-bind-html="material.titol"></p>
-                    </span>
-
-                    <span ng-if="material.url">
-                        <a class="color-area-{{activitat.areaConeixement.id}}" href="{{material.url}}">{{material.url}}</a>
-                    </span>
-                    
-                    <span ng-if="material.pathFoto">
-                        <img class="img-responsive" ng-src="http://portals.ajuntament.gava.cat{{material.pathFoto}}" />
-                    </span> 
-
-                    <span ng-if="material.pathPdfInformacio">
-                        <a class="color-area-{{activitat.areaConeixement.id}}" 
-                           href="http://portals.ajuntament.gava.cat{{material.pathPdfInformacio}}">
-                           Veure .pdf
+                    <p ng-if="material.url && material.titol">
+                        <a style="color:{{activitat.areaConeixement.color}};" 
+                           href="{{material.url}}" 
+                           target="_blank" 
+                           ng-bind-html="material.titol">
                         </a>
-                    </span>    
+                    </p>
+
+                    <p ng-if="material.pathFoto">
+                        <a style="color:{{activitat.areaConeixement.color}};" 
+                           href="http://portals.ajuntament.gava.cat{{material.pathFoto}}" 
+                           target="_blank" 
+                           >Imatge
+                        </a>
+                    </p>
+
+                    <p ng-if="material.pathPdfInformacio">
+                        <a style="color:{{activitat.areaConeixement.color}};" 
+                           href="http://portals.ajuntament.gava.cat{{material.pathPdfInformacio}}" 
+                           target="_blank" 
+                           >Document (.pdf)
+                        </a>
+                    </p>
+
                 </div>
-            </div>
-                    
+            </div>       
         </div>
  
     </div>       
