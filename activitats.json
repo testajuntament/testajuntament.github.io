@@ -19,8 +19,8 @@
                 "id": "1",
                 "titol": "Video tutorial",
                 "url": "https://www.youtube.com/watch?v=H6WmUCJd_zQ",
-                "_pathFoto": "",
-                "_pathPdfInformacio": ""
+                "pathFoto": "",
+                "pathPdfInformacio": ""
             },
             {
                 "categoriaMaterialDidactic": {
@@ -29,8 +29,8 @@
                 },
                 "id": "2",
                 "titol": "Material en foto y pdf adjunto",
-                "_pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2/getImage",
-                "_pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e4905a6014e494b036a0003/getPdf"
+                "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2/getImage",
+                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e4905a6014e494b036a0003/getPdf"
             },
             {
                 "categoriaMaterialDidactic": {
@@ -39,8 +39,8 @@
                 },
                 "id": "3",
                 "titol": "material en pdf",
-                "_pathFoto": "",
-                "_pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e2aa617014e2aae65e40001/getPdf"
+                "pathFoto": "",
+                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e2aa617014e2aae65e40001/getPdf"
             }
         ],
         "nivellRecomanat": "EP / ESO / Batxillerat",
