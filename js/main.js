@@ -6,8 +6,6 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
     function($routeProvider, $locationProvider, $httpProvider) {
 	//$locationProvider.html5Mode(true);
 	//$locationProvider.hashPrefix('!');
-    // $httpProvider.defaults.useXDomain = true;
-    // delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 	$routeProvider
 		.when('/graella-activitats', {
@@ -29,11 +27,13 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
 
 app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', 
 	function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
-	// gettextCatalog.debug = false; 
-	$rootScope.basePath =  'http://testajuntament.github.io/';  
-	// $rootScope.basePath =  'http://localhost/testajuntament/'; 
-	$rootScope.historyLink = 'graella-activitats';
+	$rootScope.basePath =  'http://testajuntament.github.io';  
+	// $rootScope.basePath =  'http://localhost/testajuntament'; 
+	// $rootScope.basePath = 'http://portals.ajuntament.gava.cat';
+	
+	$rootScope.pathPhotoDefault = '/fotos-activitats/laVenus-color.jpg';
 
+	$rootScope.historyLink = 'graella-activitats';
 	// $rootScope.$on('$locationChangeStart', function(event, next, current) {
 	// 	if (next.indexOf('/mapa') !== -1) {
 
@@ -149,16 +149,8 @@ app.controller('ChangeViewCtrl',['$scope', '$location', function($scope, $locati
 app.controller('ListCtrl', ['$scope', '$routeParams', '$rootScope', '$timeout', 'GavaAPI', 
 	function($scope, $routeParams, $rootScope, $timeout, GavaAPI) {
 
-	console.log('entro en ListCtrl');	
-
 	GavaAPI.getAllActivitats().then(function(activitats) {
 		$scope.activitats = activitats;
-
-		// $timeout(function() {
-		// 	$scope.htmlReady();
-		// }, 5000);
-
-		console.log('activitats en Ctrl', activitats);
 	});
 
 }]);
@@ -166,16 +158,8 @@ app.controller('ListCtrl', ['$scope', '$routeParams', '$rootScope', '$timeout', 
 app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootScope', '$timeout', 'GavaAPI',
 	function($scope,   $routeParams,   $location,   $rootScope,   $timeout,   GavaAPI) {
 	
-	console.log('entro en MAterialCtrl');
-	
 	GavaAPI.getAllMaterials().then(function(materials) {
-		console.log('materials en Ctrl', materials);
 		$scope.materials = materials;
-	
-		// $timeout(function() {
-		// 	$scope.htmlReady();
-		// }, 5000);
-
 	});
 
 	$scope.goBack = function() {
@@ -352,7 +336,6 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 	};
 
 	var getAllMaterials = function(){
-		console.log('entro ne getAllMaterial de api');
 
 		var defer = $q.defer();
 		this.getAllActivitats().then(function(activitats) {
@@ -370,10 +353,12 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 
 	var getActivitatByCodi = function(id) {
 		var number = parseInt(id, 10);
+		var activitatId;
 		var defer = $q.defer();
 		this.getAllActivitats().then(function(activitats) {
 			angular.forEach(activitats, function(activitat){
-				if (activitat.id === number){
+				activitatId = parseInt(activitat.id, 10);
+				if (activitatId === number){
 					defer.resolve(activitat);
 					return;
 				}
@@ -391,9 +376,14 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 			this.getAllActivitats().then(function(activitats) {
 				allNivells = {};
 				angular.forEach(activitats, function(activitat) {
-					angular.forEach(activitat.nivellsEducatius, function(nivellEducatiu, key){
-						allNivells[nivellEducatiu.id] = nivellEducatiu;
-					});	
+					if( angular.isArray(activitat.nivellsEducatius) ){
+						angular.forEach(activitat.nivellsEducatius, function(nivellEducatiu, key){
+							allNivells[nivellEducatiu.id] = nivellEducatiu;
+						});	
+					}else{
+						allNivells[activitat.nivellsEducatius.id] = activitat.nivellsEducatius;
+					}
+
 				});
 				defer.resolve(allNivells);
 			});
