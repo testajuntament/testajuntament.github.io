@@ -30,8 +30,8 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 	$rootScope.basePath =  'http://testajuntament.github.io';  
 	// $rootScope.basePath =  'http://localhost/testajuntament'; 
 	// $rootScope.basePath = 'http://portals.ajuntament.gava.cat';
-	
-	$rootScope.pathPhotoDefault = '/fotos-activitats/laVenus-color.jpg';
+
+	$rootScope.pathPhotoDefault = '/fotos-activitats/LaVenus-color.jpg';
 
 	$rootScope.historyLink = 'graella-activitats';
 	// $rootScope.$on('$locationChangeStart', function(event, next, current) {
