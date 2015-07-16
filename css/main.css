@@ -1,4 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+@import url(../bower_components/magnific-popup/dist/magnific-popup.css);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6703,42 +6704,6 @@ button.close {
 .fa-medium:before {
   content: "\f23a"; }
 
-.bg-area-1 {
-  background-color: rgba(240, 164, 0, 0.7); }
-
-.bg-area-2 {
-  background-color: rgba(150, 169, 23, 0.7); }
-
-.bg-area-3 {
-  background-color: rgba(18, 179, 179, 0.7); }
-
-.bg-solid-area-1 {
-  background-color: #f0a400; }
-
-.bg-solid-area-2 {
-  background-color: #96a917; }
-
-.bg-solid-area-3 {
-  background-color: #12b3b3; }
-
-.color-area-1 {
-  color: #f0a400; }
-
-.color-area-2 {
-  color: #96a917; }
-
-.color-area-3 {
-  color: #12b3b3; }
-
-.border-area-1 {
-  border-bottom: 15px solid #f0a400; }
-
-.border-area-2 {
-  border-bottom: 15px solid #96a917; }
-
-.border-area-3 {
-  border-bottom: 15px solid #12b3b3; }
-
 .grey {
   background-color: #383838; }
 
@@ -6942,7 +6907,7 @@ body {
     float: left;
     position: relative;
     height: 100%;
-    padding: 5% 0; }
+    padding: 3% 0; }
     .banner-info.main .banner-info-left .banner-info-round {
       margin: 0 auto;
       background-repeat: no-repeat;
@@ -7336,17 +7301,17 @@ body {
     .text-observacions ul li {
       margin: 0 0 0px 0; }
 
-.text-materials {
-  background-color: #FFF;
-  padding: 0;
-  font-size: 13px;
-  line-height: 22px; }
-  .text-materials p {
-    margin: 0;
-    padding: 0 12px; }
-    .text-materials p a {
-      display: block;
-      margin: 5px 0; }
+.wrap-text-materials {
+  background-color: #fff;
+  padding: 8px 12px 44px; }
+  .wrap-text-materials .text-materials {
+    font-size: 13px;
+    line-height: 22px; }
+    .wrap-text-materials .text-materials p {
+      margin: 0; }
+      .wrap-text-materials .text-materials p a {
+        display: block;
+        margin: 5px 0; }
 
 /*TRIANGLES*/
 .arrow-up {

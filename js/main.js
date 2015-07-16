@@ -2,21 +2,14 @@
 
 var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo','ngSanitize']);
 
-app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
+app.config(['$routeProvider', '$locationProvider', '$httpProvider', 
+    function($routeProvider, $locationProvider, $httpProvider) {
 	//$locationProvider.html5Mode(true);
 	//$locationProvider.hashPrefix('!');
     // $httpProvider.defaults.useXDomain = true;
     // delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 	$routeProvider
-		.when('/llista-activitats', {
-			controller: 'ListCtrl',
-			templateUrl: 'templates/llista-activitats.html',
-		})
-		.when('/graella', {
-			controller: 'ListCtrl',
-			templateUrl: 'templates/grid.html',
-		})
 		.when('/graella-activitats', {
 			controller: 'ListCtrl',
 			templateUrl: 'templates/graella-activitats.html',			
@@ -26,7 +19,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($ro
 			templateUrl: 'templates/detail.html',
 		})
 		.when('/materials-didactics', {
-			controller: 'DetailCtrl',
+			controller: 'MaterialsCtrl',
 			templateUrl: 'templates/materials-didactics.html',
 		})		
 		.otherwise({
@@ -34,87 +27,46 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($ro
 		});
 }]);
 
-app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
-	gettextCatalog.debug = false; 
+app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', 
+	function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
+	// gettextCatalog.debug = false; 
 	$rootScope.basePath =  'http://testajuntament.github.io/';  
-	// $rootScope.basePath =  'http://localhost/testajuntament/';  
-	$rootScope.historyLink = 'graella';
+	// $rootScope.basePath =  'http://localhost/testajuntament/'; 
+	$rootScope.historyLink = 'graella-activitats';
 
-	$rootScope.changeLanguage = function(language) {
-		var path = $location.path(),
-			newPath;
-		if ($rootScope.language === 'ca') {
-			if (path.indexOf('llista') !== -1) {
-				newPath = '/es/lista';
-			} else if (path.indexOf('graella') !== -1) {
-				newPath = '/es/parrilla';
-			} else if (path.indexOf('mapa') !== -1) {
-				newPath = '/es/mapa';
-			} else if (path.indexOf('fitxa') !== -1) {
-				newPath = path.replace('ca/fitxa', 'es/ficha');
-			}
-		} else {
-			if (path.indexOf('lista') !== -1) {
-				newPath = '/llista';
-			} else if (path.indexOf('parrilla') !== -1) {
-				newPath = '/graella-activitats';
-			} else if (path.indexOf('mapa') !== -1) {
-				newPath = '/ca/mapa';
-			} else if (path.indexOf('ficha') !== -1) {
-				newPath = path.replace('es/ficha', 'ca/fitxa');
-			}
-		}
-		$rootScope.language = language;
-		$location.path(newPath);
-	};
-	$rootScope.$watch('language', function() {
-		amMoment.changeLanguage($rootScope.language);
-		gettextCatalog.setCurrentLanguage($rootScope.language);
-		$rootScope.titolAttrKey = gettextCatalog.getString('titolCatala');
-		$rootScope.peuFotoAttrKey = gettextCatalog.getString('peuFoto');
-		$rootScope.descripcioAttrKey = gettextCatalog.getString('descripcioCatala');
-		$rootScope.filterTopicAttrKey = gettextCatalog.getString('nomCatala');
+	// $rootScope.$on('$locationChangeStart', function(event, next, current) {
+	// 	if (next.indexOf('/mapa') !== -1) {
 
-		$rootScope.filterNivellAttrKey = 'nom';
-		$rootScope.filterAreaAttrKey = 'nom';
-	});
+	// 		$rootScope.bodyClass = 'home-mapa';
+	// 	} else if (next.indexOf('/fitxa/') !== -1 || next.indexOf('/ficha/') !== -1) {
+	// 		if (current.indexOf('llista') !== -1 || current.indexOf('lista') !== -1) {
+	// 			$rootScope.historyLink = 'llista';
+	// 		} else if (current.indexOf('graella-activitats') !== -1 || current.indexOf('parrilla') !== -1) {
+	// 			$rootScope.historyLink = 'graella-activitats';
+	// 		}
+	// 		$rootScope.bodyClass = 'fitxa';
+	// 	} else {
+	// 		$rootScope.bodyClass = '';
+	// 	}
 
-	$rootScope.$on('$locationChangeStart', function(event, next, current) {
-		if (next.indexOf('/mapa') !== -1) {
-			$rootScope.bodyClass = 'home-mapa';
-		} else if (next.indexOf('/fitxa/') !== -1 || next.indexOf('/ficha/') !== -1) {
-			if (current.indexOf('llista') !== -1 || current.indexOf('lista') !== -1) {
-				$rootScope.historyLink = 'llista';
-			} else if (current.indexOf('graella') !== -1 || current.indexOf('parrilla') !== -1) {
-				$rootScope.historyLink = 'graella';
-			}
-			$rootScope.bodyClass = 'fitxa';
-		} else {
-			$rootScope.bodyClass = '';
-		}
-
-		if (next.indexOf('/') !== -1) {
-			$rootScope.language = 'ca';
-		} else if (next.indexOf('/es/') !== -1) {
-			$rootScope.language = 'es';
-		}
-	});
-
-	// $rootScope.$on('$locationChangeSuccess', function() {
-	// 	var text = gettextCatalog.getString('Activitats per a escoles - Museu de Gavà - Ajuntament de Gavà');
-	// 	$('html head title').text(text);
-	// 	$('html head meta[name=description]').attr("content", text);
-	// 	ga('send', 'pageview', {
-	// 		page: $location.url()
-	// 	});
+	// 	if (next.indexOf('/') !== -1) {
+	// 		$rootScope.language = 'ca';
+	// 	} else if (next.indexOf('/es/') !== -1) {
+	// 		$rootScope.language = 'es';
+	// 	}
 	// });
 
-	$rootScope.getGridPath = function() {
-		return ($rootScope.language === 'ca') ? '#/graella-activitats' : '#/es/parrilla-actividades';
-	};
+	$rootScope.$on('$locationChangeSuccess', function() {
+		var text = gettextCatalog.getString('Activitats per a escoles - Museu de Gavà - Ajuntament de Gavà');
+		$('html head title').text(text);
+		$('html head meta[name=description]').attr("content", text);
+		// ga('send', 'pageview', {
+		// 	page: $location.url()
+		// });
+	});
 
-	$rootScope.getListPath = function() {
-		return ($rootScope.language === 'ca') ? '#/llista-activitats' : '#/es/lista-actividades';
+	$rootScope.getGridPath = function() {
+		return  '#/graella-activitats';
 	};
 
 	$rootScope.getDetailPath = function(id) {
@@ -122,8 +74,8 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	};
 
 	$rootScope.getMaterialsPath = function(){
-		return  '#/materials-didactics/';
-	}
+		return  '#/materials-didactics';
+	};
 
 	$rootScope.rowsPerPage = 9; 
 
@@ -177,6 +129,8 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	};
 
 	$rootScope.hexToRgba = function(hex,opacity){
+		var r, g, b, result;
+
 	    hex = hex.replace('#','');
 	    r = parseInt(hex.substring(0,2), 16);
 	    g = parseInt(hex.substring(2,4), 16);
@@ -184,24 +138,97 @@ app.run(function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 
 	    result = 'rgba('+r+','+g+','+b+','+opacity/100+')';
 	    return result;
-	}
-});
+	};
 
-app.controller('ChangeViewCtrl', function($scope, $location) {
+}]);
+
+app.controller('ChangeViewCtrl',['$scope', '$location', function($scope, $location) {
 	$scope.$location = $location;
-});
+}]);
 
-app.controller('ListCtrl', function($scope, $routeParams, $rootScope, $timeout, GavaAPI) {
+app.controller('ListCtrl', ['$scope', '$routeParams', '$rootScope', '$timeout', 'GavaAPI', 
+	function($scope, $routeParams, $rootScope, $timeout, GavaAPI) {
+
+	console.log('entro en ListCtrl');	
+
 	GavaAPI.getAllActivitats().then(function(activitats) {
 		$scope.activitats = activitats;
 
-		$timeout(function() {
-			$scope.htmlReady();
-		}, 4000);
-	});
-});
+		// $timeout(function() {
+		// 	$scope.htmlReady();
+		// }, 5000);
 
-app.controller('FiltersCtrl', function($scope, GavaAPI, gettextCatalog, $rootScope) {
+		console.log('activitats en Ctrl', activitats);
+	});
+
+}]);
+
+app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootScope', '$timeout', 'GavaAPI',
+	function($scope,   $routeParams,   $location,   $rootScope,   $timeout,   GavaAPI) {
+	
+	console.log('entro en MAterialCtrl');
+	
+	GavaAPI.getAllMaterials().then(function(materials) {
+		console.log('materials en Ctrl', materials);
+		$scope.materials = materials;
+	
+		// $timeout(function() {
+		// 	$scope.htmlReady();
+		// }, 5000);
+
+	});
+
+	$scope.goBack = function() {
+		var path;
+		if ($rootScope.historyLink === 'graella-activitats'){ 
+			path = '/graella-activitats'; 
+		}else if ($rootScope.historyLink === 'materials-didactics') {
+			path =  '/materials-didactics';
+		} else if ($rootScope.historyLink === 'mapa') {
+			path =  '/mapa';
+		}
+		$location.path(path);
+	};	
+
+}]);
+
+app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', 'GavaAPI', 'gettextCatalog', '$rootScope', '$sce' ,
+	function($scope,   $routeParams,   $location,   $window,   GavaAPI,   gettextCatalog,   $rootScope,   $sce) {
+	$window.scrollTo(0, 0);
+
+	GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
+		$scope.shareTitle = gettextCatalog.getString('Patrimoni Cultural i Natural de Gavà: ') + activitat[$rootScope.titolAttrKey];
+		$scope.shareDescription = activitat[$rootScope.descripcioAttrKey];
+		$scope.shareURL = $window.location.href.replace('/#','');
+		$scope.activitat = activitat;
+		$scope.images = [];
+		$('html head title').text($scope.shareTitle);
+		$('html head meta[name=description]').attr("content", $scope.shareDescription);
+		$scope.htmlReady();
+	}, function() {
+		//console.error('No work');
+	});
+
+	$scope.goBack = function() {
+		var path;
+		if ($rootScope.historyLink === 'graella-activitats'){ 
+			path = '/graella-activitats'; 
+		}else if ($rootScope.historyLink === 'materials-didactics') {
+			path =  '/materials-didactics';
+		}
+		$location.path(path);
+	};
+
+	$scope.getDescription = function() {
+		if ($scope.activitat) {
+			return $sce.trustAsHtml($scope.activitat[$rootScope.descripcioAttrKey]);
+		}
+	};
+
+}]);
+
+app.controller('FiltersCtrl', ['$scope', 'GavaAPI', 'gettextCatalog', '$rootScope',
+	function($scope,   GavaAPI,   gettextCatalog,   $rootScope) {
 
 	GavaAPI.getAllNivells().then(function(allNivells) {
 		$scope.allNivells = allNivells;
@@ -221,57 +248,36 @@ app.controller('FiltersCtrl', function($scope, GavaAPI, gettextCatalog, $rootSco
 		}
 	});	
 
-});
+}]);
 
-app.controller('DetailCtrl', function($scope, $routeParams, $location, $window, GavaAPI, gettextCatalog, $rootScope, $sce) {
-	$window.scrollTo(0, 0);
 
-	$scope.print = function() {
-		$window.print();
-	};
 
-	// var addFotosFromNode = function(node) {
-	// 	if (node.foto1) {
-	// 		$scope.images.push(node.foto1);
-	// 	}
-	// 	if (node.foto2) {
-	// 		$scope.images.push(node.foto2);
-	// 	}
-	// };
-	// console.log('$routeParams.id!!: '+ $routeParams.id);
+/*DIRECTIVES*/
+app.directive('magnificpopup', function () {
+	return {
+		restrict: 'A',
+		link: function (scope, element, attrs) {
+			var	defaults = {};
+			var	options	 = angular.extend({}, defaults, scope.$eval(attrs.gallery));
 
-	GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
-		
-			$scope.shareTitle = gettextCatalog.getString('Patrimoni Cultural i Natural de Gavà: ') + activitat[$rootScope.titolAttrKey];
-			$scope.shareDescription = activitat[$rootScope.descripcioAttrKey];
-			$scope.shareURL = $window.location.href.replace('/#','');
-			$scope.activitat = activitat;
-			$scope.images = [];
-			addFotosFromNode($scope.activitat);
-
-			$('html head title').text($scope.shareTitle);
-			$('html head meta[name=description]').attr("content", $scope.shareDescription);
-
-			$scope.htmlReady();
-	}, function() {
-		//console.error('No work');
-	});
-
-	$scope.goBack = function() {
-		var path;
-		if ($rootScope.historyLink === 'graella') {
-			path = ($rootScope.language === 'ca') ? 'ca/graella' : 'es/parrilla';
-		} else if ($rootScope.historyLink === 'llista') {
-			path = ($rootScope.language === 'ca') ? 'ca/llista' : 'es/lista';
-		} else if ($rootScope.historyLink === 'mapa') {
-			path = ($rootScope.language === 'ca') ? 'ca/mapa' : 'es/mapa';
-		}
-		$location.path(path);
-	};
-
-	$scope.getDescription = function() {
-		if ($scope.activitat) {
-			return $sce.trustAsHtml($scope.activitat[$rootScope.descripcioAttrKey]);
+			element.magnificPopup({
+				delegate: options.selector,
+				// gallery: {
+				// 	enabled: true,
+				// 	navigateByImgClick: true,
+				// 	preload: [0, 1]
+				// },
+				image: {
+					verticalFit: false,
+					tError: 'Error: Unable to Load Image',
+					titleSrc: function (item) {
+						return item.el.attr('title');
+					}
+				},
+				tLoading: 'Loading...',
+				type: 'image',
+				closeOnContentClick: true,
+			});
 		}
 	};
 
@@ -285,6 +291,7 @@ app.directive('matchheight', function() {
 			});
 		}
 	};
+
 });
 
 app.directive('viewTitle', function() {
@@ -296,6 +303,7 @@ app.directive('viewTitle', function() {
 			$('html head title').text(text);
 		}
 	};
+
 });
 
 app.directive('viewDescription', function() {
@@ -307,13 +315,15 @@ app.directive('viewDescription', function() {
 			$('html head meta[name=description]').attr("content", text);
 		}
 	};
-});
 
-app.service('GavaAPI', function($http, $q, $rootScope) {
+});
+/*SERVICES*/
+app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootScope) {
 	var allActivitats;
 	var allAreas; 
 	var allNivells;
 	var defer;
+	var allMaterials;
 
 	var getAllActivitats = function() {
 		if (defer) {
@@ -323,11 +333,10 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		if (allActivitats) {
 			defer.resolve(allActivitats);
 		} else {
-			// url: 'https://activitats.firebaseio.com/.json' ?callback=JSON_CALLBACK
-			$http({
-				url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
-			})
-			// $http.get('activitats.json')
+			// $http({
+			// 	url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
+			// })
+			$http.get('activitats.json')
 			.success(function(response) {
 				allActivitats = [];
 				angular.forEach(response, function(activitat) {
@@ -341,6 +350,23 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		}
 		return defer.promise;
 	};
+
+	var getAllMaterials = function(){
+		console.log('entro ne getAllMaterial de api');
+
+		var defer = $q.defer();
+		this.getAllActivitats().then(function(activitats) {
+			allMaterials = [];
+			
+			angular.forEach(activitats, function(activitat){
+				angular.forEach(activitat.materialDidactics, function(material){
+					allMaterials.push(material);
+				});
+			});
+			defer.resolve(allMaterials);
+		});
+		return defer.promise;		
+	};		
 
 	var getActivitatByCodi = function(id) {
 		var number = parseInt(id, 10);
@@ -391,31 +417,6 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		return defer.promise;
 	};	
 
-	var getAllMaterials =function(){
-		if (defer) {
-			return defer.promise;
-		}
-		defer = $q.defer();
-		if (allActivitats) {
-			defer.resolve(allActivitats);
-		} else {
-			$http({
-				url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic'
-			})
-			.success(function(response) {
-				allMaterials = [];
-				angular.forEach(response, function(activitat) {
-					allMaterials.push(activitat);
-				});
-				$rootScope.allMaterials = allMaterials;
-				defer.resolve(allMaterials);
-			}).error(function() {
-				defer.reject();
-			});
-		}
-		return defer.promise;
-	};		
-
 	return {
 		'getAllActivitats': getAllActivitats,
 		'getActivitatByCodi': getActivitatByCodi,
@@ -423,4 +424,4 @@ app.service('GavaAPI', function($http, $q, $rootScope) {
 		'getAllAreas': getAllAreas,
 		'getAllMaterials': getAllMaterials
 	};
-});
+}]);

@@ -1,4 +1,4 @@
-<div class="animated-show ng-hide" ng-show="activitat"><!-- container -->
+    
     <div class="row">
       <div class="col-xs-12">
         <div class="navegacio-top">
@@ -15,6 +15,34 @@
         <div class="col-xs-12 col-is-12 col-sm-12 col-md-12 col-lg-12">
             <div class="detall-info">
                 <div class="titol">Materials Didàctics</div>
+                <div ng-repeat="material in materials">
+
+                    <p ng-if="material.categoriaMaterialDidactic.nom">
+                        <strong ng-bind-html="material.categoriaMaterialDidactic.nom"></strong>
+                    </p>                   
+                    
+                    <p ng-if="material.url && material.titol">
+                       <a ng-href="{{material.url}}" target="_blank"><span ng-bind-html="material.titol"></span></a>
+                    </p>
+
+                    <p ng-if="material.pathFoto">
+                        <a magnificpopup 
+                           style="color:{{activitat.areaConeixement.color}};" 
+                           class="image-popup-vertical-fit" 
+                           ng-href="http://portals.ajuntament.gava.cat{{material.pathFoto}}" 
+                           >Veure imatge
+                        </a> 
+                    </p>
+
+                    <p ng-if="material.pathPdfInformacio">
+                        <a style="color:{{activitat.areaConeixement.color}};" 
+                           ng-href="http://portals.ajuntament.gava.cat{{material.pathPdfInformacio}}" 
+                           target="_blank" 
+                           >Document (.pdf)
+                        </a>
+                    </p>
+
+                </div>
             </div>    
         </div>
 
@@ -22,15 +50,4 @@
 
     <div class="row"> 
 
-        <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
-            <div ng-repeat="material in activitats">
-                <p ng-bind-html="material.materialDidactics"></p>
-            </div>    
-        </div>
-
-        <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
-                <p ng-bind-html="activitat.materialDidactics"></p>
-        </div>
-
     </div>         
-</div>

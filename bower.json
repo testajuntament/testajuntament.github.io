@@ -23,6 +23,7 @@
     "flexslider": "*",
     "pdfmake": "~0.1.18",
     "xhr-xdr-adapter": "*",
-    "html5shiv": "~3.7.2"
+    "html5shiv": "~3.7.2",
+    "magnific-popup": "~1.0.0"
   }
 }

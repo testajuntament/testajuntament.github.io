@@ -1,6 +1,7 @@
 [
     {
         "areaConeixement": {
+            "color": "#0000ff",
             "id": "1",
             "nom": "Socials"
         },
@@ -91,6 +92,7 @@
     },
     {
         "areaConeixement": {
+            "color": "#00ff00",
             "id": 3,
             "nom": "Treball de síntesi"
         },
@@ -116,6 +118,7 @@
     },
     {
         "areaConeixement": {
+            "color": "#ff0000",
             "id": 2,
             "nom": "Naturals"
         },

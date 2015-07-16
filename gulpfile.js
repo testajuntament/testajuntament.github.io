@@ -19,18 +19,20 @@ var uglify = require('gulp-uglify');
 var paths = {
   scripts: [
     'bower_components/angular/angular.js',
-    'bower_components/angular-resource/angular-resource.min.js',
+    // 'bower_components/angular-resource/angular-resource.min.js',
     'bower_components/angular-route/angular-route.min.js',
-    'bower_components/angular-locale_es-es/angular-locale_es-es.js',
+    // 'bower_components/angular-locale_es-es/angular-locale_es-es.js',
     'bower_components/angular-sanitize/angular-sanitize.js',
+    'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     'js/vendor/jquery.matchHeight-min.js',
-    'js/vendor/jquery.flexslider-min.js',
-    'js/vendor/angular-flexslider.js',
+    'js/vendor/bootstrap.min.js',
+    // 'js/vendor/jquery.flexslider-min.js',
+    // 'js/vendor/angular-flexslider.js',
     'js/vendor/angular-paginator.js',
     'js/vendor/moment/min/moment-with-langs.js',
     'js/vendor/angular-moment/angular-moment.js',
-    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-  	'js/main.js*'
+  	'js/main.js'
   ],
   // images: 'assets/img/**/*s',
   styles: [

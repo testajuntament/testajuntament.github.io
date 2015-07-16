@@ -10,6 +10,9 @@ $screen-xs-max: ($screen-is-min - 1);
 @import "_grids.scss";  
 @import "../bower_components/font-awesome/scss/font-awesome.scss";
 
+
+@import "../bower_components/magnific-popup/dist/magnific-popup.css";
+
 $red-color: #D20019;//#E3001B;
 $grey-color: #383838;
 $soft-grey: #e3e4e8;
@@ -17,21 +20,21 @@ $color-area-1: #f0a400; //taronja
 $color-area-2: #96a917; //verd
 $color-area-3:  #12b3b3; //blau
 
-.bg-area-1{ background-color: rgba(240, 164, 0, 0.7); }
-.bg-area-2{ background-color: rgba(150, 169, 23, 0.7); }
-.bg-area-3{ background-color: rgba(18, 179, 179, 0.7); }
+// .bg-area-1{ background-color: rgba(240, 164, 0, 0.7); }
+// .bg-area-2{ background-color: rgba(150, 169, 23, 0.7); }
+// .bg-area-3{ background-color: rgba(18, 179, 179, 0.7); }
 
-.bg-solid-area-1{ background-color: $color-area-1; }
-.bg-solid-area-2{ background-color: $color-area-2; }
-.bg-solid-area-3{ background-color: $color-area-3; }
+// .bg-solid-area-1{ background-color: $color-area-1; }
+// .bg-solid-area-2{ background-color: $color-area-2; }
+// .bg-solid-area-3{ background-color: $color-area-3; }
 
-.color-area-1{ color: $color-area-1;  } 
-.color-area-2{ color: $color-area-2; } 
-.color-area-3{ color: $color-area-3; } 
+// .color-area-1{ color: $color-area-1;  } 
+// .color-area-2{ color: $color-area-2; } 
+// .color-area-3{ color: $color-area-3; } 
 
-.border-area-1{ border-bottom: 15px solid $color-area-1;  } 
-.border-area-2{ border-bottom: 15px solid $color-area-2; } 
-.border-area-3{ border-bottom: 15px solid $color-area-3; } 
+// .border-area-1{ border-bottom: 15px solid $color-area-1;  } 
+// .border-area-2{ border-bottom: 15px solid $color-area-2; } 
+// .border-area-3{ border-bottom: 15px solid $color-area-3; } 
 
 .grey{ background-color: $grey-color; }
 .white{ background-color: #fff; }
@@ -270,7 +273,7 @@ body {
       float: left;
       position: relative;
       height: 100%;
-      padding: 5% 0;
+      padding: 3% 0;
       .banner-info-round{
         margin: 0 auto;
         background-repeat: no-repeat;
@@ -762,21 +765,22 @@ body {
       }
     }
   }
-  .text-materials{
-    background-color: #FFF;
-    padding: 0;
-    font-size: 13px;
-    line-height: 22px;
-    
-    p{
-      margin: 0;
-      padding: 0 12px;
-      a{
-        display: block;
-        margin: 5px 0;
+  .wrap-text-materials{
+    background-color:#fff;
+    padding: 8px 12px 44px;
+    .text-materials{
+      font-size: 13px;
+      line-height: 22px;
+      p{
+        margin: 0;
+        a{
+          display: block;
+          margin: 5px 0;
+        }
       }
-    }
+    }    
   }
+
 
   /*TRIANGLES*/
   .arrow-up {
