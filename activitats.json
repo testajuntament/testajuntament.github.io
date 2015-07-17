@@ -1437,7 +1437,8 @@
         "id": "70",
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a>, <a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> i sortida de camp</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
-        "materialDidactics": {
+        "materialDidactics": [
+        {
             "categoriaMaterialDidactic": {
                 "id": "21",
                 "nom": "Socials"
@@ -1446,7 +1447,7 @@
             "titol": "Prova foto",
             "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/52/getImage",
             "pathPdfInformacio": ""
-        },
+        }],
         "nivellRecomanat": "1r i 2n d’ESO",
         "nivellsEducatius": {
             "id": "22",
