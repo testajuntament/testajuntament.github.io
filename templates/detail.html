@@ -117,7 +117,7 @@
                 
             <div class="taller">
                 <p>
-                    <div ng-if="activitat.tallers" class="titol-tallers">Tallers</div>
+                    <div ng-if="activitat.tallers.length > 0" class="titol-tallers">Tallers</div>
                     <div class="row">
                         <div class="col-xs-12 col-is-6 col-sm-6 col-md-4 col-lg-4" ng-repeat="taller in activitat.tallers">
                             <div class="taller-info modul-obra">
@@ -207,7 +207,7 @@
                 <div class="text-observacions"><p ng-bind-html="activitat.observacions"></p></div>
             </div>
 
-            <div ng-if="activitat.materialDidactics" >
+            <div ng-if="activitat.materialDidactics.length > 0" >
                 <div class="titol-observacions" style="background-color:{{activitat.areaConeixement.color}};">
                     <div class="arrow-up" style="border-bottom: 15px solid {{activitat.areaConeixement.color}};"></div>
                     Materials Didàctics

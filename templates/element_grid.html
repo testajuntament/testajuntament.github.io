@@ -5,9 +5,8 @@
       
       <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
         <div style="position:relative; overflow: hidden;">
-          <!-- <a ng-href="{{$root.getDetailPath(activitat.id)}}" title=""> -->
-            <img matchheight ng-src="{{basePath}}{{activitat.pathFoto || pathPhotoDefault}}" alt="" class="imatge-modul-obra img-responsive">
-          <!-- </a> -->
+
+          <img matchheight ng-src="{{basePath}}{{activitat.pathFoto || pathPhotoDefault}}" alt="" class="imatge-modul-obra img-responsive">
 
           <div class="detalls-obra" 
                ng-class="{'veure-detalls': hover}"         
@@ -22,10 +21,12 @@
               <!-- <p ng-if="activitat.prioritat">(Prioritat: {{activitat.prioritat}})</p> -->
             </div>
 
-            <div class="detall-plus" >
-               <a style="color: {{activitat.areaConeixement.color}}"
-                 ng-href="{{$root.getDetailPath(activitat.id)}}" 
-                 title="Veure més detalls.">
+            <div class="detall-plus">
+               <a   ng-style="{'color': mycolor }" ng-init="mycolor=activitat.areaConeixement.color"
+                    ng-mouseleave="mycolor = activitat.areaConeixement.color" 
+                    ng-mouseenter="mycolor = $root.colorDarken(activitat.areaConeixement.color, -10)"
+                    ng-href="{{$root.getDetailPath(activitat.id)}}" 
+                    title="Veure més detalls.">
                  <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
                </a>
             </div>

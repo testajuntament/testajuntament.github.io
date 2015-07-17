@@ -7239,8 +7239,8 @@ body {
       position: relative; }
       .taller .taller-info .taller-foto .taller-plus {
         position: absolute;
-        top: 6%;
-        right: 14%;
+        top: 5%;
+        right: 8%;
         font-size: 36px;
         z-index: 1000; }
         .taller .taller-info .taller-foto .taller-plus .glyphicon {
@@ -7249,18 +7249,18 @@ body {
           display: inline-block;
           font-family: 'Glyphicons Halflings';
           font-style: normal;
-          font-weight: normal;
+          font-weight: 600;
           line-height: 1;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale; }
           .taller .taller-info .taller-foto .taller-plus .glyphicon .back-white {
             z-index: -1;
             background-color: #FFF;
-            width: 25px;
-            height: 25px;
+            width: 22px;
+            height: 22px;
             position: absolute;
-            top: 19%;
-            left: 19%; }
+            top: 18%;
+            left: 21%; }
       .taller .taller-info .taller-foto .taller-titol {
         position: absolute;
         color: #FFF;
@@ -7370,19 +7370,21 @@ body {
       margin: 0px 0 4px 0; }
   .detalls-obra .detall-plus {
     position: absolute;
-    top: 79%;
+    top: 82%;
     left: 85%;
     z-index: 10000;
     font-size: 42px;
     margin: -20px -13px; }
+    .detalls-obra .detall-plus a i.glyphicon {
+      font-weight: 600; }
     .detalls-obra .detall-plus .back-white {
       z-index: -1;
       background-color: #FFF;
       width: 25px;
       height: 25px;
       position: absolute;
-      top: 19%;
-      left: 19%; }
+      top: 20%;
+      left: 21%; }
 
 .detalls-obra.veure-detalls {
   top: 0%;
