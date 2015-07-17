@@ -44,7 +44,7 @@
             </div>  -->
 
             <div ><!-- ng-if="images.length > 0" -->
-                <img class="img-responsive" ng-src="{{basePath}}{{activitat.pathFoto || pathPhotoDefault}}" />
+                <img class="img-responsive" ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}" />
             </div>
 
             <div class="detall-img-info" style="background-color: {{activitat.areaConeixement.color}}">
@@ -124,7 +124,7 @@
                                 <div class="taller-foto">
                                     <img  matchheight 
                                           class="img-responsive" 
-                                          ng-src="{{basePath}}{{taller.pathFoto || pathPhotoDefault}}">
+                                          ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}">
 
                                     <div class="taller-plus" >
                                         <a  style="color: {{activitat.areaConeixement.color}}"
@@ -228,7 +228,7 @@
                             <a magnificpopup 
                                style="color:{{activitat.areaConeixement.color}};" 
                                class="image-popup-vertical-fit" 
-                               ng-href="{{basePath}}{{activitat.pathFoto || pathPhotoDefault}}" 
+                               ng-href="{{baseImagePath}}{{activitat.pathFoto || pathPhotoDefault}}" 
                                >Veure imatge
                             </a> 
                         </p>

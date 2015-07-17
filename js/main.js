@@ -29,7 +29,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 	function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	$rootScope.basePath =  'http://testajuntament.github.io';  
 	// $rootScope.basePath =  'http://localhost/testajuntament'; 
-	// $rootScope.basePath = 'http://portals.ajuntament.gava.cat';
+	$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat';
 
 	$rootScope.pathPhotoDefault = '/fotos-activitats/LaVenus-color.jpg';
 

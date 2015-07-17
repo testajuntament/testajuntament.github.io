@@ -6,7 +6,7 @@
       <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
         <div style="position:relative; overflow: hidden;">
 
-          <img matchheight ng-src="{{basePath}}{{activitat.pathFoto || pathPhotoDefault}}" alt="" class="imatge-modul-obra img-responsive">
+          <img matchheight ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}" alt="" class="imatge-modul-obra img-responsive">
 
           <div class="detalls-obra" 
                ng-class="{'veure-detalls': hover}"         
