@@ -43,7 +43,8 @@
                 </section>
             </div>  -->
 
-            <div ><!-- ng-if="images.length > 0" -->
+            <div class="detall-img"><!-- ng-if="images.length > 0" -->
+                <div class="peu-info" ng-if="activitat.peuFoto" ng-bind-html="activitat.peuFoto"></div>
                 <img class="img-responsive" ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}" />
             </div>
 
@@ -61,7 +62,7 @@
                 <div class="data-info" ng-if="activitat.durada">
                     <div>
                         <span class="key-info">Durada:</span> <br>
-                        <span class="valor-info"ng-bind-html="activitat.durada"></span>
+                        <span class="valor-info" ></span>
                     </div>
                 </div>
                 
@@ -233,11 +234,13 @@
                             </a> 
                         </p>
 
-                        <p ng-if="material.pathPdfInformacio">
+                        <p ng-if="material.pathPdfInformacio && material.titol">
+                            
                             <a style="color:{{activitat.areaConeixement.color}};" 
                                href="http://portals.ajuntament.gava.cat{{material.pathPdfInformacio}}" 
                                target="_blank" 
-                               >Document (.pdf)
+                               
+                               ><i class="fa fa-file-pdf-o"></i> {{material.titol}}
                             </a>
                         </p>
 

@@ -170,6 +170,10 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootSc
 		$scope.materials = materials;
 	});
 
+	GavaAPI.getAllCategorias().then(function(categorias) {
+		$scope.categorias = categorias;
+	});		
+
 	$scope.goBack = function() {
 		var path;
 		if ($rootScope.historyLink === 'graella-activitats'){ 
@@ -316,6 +320,7 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 	var allNivells;
 	var defer;
 	var allMaterials;
+	var allCategorias;
 
 	var getAllActivitats = function() {
 		if (defer) {
@@ -357,6 +362,22 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 			defer.resolve(allMaterials);
 		});
 		return defer.promise;		
+	};
+
+	var getAllCategorias = function(){
+		var defer = $q.defer();
+		if (allCategorias) {
+			defer.resolve(allCategorias);
+		} else {
+			this.getAllMaterials().then(function(materials) {
+				allCategorias = {};
+				angular.forEach(materials, function(material) {
+					allCategorias[material.categoriaMaterialDidactic.id] = material.categoriaMaterialDidactic;					
+				});				
+				defer.resolve(allCategorias);
+			});
+		}			
+		return defer.promise;
 	};		
 
 	var getActivitatByCodi = function(id) {
@@ -385,7 +406,7 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 				allNivells = {};
 				angular.forEach(activitats, function(activitat) {
 					if( angular.isArray(activitat.nivellsEducatius) ){
-						angular.forEach(activitat.nivellsEducatius, function(nivellEducatiu, key){
+						angular.forEach(activitat.nivellsEducatius, function(nivellEducatiu){
 							allNivells[nivellEducatiu.id] = nivellEducatiu;
 						});	
 					}else{
@@ -420,6 +441,7 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 		'getActivitatByCodi': getActivitatByCodi,
 		'getAllNivells': getAllNivells,
 		'getAllAreas': getAllAreas,
-		'getAllMaterials': getAllMaterials
+		'getAllMaterials': getAllMaterials,
+		'getAllCategorias': getAllCategorias
 	};
 }]);

@@ -1,88 +1,81 @@
-<!-- <div class=""> --><!-- container -->
-  <!-- <div class="row"> --><!-- ng-class="{'hidden' : $parent.sidebarActive}" -->
+<div class="col-xs-12 col-sm-4 col-md-6 col-lg-6 pull-right visible-sm visible-md visible-lg">
 
-    <div class="col-xs-12 col-sm-4 col-md-6 col-lg-6 pull-right visible-sm visible-md visible-lg">
-
-      <div class="banner-info main">
-          <div class="banner-info-left">
-              <div class="banner-info-round">
-                <div class="banner-info-vertical">
-                      <p>Informació</p>
-                      <p>i</p>
-                      <p>reserves</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="banner-info-right">  
-              <div class="banner-info-vertical">        
-                  <p><a href="telto:+34932639610">93 263 96 10</a><p>
-                  <p>&nbsp;</p>
-                  <p><a href="mailto:museu@gava.cat">museu@gava.cat</a></p>
-              </div>    
+  <div class="banner-info main">
+      <div class="banner-info-left">
+          <div class="banner-info-round">
+            <div class="banner-info-vertical">
+                  <p>Informació</p>
+                  <p>i</p>
+                  <p>reserves</p>
+            </div>
           </div>
       </div>
 
-    </div> 
+      <div class="banner-info-right">  
+          <div class="banner-info-vertical">        
+              <p><a href="telto:+34932639610">93 263 96 10</a><p>
+              <p>&nbsp;</p>
+              <p><a href="mailto:museu@gava.cat">museu@gava.cat</a></p>
+          </div>    
+      </div>
+  </div>
+</div> 
 
-    <div class="col-xs-12 col-is-6 col-sm-4 col-md-3 col-lg-3">
-      <form action="" ng-controller="FiltersCtrl">
-        <div class="form-group">
-          <div class="filtre-seleccio" ng-if="allNivells" >
-              <div class="banner">
-                <div><span>Tria Nivell</span></div>
-              </div>
-          
-              <ul>
-                  <li ng-repeat="nivell in allNivells">
-                      <input type="checkbox" 
-                             id="opcio-nivell-{{nivell.id}}" 
-                             name="" 
-                             value="" 
-                             ng-model="$root.nivellFilterModels[nivell.id]">
-                      <label for="opcio-nivell-{{nivell.id}}" 
-                             title="{{nivell[filterNivellAttrKey]}}">
-                             {{nivell.nom}}
-                      </label>           
-                  </li>
-              </ul>
+<div class="col-xs-12 col-is-6 col-sm-4 col-md-3 col-lg-3">
+  <form action="" ng-controller="FiltersCtrl">
+    <div class="form-group">
+      <div class="filtre-seleccio" ng-if="allNivells" >
+          <div class="banner">
+            <div><span>Tria Nivell</span></div>
           </div>
-        </div>
-      </form>  
+      
+          <ul>
+              <li ng-repeat="nivell in allNivells">
+                  <input type="checkbox" 
+                         id="opcio-nivell-{{nivell.id}}" 
+                         name="" 
+                         value="" 
+                         ng-model="$root.nivellFilterModels[nivell.id]">
+                  <label for="opcio-nivell-{{nivell.id}}" 
+                         title="{{nivell[filterNivellAttrKey]}}">
+                         {{nivell.nom}}
+                  </label>           
+              </li>
+          </ul>
+      </div>
     </div>
+  </form>  
+</div>
 
-    <div class="col-xs-12 col-is-6 col-sm-4 col-md-3 col-lg-3">
-      <form action="" ng-controller="FiltersCtrl">
-          <div class="form-group">
+<div class="col-xs-12 col-is-6 col-sm-4 col-md-3 col-lg-3">
+  <form action="" ng-controller="FiltersCtrl">
+      <div class="form-group">
 
-            <div class="filtre-seleccio" ng-if="allAreas" style="overflow: hidden">
-                <div class="banner">
-                  <div><span>Tria Àrea</span></div>
-                </div>
-
-                <ul>
-                    <li ng-repeat="area in allAreas">
-                        <input type="checkbox" 
-                               id="opcio-area-{{area.id}}" 
-                               name="" 
-                               value="" 
-                               ng-model="$root.areaFilterModels[area.id]">
-                        <label for="opcio-area-{{area.id}}" 
-                               title="{{area[filterAreaAttrKey]}}"
-                               style="color: {{area.color}}"
-                               > {{area.nom}}
-                        </label>  
-                    </li>
-                </ul>
+        <div class="filtre-seleccio" ng-if="allAreas" style="overflow: hidden">
+            <div class="banner">
+              <div><span>Tria Àrea</span></div>
             </div>
 
-            <div class="form-cercador">
-                <input type="text" name="" value="" ng-model="$root.searchText" placeholder="{{'Cercar activitat'}}">
-            </div>            
+            <ul>
+                <li ng-repeat="area in allAreas">
+                    <input type="checkbox" 
+                           id="opcio-area-{{area.id}}" 
+                           name="" 
+                           value="" 
+                           ng-model="$root.areaFilterModels[area.id]">
+                    <label for="opcio-area-{{area.id}}" 
+                           title="{{area[filterAreaAttrKey]}}"
+                           style="color: {{area.color}}"
+                           > {{area.nom}}
+                    </label>  
+                </li>
+            </ul>
+        </div>
 
-          </div>
-      </form>
-    </div>
+        <div class="form-cercador">
+            <input type="text" name="" value="" ng-model="$root.searchText" placeholder="{{'Cercar activitat'}}">
+        </div>            
 
-  <!-- </div> --><!--row-->  
-<!-- </div> -->
+      </div>
+  </form>
+</div>

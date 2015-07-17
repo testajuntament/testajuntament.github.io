@@ -58,9 +58,9 @@ body {
   background-color: #F3F3F3;
   font-size: 13px;
 
-  a.color-area-1:hover{ color: darken($color-area-1, 7%);}
-  a.color-area-2:hover{ color: darken($color-area-2, 7%);}
-  a.color-area-3:hover{ color: darken($color-area-3, 7%);}
+  // a.color-area-1:hover{ color: darken($color-area-1, 7%);}
+  // a.color-area-2:hover{ color: darken($color-area-2, 7%);}
+  // a.color-area-3:hover{ color: darken($color-area-3, 7%);}
 
   h1, .h1 {
     font-size: 27px;
@@ -246,7 +246,7 @@ body {
   /*BANNERS*/
   .materials {
     background-color: rgba(0, 0, 0, 0);
-    float: left;
+    // float: left;
   }
 
   .banner-info.main {
@@ -409,15 +409,15 @@ body {
       width: 100%;
 
       i.fa.fa-caret-right.area-1 {
-        color: $color-area-1;
+        // color: $color-area-1;
         font-size: 19px;
       }
       i.fa.fa-caret-right.area-2 {
-        color: $color-area-2;
+        // color: $color-area-2;
         font-size: 19px;
       }
       i.fa.fa-caret-right.area-3 {
-        color: $color-area-3;
+        // color: $color-area-3;
         font-size: 19px;
       }
       .banner{
@@ -432,11 +432,19 @@ body {
           text-align: right;
           font-size: 20px;
           font-weight: bold;
-          -moz-transform: rotate(-90deg) translated3d(0,0,0);
-          -webkit-transform: rotate(-90deg);
-          -o-transform: rotate(-90deg) translated3d(0,0,0);
-          -ms-transform: rotate(-90deg) translated3d(0,0,0);
-          transform: rotate(-90deg) translated3d(0,0,0);
+          -webkit-transform: rotate(270deg);
+          -moz-transform: rotate(270deg) ;
+          -o-transform: rotate(270deg);
+          -ms-transform: rotate(270deg); 
+          transform: rotate(270deg);
+
+          // -moz-transform: rotate(-90deg) translated3d(0,0,0);
+          // -webkit-transform: rotate(-90deg);
+          // -o-transform: rotate(-90deg) translated3d(0,0,0);
+          // -ms-transform: rotate(-90deg) translated3d(0,0,0);
+          // transform: rotate(-90deg) translated3d(0,0,0);
+      
+
         } 
       }
       div.rotate > div {
@@ -448,11 +456,18 @@ body {
         width: 30px;
       }
       p.vertical {
-        -moz-transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        transform: rotate(-90deg);          
+        // -moz-transform: rotate(-90deg);
+        // -webkit-transform: rotate(-90deg);
+        // -o-transform: rotate(-90deg);
+        // -ms-transform: rotate(-90deg);
+        // transform: rotate(-90deg);  
+
+          
+        // -webkit-transform: rotate(270deg) ;
+        // -moz-transform: rotate(270deg) ;
+        // -o-transform: rotate(270deg) ;
+        // -ms-transform: rotate(270deg) ; 
+        // transform: rotate(270deg) ;       
       }
 
       .filtre-seleccio{
@@ -612,6 +627,18 @@ body {
   }
 
   /*LEFT COL DETALL*/
+  .detall-img {
+    position: relative;
+    .peu-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.44);
+      width: 100%;
+      color: #FFF;
+      padding: 10px 12px;
+    }
+  }
   .detall-img-info{
     position: relative;
     padding: 23px 15px 15px;

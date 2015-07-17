@@ -18,15 +18,13 @@ var uglify = require('gulp-uglify');
 
 var paths = {
   scripts: [
-    'bower_components/angular/angular.js',
     // 'bower_components/angular-resource/angular-resource.min.js',
-    'bower_components/angular-route/angular-route.min.js',
     // 'bower_components/angular-locale_es-es/angular-locale_es-es.js',
     'bower_components/angular-sanitize/angular-sanitize.js',
     'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
     'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     'js/vendor/jquery.matchHeight-min.js',
-    'js/vendor/bootstrap.min.js',
+    // 'js/vendor/bootstrap.min.js',
     // 'js/vendor/jquery.flexslider-min.js',
     // 'js/vendor/angular-flexslider.js',
     'js/vendor/angular-paginator.js',
@@ -57,7 +55,7 @@ gulp.task('styles', function() {
 		}))
 		.on('error', function (err) { console.log(err.message); })
 		.on('error', gutil.log )
-		.pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+		// .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
 		.pipe(concat('main.css'))
 		// .pipe(minifycss())
 		.pipe(gulp.dest('./css'))
