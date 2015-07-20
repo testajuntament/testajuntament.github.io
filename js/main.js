@@ -28,12 +28,12 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
 app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', 
 	function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	// Github
-	// $rootScope.basePath =  'http://testajuntament.github.io';  
-	//$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/fotos-activitats/LaVenus-color.jpg';
+	$rootScope.basePath =  'http://testajuntament.github.io';  
+	$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/fotos-activitats/LaVenus-color.jpg';
 	
 	//Local
-	$rootScope.basePath =  'http://localhost/testajuntament'; 
-	$rootScope.pathPhotoDefault = 'http://localhost/testajuntament/fotos-activitats/LaVenus-color.jpg';
+	//$rootScope.basePath =  'http://localhost/testajuntament'; 
+	//$rootScope.pathPhotoDefault = 'http://localhost/testajuntament/fotos-activitats/LaVenus-color.jpg';
 	
 	//Production
 	$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat';
