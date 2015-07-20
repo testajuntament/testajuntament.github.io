@@ -676,8 +676,8 @@ body {
       font-size: 17px;
       background-color:$red-color;
       color: #FFF;
-      padding: 9px 15px;
-      line-height: 1.2;
+      padding: 9px 35% 9px 15px;
+      line-height: 22px;
     }
     .subtitol{
       padding: 10px 15px 5px;
@@ -782,7 +782,8 @@ body {
     font-size: 13px;
     line-height: 22px;
     ul {
-      padding: 0;
+        padding: 0 0 0 16px;
+        list-style-type: square;
       li {
         margin: 0 0 0px 0;
       }
@@ -1083,6 +1084,10 @@ body {
   .modul-obra {
     margin-bottom: 30px;
   }
+  
+  .detall-info .titol {
+    padding: 9px 15px;
+  }
 }
 
 @media (min-width: 480px) and (max-width:767px){
@@ -1168,6 +1173,10 @@ body {
       }
     }  
   }
+
+  .detall-info .titol {
+    padding: 9px 15px;
+  }
 }
 @media (min-width:768px) and (max-width:991px){
   .container{
@@ -1191,6 +1200,29 @@ body {
         padding: 11px 8px;
       }      
   }  
+
+  .banner-info.main{
+
+    .banner-info-left{
+      height: 100%;
+      padding: 10% 0;
+      .banner-info-round{
+        .banner-info-vertical{
+          p{
+            font-size: 14px;
+          }          
+        }
+      } 
+    }
+    .banner-info-right{
+      height: 100%;
+      .banner-info-vertical{
+        p{
+          font-size: 14px;
+        }        
+      }
+    }  
+  }   
   .banner-info.detail{
     margin: 0;
     .banner-info-left{
@@ -1211,24 +1243,11 @@ body {
       }
     }  
   }
-  .banner-info{
-    margin: 0;
-    .banner-info-left{
-      height: 100%;
-      padding: 4% 0;
-      .banner-info-round{
-        p{
-          font-size: 13px;
-        }        
-      } 
-    }
-    .banner-info-right{
-      height: 100%;
-      p{
-        font-size: 13px;
-      }
-    }  
-  }     
+
+  .detall-info .titol {
+    padding: 9px 15px;
+  }
+    
 }
 
 @media (min-width:992px) and (max-width:1199px){

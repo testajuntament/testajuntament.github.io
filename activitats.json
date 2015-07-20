@@ -1449,10 +1449,10 @@
             "pathPdfInformacio": ""
         }],
         "nivellRecomanat": "1r i 2n d’ESO",
-        "nivellsEducatius": {
+        "nivellsEducatius": [{
             "id": "22",
             "nom": "ESO"
-        },
+        }],
         "observacions": "<ul>\n<li>\nEl treball es fa en dos dies a Gav&agrave;.</li>\n<li>\nUn dels dos dies, a concretar, cal que el grup disposi d&rsquo;autocar per als despla&ccedil;aments al Garraf.</li>\n<li>\nEls alumnes hauran de dur llapis o bol&iacute;graf i algun suport per al dossier did&agrave;ctic que se&rsquo;ls facilitar&agrave;.</li>\n<li>\nCal dur cal&ccedil;at i roba adequada per fer la sortida de camp i les diverses activitats proposades.</li>\n</ul>\n",
         "peuFoto": "© Museu de Gavà",
         "preu": "24 € / alumne (grup mínim 20 alumnes i màxim 30)",
@@ -1475,10 +1475,10 @@
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> (pla&ccedil;a de Dolors Clua, 13-14)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
         "nivellRecomanat": "P3, P4 i P5",
-        "nivellsEducatius": {
+        "nivellsEducatius": [{
             "id": "1",
             "nom": "Educació infantil"
-        },
+        }],
         "preu": "2,70 € / alumne (grup mínim 20 alumnes i màxim 30)",
         "prioritat": "6",
         "subtitol": "Tres jocs de descoberta dels sentits",
@@ -1499,10 +1499,10 @@
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> (pla&ccedil;a de Dolors Clua, 13-14)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
         "nivellRecomanat": "P3, P4 i P5",
-        "nivellsEducatius": {
+        "nivellsEducatius": [{
             "id": "1",
             "nom": "Educació infantil"
-        },
+        }],
         "observacions": "<ul>\n<li>\nPorteu roba que es pugui embrutar.</li>\n<li>\nEn cas de pluja, l&rsquo;activitat es fa a l&rsquo;aula-taller del Museu.</li>\n</ul>\n",
         "preu": "2,70 € / alumne (grup mínim 20 alumnes i màxim 30)",
         "prioritat": "7",

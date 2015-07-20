@@ -7254,8 +7254,8 @@ body {
   font-size: 17px;
   background-color: #D20019;
   color: #FFF;
-  padding: 9px 15px;
-  line-height: 1.2; }
+  padding: 9px 35% 9px 15px;
+  line-height: 22px; }
 .detall-info .subtitol {
   padding: 10px 15px 5px;
   font-size: 15px;
@@ -7341,7 +7341,8 @@ body {
   font-size: 13px;
   line-height: 22px; }
   .text-observacions ul {
-    padding: 0; }
+    padding: 0 0 0 16px;
+    list-style-type: square; }
     .text-observacions ul li {
       margin: 0 0 0px 0; }
 
@@ -7569,7 +7570,9 @@ body {
   .sidebar-offcanvas.active {
     display: block; }
   .modul-obra {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .detall-info .titol {
+    padding: 9px 15px; } }
 
 @media (min-width: 480px) and (max-width: 767px) {
   .container {
@@ -7625,7 +7628,9 @@ body {
     .banner-info.detail .banner-info-right {
       height: 130px; }
       .banner-info.detail .banner-info-right p {
-        font-size: 14px; } }
+        font-size: 14px; }
+  .detall-info .titol {
+    padding: 9px 15px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
@@ -7640,6 +7645,15 @@ body {
   .retol-2 .retol-text h1 {
     font-size: 16px;
     padding: 11px 8px; }
+  .banner-info.main .banner-info-left {
+    height: 100%;
+    padding: 10% 0; }
+    .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
+      font-size: 14px; }
+  .banner-info.main .banner-info-right {
+    height: 100%; }
+    .banner-info.main .banner-info-right .banner-info-vertical p {
+      font-size: 14px; }
   .banner-info.detail {
     margin: 0; }
     .banner-info.detail .banner-info-left {
@@ -7651,17 +7665,8 @@ body {
       height: 100%; }
       .banner-info.detail .banner-info-right p {
         font-size: 14px; }
-  .banner-info {
-    margin: 0; }
-    .banner-info .banner-info-left {
-      height: 100%;
-      padding: 4% 0; }
-      .banner-info .banner-info-left .banner-info-round p {
-        font-size: 13px; }
-    .banner-info .banner-info-right {
-      height: 100%; }
-      .banner-info .banner-info-right p {
-        font-size: 13px; } }
+  .detall-info .titol {
+    padding: 9px 15px; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .banner-info.detail {
