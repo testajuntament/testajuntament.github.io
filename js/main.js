@@ -36,31 +36,14 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 	//$rootScope.pathPhotoDefault = 'http://localhost/testajuntament/fotos-activitats/LaVenus-color.jpg';
 	
 	//Production
+	//$rootScope.basePath =  'http://portals.ajuntament.gava.cat'; 
 	$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat';
 	//$rootScope.pathPhotoDefault = 'http://portals.ajuntament.gava.cat/fotos-activitats/LaVenus-color.jpg';
 
+
+
+
 	$rootScope.historyLink = 'graella-activitats';
-	// $rootScope.$on('$locationChangeStart', function(event, next, current) {
-	// 	if (next.indexOf('/mapa') !== -1) {
-
-	// 		$rootScope.bodyClass = 'home-mapa';
-	// 	} else if (next.indexOf('/fitxa/') !== -1 || next.indexOf('/ficha/') !== -1) {
-	// 		if (current.indexOf('llista') !== -1 || current.indexOf('lista') !== -1) {
-	// 			$rootScope.historyLink = 'llista';
-	// 		} else if (current.indexOf('graella-activitats') !== -1 || current.indexOf('parrilla') !== -1) {
-	// 			$rootScope.historyLink = 'graella-activitats';
-	// 		}
-	// 		$rootScope.bodyClass = 'fitxa';
-	// 	} else {
-	// 		$rootScope.bodyClass = '';
-	// 	}
-
-	// 	if (next.indexOf('/') !== -1) {
-	// 		$rootScope.language = 'ca';
-	// 	} else if (next.indexOf('/es/') !== -1) {
-	// 		$rootScope.language = 'es';
-	// 	}
-	// });
 
 	$rootScope.$on('$locationChangeSuccess', function() {
 		var text = gettextCatalog.getString('Activitats per a escoles - Museu de Gavà - Ajuntament de Gavà');

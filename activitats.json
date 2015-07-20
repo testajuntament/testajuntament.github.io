@@ -770,10 +770,10 @@
             }
         ],
         "nivellRecomanat": "P3, P4 i P5",
-        "nivellsEducatius": {
+        "nivellsEducatius": [{
             "id": "1",
             "nom": "Educació infantil"
-        },
+        }],
         "observacions": "<p>\nAquesta activitat permet prendre contacte per primera vegada amb les mines de Gav&agrave; i amb la prehist&ograve;ria, i treballar difer&egrave;ncies i semblances dels modes de vida i dels objectes d&rsquo;abans i ara: el menjar, l&rsquo;agricultura i la ramaderia, els estris quotidians...</p>\n",
         "preu": "3,70 €/alumne (grup mínim 20 alumnes)",
         "prioritat": "5",

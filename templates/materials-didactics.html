@@ -8,59 +8,64 @@
         </div>     
       </div>          
     </div> 
-                      <!-- <p ng-if="material.categoriaMaterialDidactic.nom">
-                          <strong ng-bind-html="material.categoriaMaterialDidactic.nom"></strong>
-                      </p>   -->  
+
     <div class="row">  
         <div class="col-xs-12 col-is-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="detall-info">
-                <div class="titol">Materials Didàctics</div>
-                
+            <div class="materials-info">
+                <div class="materials-info-titol">Materials Didàctics</div>
 
-              <div class="row">
-                <div ng-repeat="categoria in categorias">
-                  <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
-                    <strong>{{categoria.nom}}</strong>
+                <div class="row">
 
-                    <div ng-repeat="material in materials">
-                      <div ng-if="material.categoriaMaterialDidactic.nom === categoria.nom">
+                  <div ng-repeat="categoria in categorias">
+                    <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
+                      <div class="materials-info-links">
+                        <strong class="materials-info-categoria"
+                                style="color: {{area.color}}"
+                                >{{categoria.nom}}</strong>
 
-                        <!--videos-->
-                        <p ng-if="material.url && material.titol">
-                          <i class="fa fa-file-video-o"></i>
-                          <a ng-href="{{material.url}}" target="_blank"
-                             ng-bind-html="material.titol">
-                           </a>
-                        </p>
+                        <div ng-repeat="material in materials">
+                          <div ng-if="material.categoriaMaterialDidactic.nom === categoria.nom">
 
-                        <!--imatges-->
-                        <p ng-if="material.pathFoto && material.titol">
-                          <i class="fa fa-picture-o"></i>
-                            <a magnificpopup 
-                               style="color:{{activitat.areaConeixement.color}};" 
-                               class="image-popup-vertical-fit" 
-                               ng-href="{{baseGavaPath}}{{material.pathFoto}}" 
-                               ng-bind-html="material.titol"
-                               >
-                            </a> 
-                        </p>
+                            <!--videos-->
+                            <p ng-if="material.url && material.titol">
+                              <i class="fa fa-file-video-o"></i>
+                              <a ng-href="{{material.url}}" target="_blank"
+                                 ng-bind-html="material.titol">
+                               </a>
+                            </p>
 
-                        <!--documents pdf-->
-                        <p ng-if="material.pathPdfInformacio && material.titol">
-                            <i class="fa fa-file-pdf-o"></i>
-                            <a style="color:{{activitat.areaConeixement.color}};" 
-                               ng-href="{{baseGavaPath}}{{material.pathPdfInformacio}}" 
-                               target="_blank" 
-                               ng-bind-html="material.titol"
-                               >
-                            </a>
-                        </p>
+                            <!--imatges-->
+                            <p ng-if="material.pathFoto && material.titol">
+                              <i class="fa fa-picture-o"></i>
+                                <a magnificpopup 
+                                   style="color:{{activitat.areaConeixement.color}};" 
+                                   class="image-popup-vertical-fit" 
+                                   ng-href="{{baseGavaPath}}{{material.pathFoto}}" 
+                                   ng-bind-html="material.titol"
+                                   >
+                                </a> 
+                            </p>
 
+                            <!--documents pdf-->
+                            <p ng-if="material.pathPdfInformacio && material.titol">
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a style="color:{{activitat.areaConeixement.color}};" 
+                                   ng-href="{{baseGavaPath}}{{material.pathPdfInformacio}}" 
+                                   target="_blank" 
+                                   ng-bind-html="material.titol"
+                                   >
+                                </a>
+                            </p>
+
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div><!--col-->  
-                </div><!--ng-repeat-->
-              </div><!--row-->
+
+
+                    </div><!--col-->  
+                  
+                  </div><!--ng-repeat-->
+                </div><!--row-->
 
             </div>    
         </div>

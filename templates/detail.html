@@ -62,7 +62,7 @@
                 <div class="data-info" ng-if="activitat.durada">
                     <div>
                         <span class="key-info">Durada:</span> <br>
-                        <span class="valor-info" ></span>
+                        <span class="valor-info" ng-bind-html="activitat.durada"></span>
                     </div>
                 </div>
                 
@@ -120,12 +120,12 @@
                 <p>
                     <div ng-if="activitat.tallers.length > 0" class="titol-tallers">Tallers</div>
                     <div class="row">
-                        <div class="col-xs-12 col-is-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="taller in activitat.tallers">
+                        <div class="col-xs-12 col-is-12 col-sm-6 col-md-6 col-lg-6 " ng-repeat="taller in activitat.tallers">
                             <div class="taller-info modul-obra">
                                 <div class="taller-foto">
                                     <img  matchheight 
                                           class="img-responsive" 
-                                          ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}">
+                                          ng-src="{{$root.baseGavaPath}}{{taller.pathFoto}}">
 
                                     <div class="taller-plus" >
                                         <a  style="color: {{activitat.areaConeixement.color}}"
