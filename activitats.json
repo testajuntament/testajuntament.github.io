@@ -1696,10 +1696,12 @@
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> (pla&ccedil;a de Dolors Clua, 13-14)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
         "nivellRecomanat": "P3, P4 i P5",
-        "nivellsEducatius": {
+        "nivellsEducatius": [
+        {
             "id": "1",
             "nom": "Educació infantil"
-        },
+        }
+        ],
         "preu": "2,70 € / alumne (grup mínim 20 alumnes)",
         "prioritat": "10",
         "subtitol": "El Jardí Botànic del Museu de Gavà, una finestra al món de les plantes del delta del Llobregat i del Garraf",

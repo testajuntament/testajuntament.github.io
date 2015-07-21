@@ -1,6 +1,6 @@
 "use strict"; 
 
-var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo','ngSanitize']);
+var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo','ngSanitize', 'mgcrea.ngStrap']);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', 
     function($routeProvider, $locationProvider, $httpProvider) {

@@ -12,36 +12,11 @@
     <div class="row">
         <!--left col-->
         <div class="col-xs-12 col-is-6 col-sm-5 col-md-3 col-lg-3">
-            <!-- <div class="modul-galeria" ng-if="images.length > 0">
-                <section class="slider">
-                    <flex-slider id="slider" 
-                                slide="s in images track by $index"
-                                animation="slide"
-                                control-nav="false"
-                                animation-loop="false"
-                                slideshow="false"
-                                sync="#carousel-slider">
-                        <li>
-                            <img class="pepito" ng-src="{{$root.basePath}}{{s.pathFoto}}" />
-                            <p class="peu-foto">{{s[$root.peuFotoAttrKey]}}</p>
-                        </li>
-                    </flex-slider>
-
-                    <!-- <flex-slider id="carousel" 
-                                slide="s in images track by $index"
-                                animation="slide"
-                                control-nav="false"
-                                animation-loop="false"
-                                slideshow="false"
-                                item-width="140"
-                                item-margin="5"
-                                as-nav-for="#slider-slider">
-                        <li>
-                            <img ng-src="{{$root.basePath}}{{s.pathFoto}}" />
-                        </li>
-                    </flex-slider>
-                </section>
-            </div>  -->
+            <!-- only on xs-->
+            <div class="detall-info visible-xs">
+                <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol"></div>
+            </div> 
+            <!-- -->
 
             <div class="detall-img"><!-- ng-if="images.length > 0" -->
                 <div class="peu-info" ng-if="activitat.peuFoto" ng-bind-html="activitat.peuFoto"></div>
@@ -81,7 +56,7 @@
                 </div>
             </div>
               
-            <div class="banner-info detail" >
+            <div class="banner-info detail hidden-xs" >
                 <div class="banner-info-left">
                   <div class="banner-info-round">
                       <div class="banner-info-vertical">
@@ -90,7 +65,6 @@
                            <p>reserves</p>
                       </div>
                   </div>
-
                 </div>
 
                 <div class="banner-info-right"> 
@@ -105,7 +79,7 @@
 
         <!--middle col -->
         <div class="col-xs-12 col-is-6 col-sm-7 col-md-9 col-lg-9">
-            <div class="detall-info">
+            <div class="detall-info hidden-xs">
                 <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol"></div>
             </div>    
         </div>
@@ -119,8 +93,11 @@
             <div class="taller">
                 <p>
                     <div ng-if="activitat.tallers.length > 0" class="titol-tallers">Tallers</div>
+                    
                     <div class="row">
-                        <div class="col-xs-12 col-is-12 col-sm-6 col-md-6 col-lg-6 " ng-repeat="taller in activitat.tallers">
+                        <div class="col-xs-12 col-is-12 col-sm-6 col-md-6 col-lg-6 " 
+                             ng-repeat="taller in activitat.tallers">
+                            
                             <div class="taller-info modul-obra">
                                 <div class="taller-foto">
                                     <img  matchheight 
@@ -128,10 +105,10 @@
                                           ng-src="{{$root.baseGavaPath}}{{taller.pathFoto}}">
 
                                     <div class="taller-plus" >
-                                        <a  style="color: {{activitat.areaConeixement.color}}"
+                                    <!--<a  style="color: {{activitat.areaConeixement.color}}"
                                             class="color-hover"
                                             title="{{taller.titol}}"
-                                            data-content="{{taller.descripcio}}"
+                                            data-content=""
                                             data-container="body"
                                             data-toggle="popover" 
                                             data-placement="bottom"
@@ -141,10 +118,29 @@
                                                 <div class="back-white"></div>
                                             </i>
                                         </a>
+                                        type="button"
+                                    -->
+                                        <a  style="color: {{activitat.areaConeixement.color}}"
+                                            class="color-hover" 
+                                            class="btn" 
+                                            title="{{taller.titol}}"
+                                            data-unique="{{taller.id}}" 
+                                            data-placement="bottom" 
+                                            data-title="{{taller.titol}}" 
+                                            data-content="{{taller.descripcio}}"
+                                            data-template-url="templates/popover-tmp.html"
+                                            data-auto-close="1"
+                                            bs-popover >
+                                            <i class="glyphicon glyphicon-plus-sign">
+                                                <div class="back-white"></div>
+                                            </i>
+                                        </a> 
+
                                     </div>
+
                                     <div class="taller-titol">{{taller.titol}}</div>
-                                </div>
-            
+                                </div> 
+
                                 <div class="taller-recomanat">{{taller.nivellRecomanat}}</div>
                             </div>
 
@@ -222,6 +218,7 @@
                     <div class="text-materials" ng-repeat="material in activitat.materialDidactics">
 
                         <p ng-if="material.url && material.titol">
+                            <i class="fa fa-external-link" style="color:{{activitat.areaConeixement.color}};"></i>
                             <a style="color:{{activitat.areaConeixement.color}};" 
                                href="{{material.url}}" 
                                target="_blank" 
@@ -229,29 +226,48 @@
                             </a>
                         </p>
 
-                        <p ng-if="material.pathFoto">
+                        <p ng-if="material.pathFoto && material.titol">
+                            <i class="fa fa-picture-o" style="color:{{activitat.areaConeixement.color}};"></i>
                             <a magnificpopup 
                                style="color:{{activitat.areaConeixement.color}};" 
                                class="image-popup-vertical-fit" 
                                ng-href="{{baseGavaPath}}{{activitat.pathFoto}}" 
-                               >Veure imatge
+                               ng-bind-html="material.titol">
                             </a> 
                         </p>
 
                         <p ng-if="material.pathPdfInformacio && material.titol">
-                            
+                            <i class="fa fa-file-text-o" style="color:{{activitat.areaConeixement.color}};"></i>
                             <a style="color:{{activitat.areaConeixement.color}};" 
                                href="http://portals.ajuntament.gava.cat{{material.pathPdfInformacio}}" 
                                target="_blank" 
-                               
-                               ><i class="fa fa-file-pdf-o"></i> {{material.titol}}
+                               ng-bind-html="material.titol">
                             </a>
                         </p>
 
                     </div>                    
                 </div>    
+            </div>  
 
-            </div>       
+            <div class="banner-info detail visible-xs" >
+                <div class="banner-info-left">
+                  <div class="banner-info-round">
+                      <div class="banner-info-vertical">
+                        <p>Informació</p>
+                               <p>i</p>
+                           <p>reserves</p>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="banner-info-right"> 
+                    <div class="banner-info-vertical">
+                        <span ng-if="activitat.telefonInformacioReserves" ng-bind-html="activitat.telefonInformacioReserves"></span>
+                        <p>&nbsp;</p>
+                        <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves"></span>
+                    </div>         
+                </div>
+            </div>     
         </div>
  
     </div>       

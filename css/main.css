@@ -6772,9 +6772,9 @@ body {
   body p {
     overflow: hidden; }
   body .capcalera-back {
-    background-color: #e3e4e8;
-    padding: 0 0 15px 0;
-    margin: 0 0 7px 0; }
+    background-color: #E2E2E2;
+    padding: 0 0 31px 0;
+    margin: 0 0 -1px 0; }
 
 /*RETOLS*/
 .home-back {
@@ -6815,6 +6815,8 @@ body {
   padding: 0px 0px 0px 0px;
   margin: 0px;
   border-top: 1px solid #E5011D; }
+  .retol-2 a {
+    text-decoration: none; }
   .retol-2 h1 {
     letter-spacing: -1px;
     line-height: 26px;
@@ -6938,14 +6940,16 @@ body {
   height: 180px;
   float: left;
   width: 100%;
-  background: #d1d1d1;
-  background: -moz-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #d1d1d1), color-stop(51%, #636363), color-stop(100%, #383838));
-  background: -webkit-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: -o-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: -ms-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: linear-gradient(to bottom, #d1d1d1 0%, #636363 51%, #383838 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#383838', GradientType=0 ); }
+  background-color: #4a4a4a;
+  background-image: -moz-linear-gradient(top, #535353, #3c3c3c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#535353), to(#3c3c3c));
+  background-image: -webkit-linear-gradient(top, #535353, #3c3c3c);
+  background-image: -o-linear-gradient(top, #535353, #3c3c3c);
+  background-image: -ms-linear-gradient(top, #535353, #3c3c3c);
+  background-image: linear-gradient(to bottom, #535353, #3c3c3c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff535353',endColorstr='#ff3c3c3c',GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
   .banner-info.main .banner-info-left {
     width: 50%;
     float: left;
@@ -6959,19 +6963,19 @@ body {
       background-size: contain;
       background-position: center;
       background-image: url('../img/white-circle-np.png'); }
-    .banner-info.main .banner-info-left .banner-info-vertical {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
-      .banner-info.main .banner-info-left .banner-info-vertical p {
-        color: #383838;
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        text-align: center;
-        font-size: 18px; }
+      .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+        .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
+          color: #383838;
+          font-weight: 800;
+          text-align: center;
+          margin: 0;
+          text-align: center;
+          font-size: 18px; }
   .banner-info.main .banner-info-right {
     width: 50%;
     float: left;
@@ -6992,6 +6996,11 @@ body {
         color: #fff; }
         .banner-info.main .banner-info-right .banner-info-vertical p a {
           color: #fff; }
+          .banner-info.main .banner-info-right .banner-info-vertical p a i.fa.fa-phone {
+            font-size: 17px; }
+          .banner-info.main .banner-info-right .banner-info-vertical p a i.fa.fa-envelope {
+            font-size: 14px;
+            margin-right: 2px; }
 
 .banner-info.detail {
   margin: 15px 0px;
@@ -6999,14 +7008,16 @@ body {
   height: 121px;
   float: left;
   width: 100%;
-  background: #d1d1d1;
-  background: -moz-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #d1d1d1), color-stop(51%, #636363), color-stop(100%, #383838));
-  background: -webkit-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: -o-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: -ms-linear-gradient(top, #d1d1d1 0%, #636363 51%, #383838 100%);
-  background: linear-gradient(to bottom, #d1d1d1 0%, #636363 51%, #383838 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#383838', GradientType=0 ); }
+  background-color: #4a4a4a;
+  background-image: -moz-linear-gradient(top, #535353, #3c3c3c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#535353), to(#3c3c3c));
+  background-image: -webkit-linear-gradient(top, #535353, #3c3c3c);
+  background-image: -o-linear-gradient(top, #535353, #3c3c3c);
+  background-image: -ms-linear-gradient(top, #535353, #3c3c3c);
+  background-image: linear-gradient(to bottom, #535353, #3c3c3c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff535353',endColorstr='#ff3c3c3c',GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
   .banner-info.detail .banner-info-left {
     width: 50%;
     float: left;
@@ -7070,9 +7081,9 @@ body {
     .modul-filtres .form-cercador input {
       font-size: 15px;
       font-weight: 500;
-      margin: 16px 0 0 0;
+      margin: 32px 0 0 0;
       width: 100%;
-      border: 1px solid #e3e4e8;
+      border: 1px solid #E2E2E2;
       background: #FFF url("../img/lupa.png") right 4px no-repeat;
       padding: 7px 0px 8px 13px; }
   .modul-filtres .form-group {
@@ -7118,13 +7129,14 @@ body {
         font-weight: 400; }
       .modul-filtres .form-group .filtre-seleccio ul {
         margin: 0;
-        padding: 8px 0 0 10px;
+        /*padding: 8px 0 0 10px;*/
+        padding-left: 0;
         margin-bottom: -99999px;
         padding-bottom: 99999px;
         float: left; }
         .modul-filtres .form-group .filtre-seleccio ul li {
           list-style-type: none;
-          margin-bottom: 12px; }
+          margin: 8px 0px 10px 10px; }
           .modul-filtres .form-group .filtre-seleccio ul li label {
             margin-top: 5px; }
     .modul-filtres .form-group .modul-filtres .form-group .filtre-seleccio ul li.mark-verd label {
@@ -7147,7 +7159,7 @@ body {
       top: 2px;
       width: 24px;
       height: 24px;
-      border: 2px solid #e3e4e8;
+      border: 2px solid #E2E2E2;
       background: #fff;
       border-radius: 4px; }
     .modul-filtres .form-group .filtre-seleccio ul li [type="checkbox"]:not(:checked) + label:after, .modul-filtres .form-group .filtre-seleccio ul li [type="checkbox"]:checked + label:after {
@@ -7260,6 +7272,15 @@ body {
     line-height: 22px; }
   .materials-info .materials-info-links {
     padding: 9px 15px; }
+    .materials-info .materials-info-links p {
+      padding: 4px 0; }
+      .materials-info .materials-info-links p a {
+        color: #333333; }
+      .materials-info .materials-info-links p i.fa {
+        margin: 0 2px 0 0; }
+    .materials-info .materials-info-links .materials-info-categoria {
+      padding: 4px 0 16px;
+      display: block; }
 
 /*DETALL*/
 .detall-info p {
@@ -7333,7 +7354,7 @@ body {
         width: 100%;
         bottom: 0;
         padding: 5px 8px;
-        height: 19%; }
+        height: 21%; }
     .taller .taller-info .taller-recomanat {
       background-color: #808080;
       color: #000;
@@ -7376,9 +7397,8 @@ body {
     font-size: 13px;
     line-height: 22px; }
     .wrap-text-materials .text-materials p {
-      margin: 0; }
+      margin: 9px 0; }
       .wrap-text-materials .text-materials p a {
-        display: block;
         margin: 5px 0; }
 
 /*TRIANGLES*/
@@ -7430,23 +7450,30 @@ body {
     padding: 8px 10px 0px;
     font-size: 15px;
     font-weight: 600; }
+    .detalls-obra .detall-titol p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; }
   .detalls-obra .detall {
     position: absolute;
-    top: 32%;
-    padding: 0 49px 0 10px;
+    top: 29%;
+    padding: 0 54px 0 10px;
     width: 100%;
     left: 0; }
     .detalls-obra .detall p {
       font-size: 13px;
       color: #FFF;
       font-weight: 600;
-      margin: 0px 0 4px 0; }
+      margin: 0px 0 7px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; }
   .detalls-obra .detall-plus {
     position: absolute;
-    top: 82%;
-    left: 85%;
+    top: 83%;
+    left: 86%;
     z-index: 10000;
-    font-size: 42px;
+    font-size: 39px;
     margin: -20px -13px; }
     .detalls-obra .detall-plus a i.glyphicon {
       font-weight: 600; }
@@ -7514,17 +7541,15 @@ body {
   cursor: pointer; }
 
 .peu-back {
-  background-color: #e3e4e8; }
-
-.peu {
-  height: 200px;
-  margin-top: 100px;
-  padding-top: 53px; }
-
-.peu .logo-Ajuntament {
-  margin: 0 auto;
-  display: block;
-  width: 120px; }
+  background-color: #E2E2E2; }
+  .peu-back .peu {
+    margin-top: 41px; }
+    .peu-back .peu .footer p, .peu-back .peu footer p {
+      text-align: center;
+      padding: 40px 0 38px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #666; }
 
 .navegacio-top {
   padding: 4px 2px 5px;
@@ -7597,7 +7622,8 @@ body {
   .modul-obra {
     margin-bottom: 30px; }
   .detall-info .titol {
-    padding: 9px 15px; } }
+    padding: 9px 15px;
+    margin: 0 0 10px 0; } }
 
 @media (min-width: 480px) and (max-width: 767px) {
   .container {
@@ -7626,12 +7652,12 @@ body {
   .retol {
     width: 100%; }
     .retol .retol-text h1 {
-      font-size: 15px;
+      font-size: 18px;
       padding: 11px 8px; }
   .retol-2 {
     width: 100%; }
     .retol-2 .retol-text h1 {
-      font-size: 15px;
+      font-size: 18px;
       padding: 11px 8px; }
   .banner-info.main {
     margin: 0; }
@@ -7665,10 +7691,10 @@ body {
     .container.capcalera {
       padding: 0; }
   .retol .retol-text h1 {
-    font-size: 15px;
+    font-size: 19px;
     padding: 11px 8px; }
   .retol-2 .retol-text h1 {
-    font-size: 16px;
+    font-size: 19px;
     padding: 11px 8px; }
   .banner-info.main .banner-info-left {
     height: 100%;

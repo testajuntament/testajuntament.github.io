@@ -28,7 +28,7 @@
 
                             <!--videos-->
                             <p ng-if="material.url && material.titol">
-                              <i class="fa fa-file-video-o"></i>
+                              <i class="fa fa-external-link"></i>
                               <a ng-href="{{material.url}}" target="_blank"
                                  ng-bind-html="material.titol">
                                </a>
@@ -48,7 +48,7 @@
 
                             <!--documents pdf-->
                             <p ng-if="material.pathPdfInformacio && material.titol">
-                                <i class="fa fa-file-pdf-o"></i>
+                                <i class="fa fa-file-text-o"></i>
                                 <a style="color:{{activitat.areaConeixement.color}};" 
                                    ng-href="{{baseGavaPath}}{{material.pathPdfInformacio}}" 
                                    target="_blank" 

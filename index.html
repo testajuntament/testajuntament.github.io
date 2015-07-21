@@ -61,7 +61,7 @@
 
                         <div class="retol white">
                             <div class="home-back">
-                                <a href="http://www.patrimonigava.cat/" title="patrimonigava.cat">
+                                <a href="http://www.patrimonigava.cat/" title="www.patrimonigava.cat">
                                     <img src="img/home.png">
                                 </a>
                             </div> 
@@ -69,25 +69,25 @@
                                 <h1>Patrimoni Cultural i Natural de Gavà</h1>
                             </div>  
 
-                            <div class="logo-Ajuntament hidden-xs hidden-sm"><!--  -->
+                            <div class="logo-Ajuntament hidden-xs hidden-sm hidden-md">
                                 <a href="http://www.gavaciutat.cat" target="_blank" title="Ajuntament de Gavà">
                                   <img src="img/gava.png" alt="logotip de l'Ajuntament de Gavà" class="img-responsive" >
                                 </a>
                             </div>                             
-                              
                         </div> 
 
                         <div class="retol-2 red">
                             <div class="retol-text text-center">
-                                <a ng-href="{{$root.basePath}}">
+                                <a ng-href="{{$root.basePath}}" title="Servei Pedagògic - Patrimoni Cultural i Natural de Gavà">
                                 <h1>Servei Pedagògic</h1></a>
                             </div>                               
-                        </div>  
+                        </div> 
+
                     </div><!-- col12-->
                 </div> <!--row--> 
 
-                <div class="row">
-                    <div class="col-xs-12 col-is-12 col-sm-12 col-md-12 visible-xs no-pad">
+                <!--<div class="row hidden-xs">
+                    <div class="col-xs-12 col-is-12 col-sm-12 col-md-12">
                         <div class="banner-info main">
                             <div class="banner-info-left">
                                 <div class="banner-info-round">
@@ -101,14 +101,14 @@
 
                             <div class="banner-info-right">  
                                 <div class="banner-info-vertical">        
-                                    <p><a href="telto:+34932639610">93 263 96 10</a><p>
+                                    <p><a href="telto:+34932639610"><i class="fa fa-mobile"></i> 93 263 96 10</a><p>
                                     <p>&nbsp;</p>
                                     <p><a href="mailto:museu@gava.cat">museu@gava.cat</a></p>
                                 </div>    
                             </div>
                         </div>
                     </div> 
-                </div><!--row-->        
+                </div>-->        
             </div><!--container-->
         </div>
 
@@ -141,7 +141,8 @@
                 <footer>
                   <div class="row">
                     <div class="col-xs-12">
-                        <p class="text-center">Dades legals</p>
+                        <p class="text-center">Plaça Dolors Clua, 13-14 Gavà - 08850 - Tel. 93 263 96 50 Fax 93 263 96 21 - museu@gava.cat -<a href="http://www.patrimonigava.cat" rel="external" target="_blank"> Patrimoni Cultural i Natural de Gavà</a>
+                        </p>
                     </div>
                   </div>  
                 </footer>
@@ -150,8 +151,13 @@
                      
         <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
         <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+        
+
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+        <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.1.2/angular-strap.tpl.min.js"></script>
 
 
         <!-- <script src="js/vendor/bootstrap.min.js"></script> -->

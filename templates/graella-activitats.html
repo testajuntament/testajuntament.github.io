@@ -1,24 +1,26 @@
-<!-- <div class=" gab-before"></div> --><!-- container -->
+<div class="row row-offcanvas row-offcanvas-left">
+  <div class="col-xs-12 col-sm-12 col-md-12   hidden-sm hidden-md hidden-lg">
+    <button  ng-click="sidebarActive = !sidebarActive" type="button" class="btn btn-primary cap-xs" data-toggle="offcanvas" translate>Cercar activitats</button>
+  </div>
+</div> 
 
-    <div class="row row-offcanvas row-offcanvas-left">
-      <div class="col-xs-12 col-sm-12 col-md-12   hidden-sm hidden-md hidden-lg"><!--sidebar-offcanvas visible-is visible-xs -->
-        <button  ng-click="sidebarActive = !sidebarActive" type="button" class="btn btn-primary cap-xs" data-toggle="offcanvas" translate>Cercar</button>
-      </div>
-    </div> 
+<div class="row">
+  <div class="sidebar-offcanvas" id="sidebar" ng-class="{'active':sidebarActive}">
+    <div class="modul-filtres" ng-include="'templates/filters.html'"></div>
+  </div>
+</div>
 
-    <div class="row">
-      <div class="sidebar-offcanvas" id="sidebar" ng-class="{'active':sidebarActive}">
-        <div class="modul-filtres" ng-include="'templates/filters.html'"></div>
-      </div>
-    </div>
-
+<div clas="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="header-resultats">
       <p translate-n="filteredWorks.length" 
          translate-plural="Hi ha <strong>{{$count}}</strong> activitats" 
          translate>Hi ha <strong>1</strong> activitat
       </p>
     </div>
+  </div>  
+</div>
 
-    <div class="row row-offcanvas row-offcanvas-left" ng-include="'templates/element_grid.html'"></div>
+<div class="row row-offcanvas row-offcanvas-left" ng-include="'templates/element_grid.html'"></div>
 
-    <div class="row row-offcanvas row-offcanvas-left"><paginator></paginator></div>           
+<div class="row row-offcanvas row-offcanvas-left"><paginator></paginator></div>           

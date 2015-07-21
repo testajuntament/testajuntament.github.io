@@ -1,0 +1,61 @@
+<div class="popover" 
+     tabindex="-1" 
+     ng-show="content"
+     style="padding:0px;">
+  
+  <div class="arrow"></div>
+  
+  <i class="fa fa-times"
+  	 style="position: absolute;  
+  	        color: #fff;
+  			position: absolute;
+  			right: 0;
+  			padding: 9px 13px 7px 5px;"	>
+  </i>
+
+  <h3 class="popover-title" 
+      ng-bind-html="title" 
+      ng-show="title" 
+      ng-style="{
+        'background-color': '{{activitat.areaConeixement.color}}',
+        'color': '#fff',
+        'font-weight': '700'
+      }">
+  </h3>
+  
+  <div class="popover-content">
+    
+
+    <form name="popoverForm">
+      <p ng-bind-html="content" ></p><!--style="min-width:300px;"-->
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon">@</div>
+          <input class="form-control" type="email" placeholder="Enter email">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="btn btn-danger" ng-click="$hide()">Close</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+<!--<div name="popoverForm" class="popover">
+	<div class="arrow"></div>
+    
+    <h3 class="popover-title" 
+        style="background-color: {{activitat.areaConeixement.color}}"
+        ng-bind-html="">
+    </h3>
+    
+    <div class="popover-content">
+		<form name="popoverForm" class="ng-pristine ng-valid">
+		  <p ng-bind-html="popover.content" style="color: {{activitat.areaConeixement.color}}"></p>
+
+		  <div class="form-actions">
+			<button type="button" class="btn" ng-click="dismiss()">Tancar</button>
+		  </div>
+		</form>
+	</div>
+</div>
