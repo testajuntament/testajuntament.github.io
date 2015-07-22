@@ -10,7 +10,9 @@
     */
 
     var _previousResizeWidth = -1,
-        _updateTimeout = -1;
+        //_updateTimeout = -1;
+        _updateTimeout = -1,
+        _resizeTimer = -1;
 
     /*
     *  _parse
@@ -136,6 +138,8 @@
     matchHeight._maintainScroll = false;
     matchHeight._beforeUpdate = null;
     matchHeight._afterUpdate = null;
+
+    matchHeight._resizeTimeOut = 0;
 
     /*
     *  matchHeight._apply
@@ -323,14 +327,31 @@
         }
 
         // throttle updates
-        if (!throttle) {
-            _update(event);
-        } else if (_updateTimeout === -1) {
-            _updateTimeout = setTimeout(function() {
-                _update(event);
-                _updateTimeout = -1;
-            }, matchHeight._throttle);
-        }
+        //if (!throttle) {
+        //    _update(event);
+        //} else if (_updateTimeout === -1) {
+        //    _updateTimeout = setTimeout(function() {
+        //        _update(event);
+        //        _updateTimeout = -1;
+        //    }, matchHeight._throttle);
+
+            // clear the timeout when matchHeight._resizeTimeOut is not reached
+            if (_resizeTimer !== -1) {
+             clearTimeout(_resizeTimer);
+            }
+
+            _resizeTimer = setTimeout(function() {
+                // throttle updates
+                if (!throttle) {
+                    _update(event);
+                } else if (_updateTimeout === -1) {
+                    _updateTimeout = setTimeout(function() {
+                        _update(event);
+                        _updateTimeout = -1;
+                    }, matchHeight._throttle);
+                }
+            }, matchHeight._resizeTimeOut);
+
     };
 
     /*

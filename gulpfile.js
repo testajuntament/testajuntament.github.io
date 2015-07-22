@@ -23,7 +23,7 @@ var paths = {
     'bower_components/angular-sanitize/angular-sanitize.js',
     'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
     'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-    'js/vendor/jquery.matchHeight-min.js',
+    //'js/vendor/jquery.matchHeight-min.js',
     // 'js/vendor/bootstrap.min.js',
     // 'js/vendor/jquery.flexslider-min.js',
     // 'js/vendor/angular-flexslider.js',

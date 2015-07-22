@@ -776,7 +776,7 @@ body {
             width: 100%;
             bottom: 0;
             padding: 5px 8px;
-            height: 21%;
+            height: 19%;
           }
         }
         .taller-recomanat {
@@ -903,6 +903,16 @@ body {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical; 
 
+          display: block; /* Fallback for non-webkit */
+          max-width: 400px;
+          height: 3.6em; /* Fallback for non-webkit */
+          margin: 0 auto;
+          
+          overflow: hidden;
+          text-overflow: ellipsis; 
+
+          line-height: $line-height;         
+
         }
       }
       .detall{
@@ -1015,6 +1025,10 @@ body {
           font-size: 12px;
           font-weight: 400;
           color: #666;
+          a {
+            color: #666666;
+            text-decoration: underline;
+          }
         }
       }      
     }
@@ -1133,10 +1147,6 @@ body {
   .sidebar-offcanvas.active {
     // @include transition(0.2s);
     display: block;
-  }
-
-  .modul-obra {
-    margin-bottom: 30px;
   }
   
   .detall-info .titol {

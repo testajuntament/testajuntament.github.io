@@ -45,13 +45,28 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 
 	$rootScope.historyLink = 'graella-activitats';
 
+	$rootScope.$on('$locationChangeStart', function(event, next, current) {
+		if (next.indexOf('/mapa') !== -1) {
+			$rootScope.bodyClass = 'home-mapa';
+		} else if (next.indexOf('/fitxa/') !== -1 ) {
+			if (current.indexOf('graella-activitats') !== -1 ) {
+				$rootScope.historyLink = 'graella-activitats';
+			} else if (current.indexOf('graella-activitats') !== -1 ) {
+				$rootScope.historyLink = 'graella-activitats';
+			} else if (current.indexOf('materials-didactics') !== -1) {
+				$rootScope.historyLink = 'materials-didactics';
+			}
+			$rootScope.bodyClass = 'fitxa';
+		} else {
+			$rootScope.bodyClass = '';
+		}
+	});
+
+
 	$rootScope.$on('$locationChangeSuccess', function() {
 		var text = gettextCatalog.getString('Activitats per a escoles - Museu de Gavà - Ajuntament de Gavà');
 		$('html head title').text(text);
 		$('html head meta[name=description]').attr("content", text);
-		// ga('send', 'pageview', {
-		// 	page: $location.url()
-		// });
 	});
 
 	$rootScope.getGridPath = function() {
@@ -155,6 +170,10 @@ app.controller('ListCtrl', ['$scope', '$routeParams', '$rootScope', '$timeout', 
 app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootScope', '$timeout', 'GavaAPI',
 	function($scope,   $routeParams,   $location,   $rootScope,   $timeout,   GavaAPI) {
 	
+	GavaAPI.getAllActivitats().then(function(activitats) {
+		$scope.activitats = activitats;
+	});	
+
 	GavaAPI.getAllMaterials().then(function(materials) {
 		$scope.materials = materials;
 	});
@@ -163,26 +182,24 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootSc
 		$scope.categorias = categorias;
 	});	
 
-	
-	$scope.getColor = function(categoriaNom){
-		GavaAPI.getColorByCategoriaNom(categoriaNom).then(function(color){
-			$scope.thecolor = color;
-			console.log('thecolor', color);
-			return thecolor;
-		});
-		return thecolor;		
+	GavaAPI.getColorByCategoriaNom().then(function(color){
+
+	});
+
+	$scope.getColor = function(nom){
+		var nom = nom;
+		console.log('nom', nom);
+		if (nom === "Socials"){return '#f0a400'}
+		
+		
 	};
 
 
 	$scope.goBack = function() {
 		var path;
-		if ($rootScope.historyLink === 'graella-activitats'){ 
-			path = '/graella-activitats'; 
-		}else if ($rootScope.historyLink === 'materials-didactics') {
-			path =  '/materials-didactics';
-		} else if ($rootScope.historyLink === 'mapa') {
-			path =  '/mapa';
-		}
+		if ($rootScope.historyLink === 'graella-activitats'){ path = '/graella-activitats'; }
+        if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
+        if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 		$location.path(path);
 	};	
 
@@ -207,11 +224,9 @@ app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', 
 
 	$scope.goBack = function() {
 		var path;
-		if ($rootScope.historyLink === 'graella-activitats'){ 
-			path = '/graella-activitats'; 
-		}else if ($rootScope.historyLink === 'materials-didactics') {
-			path =  '/materials-didactics';
-		}
+		if ($rootScope.historyLink === 'graella-activitats'){ path = '/graella-activitats'; }
+        if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
+        if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 		$location.path(path);
 	};
 
@@ -284,6 +299,9 @@ app.directive('matchheight', function() {
 			element.bind("load", function(e) {
 				$('.modul-obra').matchHeight();
 			});
+			element.bind("resize", function(e) {
+				$('.modul-obra').matchHeight();
+			});
 		}
 	};
 });
@@ -348,21 +366,21 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 
 	var getColorByCategoriaNom = function(categoriaNom){
 		var categoriaNom = categoriaNom;
-		var theColor = '';
+		var nomPicked;
 
 		var defer = $q.defer();
 		this.getAllActivitats().then(function(activitats) {
-			
 			angular.forEach(activitats, function(activitat){
-				angular.forEach(activitat.areaConeixement, function(areaConeixement){
-					if (areaConeixement.nom === categoriaNom){
-						theColor = areaConeixement.color;
-					}
-				});
+				nomPicked = activitat.areaConeixement.nom;
+				if (categoriaNom === nomPicked){
+					defer.resolve(activitat.areaConeixement.color);
+					console.log('color magico', activitat.areaConeixement.color);
+					return;
+				}
 			});
-			defer.resolve(theColor);
+			defer.reject();
 		});
-		return defer.promise;		
+		return defer.promise;	
 	};
 
 	var getAllMaterials = function(){

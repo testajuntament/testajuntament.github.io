@@ -7552,6 +7552,9 @@ body {
       font-size: 12px;
       font-weight: 400;
       color: #666; }
+      .peu-back .peu .footer p a, .peu-back .peu footer p a {
+        color: #666666;
+        text-decoration: underline; }
 
 .navegacio-top {
   padding: 4px 2px 5px;
@@ -7621,8 +7624,6 @@ body {
     display: none; }
   .sidebar-offcanvas.active {
     display: block; }
-  .modul-obra {
-    margin-bottom: 30px; }
   .detall-info .titol {
     padding: 9px 15px;
     margin: 0 0 10px 0; } }

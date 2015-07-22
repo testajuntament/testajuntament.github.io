@@ -17,9 +17,10 @@
                 <div class="row">
 
                   <div ng-repeat="categoria in categorias">
+                    
                     <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
                       <div class="materials-info-links">
-                        <strong class="materials-info-categoria">
+                        <strong class="materials-info-categoria" ng-style="{ 'color': getColor({{categoria.nom}}) }">
                           {{categoria.nom}}
                         </strong>
 
