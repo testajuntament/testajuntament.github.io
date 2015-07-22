@@ -827,7 +827,10 @@ body {
       font-size: 13px;
       line-height: 22px;
       p{
-          margin: 9px 0;
+        margin: 9px 0;
+        i.fa {
+          margin: 0 3px 0 0;
+        }
         a{
           margin: 5px 0;
         }

@@ -7398,6 +7398,8 @@ body {
     line-height: 22px; }
     .wrap-text-materials .text-materials p {
       margin: 9px 0; }
+      .wrap-text-materials .text-materials p i.fa {
+        margin: 0 3px 0 0; }
       .wrap-text-materials .text-materials p a {
         margin: 5px 0; }
 

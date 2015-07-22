@@ -19,11 +19,11 @@
                   <div ng-repeat="categoria in categorias">
                     <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
                       <div class="materials-info-links">
-                        <strong class="materials-info-categoria"
-                                style="color: {{area.color}}"
-                                >{{categoria.nom}}</strong>
+                        <strong class="materials-info-categoria">
+                          {{categoria.nom}}
+                        </strong>
 
-                        <div ng-repeat="material in materials">
+                        <div ng-repeat="material in materials | unique: 'id' "> 
                           <div ng-if="material.categoriaMaterialDidactic.nom === categoria.nom">
 
                             <!--videos-->
