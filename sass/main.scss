@@ -1,4 +1,6 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+/*@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");*/
+
+@import "../bower_components/open-sans-fontface/sass/open-sans.scss";
 
 $ContainerPhone: 460px;
 $screen-is: 480px;
@@ -895,6 +897,7 @@ body {
         padding: 8px 10px 0px;
         font-size: 15px;
         font-weight: 600;
+        overflow: hidden;
         p{
           //text-overflow: ellipsis;
           //overflow: hidden;
@@ -904,10 +907,10 @@ body {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical; 
 
-          display: block; /* Fallback for non-webkit */
-          max-width: 400px;
-          height: 3.6em; /* Fallback for non-webkit */
-          margin: 0 auto;
+          //display: block; /* Fallback for non-webkit */
+          //max-width: 400px;
+          //height: 3.6em; /* Fallback for non-webkit */
+          //margin: 0 auto;
           
           overflow: hidden;
           text-overflow: ellipsis; 
@@ -918,19 +921,20 @@ body {
       }
       .detall{
         position: absolute;
-        top: 29%;
+        top: 32%;
         padding: 0 54px 0 10px;
         width: 100%;
         left: 0;
         p{
           font-size: 13px;
           color: #FFF;
-          font-weight: 600; 
-          margin: 0px 0 7px 0; 
-
+          font-weight: 600;
+          margin: 0;
           display: -webkit-box;
           -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;       
+          -webkit-box-orient: vertical;
+          line-height: 1.5; 
+      
         }
       } 
       .detall-plus {
