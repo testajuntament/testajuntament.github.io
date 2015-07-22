@@ -20,9 +20,9 @@
                     
                     <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-6">
                       <div class="materials-info-links">
-                        <strong class="materials-info-categoria" ng-style="{ 'color': getColor({{categoria.nom}}) }">
+                        <div class="materials-info-categoria" ><!--ng-style="{ 'color': getColor({{categoria.nom}}) }"-->
                           {{categoria.nom}}
-                        </strong>
+                        </div>
 
                         <div ng-repeat="material in materials | unique: 'id' "> 
                           <div ng-if="material.categoriaMaterialDidactic.nom === categoria.nom">

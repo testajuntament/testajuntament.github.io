@@ -50,7 +50,7 @@ body {
 
   .capcalera-back{
     background-color: $soft-grey;
-    padding: 0 0 31px 0;
+    padding: 0 0 26px 0;
     margin: 0 0 -1px 0;
   }
 
@@ -666,11 +666,10 @@ body {
       padding: 9px 14px;
       line-height: 22px;
     }
-    .materials-info-categoria{
 
-    }
     .materials-info-links{
       padding: 9px 15px;
+
       p{
         padding: 4px 0;
         a{
@@ -681,9 +680,11 @@ body {
         }                  
       }
 
-      .materials-info-categoria {
-        padding: 4px 0 16px;
+      .materials-info-categoria { 
+        padding: 4px 0 8px;
         display: block;
+        font-size: 16px;
+        font-weight: 600;
       }
 
     }
@@ -911,7 +912,7 @@ body {
           overflow: hidden;
           text-overflow: ellipsis; 
 
-          line-height: $line-height;         
+         // line-height: $line-height;         
 
         }
       }
@@ -1038,18 +1039,16 @@ body {
 
 
   .navegacio-top {
-    padding: 4px 2px 5px;
-    font-size: 16px;
+    padding: 11px 0px 8px;
     margin-bottom: 2px;
     display: block;
     a {
-      font-size: 18px;
-      color: $grey-color;
+      font-size: 16px;
+      color: #383838;
     }
 
     i {
-      font-size: 17px;
-      // margin-right: 5px;
+      font-size: 14px;
       margin-right: 0px;
       margin-top: 5px;
     }

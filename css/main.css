@@ -6773,7 +6773,7 @@ body {
     overflow: hidden; }
   body .capcalera-back {
     background-color: #E2E2E2;
-    padding: 0 0 31px 0;
+    padding: 0 0 26px 0;
     margin: 0 0 -1px 0; }
 
 /*RETOLS*/
@@ -7279,8 +7279,10 @@ body {
       .materials-info .materials-info-links p i.fa {
         margin: 0 2px 0 0; }
     .materials-info .materials-info-links .materials-info-categoria {
-      padding: 4px 0 16px;
-      display: block; }
+      padding: 4px 0 8px;
+      display: block;
+      font-size: 16px;
+      font-weight: 600; }
 
 /*DETALL*/
 .detall-info p {
@@ -7354,7 +7356,7 @@ body {
         width: 100%;
         bottom: 0;
         padding: 5px 8px;
-        height: 21%; }
+        height: 19%; }
     .taller .taller-info .taller-recomanat {
       background-color: #808080;
       color: #000;
@@ -7455,7 +7457,15 @@ body {
     .detalls-obra .detall-titol p {
       display: -webkit-box;
       -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical; }
+      -webkit-box-orient: vertical;
+      display: block;
+      /* Fallback for non-webkit */
+      max-width: 400px;
+      height: 3.6em;
+      /* Fallback for non-webkit */
+      margin: 0 auto;
+      overflow: hidden;
+      text-overflow: ellipsis; }
   .detalls-obra .detall {
     position: absolute;
     top: 29%;
@@ -7557,15 +7567,14 @@ body {
         text-decoration: underline; }
 
 .navegacio-top {
-  padding: 4px 2px 5px;
-  font-size: 16px;
+  padding: 11px 0px 8px;
   margin-bottom: 2px;
   display: block; }
   .navegacio-top a {
-    font-size: 18px;
+    font-size: 16px;
     color: #383838; }
   .navegacio-top i {
-    font-size: 17px;
+    font-size: 14px;
     margin-right: 0px;
     margin-top: 5px; }
 

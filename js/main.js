@@ -186,13 +186,13 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootSc
 
 	});
 
-	$scope.getColor = function(nom){
+	/*$scope.getColor = function(nom){
 		var nom = nom;
 		console.log('nom', nom);
 		if (nom === "Socials"){return '#f0a400'}
 		
 		
-	};
+	};*/
 
 
 	$scope.goBack = function() {
