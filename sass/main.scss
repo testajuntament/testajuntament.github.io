@@ -1,6 +1,6 @@
-/*@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");*/
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 
-@import "../bower_components/open-sans-fontface/sass/open-sans.scss";
+/*@import "../bower_components/open-sans-fontface/sass/open-sans.scss";*/
 
 $ContainerPhone: 460px;
 $screen-is: 480px;
@@ -14,9 +14,9 @@ $screen-xs-max: ($screen-is-min - 1);
 
 @import "../bower_components/magnific-popup/dist/magnific-popup.css";
 
-$red-color: #D20019; //#E3001B;
+$red-color: #D20019;
 $grey-color: #383838;
-$soft-grey: #E2E2E2; //#e3e4e8;
+$soft-grey: #E2E2E2;
 
 .grey{ background-color: $grey-color; }
 .white{ background-color: #fff; }
@@ -1044,11 +1044,11 @@ body {
 
 
   .navegacio-top {
-    padding: 11px 0px 8px;
+    padding: 12px 0px 9px;
     margin-bottom: 2px;
     display: block;
     a {
-      font-size: 16px;
+      font-size: 15px;
       color: #383838;
     }
 
@@ -1124,13 +1124,13 @@ body {
     height: 95px;
     margin: 0;
     .banner-info-left{
-      padding: 1% 0;
+      padding: 1.5% 0;
       .banner-info-round {
         .banner-info-vertical{
           p{
-            font-size: 13px;
+            font-size: 12px;
             a{
-              font-size: 13px;
+              font-size: 12px;
             }
           } 
         }         
@@ -1139,7 +1139,7 @@ body {
     .banner-info-right{
       .banner-info-vertical{
         p{
-          font-size: 13px;
+          font-size: 12px;
         }
       }  
     }
@@ -1247,6 +1247,7 @@ body {
     padding: 9px 15px;
   }
 }
+
 @media (min-width:768px) and (max-width:991px){
   .container{
     margin-right: auto;
