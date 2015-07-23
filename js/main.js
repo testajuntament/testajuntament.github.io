@@ -365,7 +365,7 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 	};
 
 	var getColorByCategoriaNom = function(categoriaNom){
-		var categoriaNom = categoriaNom;
+		categoriaNom = categoriaNom;
 		var nomPicked;
 
 		var defer = $q.defer();
