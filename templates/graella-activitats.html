@@ -21,36 +21,21 @@
   </div>  
 </div>
 
-<div class="row row-offcanvas row-offcanvas-left" ng-include="'templates/element_grid.html'"></div>
+<div class="row" ng-include="'templates/element_grid.html'"></div>
 
-<div class="row row-offcanvas row-offcanvas-left"><paginator></paginator></div>           
+<div class="row"><paginator></paginator></div>          
 
-<div class="row">
-    <div class="banner-info detail visible-xs" >
-        <div class="banner-info-left">
-          <div class="banner-info-round">
-              <div class="banner-info-vertical">
-                <p>Informació</p>
-                       <p>i</p>
-                   <p>reserves</p>
-              </div>
-          </div>
-        </div>
 
-        <div class="banner-info-right"> 
-            <div class="banner-info-vertical">
-                <p>
-                    <a href="telto:+34932639610">
-                       <i class="fa fa-phone hidden-sm"></i> 93 263 96 10
-                     </a>
-                  <p>
-                <p>&nbsp;</p>
-                <p>
-                    <a href="mailto:museu@gava.cat">
-                      <i class="fa fa-envelope hidden-sm"></i> museu@gava.cat
-                    </a>
-                  </p>
-            </div>         
-        </div>
-    </div>
-</div>
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3
+            hidden-sm hidden-md hidden-lg">
+  <div class="row">
+    <div class="col-xs-12 col-is-6 col-sm-12 col-md-12 col-lg-12">
+      <div class="materials">
+        <a ng-href="{{$root.getMaterialsPath()}}" title="Materias didàctics">
+          <img class="img-responsive" src="img/banner-material-didactic.png">
+        </a>
+      </div>
+    </div>  
+  </div>  
+</div><!--col-->
+

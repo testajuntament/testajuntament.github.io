@@ -394,7 +394,7 @@ body {
       input {
         font-size: 15px;
         font-weight: 500;
-        margin: 32px 0 0 0;
+        margin: 29px 0 0 0;
         width: 100%;
         border: 1px solid $soft-grey;
         background: #FFF url("../img/lupa.png") right 4px no-repeat;
@@ -471,7 +471,7 @@ body {
             font-size: 18px;
             color: #000;
             display: block;
-            margin-bottom: 20px;
+            /*margin-bottom: 20px;*/
             font-weight: 400;
           }   
 
@@ -904,7 +904,7 @@ body {
         font-size: 15px;
         font-weight: 600;
         overflow: hidden;
-        height: 25%;
+        height: 28%;
         p{
           //text-overflow: ellipsis;
           //overflow: hidden;
@@ -1127,17 +1127,18 @@ body {
     }
   }
   .banner-info.main{
-    height: 95px;
+    height: 110px;
     margin: 0;
     border-top: 1px solid #636363;
     .banner-info-left{
-      padding: 1.5% 0;
+      padding: 2% 0;
       .banner-info-round {
         .banner-info-vertical{
           p{
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: 700;
             a{
-              font-size: 12px;
+              font-size: 13px;
             }
           } 
         }         
@@ -1146,7 +1147,11 @@ body {
     .banner-info-right{
       .banner-info-vertical{
         p{
-          font-size: 12px;
+          font-size: 13px;
+          font-weight: 700;
+          a{
+            font-size: 13px;
+          }
         }
       }  
     }
