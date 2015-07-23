@@ -168,7 +168,7 @@ body {
     box-shadow: none;
     background-color: $red-color;
     color: #fff;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .idioma .btn.active:hover {
     background-color: $red-color;
@@ -704,8 +704,8 @@ body {
       color: #FFF;
       padding: 9px 35% 9px 15px;
       line-height: 22px;
-      -webkit-border-radius: 7px 7px 7px 7px;
-      border-radius: 7px 7px 7px 7px;
+      -webkit-border-radius: 4px 4px 4px 4px;
+      border-radius: 4px 4px 4px 4px;
     }
     .subtitol{
       padding: 10px 15px 5px;
@@ -732,8 +732,8 @@ body {
         padding: 6px 12px;
         margin: 0 0px;
         font-size: 17px;
-        -webkit-border-radius: 7px 7px 7px 7px;
-        border-radius: 7px 7px 7px 7px;
+        -webkit-border-radius: 4px 4px 4px 4px;
+        border-radius: 4px 4px 4px 4px;
       }
 
       .taller-info {
@@ -1123,6 +1123,7 @@ body {
   .banner-info.main{
     height: 95px;
     margin: 0;
+    border-top: 1px solid #636363;
     .banner-info-left{
       padding: 1.5% 0;
       .banner-info-round {
