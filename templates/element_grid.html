@@ -6,11 +6,14 @@
       
       <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
         <div style="position:relative; overflow: hidden;">
+          
           <img ng-src="{{!activitat.pathFoto && $root.pathPhotoDefault || $root.baseGavaPath + activitat.pathFoto }}"
                matchheight 
                class="imatge-modul-obra img-responsive"/>
           
-          <div class="detalls-obra" ng-class="{'veure-detalls': hover}" style="background-color: {{ $root.hexToRgba(activitat.areaConeixement.color, 70) }}">
+          <div class="detalls-obra" 
+               ng-class="{'veure-detalls': hover}" 
+               ng-style="{'background-color': '{{ $root.hexToRgba(activitat.areaConeixement.color, 70) }}'}">
             
             <div class="detall-titol">
               <p>{{activitat.titol}}</p><!--| limitTo: 65}}{{activitat.titol.length > 64 ? ' ...' : ''-->

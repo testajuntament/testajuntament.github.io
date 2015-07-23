@@ -7204,7 +7204,8 @@ body {
   position: relative;
   padding: 23px 15px 15px;
   color: #fff;
-  font-weight: 700; }
+  font-weight: 700;
+  background-color: #E2E2E2; }
   .detall-img-info a {
     color: #FFF; }
     .detall-img-info a:hover, .detall-img-info a:focus {
@@ -7366,7 +7367,7 @@ body {
 .arrow-up {
   position: absolute;
   left: 50%;
-  top: -14px;
+  top: -15px;
   margin: 0 -15px;
   width: 0px;
   height: 0px;
