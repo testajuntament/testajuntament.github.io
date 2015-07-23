@@ -91,7 +91,6 @@
             </div>
                 
             <div class="taller">
-                <p>
                     <div ng-if="activitat.tallers.length > 0" class="titol-tallers">Tallers</div>
                     
                     <div class="row">
@@ -104,11 +103,13 @@
                                           class="img-responsive" 
                                           ng-src="{{$root.baseGavaPath}}{{taller.pathFoto}}">
 
-                                    <div class="taller-plus" >
-                                        <a  style="color: {{activitat.areaConeixement.color}}"
+                                    <div class="taller-plus" ><!--title="{{taller.titol}}" style="color: {{activitat.areaConeixement.color}}"-->
+                                        <a  
+                                            ng-style="{'color': mycolor }" ng-init="mycolor=activitat.areaConeixement.color"
+                                            ng-mouseleave="mycolor = activitat.areaConeixement.color" 
+                                            ng-mouseenter="mycolor = $root.colorDarken(activitat.areaConeixement.color, -10)"
                                             class="color-hover" 
                                             class="btn" 
-                                            title="{{taller.titol}}"
                                             data-unique="{{taller.id}}" 
                                             data-placement="bottom" 
                                             data-container=".taller" 
@@ -116,12 +117,12 @@
                                             data-content="{{taller.descripcio}}"
                                             data-template-url="templates/popover-tmp.html"
                                             data-auto-close="1"
+                                            data-delay: {show:500, hide:100}
                                             bs-popover >
                                             <i class="glyphicon glyphicon-plus-sign">
                                                 <div class="back-white"></div>
                                             </i>
-                                        </a> 
-
+                                        </a>     
                                     </div>
 
                                     <div class="taller-titol">{{taller.titol}}</div>
@@ -130,54 +131,9 @@
                                 <div class="taller-recomanat">{{taller.nivellRecomanat}}</div>
                             </div>
 
-                            <!-- <div class="popover">
-                                <div class="arrow"></div>
-                                <h3 class="popover-title bg-solid-area-{{activitat.area_de_coneixement.id}}" >titulo</h3>
-                                <div class="popover-content"></div>
-                                <div class="popover-footer">
-                                    <button type="button" class="btn btn-primary popover-submit">
-                                        <i class="icon-ok icon-white"></i>
-                                    </button>&nbsp;
-                                    <button type="button" class="btn btn-default popover-cancel">
-                                        <i class="icon-remove"></i>
-                                    </button>
-                                </div>
-                            </div> -->
-
-                        <script>
-                        $( document ).ready(function() {                     
-
-
-                            $('[data-toggle="popover"]').popover({
-                                trigger : 'click',  
-                                placement : 'bottom', 
-                                html: 'true', 
-                         
-                            })
-                            //   .on('shown', function() {
-                            //     //hide any visible comment-popover
-                            //     $("[rel=comments]").not(this).popover('hide');
-                            //     var $this = $(this);
-                            //     //attach link text
-                            //     $('.popover-textarea').val($this.text()).focus();
-                            //     //close on cancel
-                            //     $('.popover-cancel').click(function() {
-                            //         $this.popover('hide');
-                            //     });
-                            //     //update link text on submit
-                            //     $('.popover-submit').click(function() {
-                            //         $this.text($('.popover-textarea').val());
-                            //         $this.popover('hide');
-                            //     });
-                            //  });
-
-                        });
-                        </script>
-
-                        </div>
-                    </div>
-                </p>
-            </div>
+                        </div><!--col-->
+                    </div><!--row-->
+            </div><!--taller-->
         </div>
 
         <!--right col-->
@@ -253,8 +209,9 @@
                         <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves"></span>
                     </div>         
                 </div>
-            </div>     
-        </div>
+            </div> 
+
+        </div><!-- col -->
  
     </div>       
 </div>

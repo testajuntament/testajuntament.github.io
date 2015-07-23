@@ -55,7 +55,7 @@ gulp.task('styles', function() {
 		}))
 		.on('error', function (err) { console.log(err.message); })
 		.on('error', gutil.log )
-		// .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+		.pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
 		.pipe(concat('main.css'))
 		// .pipe(minifycss())
 		.pipe(gulp.dest('./css'))
