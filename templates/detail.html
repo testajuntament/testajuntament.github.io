@@ -105,27 +105,13 @@
                                           ng-src="{{$root.baseGavaPath}}{{taller.pathFoto}}">
 
                                     <div class="taller-plus" >
-                                    <!--<a  style="color: {{activitat.areaConeixement.color}}"
-                                            class="color-hover"
-                                            title="{{taller.titol}}"
-                                            data-content=""
-                                            data-container="body"
-                                            data-toggle="popover" 
-                                            data-placement="bottom"
-                                            html=true
-                                            >
-                                            <i class="glyphicon glyphicon-plus-sign">
-                                                <div class="back-white"></div>
-                                            </i>
-                                        </a>
-                                        type="button"
-                                    -->
                                         <a  style="color: {{activitat.areaConeixement.color}}"
                                             class="color-hover" 
                                             class="btn" 
                                             title="{{taller.titol}}"
                                             data-unique="{{taller.id}}" 
                                             data-placement="bottom" 
+                                            data-container=".taller" 
                                             data-title="{{taller.titol}}" 
                                             data-content="{{taller.descripcio}}"
                                             data-template-url="templates/popover-tmp.html"

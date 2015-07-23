@@ -1,11 +1,21 @@
 <div class="popover" 
      tabindex="-1" 
      ng-show="content"
-     style="padding:0px;">
+     style="padding:0px;  max-width: 100%;"
+     >
   
-  <div class="arrow"></div>
+  <!--style="position: absolute;
+              left: 50%;
+              top: -14px;
+              margin: 0 -15px;
+              width: 0px;
+              height: 0px;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;" -->
+      <div  ng-style="{ 'border-bottom:': '{{activitat.areaConeixement.color}}' }"></div>
   
   <i class="fa fa-times"
+     ng-click="$hide()"
   	 style="position: absolute;  
   	        color: #fff;
   			position: absolute;
@@ -24,19 +34,8 @@
   </h3>
   
   <div class="popover-content">
-    
-
     <form name="popoverForm">
       <p ng-bind-html="content" ></p><!--style="min-width:300px;"-->
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-addon">@</div>
-          <input class="form-control" type="email" placeholder="Enter email">
-        </div>
-      </div>
-      <div class="form-actions">
-        <button type="button" class="btn btn-danger" ng-click="$hide()">Close</button>
-      </div>
     </form>
   </div>
 

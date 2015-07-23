@@ -10,7 +10,7 @@ angular.module('mgcrea.ngStrap.popover', ['mgcrea.ngStrap.tooltip'])
       // uncommenting the next two lines will break backwards compatability
       // prefixClass: 'popover',
       // prefixEvent: 'popover',
-      container: false,
+      container: 'body',
       target: false,
       placement: 'right',
       templateUrl: 'popover/popover.tpl.html',
