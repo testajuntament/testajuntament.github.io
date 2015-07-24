@@ -126,7 +126,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 		}
 
 		if ($rootScope.searchText) {
-			return activitat.titol.toLowerCase().indexOf($rootScope.searchText.toLowerCase()) !== -1 || activitat.titol.toLowerCase().indexOf($rootScope.searchText.toLowerCase()) !== -1;
+			return activitat.titol.toLowerCase().indexOf($rootScope.searchText.toLowerCase()) !== -1 || activitat.subtitol.toLowerCase().indexOf($rootScope.searchText.toLowerCase()) !== -1;
 		}
 
 		return true;
