@@ -186,15 +186,6 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootSc
 
 	});
 
-	/*$scope.getColor = function(nom){
-		var nom = nom;
-		console.log('nom', nom);
-		if (nom === "Socials"){return '#f0a400'}
-		
-		
-	};*/
-
-
 	$scope.goBack = function() {
 		var path;
 		if ($rootScope.historyLink === 'graella-activitats'){ path = '/graella-activitats'; }
@@ -328,6 +319,18 @@ app.directive('viewDescription', function() {
 	};
 });
 
+app.directive('errSrc', function() {
+  return {
+    link: function(scope, element, attrs) {
+      element.bind('error', function() {
+        if (attrs.src != attrs.errSrc) {
+          attrs.$set('src', attrs.errSrc);
+        }
+      });
+    }
+  }
+});
+
 
 /*SERVICES*/
 app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootScope) {
@@ -374,7 +377,6 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 				nomPicked = activitat.areaConeixement.nom;
 				if (categoriaNom === nomPicked){
 					defer.resolve(activitat.areaConeixement.color);
-					console.log('color magico', activitat.areaConeixement.color);
 					return;
 				}
 			});
@@ -445,7 +447,6 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 						
 						angular.forEach(activitat.nivellsEducatius, function(nivellEducatiu){
 							allNivells[nivellEducatiu.id] = nivellEducatiu;
-							console.log('nivellEducatiu si es array', nivellEducatiu.id);
 						});
 
 					}
