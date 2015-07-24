@@ -12,6 +12,7 @@
     <div class="row">
         <!--foto e info-->
         <div class="col-xs-12 col-is-6 col-sm-5 col-md-3 col-lg-3">
+            
             <!-- only on xs-->
             <div class="detall-info visible-xs">
                 <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol"></div>
@@ -20,7 +21,8 @@
 
             <div class="detall-img">
                 <div class="peu-info" ng-if="activitat.peuFoto" ng-bind-html="activitat.peuFoto"></div>
-                <img class="img-responsive" ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}" />
+                <!--<img class="img-responsive" ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}" />-->
+                <img class="img-responsive" ng-src="{{$root.baseGavaPath + activitat.pathFoto }}" err-src="{{$root.pathPhotoDefault}}" />
             </div>
 
             <div ng-if="activitat.areaConeixement">
@@ -104,7 +106,8 @@
                                 <div class="taller-foto">
                                     <img  matchheight 
                                           class="img-responsive" 
-                                          ng-src="{{$root.baseGavaPath}}{{taller.pathFoto}}">
+                                          ng-src="{{$root.baseGavaPath + taller.pathFoto }}" err-src="{{$root.pathPhotoDefault}}"
+                                          ><!--ng-src="{{$root.baseGavaPath}}{{taller.pathFoto}}"-->
 
                                     <div class="taller-plus" ><!--title="{{taller.titol}}" style="color: {{activitat.areaConeixement.color}}"-->
                                         <a  

@@ -4,41 +4,41 @@
          ng-repeat="activitat in $parent.filteredWorks = (activitats | filter:activitatsFilter  )  | paginate:rowsPerPage"><!-- | orderBy: 'prioritat' -->
       
             <article class="modul-obra" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
-        <div style="position:relative; overflow: hidden;">
-          
-          <img ng-src="{{$root.baseGavaPath + activitat.pathFoto }}" err-src="{{$root.pathPhotoDefault}}"
-               
-               matchheight 
-               class="imatge-modul-obra img-responsive"/>
-               <!--ng-src="{{!activitat.pathFoto && $root.pathPhotoDefault || $root.baseGavaPath + activitat.pathFoto }}" -->
-          
-          <div class="detalls-obra" 
-               ng-class="{'veure-detalls': hover}" 
-               ng-style="{'background-color': '{{ $root.hexToRgba(activitat.areaConeixement.color, 70) }}'}">
-            
-            <div class="detall-titol">
-              <p>{{activitat.titol}}</p><!--| limitTo: 65}}{{activitat.titol.length > 64 ? ' ...' : ''-->
-            </div>
-            
-            <div class="detall">
-              <p ng-if="activitat.nivellRecomanat">Nivell: {{activitat.nivellRecomanat}}</p>
-              <p ng-if="activitat.durada">Durada: {{activitat.durada}}</p>
-              <p ng-if="activitat.preu">Preu: {{activitat.preu}}</p>
-              <!-- <p ng-if="activitat.prioritat">(Prioritat: {{activitat.prioritat}})</p> -->
-            </div>
+                <div style="position:relative; overflow: hidden;">
+                  
+                    <img ng-src="{{$root.baseGavaPath + activitat.pathFoto }}" err-src="{{$root.pathPhotoDefault}}"
+                         matchheight 
+                         class="imatge-modul-obra img-responsive"/>
+                         <!--ng-src="{{!activitat.pathFoto && $root.pathPhotoDefault || $root.baseGavaPath + activitat.pathFoto }}" -->
+                    
+                    <div class="detalls-obra" 
+                         ng-class="{'veure-detalls': hover}" 
+                         ng-style="{'background-color': '{{ $root.hexToRgba(activitat.areaConeixement.color, 70) }}'}">
+                      
+                      <div class="detall-titol">
+                        <p>{{activitat.titol}}</p><!--| limitTo: 65}}{{activitat.titol.length > 64 ? ' ...' : ''-->
+                      </div>
+                      
+                      <div class="detall">
+                        <p ng-if="activitat.nivellRecomanat">Nivell: {{activitat.nivellRecomanat}}</p>
+                        <p ng-if="activitat.durada">Durada: {{activitat.durada}}</p>
+                        <p ng-if="activitat.preu">Preu: {{activitat.preu}}</p>
+                        <!-- <p ng-if="activitat.prioritat">(Prioritat: {{activitat.prioritat}})</p> -->
+                      </div>
 
-            <div class="detall-plus">
-               <a   ng-style="{'color': mycolor }" ng-init="mycolor=activitat.areaConeixement.color"
-                    ng-mouseleave="mycolor = activitat.areaConeixement.color" 
-                    ng-mouseenter="mycolor = $root.colorDarken(activitat.areaConeixement.color, -10)"
-                    ng-href="{{$root.getDetailPath(activitat.id)}}" 
-                    title="Veure més detalls.">
-                 <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
-               </a>
-            </div>
-          </div>       
+                      <div class="detall-plus">
+                         <a   ng-style="{'color': mycolor }" ng-init="mycolor=activitat.areaConeixement.color"
+                              ng-mouseleave="mycolor = activitat.areaConeixement.color" 
+                              ng-mouseenter="mycolor = $root.colorDarken(activitat.areaConeixement.color, -10)"
+                              ng-href="{{$root.getDetailPath(activitat.id)}}" 
+                              title="Veure més detalls.">
+                           <i class="glyphicon glyphicon-plus-sign"><div class="back-white"></div></i>
+                         </a>
+                      </div>
+                    </div>       
 
-        </div></article>
+              </div>
+          </article>
     
         </div><!--col--> 
     </div> <!--row-->

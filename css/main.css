@@ -7287,7 +7287,7 @@ body {
           width: 100%;
           bottom: 0;
           padding: 5px 8px;
-          height: 19%; }
+          height: 23%; }
       body .taller .taller-info .taller-recomanat {
         background-color: #808080;
         color: #000;
@@ -7497,53 +7497,73 @@ body {
     vertical-align: top; }
   body .loader svg path, body .loader svg rect {
     fill: #cc0000; }
+  body .scrollToTop {
+    width: 44px;
+    height: 41px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+    position: fixed;
+    bottom: 22px;
+    right: 40px;
+    display: none;
+    background: #474747;
+    background-color: #474747;
+    border-radius: 3px 3px 3px 3px;
+    z-index: 1000; }
+  body .scrollToTop:hover {
+    text-decoration: none;
+    background: #292929;
+    background-color: #292929; }
 
 /*MEDIA QUERIES*/
 @media (min-width: 0px) and (max-width: 479px) {
-  .container {
+  body .container {
     width: 100%; }
-    .container.capcalera {
+    body .container.capcalera {
       padding: 0; }
-  .retol {
+  body .retol {
     width: 100%; }
-    .retol .retol-text h1 {
+    body .retol .retol-text h1 {
       padding: 11px 8px;
       font-size: 16px; }
-  .retol-2 {
+  body .retol-2 {
     width: 100%;
     border-bottom: 1px solid #AD0318; }
-    .retol-2 .retol-text h1 {
+    body .retol-2 .retol-text h1 {
       font-size: 16px; }
-  .banner-info.main {
+  body .banner-info.main {
     height: 110px;
     margin: 0;
     border-top: 1px solid #636363; }
-    .banner-info.main .banner-info-left {
+    body .banner-info.main .banner-info-left {
       padding: 2% 0; }
-      .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
+      body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
         font-size: 13px;
         font-weight: 700; }
-        .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p a {
+        body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p a {
           font-size: 13px; }
-    .banner-info.main .banner-info-right .banner-info-vertical p {
+    body .banner-info.main .banner-info-right .banner-info-vertical p {
       font-size: 13px;
       font-weight: 700; }
-      .banner-info.main .banner-info-right .banner-info-vertical p a {
+      body .banner-info.main .banner-info-right .banner-info-vertical p a {
         font-size: 13px; }
-  .sidebar-offcanvas {
+  body .sidebar-offcanvas {
     display: none; }
-  .sidebar-offcanvas.active {
+  body .sidebar-offcanvas.active {
     display: block; }
-  .detall-info .titol {
+  body .detall-info .titol {
     padding: 9px 15px;
     margin: 0 0 10px 0; } }
 
 @media (min-width: 480px) and (max-width: 767px) {
-  .container {
+  body .container {
     width: 100%; }
-    .container.capcalera {
+    body .container.capcalera {
       padding: 0; }
-  .loader {
+  body .loader {
     margin: 0 0 2em;
     height: 100px;
     width: 20%;
@@ -7552,96 +7572,96 @@ body {
     margin: 0 auto 1em;
     display: inline-block;
     vertical-align: top; }
-  .loader svg path, .loader svg rect {
+  body .loader svg path, body .loader svg rect {
     fill: #cc0000; }
-  .detalls-obra p {
+  body .detalls-obra p {
     font-weight: 600;
     color: #FFF;
     font-size: 14px; }
-  .sidebar-offcanvas {
+  body .sidebar-offcanvas {
     display: none; }
-  .sidebar-offcanvas.active {
+  body .sidebar-offcanvas.active {
     display: block; }
-  .retol {
+  body .retol {
     width: 100%; }
-    .retol .retol-text h1 {
+    body .retol .retol-text h1 {
       font-size: 18px;
       padding: 11px 8px; }
-  .retol-2 {
+  body .retol-2 {
     width: 100%; }
-    .retol-2 .retol-text h1 {
+    body .retol-2 .retol-text h1 {
       font-size: 18px;
       padding: 11px 8px; }
-  .banner-info.main {
+  body .banner-info.main {
     margin: 0; }
-    .banner-info.main .banner-info-left {
+    body .banner-info.main .banner-info-left {
       height: 130px; }
-      .banner-info.main .banner-info-left .banner-info-round p {
+      body .banner-info.main .banner-info-left .banner-info-round p {
         font-size: 14px; }
-    .banner-info.main .banner-info-right {
+    body .banner-info.main .banner-info-right {
       height: 130px; }
-      .banner-info.main .banner-info-right p {
+      body .banner-info.main .banner-info-right p {
         font-size: 14px; }
-  .banner-info.detail {
+  body .banner-info.detail {
     margin: 13px 0 0 0; }
-    .banner-info.detail .banner-info-left {
+    body .banner-info.detail .banner-info-left {
       height: 130px;
       padding: 5% 0; }
-      .banner-info.detail .banner-info-left .banner-info-round p {
+      body .banner-info.detail .banner-info-left .banner-info-round p {
         font-size: 14px; }
-    .banner-info.detail .banner-info-right {
+    body .banner-info.detail .banner-info-right {
       height: 130px; }
-      .banner-info.detail .banner-info-right p {
+      body .banner-info.detail .banner-info-right p {
         font-size: 14px; }
-  .detall-info .titol {
+  body .detall-info .titol {
     padding: 9px 15px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .container {
+  body .container {
     margin-right: auto;
     margin-left: auto;
     width: 100%; }
-    .container.capcalera {
+    body .container.capcalera {
       padding: 0; }
-  .retol .retol-text h1 {
+  body .retol .retol-text h1 {
     font-size: 19px;
     padding: 11px 8px; }
-  .retol-2 .retol-text h1 {
+  body .retol-2 .retol-text h1 {
     font-size: 19px;
     padding: 11px 8px; }
-  .banner-info.main .banner-info-left {
+  body .banner-info.main .banner-info-left {
     height: 100%;
     padding: 10% 0; }
-    .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
+    body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
       font-size: 14px; }
-  .banner-info.main .banner-info-right {
+  body .banner-info.main .banner-info-right {
     height: 100%; }
-    .banner-info.main .banner-info-right .banner-info-vertical p {
+    body .banner-info.main .banner-info-right .banner-info-vertical p {
       font-size: 14px; }
-  .banner-info.detail {
+  body .banner-info.detail {
     margin: 13px 0 0 0; }
-    .banner-info.detail .banner-info-left {
+    body .banner-info.detail .banner-info-left {
       height: 100%;
       padding: 4% 0; }
-      .banner-info.detail .banner-info-left .banner-info-round p {
+      body .banner-info.detail .banner-info-left .banner-info-round p {
         font-size: 14px; }
-    .banner-info.detail .banner-info-right {
+    body .banner-info.detail .banner-info-right {
       height: 100%; }
-      .banner-info.detail .banner-info-right p {
+      body .banner-info.detail .banner-info-right p {
         font-size: 14px; }
-  .detall-info .titol {
+  body .detall-info .titol {
     padding: 9px 15px; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .banner-info.detail {
+  body .banner-info.detail {
     margin: 13px 0 0 0; }
-    .banner-info.detail .banner-info-left {
+    body .banner-info.detail .banner-info-left {
       height: 100%;
       padding: 5% 0; }
-      .banner-info.detail .banner-info-left .banner-info-round .banner-info-vertical p {
+      body .banner-info.detail .banner-info-left .banner-info-round .banner-info-vertical p {
         font-size: 13px; }
-    .banner-info.detail .banner-info-right {
+    body .banner-info.detail .banner-info-right {
       height: 100%; }
-      .banner-info.detail .banner-info-right .banner-info-vertical p {
+      body .banner-info.detail .banner-info-right .banner-info-vertical p {
         font-size: 13px; } }
 
