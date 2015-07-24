@@ -27,6 +27,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
 
 app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', 
 	function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
+	
 	// Github
 	$rootScope.basePath =  'http://testajuntament.github.io';  
 	$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/fotos-activitats/LaVenus-color.jpg';
@@ -39,8 +40,6 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 	//$rootScope.basePath =  'http://portals.ajuntament.gava.cat'; 
 	$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat';
 	//$rootScope.pathPhotoDefault = 'http://portals.ajuntament.gava.cat/fotos-activitats/LaVenus-color.jpg';
-
-
 
 
 	$rootScope.historyLink = 'graella-activitats';
@@ -60,6 +59,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 		} else {
 			$rootScope.bodyClass = '';
 		}
+		console.log('location.pathname in Run', $location.path()); 
 	});
 
 
@@ -167,8 +167,8 @@ app.controller('ListCtrl', ['$scope', '$routeParams', '$rootScope', '$timeout', 
 
 }]);
 
-app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootScope', '$timeout', 'GavaAPI',
-	function($scope,   $routeParams,   $location,   $rootScope,   $timeout,   GavaAPI) {
+app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$window', '$rootScope', '$timeout', 'GavaAPI',
+    function($scope,   $routeParams,   $location,   $window,   $rootScope,   $timeout,   GavaAPI) {
 	
 	GavaAPI.getAllActivitats().then(function(activitats) {
 		$scope.activitats = activitats;
@@ -192,12 +192,14 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$rootSc
         if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
         if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 		$location.path(path);
+		console.log('goBack from MaterialsCtrl', $location.path()); 
 	};	
 
 }]);
 
-app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', 'GavaAPI', 'gettextCatalog', '$rootScope', '$sce' ,
-	function($scope,   $routeParams,   $location,   $window,   GavaAPI,   gettextCatalog,   $rootScope,   $sce) {
+app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', '$rootScope', '$timeout', 'GavaAPI', 'gettextCatalog',  '$sce' ,
+    function($scope,   $routeParams,   $location,   $window,   $rootScope,   $timeout ,   GavaAPI,   gettextCatalog,    $sce) {
+	
 	$window.scrollTo(0, 0);
 
 	GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
@@ -219,6 +221,7 @@ app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', 
         if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
         if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 		$location.path(path);
+		console.log('goBack from DetailCtrl', $location.path()); 
 	};
 
 	$scope.getDescription = function() {
