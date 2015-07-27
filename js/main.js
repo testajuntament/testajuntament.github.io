@@ -61,7 +61,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 
 	$rootScope.historyLink = 'graella-activitats';
 
-	$rootScope.$on('$locationChangeStart', function(event, next, current) {
+	/*$rootScope.$on('$locationChangeStart', function(event, next, current) {
 		 if (next.indexOf('fitxa') !== -1 ) {
 			if (current.indexOf('graella-activitats') !== -1 ) {
 				$rootScope.historyLink = 'graella-activitats';
@@ -73,8 +73,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 				$rootScope.historyLink = 'materials-didactics';
 		    }
 		 }   
-		console.log('location.pathname in Run', $location.path()); 
-	});
+	});*/
 
 
 	$rootScope.$on('$locationChangeSuccess', function() {
@@ -96,20 +95,18 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 	};
 
 	$rootScope.rowsPerPage = 9; 
-
 	$rootScope.searchText = "";
-
 	$rootScope.nivellFilterModels = [];
-
 	$rootScope.areaFilterModels = [];
 
 	var resetPager = function() {
 		Paginator.page = 0;
 	};
 
-	$rootScope.$watchCollection('nivellFilterModels', resetPager, true);
-	$rootScope.$watchCollection('areaFilterModels', resetPager, true);
-	$rootScope.$watch('[rowsPerPage,searchText]', resetPager);
+	$rootScope.$watchCollection('nivellFilterModels', resetPager);
+	$rootScope.$watchCollection('areaFilterModels', resetPager);
+	$rootScope.$watch('rowsPerPage', resetPager);
+	$rootScope.$watch('searchText', resetPager);
 
 	$rootScope.activitatsFilter = function(activitat) {
 		var acceptar = false;
@@ -194,10 +191,6 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$window
 
 	GavaAPI.getAllCategorias().then(function(categorias) {
 		$scope.categorias = categorias;
-	});	
-
-	GavaAPI.getColorByCategoriaNom().then(function(color){
-
 	});
 
 	$scope.goBack = function() {
@@ -207,7 +200,7 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$window
         if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 		$location.path(path);
 	};	
-	
+
 	$scope.goHome = function(){
 		$location.path('/graella-activitats');
 	}; 
@@ -287,6 +280,7 @@ app.directive('magnificpopup', function () {
 
 			element.magnificPopup({
 				delegate: options.selector,
+				closeMarkup:'<button title="Tancar imatge" class="mfp-close"><i class="mfp-close-icn">&times;</i></button>',
 				// gallery: {
 				// 	enabled: true,
 				// 	navigateByImgClick: true,
@@ -294,7 +288,7 @@ app.directive('magnificpopup', function () {
 				// },
 				image: {
 					verticalFit: false,
-					tError: 'Error: Unable to Load Image',
+					tError: 'Error: No es pot carregar la imatge.',
 					titleSrc: function (item) {
 						return item.el.attr('title');
 					}
@@ -342,7 +336,7 @@ app.directive('viewDescription', function() {
 	};
 });
 
-app.directive('errSrc', function() {
+/*app.directive('errSrc', function() {
   return {
     link: function(scope, element, attrs) {
       element.bind('error', function() {
@@ -352,7 +346,7 @@ app.directive('errSrc', function() {
       });
     }
   }
-});
+});*/
 
 
 /*SERVICES*/
