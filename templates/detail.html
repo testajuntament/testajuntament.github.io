@@ -1,10 +1,13 @@
 <div class="animated-show ng-hide" ng-show="activitat"><!-- container -->
     <div class="row">
       <div class="col-xs-12">
-        <div class="navegacio-top">
-            <a href ng-click="goBack()">
-               <i class="fa fa-chevron-left"></i> {{'Torna al llistat'}}
+        <div class="navegacio-top">  
+            <a href ng-show="userAgent() == 'isiPad'" ng-click="goHome()">
+               <i class="fa fa-chevron-left"></i> {{'Torna al llistat'}} ({{ userAgent() }})
             </a>
+            <a href ng-show="userAgent() !== 'isiPad'" ng-click="goBack()">
+               <i class="fa fa-chevron-left"></i> {{'Torna al llistat'}} ({{ userAgent() }})
+            </a>                                
         </div>     
       </div>          
     </div> 

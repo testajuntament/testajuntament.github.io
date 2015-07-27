@@ -28,6 +28,23 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider',
 app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', 
 	function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
 	
+	$rootScope.userAgent = function(){
+		var ua = navigator.userAgent;
+        var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
+        var isChrome = /Chrome/.test(ua) && /Google Inc/.test(navigator.vendor);
+        var isFirefox = /firefox/i.test(ua);
+		
+		if( isChrome ){
+			return 'isChrome';
+		}
+		if( isFirefox ){
+			return 'isFirefox';
+		}
+		if( isiPad ){
+			return 'isiPad';
+		}
+
+	};
 	// Github
 	$rootScope.basePath =  'http://testajuntament.github.io';  
 	$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/fotos-activitats/LaVenus-color.jpg';
@@ -189,8 +206,11 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$window
         if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
         if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 		$location.path(path);
-		console.log('goBack from MaterialsCtrl', $location.path()); 
 	};	
+	
+	$scope.goHome = function(){
+		$location.path('/graella-activitats');
+	}; 
 
 }]);
 
@@ -218,8 +238,11 @@ app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', 
         if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
         if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 		$location.path(path);
-		console.log('goBack from DetailCtrl', $location.path()); 
 	};
+
+	$scope.goHome = function(){
+		$location.path('/graella-activitats');
+	}; 
 
 	$scope.getDescription = function() {
 		if ($scope.activitat) {
