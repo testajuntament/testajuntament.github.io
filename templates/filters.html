@@ -38,7 +38,7 @@
           </div>
       
           <ul>
-              <li ng-repeat="nivell in allNivells">
+              <li ng-repeat="nivell in allNivells track by $index">
                   <input type="checkbox" 
                          id="opcio-nivell-{{nivell.id}}" 
                          name="" 
@@ -65,7 +65,7 @@
             </div>
 
             <ul>
-                <li ng-repeat="area in allAreas">
+                <li ng-repeat="area in allAreas track by $index">
                   <span ng-if="area.color">
                     <input type="checkbox" 
                            id="opcio-area-{{area.id}}" 
