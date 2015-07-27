@@ -1,7 +1,31 @@
-<div class="popover animated-show" tabindex="-1" ng-show="content" style=" "
-     >
-  <div class="arrow"></div>            
-  <!--<div  ng-style="{ 'border-bottom:': '{{activitat.areaConeixement.color}}' }"></div>-->
+<div class="popover animated-show" tabindex="-1" ng-show="content" style="">
+  
+  <div ng-if="activitat.areaConeixement.color">
+    <div class="" ng-style="{
+        'border-bottom': '15px solid {{activitat.areaConeixement.color}}',
+        'margin': '0 -15px',
+        'width': '0px',
+        'height': '0px',
+        'border-left': '15px solid transparent',
+        'border-right': '15px solid transparent',
+        'position': 'absolute',
+        'top': '-14px',
+        'left': '50%'
+      }">
+    </div> 
+  </div>           
+  <!--,
+    /*,
+    ,
+    'position': 'absolute',
+    'left': '50%',
+    'top': '-15px',
+    ,
+    
+    ;
+    'border-left': '15px solid transparent',
+    'border-right': '15px solid transparent'*/
+    -->
   
   <i class="fa fa-times" ng-click="$hide()" title="Tancar"
   	 style="position: absolute;

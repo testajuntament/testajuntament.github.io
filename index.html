@@ -12,8 +12,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="shortcut icon" type="image/x-ico" href="img/favicon.ico"/>
-        <link rel="stylesheet" href="css/main.css"  media="screen"/>
-        <link rel="stylesheet" href="css/print.css" media="print" />
+        <link rel="stylesheet" href="css/main.css" media="screen" />
+        <!--<link rel="stylesheet" href="css/print.css" media="screen"/>-->
+        <link rel="stylesheet" href="css/print.css" media="print"/>
 
         <script>
           if ((/\bSafari\//gi).test(window.navigator.userAgent) && (/\bVersion\/7/gi).test(window.navigator.userAgent)) {
@@ -147,7 +148,7 @@
 
         <div ng-view class="animated-show ng-hide container" ng-show="$root.allActivitats"></div>   
         
-        <div class="peu-back animated-show ng-hide">
+        <div class="peu-back animated-show ng-hide" ng-show="$root.allActivitats">
             <div class="peu container">
                 <footer>
                   <div class="row">

@@ -6,7 +6,9 @@
 -------------------------------------------------------------- */
 
 body { 
-width:100% !important;
+/*width:100% !important;*/
+width:670px !important;
+border: 1px green solid;
 margin:0 !important;
 padding:0 !important;
 line-height: 1.45; 
@@ -99,4 +101,23 @@ img,tr {page-break-inside: avoid;}
 }
 *{
   background-color: #fff !important;
+}
+
+
+/*Detail*/
+.arrow-up{
+  display: none;
+}
+.detall-img img {
+    width: 100%;}
+.data-info {
+    display: block;
+    width: 100%;
+}
+.data-info p{
+  margin: 0;
+}
+.taller-info.modul-obra {
+    width: 100%;
+    float: left;
 }
