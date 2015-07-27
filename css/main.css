@@ -7800,7 +7800,7 @@ body {
     overflow: hidden; }
     body .retol .retol-text {
       float: left;
-      border-left: 1px solid #DFDFDF; }
+      border-left: 0px solid #DFDFDF; }
       body .retol .retol-text h1 {
         text-decoration: none;
         letter-spacing: -1px;
@@ -8689,7 +8689,7 @@ body {
       padding: 0; }
   body .retol .retol-text h1 {
     font-size: 19px;
-    padding: 11px 8px; }
+    padding: 11px 0px 11px 8px; }
   body .retol .logo-Ajuntament {
     width: 96px; }
   body .retol-2 .retol-text h1 {

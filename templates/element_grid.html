@@ -13,8 +13,9 @@
                     
                     <div class="detalls-obra" 
                          ng-class="{'veure-detalls': hover}" 
-                         ng-style="{'background-color': '{{ $root.hexToRgba(activitat.areaConeixement.color, 70) }}'}">
-                      
+                         ng-style="{'background-color': mybgcolor }" ng-init="mybgcolor=$root.hexToRgba(activitat.areaConeixement.color, 70)"
+                         >
+                      <!--ng-style="{'background-color': '{{ $root.hexToRgba(activitat.areaConeixement.color, 70) }}'}"-->
                       <div class="detall-titol">
                         <p>{{activitat.titol}}</p><!--| limitTo: 65}}{{activitat.titol.length > 64 ? ' ...' : ''-->
                       </div>

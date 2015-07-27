@@ -90,7 +90,7 @@ body {
 
         .retol-text{
           float: left;
-          border-left: 1px solid #DFDFDF;
+          border-left: 0px solid #DFDFDF;
           h1{
             text-decoration: none;
             letter-spacing: -1px;
@@ -1318,7 +1318,7 @@ body {
     .retol{
       .retol-text h1 {
         font-size: 19px;
-        padding: 11px 8px;
+        padding: 11px 0px 11px 8px;
       }
       .logo-Ajuntament{
         width: 96px;
@@ -1333,7 +1333,6 @@ body {
     }  
 
     .banner-info.main{
-
       .banner-info-left{
         height: 100%;
         padding: 10% 0;
@@ -1361,7 +1360,6 @@ body {
         padding: 4% 0;
         .banner-info-round{
           p{
-            // margin: -16% -25%;
             font-size: 14px;
           }        
         } 
