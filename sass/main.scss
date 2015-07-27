@@ -849,7 +849,7 @@ body {
       p{
         margin: 9px 0;
         i.fa {
-          margin: 0 3px 0 0;
+          margin: 0 3px 0 1px;
         }
         a{
           margin: 5px 0;
@@ -1169,6 +1169,7 @@ body {
         padding: 2% 0;
         .banner-info-round {
           .banner-info-vertical{
+            @include vertical-align;
             p{
               font-size: 13px;
               font-weight: 700;
@@ -1181,6 +1182,7 @@ body {
       }
       .banner-info-right{
         .banner-info-vertical{
+          @include vertical-align;
           p{
             font-size: 13px;
             font-weight: 700;
@@ -1234,6 +1236,7 @@ body {
           margin: 0;
           float: right; 
           .banner-info-vertical{
+            @include vertical-align;
             p{
               font-size: 13px;
               font-weight: 700;
@@ -1246,6 +1249,7 @@ body {
       }
       .banner-info-right{
         .banner-info-vertical{
+          @include vertical-align;
           width: 56%;
           p{
             font-size: 13px;
@@ -1257,7 +1261,27 @@ body {
         }  
       }
     }      
+    .banner-info.detail{
+      height: 130px;
+      margin: 13px 0 0 0;
+      .banner-info-left{
+        height: 100%;
+        padding: 3% 0;
+        .banner-info-round p{
+          font-size: 14px;
+        }
+      }
+      .banner-info-right{
+        height: 100%;
+        .banner-info-vertical{
+          @include vertical-align;
+          p{
+            font-size: 14px;
+          }          
+        }
 
+      }  
+    }
     .loader {
       margin: 0 0 2em;
       height: 100px;
@@ -1300,38 +1324,7 @@ body {
         padding: 11px 8px;
       }      
     }
-    /*.banner-info.main{
-      margin: 0;
-      .banner-info-left{
-        height: 130px;
-        .banner-info-round p{
-          font-size: 14px;
-        }
-      }
-      .banner-info-right{
-        height: 130px;
-        p{
-          font-size: 14px;
-        }
-      }  
-    }*/
-    .banner-info.detail{
-      margin: 13px 0 0 0;
-      .banner-info-left{
-        height: 130px;
-        padding: 5% 0;
-        .banner-info-round p{
-          font-size: 14px;
-        }
-      }
-      .banner-info-right{
-        height: 130px;
-        p{
-          // margin: -14% -64%;
-          font-size: 14px;
-        }
-      }  
-    }
+
 
     .detall-info .titol {
       padding: 9px 15px;
@@ -1375,6 +1368,7 @@ body {
         padding: 10% 0;
         .banner-info-round{
           .banner-info-vertical{
+            @include vertical-align;
             p{
               font-size: 14px;
             }          
@@ -1384,6 +1378,7 @@ body {
       .banner-info-right{
         height: 100%;
         .banner-info-vertical{
+          @include vertical-align;
           p{
             font-size: 14px;
           }        
