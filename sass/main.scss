@@ -1,5 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
-
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 @import "../bower_components/normalize-css/normalize.css";
 
 $ContainerPhone: 460px;
@@ -50,10 +49,15 @@ html{
   height: 100%;
 }
 body {
+  min-width: 320px;
   font-family: 'Open Sans', sans-serif;
   background-color: #F3F3F3; //#F3F3F3;
   font-size: 13px;
   height: 100%;
+
+  *{
+    -moz-box-sizing: border-box;
+  }
 
   .frame-load {
     min-height: 100%;
@@ -292,7 +296,7 @@ body {
           @include vertical-align;
           p {
             color: #383838;
-            font-weight: 800;
+            font-weight: 700;
             text-align: center;
             margin: 0;
             text-align: center;

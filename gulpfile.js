@@ -67,7 +67,7 @@ gulp.task('scripts', function() {
 	    .src(paths.scripts)
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
-        .pipe(concat('app.js'))
+        .pipe(concat('mainapp.js'))
 	    // .pipe(uglify()).pipe(uglify().on('error', gutil.log))
 	      .pipe(rename({suffix:'.min'}))
 	      .pipe(gulp.dest('./buildjs'))
