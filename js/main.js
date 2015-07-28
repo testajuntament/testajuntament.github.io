@@ -61,7 +61,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 
 	$rootScope.historyLink = 'graella-activitats';
 
-	/*$rootScope.$on('$locationChangeStart', function(event, next, current) {
+	$rootScope.$on('$locationChangeStart', function(event, next, current) {
 		 if (next.indexOf('fitxa') !== -1 ) {
 			if (current.indexOf('graella-activitats') !== -1 ) {
 				$rootScope.historyLink = 'graella-activitats';
@@ -73,7 +73,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment',
 				$rootScope.historyLink = 'materials-didactics';
 		    }
 		 }   
-	});*/
+	});
 
 
 	$rootScope.$on('$locationChangeSuccess', function() {

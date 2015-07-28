@@ -46,15 +46,26 @@ $soft-grey: #E2E2E2;
   transform: translateY(-50%);
 }
 
+html{
+  height: 100%;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #F3F3F3; //#F3F3F3;
   font-size: 13px;
+  height: 100%;
 
-  .load-gears{
-    text-align: center;
-    @include vertical-align;
+  .frame-load {
+    min-height: 100%;
+    height: 100%;
+    .load-gears{
+      width: 50px;
+      height: 50px;
+      margin: -50px auto;
+      @include vertical-align;
+    }  
   }
+
 
   h1, .h1 {
     font-size: 27px;
@@ -875,6 +886,7 @@ body {
   .modul-obra {
     position: relative;
     margin: 0 0 6% 0;
+    background-color: #D6D6D6;
 
     .imatge-modul-obra {
       background-color: #F9F9F9;
