@@ -77,7 +77,9 @@
 
 		$rootScope.goHome = function(){
 			console.log('goHome');
-			$location.path('/graella-activitats');
+	        $timeout(function(){ 
+			  $location.path('/graella-activitats').replace();
+			},500);
 		}; 
 
 		$rootScope.getGridPath = function() {
@@ -199,9 +201,11 @@
 			$location.path(path);
 		};	
 
-		$rootScope.goHome = function(){
+		$scope.goHome = function(){
 			console.log('goHome');
-			$location.path('/graella-activitats');
+	        $timeout(function(){ 
+			  $location.path('/graella-activitats').replace();
+			},500);
 		}; 
 
 	}]);
@@ -230,13 +234,19 @@
 			if ($rootScope.historyLink === 'graella-activitats'){ path = '/graella-activitats'; }
 	        if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
 	        if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
-			$location.path(path).replace();
+
+	        $timeout(function(){ 
+			  $location.path(path).replace(); 
+			},500);
+			
 		};
 
 		$scope.goHome = function(){
 			console.log('goHome in DetailCtrl');
-			$location.path('/graella-activitats').replace();
-			//$scope.$apply();
+	        
+	        $timeout(function(){ 
+			  $location.path('/graella-activitats').replace();
+			},500);
 		}; 
 
 		$scope.getDescription = function() {
