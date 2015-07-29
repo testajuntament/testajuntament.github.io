@@ -1393,7 +1393,8 @@ body {
     .banner-info.main{
       .banner-info-left{
         height: 100%;
-        padding: 10% 0;
+        padding: 0 2%;
+        width: 45%;
         .banner-info-round{
           .banner-info-vertical{
             @include vertical-align;
@@ -1405,6 +1406,7 @@ body {
       }
       .banner-info-right{
         height: 100%;
+        width: 55%;
         .banner-info-vertical{
           @include vertical-align;
           p{
