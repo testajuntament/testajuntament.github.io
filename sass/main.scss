@@ -352,11 +352,11 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);    
     
     .banner-info-left {
-      width: 50%;
+      width: 45%;
       float: left;
       position: relative;
       height: 100%;
-      padding: 3% 0;
+      padding: 4% 0;
       .banner-info-round{
         margin: 0 auto;
         background-repeat: no-repeat;
@@ -378,7 +378,7 @@ body {
       }
     }
     .banner-info-right {
-      width: 50%;
+      width: 55%;
       float: left;
       position: relative;
       height: 100%;
@@ -1283,16 +1283,13 @@ body {
       }
     } 
 
-    &.fitxa .banner-info.main{
-      display: none;
-    }  
-
     .banner-info.detail{
       height: 130px;
       margin: 13px 0 0 0;
       .banner-info-left{
-        height: 100%;
-        padding: 4% 0;
+          height: 100%;
+          width: 45%;
+          padding: 4% 2%;
         .banner-info-round{
           p{
             font-size: 12px;
@@ -1420,7 +1417,7 @@ body {
       margin: 13px 0 0 0;
       .banner-info-left{
         height: 100%;
-        padding: 4% 0;
+        padding: 3% 0;
         .banner-info-round{
           p{
             font-size: 14px;
@@ -1468,7 +1465,7 @@ body {
       margin: 13px 0 0 0;
       .banner-info-left{
         height: 100%;
-        padding: 5% 0;
+        padding: 6% 0;
         .banner-info-round{
           .banner-info-vertical p{
               font-size: 13px;        
@@ -1487,5 +1484,3 @@ body {
   }    
 }
 
-@media (min-width:1200px){
-}

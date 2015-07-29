@@ -26,8 +26,8 @@
 			});
 	}]);
 
-	app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', 
-		function($rootScope, $location, Paginator, gettextCatalog, amMoment) {
+	app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '$timeout', 
+		function($rootScope, $location, Paginator, gettextCatalog, amMoment, $timeout) {
 		
 		$rootScope.userAgent = function(){
 			var ua = navigator.userAgent;
@@ -41,35 +41,32 @@
 		};
 
 		// Github
-		$rootScope.basePath =  'http://testajuntament.github.io';  
-		$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/fotos-activitats/LaVenus-color.jpg';
+			$rootScope.basePath =  'http://testajuntament.github.io';  
+			$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/fotos-activitats/LaVenus-color.jpg';
 		
 		//Local
-		//$rootScope.basePath =  'http://localhost/testajuntament'; 
-		//$rootScope.pathPhotoDefault = 'http://localhost/testajuntament/fotos-activitats/LaVenus-color.jpg';
+			//$rootScope.basePath =  'http://localhost/testajuntament'; 
+			//$rootScope.pathPhotoDefault = 'http://localhost/testajuntament/fotos-activitats/LaVenus-color.jpg';
 		
 		//Production
-		//$rootScope.basePath =  'http://portals.ajuntament.gava.cat'; 
-		$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat';
-		//$rootScope.pathPhotoDefault = 'http://portals.ajuntament.gava.cat/fotos-activitats/LaVenus-color.jpg';
+			//$rootScope.basePath =  'http://portals.ajuntament.gava.cat'; 
+			$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat';
+			//$rootScope.pathPhotoDefault = 'http://portals.ajuntament.gava.cat/fotos-activitats/LaVenus-color.jpg';
 
 		$rootScope.historyLink = 'graella-activitats';
-		$rootScope.bodyClass = 'graella';
+		$rootScope.bodyClass = 'graella-activitats';
 
 		$rootScope.$on('$locationChangeStart', function(event, next, current) {
 			 if (next.indexOf('fitxa') !== -1 ) {
 				if (current.indexOf('graella-activitats') !== -1 ) {
 					$rootScope.historyLink = 'graella-activitats';
-					$rootScope.bodyClass = 'graella';
-				}
-				if (current.indexOf('fitxa') !== -1 ) {
+				} else if (current.indexOf('fitxa') !== -1 ) {
 					$rootScope.historyLink = 'fitxa';
-					$rootScope.bodyClass = 'fitxa';
-				}
-				if (current.indexOf('materials-didactics') !== -1) {
+				} else if (current.indexOf('materials-didactics') !== -1) {
 					$rootScope.historyLink = 'materials-didactics';
-					$rootScope.bodyClass = 'materials';
 			    }
+			    $rootScope.bodyClass = 'fitxa';
+			    console.log('bodyClass', $rootScope.bodyClass);
 			 }   
 		});
 
@@ -79,12 +76,33 @@
 			$('html head meta[name=description]').attr("content", text);
 		});
 
-		$rootScope.goHome = function(){
-			console.log('goHome');
+		$rootScope.goBack = function() {
+			console.log('goBack in DetailCtrls');
+			
+			var path;
+			if ($rootScope.historyLink === 'graella-activitats'){ 
+				path = '/graella-activitats'; 
+			}else if ($rootScope.historyLink === 'materials-didactics'){ 
+				path = '/materials-didactics';
+			}else if ($rootScope.historyLink === 'fitxa') { 
+				path =  '/fitxa';
+			}
+
 	        $timeout(function(){ 
-			  $location.path('/graella-activitats').replace();
-			},500);
-		}; 
+	          $rootScope.bodyClass = 'graella-activitats';	
+			  $location.path(path).replace(); 
+			}, 100);
+		};
+
+
+		$rootScope.goHome = function(){
+			console.log('goHome in DetailCtrls');
+	        
+	        $timeout(function(){ 
+	          $rootScope.bodyClass = 'graella-activitats';
+			  $location.path('/graella-activitats');
+			},100);
+		};
 
 		$rootScope.getGridPath = function() {
 			return  '#/graella-activitats';
@@ -196,22 +214,6 @@
 			$scope.categorias = categorias;
 		});
 
-		$scope.goBack = function() {
-			console.log('goBack');
-			var path = '/graella-activitats';
-			if ($rootScope.historyLink === 'graella-activitats'){ path = '/graella-activitats'; }
-	        if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
-	        if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
-			$location.path(path);
-		};	
-
-		$scope.goHome = function(){
-			console.log('goHome');
-	        $timeout(function(){ 
-			  $location.path('/graella-activitats').replace();
-			},500);
-		}; 
-
 	}]);
 
 	app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', '$rootScope', '$timeout', 'GavaAPI', 'gettextCatalog',  '$sce' ,
@@ -228,30 +230,10 @@
 			$('html head title').text($scope.shareTitle);
 			$('html head meta[name=description]').attr("content", $scope.shareDescription);
 			$scope.htmlReady();
-		}, function() {
-			//console.error('No work');
-		});
+		}, function() {/*console.error('No work');*/} );
 
-		$scope.goBack = function() {
-			console.log('goBack in DetailCtrl');
-			var path;
-			if ($rootScope.historyLink === 'graella-activitats'){ path = '/graella-activitats'; }
-	        if ($rootScope.historyLink === 'materials-didactics'){ path = '/materials-didactics';}
-	        if ($rootScope.historyLink === 'fitxa') { path =  '/fitxa';}
 
-	        $timeout(function(){ 
-			  $location.path(path).replace(); 
-			},500);
-			
-		};
-
-		$scope.goHome = function(){
-			console.log('goHome in DetailCtrl');
-	        
-	        $timeout(function(){ 
-			  $location.path('/graella-activitats').replace();
-			},500);
-		}; 
+ 
 
 		$scope.getDescription = function() {
 			if ($scope.activitat) {

@@ -8017,11 +8017,11 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff535353',endColorstr='#ff3c3c3c',GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
     body .banner-info.detail .banner-info-left {
-      width: 50%;
+      width: 45%;
       float: left;
       position: relative;
       height: 100%;
-      padding: 3% 0; }
+      padding: 4% 0; }
       body .banner-info.detail .banner-info-left .banner-info-round {
         margin: 0 auto;
         background-repeat: no-repeat;
@@ -8043,7 +8043,7 @@ body {
           text-align: center;
           font-size: 14px; }
     body .banner-info.detail .banner-info-right {
-      width: 50%;
+      width: 55%;
       float: left;
       position: relative;
       height: 100%; }
@@ -8688,14 +8688,13 @@ body {
         font-weight: 700; }
         body .banner-info.main .banner-info-right .banner-info-vertical p a {
           font-size: 13px; }
-  body.fitxa .banner-info.main {
-    display: none; }
   body .banner-info.detail {
     height: 130px;
     margin: 13px 0 0 0; }
     body .banner-info.detail .banner-info-left {
       height: 100%;
-      padding: 4% 0; }
+      width: 45%;
+      padding: 4% 2%; }
       body .banner-info.detail .banner-info-left .banner-info-round p {
         font-size: 12px; }
     body .banner-info.detail .banner-info-right {
@@ -8783,7 +8782,7 @@ body {
     margin: 13px 0 0 0; }
     body .banner-info.detail .banner-info-left {
       height: 100%;
-      padding: 4% 0; }
+      padding: 3% 0; }
       body .banner-info.detail .banner-info-left .banner-info-round p {
         font-size: 14px; }
     body .banner-info.detail .banner-info-right {
@@ -8806,7 +8805,7 @@ body {
     margin: 13px 0 0 0; }
     body .banner-info.detail .banner-info-left {
       height: 100%;
-      padding: 5% 0; }
+      padding: 6% 0; }
       body .banner-info.detail .banner-info-left .banner-info-round .banner-info-vertical p {
         font-size: 13px; }
     body .banner-info.detail .banner-info-right {
