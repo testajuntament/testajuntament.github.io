@@ -35,7 +35,10 @@ var paths = {
   // images: 'assets/img/**/*s',
   styles: [
   	'sass/**/*.scss'
-  ]
+  ],
+  prints: [
+    'css/print.scss'
+  ]  
 };
 
 gulp.task('clean', function(cb) {
@@ -62,6 +65,24 @@ gulp.task('styles', function() {
 		.pipe(notify({ message: 'styles task complete' }));
 });
 
+gulp.task('prints', function() {
+  return gulp.src(paths.prints)
+    // .pipe(compass({
+    //   sass: 'sass'
+    // }))
+    .pipe(sass({
+      includePaths: [
+      ]
+    }))
+    .on('error', function (err) { console.log(err.message); })
+    .on('error', gutil.log )
+    .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+    .pipe(concat('print.css'))
+    // .pipe(minifycss())
+    .pipe(gulp.dest('./css'))
+    .pipe(notify({ message: 'styles task complete' }));
+});
+
 gulp.task('scripts', function() {
     return gulp
 	    .src(paths.scripts)
@@ -76,9 +97,10 @@ gulp.task('scripts', function() {
 
 gulp.task('watch', function() {
 	gulp.watch(paths.scripts, ['scripts']);
-	gulp.watch(paths.styles, ['styles']);
+  gulp.watch(paths.styles, ['styles']);
+	gulp.watch(paths.prints, ['prints']);
 });
 
 gulp.task('default', function() {
-    gulp.start('styles', 'scripts', 'watch');
+    gulp.start('styles', 'scripts',  'prints','watch');
 });	
