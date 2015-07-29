@@ -1450,8 +1450,8 @@
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
         "nivellRecomanat": "P3, P4 i P5",
         "nivellsEducatius": [{
-            "id": "1",
-            "nom": "Educació infantil"
+            "id": "21",
+            "nom": "Educació primària"
         }],
         "preu": "2,70 € / alumne (grup mínim 20 alumnes)",
         "prioritat": "9",
