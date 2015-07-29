@@ -8637,6 +8637,8 @@ body {
         font-weight: 700; }
         body .banner-info.main .banner-info-right .banner-info-vertical p a {
           font-size: 13px; }
+  body.fitxa .banner-info.main.hidden-sm.hidden-md.hidden-lg {
+    display: none; }
   body .sidebar-offcanvas {
     display: none; }
   body .sidebar-offcanvas.active {
@@ -8686,14 +8688,16 @@ body {
         font-weight: 700; }
         body .banner-info.main .banner-info-right .banner-info-vertical p a {
           font-size: 13px; }
+  body.fitxa .banner-info.main {
+    display: none; }
   body .banner-info.detail {
     height: 130px;
     margin: 13px 0 0 0; }
     body .banner-info.detail .banner-info-left {
       height: 100%;
-      padding: 3% 0; }
+      padding: 4% 0; }
       body .banner-info.detail .banner-info-left .banner-info-round p {
-        font-size: 14px; }
+        font-size: 12px; }
     body .banner-info.detail .banner-info-right {
       height: 100%; }
       body .banner-info.detail .banner-info-right .banner-info-vertical {
@@ -8703,7 +8707,9 @@ body {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%); }
         body .banner-info.detail .banner-info-right .banner-info-vertical p {
-          font-size: 14px; }
+          font-size: 12px; }
+          body .banner-info.detail .banner-info-right .banner-info-vertical p a {
+            font-size: 12px; }
   body .loader {
     margin: 0 0 2em;
     height: 100px;

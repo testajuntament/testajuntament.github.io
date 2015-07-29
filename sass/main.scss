@@ -886,7 +886,6 @@ body {
     border-right: 15px solid rgba(0, 0, 0, 0);
   }
 
-
   .modul-obra {
     position: relative;
     margin: 0 0 6% 0;
@@ -1168,6 +1167,7 @@ body {
       }         
 
     }
+
     .retol-2{
       width: 100%;
       border-bottom: 1px solid #AD0318;
@@ -1177,6 +1177,7 @@ body {
         }
       }
     }
+
     .banner-info.main{
       height: 110px;
       margin: 0;
@@ -1208,7 +1209,11 @@ body {
           }
         }  
       }
-    }    
+    } 
+
+    &.fitxa .banner-info.main.hidden-sm.hidden-md.hidden-lg{
+      display: none;
+    }       
 
     .sidebar-offcanvas {
       display: none;
@@ -1276,23 +1281,33 @@ body {
           }
         }  
       }
-    }      
+    } 
+
+    &.fitxa .banner-info.main{
+      display: none;
+    }  
+
     .banner-info.detail{
       height: 130px;
       margin: 13px 0 0 0;
       .banner-info-left{
         height: 100%;
-        padding: 3% 0;
-        .banner-info-round p{
-          font-size: 14px;
-        }
+        padding: 4% 0;
+        .banner-info-round{
+          p{
+            font-size: 12px;
+          }          
+        } 
       }
       .banner-info-right{
         height: 100%;
         .banner-info-vertical{
           @include vertical-align;
           p{
-            font-size: 14px;
+            font-size: 12px;
+            a{
+              font-size: 12px;
+            }
           }          
         }
 

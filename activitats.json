@@ -7,7 +7,7 @@
         },
         "descripcio": "<p>\nCom vivien, qu&egrave; feien, com eren els nostres avantpassats de fa 6.000 anys? El Parc Arqueol&ograve;gic Mines de Gav&agrave; ens ofereix les respostes. La visita convida a posar-se en la pell d&rsquo;un arque&ograve;leg i seguir totes les pistes que ens d&oacute;na aquest jaciment &uacute;nic a Europa. Una aventura fascinant per con&egrave;ixer la prehist&ograve;ria i en concret el neol&iacute;tic!</p>\n",
         "durada": "2 hores",
-        "enllacRecursosNeolitic": "false",
+        "enllacRecursosNeolitic": "true",
         "id": "64",
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a> (c/ Jaume I, n&uacute;mero 7)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
@@ -21,36 +21,6 @@
                 "titol": "Guia de Recursos del Parc Arqueològic",
                 "pathFoto": "",
                 "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be3333a0002/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "26",
-                "titol": "Quadern d’activitats “Viu la Prehistòria”",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4000d0003/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "27",
-                "titol": "Recurs Educatiu en Línia: El collaret de variscita (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4bddb0004/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "28",
-                "titol": "Recurs Educatiu en Línia: La mineria (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be5787f0005/getPdf"
             },
             {
                 "categoriaMaterialDidactic": {
@@ -136,7 +106,7 @@
         "prioritat": "1",
         "subtitol": "Descobriu els misteris de les mines en galeria més antigues d’Europa! Un viatge al passat... un viatge al neolític",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
-        "titol": "Visita guiada de dues hores al Parc Arqueològic Mines de Gavà",
+        "titol": "Visita guiada de dues hores al Parc Arqueològic",
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/64/getImage"
     },
     {
@@ -147,7 +117,7 @@
         },
         "descripcio": "<p>\nCom vivien, qu&egrave; feien, com eren els nostres avantpassats de fa 6.000 anys? El Parc Arqueol&ograve;gic Mines de Gav&agrave; ens ofereix les respostes. La visita convida a posar-se en la pell d&rsquo;un arque&ograve;leg i seguir totes les pistes que ens d&oacute;na aquest jaciment &uacute;nic a Europa. Una aventura fascinant per con&egrave;ixer la prehist&ograve;ria i en concret el neol&iacute;tic!</p>\n",
         "durada": "2 hores",
-        "enllacRecursosNeolitic": "false",
+        "enllacRecursosNeolitic": "true",
         "id": "65",
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a> (c/ Jaume I, n&uacute;mero 7)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
@@ -168,7 +138,7 @@
                     "nom": "Socials"
                 },
                 "id": "26",
-                "titol": "Quadern d’activitats “Viu la Prehistòria”",
+                "titol": "Quadern d’activitats “Viu la Prehistòria” (Educació infantil)",
                 "pathFoto": "",
                 "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4000d0003/getPdf"
             },
@@ -295,7 +265,7 @@
                 "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.taller/41/getImage"
             },
             {
-                "descripcio": "<p>\nAmb aquest taller es pret&eacute;n que els alumnes coneguin de prop la metodologia de treball de l&rsquo;arque&ograve;leg i l&rsquo;apassionant m&oacute;n de la recerca. A partir d&rsquo;una s&egrave;rie de pistes, els alumnes hauran de descobrir un personatge prehist&ograve;ric i reconstruir cooperativament el passat neol&iacute;tic.</p>\n<p>\nTreballarem a l&rsquo;aula en cinc equips de treball. Cada equip treballar&agrave; una maleta amb diferents reproduccions per desxifrar tal com ho faria un arque&ograve;leg: on?, qui?, a qu&egrave;? es dedicava aquest enigm&agrave;tic personatge.</p>\n",
+                "descripcio": "<p>\nAmb aquest taller es pret&eacute;n que els alumnes coneguin de prop la metodologia de treball de l&rsquo;arque&ograve;leg i l&rsquo;apassionant m&oacute;n de la recerca. A partir d&rsquo;una s&egrave;rie de pistes, els alumnes hauran de descobrir un personatge prehist&ograve;ric i reconstruir cooperativament el passat neol&iacute;tic.</p>\n<p>\nTreballarem a l&rsquo;aula en cinc equips de treball. Cada equip treballar&agrave; una maleta amb diferents reproduccions per desxifrar tal com ho faria un arque&ograve;leg: qui era el nostre enigm&agrave;tic personatge? a qu&egrave; es dedicava? on treballava?</p>\n",
                 "id": "21",
                 "nivellRecomanat": "5è i 6è d’EP / ESO / Batxillerat",
                 "titol": "Taller “Investigació oberta: neolític”",
@@ -310,7 +280,7 @@
             }
         ],
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
-        "titol": "Visita guiada de dues hores amb taller al Parc Arqueològic Mines de Gavà",
+        "titol": "Visita guiada de dues hores amb taller al Parc Arqueològic",
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/65/getImage"
     },
     {
@@ -321,7 +291,7 @@
         },
         "descripcio": "<p>\nCom vivien, qu&egrave; feien, com eren els nostres avantpassats de fa 6.000 anys? El Parc Arqueol&ograve;gic Mines de Gav&agrave; ens ofereix les respostes. La visita convida a posar-se en la pell d&rsquo;un arque&ograve;leg i seguir totes les pistes que ens d&oacute;na aquest jaciment &uacute;nic a Europa. Una aventura fascinant per con&egrave;ixer la prehist&ograve;ria i en concret el neol&iacute;tic!<br />\n<br />\nPoseu-vos en la pell d&rsquo;un prehist&ograve;ric tot participant en un dels nostres tallers i baixant a la mina did&agrave;ctica... Tocareu la prehist&ograve;ria de ben a prop!</p>\n",
         "durada": "3 hores",
-        "enllacRecursosNeolitic": "false",
+        "enllacRecursosNeolitic": "true",
         "id": "66",
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a> (c/ Jaume I, n&uacute;mero 7)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
@@ -335,36 +305,6 @@
                 "titol": "Guia de Recursos del Parc Arqueològic",
                 "pathFoto": "",
                 "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be3333a0002/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "26",
-                "titol": "Quadern d’activitats “Viu la Prehistòria”",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4000d0003/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "27",
-                "titol": "Recurs Educatiu en Línia: El collaret de variscita (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4bddb0004/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "28",
-                "titol": "Recurs Educatiu en Línia: La mineria (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be5787f0005/getPdf"
             },
             {
                 "categoriaMaterialDidactic": {
@@ -447,6 +387,7 @@
         ],
         "observacions": "<p>\nEn aquesta activitat visitareu la zona d&rsquo;exposici&oacute; permanent, baixareu amb un casc a la mina did&agrave;ctica i haureu de triar un taller complementari, a escollir en el moment de la reserva, segons el vostre inter&egrave;s i adequat al nivell dels alumnes.</p>\n",
         "preu": "9,20 €/alumne (grup mínim 20 alumnes). Consulteu descomptes en horaris i setmanes especials.",
+        "prioritat": "3",
         "subtitol": "Descobriu els misteris de les mines en galeria més antigues d’Europa! Un viatge de tot un matí a la prehistòria... i a més, fareu un taller. Una aventura d’allò més completa.",
         "tallers": [
             {
@@ -464,7 +405,7 @@
                 "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.taller/41/getImage"
             },
             {
-                "descripcio": "<p>\nAmb aquest taller es pret&eacute;n que els alumnes coneguin de prop la metodologia de treball de l&rsquo;arque&ograve;leg i l&rsquo;apassionant m&oacute;n de la recerca. A partir d&rsquo;una s&egrave;rie de pistes, els alumnes hauran de descobrir un personatge prehist&ograve;ric i reconstruir cooperativament el passat neol&iacute;tic.</p>\n<p>\nTreballarem a l&rsquo;aula en cinc equips de treball. Cada equip treballar&agrave; una maleta amb diferents reproduccions per desxifrar tal com ho faria un arque&ograve;leg: on?, qui?, a qu&egrave;? es dedicava aquest enigm&agrave;tic personatge.</p>\n",
+                "descripcio": "<p>\nAmb aquest taller es pret&eacute;n que els alumnes coneguin de prop la metodologia de treball de l&rsquo;arque&ograve;leg i l&rsquo;apassionant m&oacute;n de la recerca. A partir d&rsquo;una s&egrave;rie de pistes, els alumnes hauran de descobrir un personatge prehist&ograve;ric i reconstruir cooperativament el passat neol&iacute;tic.</p>\n<p>\nTreballarem a l&rsquo;aula en cinc equips de treball. Cada equip treballar&agrave; una maleta amb diferents reproduccions per desxifrar tal com ho faria un arque&ograve;leg: qui era el nostre enigm&agrave;tic personatge? a qu&egrave; es dedicava? on treballava?</p>\n",
                 "id": "21",
                 "nivellRecomanat": "5è i 6è d’EP / ESO / Batxillerat",
                 "titol": "Taller “Investigació oberta: neolític”",
@@ -479,7 +420,7 @@
             }
         ],
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
-        "titol": "Visita guiada de tres hores amb taller al Parc Arqueològic Mines de Gavà",
+        "titol": "Visita guiada de tres hores amb taller al Parc Arqueològic",
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/66/getImage"
     },
     {
@@ -490,7 +431,7 @@
         },
         "descripcio": "<p>\nCom vivien, qu&egrave; feien, com eren els nostres avantpassats de fa 6.000 anys? El Parc Arqueol&ograve;gic Mines de Gav&agrave; ens ofereix les respostes. La visita convida a posar-se en la pell d&rsquo;un arque&ograve;leg i seguir totes les pistes que ens d&oacute;na aquest jaciment &uacute;nic a Europa. Una aventura fascinant per con&egrave;ixer la prehist&ograve;ria i en concret el neol&iacute;tic!<br />\n<br />\nNo sabeu quin taller triar? Els far&iacute;eu tots? Aquesta &eacute;s la vostra opci&oacute;: dos tallers adequats al nivell dels vostres alumnes amb l&rsquo;opci&oacute; de poder dinar entre l&rsquo;un i l&rsquo;altre.</p>\n",
         "durada": "3 hores",
-        "enllacRecursosNeolitic": "false",
+        "enllacRecursosNeolitic": "true",
         "id": "67",
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a> (c/ Jaume I, n&uacute;mero 7)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
@@ -504,36 +445,6 @@
                 "titol": "Guia de Recursos del Parc Arqueològic",
                 "pathFoto": "",
                 "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be3333a0002/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "26",
-                "titol": "Quadern d’activitats “Viu la Prehistòria”",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4000d0003/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "27",
-                "titol": "Recurs Educatiu en Línia: El collaret de variscita (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4bddb0004/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "28",
-                "titol": "Recurs Educatiu en Línia: La mineria (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be5787f0005/getPdf"
             },
             {
                 "categoriaMaterialDidactic": {
@@ -634,7 +545,7 @@
                 "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.taller/41/getImage"
             },
             {
-                "descripcio": "<p>\nAmb aquest taller es pret&eacute;n que els alumnes coneguin de prop la metodologia de treball de l&rsquo;arque&ograve;leg i l&rsquo;apassionant m&oacute;n de la recerca. A partir d&rsquo;una s&egrave;rie de pistes, els alumnes hauran de descobrir un personatge prehist&ograve;ric i reconstruir cooperativament el passat neol&iacute;tic.</p>\n<p>\nTreballarem a l&rsquo;aula en cinc equips de treball. Cada equip treballar&agrave; una maleta amb diferents reproduccions per desxifrar tal com ho faria un arque&ograve;leg: on?, qui?, a qu&egrave;? es dedicava aquest enigm&agrave;tic personatge.</p>\n",
+                "descripcio": "<p>\nAmb aquest taller es pret&eacute;n que els alumnes coneguin de prop la metodologia de treball de l&rsquo;arque&ograve;leg i l&rsquo;apassionant m&oacute;n de la recerca. A partir d&rsquo;una s&egrave;rie de pistes, els alumnes hauran de descobrir un personatge prehist&ograve;ric i reconstruir cooperativament el passat neol&iacute;tic.</p>\n<p>\nTreballarem a l&rsquo;aula en cinc equips de treball. Cada equip treballar&agrave; una maleta amb diferents reproduccions per desxifrar tal com ho faria un arque&ograve;leg: qui era el nostre enigm&agrave;tic personatge? a qu&egrave; es dedicava? on treballava?</p>\n",
                 "id": "21",
                 "nivellRecomanat": "5è i 6è d’EP / ESO / Batxillerat",
                 "titol": "Taller “Investigació oberta: neolític”",
@@ -649,7 +560,7 @@
             }
         ],
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
-        "titol": "Visita guiada amb dos tallers al Parc Arqueològic Mines de Gavà",
+        "titol": "Visita guiada amb dos tallers al Parc Arqueològic",
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/67/getImage"
     },
     {
@@ -658,7 +569,7 @@
             "id": "61",
             "nom": "Socials"
         },
-        "descripcio": "<p>\nEn Roc i la Mina, dos simp&agrave;tics titelles prehist&ograve;rics, explicaran un conte que permetr&agrave; als nens i nenes con&egrave;ixer com era la vida ara fa 6.000 anys i l&#39;activitat minera a Gav&agrave;. A trav&eacute;s d&rsquo;un joc de rol es refor&ccedil;aran els conceptes explicats i baixarem a una mina amb un casc adaptat. Una petita aventura!</p>\n",
+        "descripcio": "<p>\nEn Roc i la Mina, dos simp&agrave;tics titelles prehist&ograve;rics, explicaran un conte que permetr&agrave; als nens i nenes con&egrave;ixer com era la vida ara fa 6.000 anys i l&#39;activitat minera a Gav&agrave;. A trav&eacute;s d&rsquo;un joc de rol es refor&ccedil;aran els conceptes explicats i baixarem a una mina amb un casc adaptat. Una petita aventura!</p>\n<p>\nAquesta activitat permet prendre contacte per primera vegada amb les mines de Gav&agrave; i amb la prehist&ograve;ria, i treballar difer&egrave;ncies i semblances dels modes de vida i dels objectes d&rsquo;abans i ara: el menjar, l&rsquo;agricultura i la ramaderia, els estris quotidians...</p>\n",
         "durada": "1 hora",
         "enllacRecursosNeolitic": "false",
         "id": "68",
@@ -670,18 +581,8 @@
                     "id": "21",
                     "nom": "Socials"
                 },
-                "id": "25",
-                "titol": "Guia de Recursos del Parc Arqueològic",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be3333a0002/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
                 "id": "26",
-                "titol": "Quadern d’activitats “Viu la Prehistòria”",
+                "titol": "Quadern d’activitats “Viu la Prehistòria” (Educació infantil)",
                 "pathFoto": "",
                 "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4000d0003/getPdf"
             },
@@ -704,77 +605,15 @@
                 "titol": "Recurs Educatiu en Línia: La mineria (Educació infantil)",
                 "pathFoto": "",
                 "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be5787f0005/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "29",
-                "titol": "Recurs Educatiu en Línia: La Venus de Gavà (Educació primària)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be611c70006/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "30",
-                "titol": "Recurs Educatiu en Línia: El poblat neolític (Educació primària)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be6b9500007/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "31",
-                "titol": "Recurs Educatiu en Línia: Sopa de lletres neolítica (Educació secundària)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be796660008/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "32",
-                "titol": "Vídeo “Parc Arqueològic Mines de Gavà”",
-                "url": "http://youtu.be/P-T8n1OH_HU",
-                "pathFoto": "",
-                "pathPdfInformacio": ""
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "33",
-                "titol": "Vídeo “La Venus de Gavà”",
-                "url": "http://www.gavatv.cat/histories/capitol/la-venus-de-gava",
-                "pathFoto": "",
-                "pathPdfInformacio": ""
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "34",
-                "titol": "Vídeo “Les mines neolítiques”",
-                "url": "http://www.gavatv.cat/histories/capitol/les-mines-neolitiques",
-                "pathFoto": "",
-                "pathPdfInformacio": ""
             }
         ],
         "nivellRecomanat": "P3, P4 i P5",
-        "nivellsEducatius": [{
-            "id": "1",
-            "nom": "Educació infantil"
-        }],
-        "observacions": "<p>\nAquesta activitat permet prendre contacte per primera vegada amb les mines de Gav&agrave; i amb la prehist&ograve;ria, i treballar difer&egrave;ncies i semblances dels modes de vida i dels objectes d&rsquo;abans i ara: el menjar, l&rsquo;agricultura i la ramaderia, els estris quotidians...</p>\n",
+        "nivellsEducatius": [
+            {
+                "id": "1",
+                "nom": "Educació infantil"
+            }
+        ],
         "preu": "3,70 €/alumne (grup mínim 20 alumnes)",
         "prioritat": "5",
         "subtitol": "Descobriu les mines prehistòriques de la mà de dos petits prehistòrics",
@@ -807,7 +646,7 @@
         ],
         "observacions": "<ul>\n<li>\nPorteu roba que es pugui embrutar.</li>\n<li>\nL&rsquo;activitat es fa l&rsquo;aire lliure.</li>\n</ul>\n",
         "preu": "3,20 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "7",
+        "prioritat": "8",
         "subtitol": "La màgia i la tècnica de la pintura de la prehistòria",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "L’art de la prehistòria",
@@ -903,7 +742,7 @@
         ],
         "observacions": "<p>\nActivitat recomanada per complementar la visita al Parc Arqueol&ograve;gic Mines de Gav&agrave; des de l&rsquo;&agrave;mbit de la mineralogia i la geologia.</p>\n",
         "preu": "2,70 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "8",
+        "prioritat": "9",
         "subtitol": "Descobrirem i estudiarem els materials que es trobaven els miners neolítics",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Roques i minerals a les mines prehistòriques de Gavà",
@@ -1100,7 +939,7 @@
         ],
         "observacions": "<ul>\n<li>\nCal que el grup disposi d&rsquo;autocar per fer la visita al Garraf.</li>\n<li>\nCal dur cal&ccedil;at i roba adequada per fer la sortida de camp.</li>\n</ul>\n",
         "preu": "6,30 € / alumne (grup mínim 20 alumnes)",
-        "prioritat": "7",
+        "prioritat": "9",
         "subtitol": "Les roques del Garraf mitjançant una experiència de laboratori i una sortida al camp",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Fem parlar les roques del Garraf",
@@ -1113,7 +952,7 @@
             "nom": "Naturals"
         },
         "descripcio": "<p>\nUn estudi acurat amb material d&rsquo;an&agrave;lisi cient&iacute;fic al laboratori de les roques del mass&iacute;s del Garraf permetr&agrave; als alumnes con&egrave;ixer-ne els principals tipus, les caracter&iacute;stiques i la hist&ograve;ria geol&ograve;gica del mass&iacute;s.<br />\n<br />\nAmb la posterior sortida, al llarg d&rsquo;un itinerari descobriran les formacions que aquestes roques presenten i com les seves caracter&iacute;stiques condicionen la vegetaci&oacute;, que varia en funci&oacute; de la litologia a la qual es troba associada. L&rsquo;estudi del s&ograve;l i la identificaci&oacute; d&rsquo;esp&egrave;cies vegetals els far&agrave; tancar el cercle de relacions entre la geologia i la vegetaci&oacute;, fet que serveix com a introducci&oacute; del concepte d&rsquo;ecologia.<br />\n<br />\nEl taller inclou diverses activitats amb una marcada metodologia experiencial com l&rsquo;observaci&oacute; directa, estudi i identificaci&oacute;, in situ, de la vegetaci&oacute; o de les formacions geol&ograve;giques.</p>\n",
-        "durada": "1 hora",
+        "durada": "4 hores",
         "enllacRecursosNeolitic": "false",
         "id": "82",
         "llocRealitzacio": "<p>\nSortida al camp i <a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> (pla&ccedil;a de Dolors Clua, 13-14). Punt de trobada a concretar amb el Servei Pedag&ograve;gic del Museu.</p>\n",
@@ -1297,10 +1136,10 @@
         ],
         "observacions": "<ul>\n<li>\nCal que el grup disposi d&rsquo;autocar per fer la visita al Garraf.</li>\n<li>\nCal dur cal&ccedil;at i roba adequada per fer la sortida de camp.</li>\n</ul>\n",
         "preu": "5,55 € / alumne (grup mínim 20 alumnes)",
-        "prioritat": "9",
+        "prioritat": "6",
         "subtitol": "La vegetació i les roques del massís del Garraf a partir d’una experiència de laboratori i una sortida de camp al Garraf",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
-        "titol": "Del Garraf blanc al Garraf negre. Una introducció a l’ecologia del Garraf",
+        "titol": "Del Garraf blanc al Garraf negre. Una introducció a l’ecologia",
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/82/getImage"
     },
     {
@@ -1309,24 +1148,13 @@
             "id": "61",
             "nom": "Socials"
         },
-        "descripcio": "<p>\nLa visita consisteix en un recorregut pel jaciment a trav&eacute;s dels sentits. Amb l&rsquo;ajut del &ldquo;m&ograve;dul sensorial&rdquo;, que cont&eacute; informaci&oacute; en braille i macrocar&agrave;cters sobre el jaciment, s&rsquo;ofereix la possibilitat de tenir una experi&egrave;ncia t&agrave;ctil a partir de la reproducci&oacute; de les peces &uacute;niques descobertes a les mines prehist&ograve;riques de Gav&agrave;, com el crani trepanat o la Venus de Gav&agrave;. La baixada a la mina sota una altra mirada.</p>\n",
+        "descripcio": "<p>\nLa visita consisteix en un recorregut pel jaciment a trav&eacute;s dels sentits. Amb l&rsquo;ajut del &ldquo;m&ograve;dul sensorial&rdquo;, que cont&eacute; informaci&oacute; en braille i macrocar&agrave;cters sobre el jaciment, s&rsquo;ofereix la possibilitat de tenir una experi&egrave;ncia t&agrave;ctil a partir de la reproducci&oacute; de les peces &uacute;niques descobertes a les mines prehist&ograve;riques de Gav&agrave;, com el crani trepanat o la Venus de Gav&agrave;. La baixada a la mina sota una altra mirada.</p>\n<p>\nUna visita guiada al Parc Arqueol&ograve;gic a trav&eacute;s d&rsquo;una experi&egrave;ncia sensorial i acompanyats per un monitor format en t&egrave;cnica guia per con&egrave;ixer aquest jaciment &uacute;nic a Europa. Els coneixements es completaran gr&agrave;cies als exercicis pr&agrave;ctics preparats per a l&rsquo;ocasi&oacute;.</p>\n",
         "durada": "2 hores",
         "enllacRecursosNeolitic": "false",
         "id": "69",
-        "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a> (c/ Jaume I, n&uacute;mero 7) i <a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> (pl. Dolors Clua, 13-14)</p>\n",
+        "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a> (c/ Jaume I, n&uacute;mero 7)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
         "materialDidactics": [
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "35",
-                "titol": "Vídeo “Presentació. Mòdul de la Mirada Tàctil. Museu Parc Arqueològic Mines de Gavà”",
-                "url": "https://www.youtube.com/watch?v=BTJoOH4ZDbY",
-                "pathFoto": "",
-                "pathPdfInformacio": ""
-            },
             {
                 "categoriaMaterialDidactic": {
                     "id": "21",
@@ -1342,84 +1170,21 @@
                     "id": "21",
                     "nom": "Socials"
                 },
-                "id": "26",
-                "titol": "Quadern d’activitats “Viu la Prehistòria”",
+                "id": "35",
+                "titol": "Vídeo “Presentació. Mòdul de la Mirada Tàctil. Museu Parc Arqueològic Mines de Gavà”",
+                "url": "https://www.youtube.com/watch?v=BTJoOH4ZDbY",
                 "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4000d0003/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "27",
-                "titol": "Recurs Educatiu en Línia: El collaret de variscita (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be4bddb0004/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "28",
-                "titol": "Recurs Educatiu en Línia: La mineria (Educació infantil)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be5787f0005/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "29",
-                "titol": "Recurs Educatiu en Línia: La Venus de Gavà (Educació primària)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be611c70006/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "30",
-                "titol": "Recurs Educatiu en Línia: El poblat neolític (Educació primària)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be6b9500007/getPdf"
-            },
-            {
-                "categoriaMaterialDidactic": {
-                    "id": "21",
-                    "nom": "Socials"
-                },
-                "id": "31",
-                "titol": "Recurs Educatiu en Línia: Sopa de lletres neolítica (Educació secundària)",
-                "pathFoto": "",
-                "pathPdfInformacio": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/2c9080ee4e8b3070014e9be796660008/getPdf"
+                "pathPdfInformacio": ""
             }
         ],
-        "nivellRecomanat": "EP, ESO i Batxillerat. Grups amb necessitats especials.",
+        "nivellRecomanat": "Adreçada a grups amb necessitats especials.",
         "nivellsEducatius": [
-            {
-                "id": "21",
-                "nom": "Educació primària"
-            },
-            {
-                "id": "22",
-                "nom": "ESO"
-            },
-            {
-                "id": "23",
-                "nom": "Batxillerat"
-            },
-            {
-                "id": "24",
-                "nom": "Altres"
-            }
-        ],
-        "observacions": "<p>\nUna visita guiada al Parc Arqueol&ograve;gic a trav&eacute;s d&rsquo;una experi&egrave;ncia sensorial i acompanyats per un monitor format en t&egrave;cnica guia per con&egrave;ixer aquest jaciment &uacute;nic a Europa. Els coneixements es completaran gr&agrave;cies als exercicis pr&agrave;ctics preparats per a l&rsquo;ocasi&oacute;.</p>\n",
+        {
+            "id": "24",
+            "nom": "Altres"
+        }],
         "preu": "6,90€/alumne (grup mínim 20 alumnes)",
-        "prioritat": "6",
+        "prioritat": "10",
         "subtitol": "Una experiència sensorial plena de sorpreses per descobrir un jaciment únic!",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Visita sensorial",
@@ -1437,26 +1202,14 @@
         "id": "70",
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Parc+Arqueol%C3%B2gic+Mines+de+Gav%C3%A0/@41.3098851,2.0003647,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdbcbd24139:0x1cb64aefc23a137b?hl=ca\" target=\"_blank\">Parc Arqueol&ograve;gic Mines de Gav&agrave;</a>, <a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> i sortida de camp</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
-        "materialDidactics": [
-        {
-            "categoriaMaterialDidactic": {
-                "id": "21",
-                "nom": "Socials"
-            },
-            "id": "52",
-            "titol": "Prova foto",
-            "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.materialdidactic/52/getImage",
-            "pathPdfInformacio": ""
-        }],
         "nivellRecomanat": "1r i 2n d’ESO",
         "nivellsEducatius": [{
             "id": "22",
             "nom": "ESO"
         }],
         "observacions": "<ul>\n<li>\nEl treball es fa en dos dies a Gav&agrave;.</li>\n<li>\nUn dels dos dies, a concretar, cal que el grup disposi d&rsquo;autocar per als despla&ccedil;aments al Garraf.</li>\n<li>\nEls alumnes hauran de dur llapis o bol&iacute;graf i algun suport per al dossier did&agrave;ctic que se&rsquo;ls facilitar&agrave;.</li>\n<li>\nCal dur cal&ccedil;at i roba adequada per fer la sortida de camp i les diverses activitats proposades.</li>\n</ul>\n",
-        "peuFoto": "© Museu de Gavà",
-        "preu": "24 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "6",
+        "preu": "24 € / alumne",
+        "prioritat": "10",
         "subtitol": "L’ésser humà i el seu entorn... abans i ara",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Treball de síntesi “L’ésser humà, actor en el paisatge”",
@@ -1480,7 +1233,7 @@
             "nom": "Educació infantil"
         }],
         "preu": "2,70 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "6",
+        "prioritat": "8",
         "subtitol": "Tres jocs de descoberta dels sentits",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Els sentits",
@@ -1505,7 +1258,7 @@
         }],
         "observacions": "<ul>\n<li>\nPorteu roba que es pugui embrutar.</li>\n<li>\nEn cas de pluja, l&rsquo;activitat es fa a l&rsquo;aula-taller del Museu.</li>\n</ul>\n",
         "preu": "2,70 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "7",
+        "prioritat": "8",
         "subtitol": "Els colors de la natura",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Petits pintors de la prehistòria",
@@ -1562,8 +1315,8 @@
             }
         ],
         "preu": "2,70 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "8",
-        "subtitol": "Amagar-se sota terra",
+        "prioritat": "7",
+        "subtitol": "Protegir-se sota terra",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Refugi antiaeri de la Rambla. Gavà sota les bombes",
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/73/getImage"
@@ -1592,7 +1345,7 @@
             }
         ],
         "preu": "4,05 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "9",
+        "prioritat": "8",
         "subtitol": "Protagonistes de la història",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Itinerari urbà per Gavà. La meva ciutat",
@@ -1605,7 +1358,7 @@
             "nom": "Socials"
         },
         "descripcio": "<p>\nLa visita al castell d&rsquo;Erampruny&agrave; i el seu entorn permetr&agrave; que els alumnes coneguin el feudalisme i l&rsquo;edat mitjana. Recorrent els diferents recintes que conserva el castell,&nbsp; visitant l&rsquo;esgl&eacute;sia de Sant Miquel o les tombes antropomorfes i observant el magn&iacute;fic entorn en qu&egrave; se situa els alumnes coneixeran les funcions d&rsquo;aquestes construccions al llarg dels segles i la complexa estructura social i econ&ograve;mica amb qu&egrave; s&rsquo;organitzava.<br />\nTot plegat en un entorn natural &uacute;nic i a l&rsquo;aire lliure com &eacute;s l&rsquo;anomenat Garraf roig.</p>\n",
-        "durada": "2 hores, des de l’ermita de Bruguers (carretera de Gavà a Begues, km. 4,6). Temps lectiu (no inclou desplaçaments i descansos).",
+        "durada": "2 hores de temps lectiu, des de l’ermita de Bruguers",
         "enllacRecursosNeolitic": "false",
         "id": "75",
         "llocRealitzacio": "<p>\nCastell d&rsquo;Erampruny&agrave;. Punt de trobada a concretar amb el Servei Pedag&ograve;gic del Museu.</p>\n",
@@ -1644,9 +1397,9 @@
                 "nom": "ESO"
             }
         ],
-        "observacions": "<ul>\n<li>\nCal que el grup disposi d&rsquo;autocar. Opci&oacute; de transport p&uacute;blic: l&iacute;nia 902 de BaixBus Barcelona Begues <a href=\"http://www.baixbus.cat/linies/902\" target=\"_blank\">http://www.baixbus.cat/linies/902</a></li>\n<li>\nLa pujada al castell es fa a peu per un tram de drecera del GR92 que presenta alguns desnivells importants.</li>\n<li>\nEls alumnes hauran de dur llapis o bol&iacute;graf i algun suport per al dossier did&agrave;ctic que se&rsquo;ls facilitar&agrave;.</li>\n<li>\nCal dur cal&ccedil;at i roba adequada.</li>\n</ul>\n",
+        "observacions": "<ul>\n<li>\nCal que el grup disposi d&rsquo;autocar. Opci&oacute; de transport p&uacute;blic: l&iacute;nia 902 de BaixBus Barcelona Begues <a href=\"http://www.baixbus.cat/linies/902\" target=\"_blank\">http://www.baixbus.cat/linies/902</a></li>\n<li>\nLa pujada al castell es fa a peu per un tram de drecera del GR92 que presenta alguns desnivells importants.</li>\n<li>\nEls alumnes hauran de dur llapis o bol&iacute;graf i algun suport per al dossier did&agrave;ctic que se&rsquo;ls facilitar&agrave;.</li>\n<li>\nCal dur cal&ccedil;at i roba adequada.</li>\n<li>\nPunt de trobada a concretar amb el Servei Pedag&ograve;gic del Museu.</li>\n</ul>\n",
         "preu": "4,05 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "10",
+        "prioritat": "7",
         "subtitol": "Una excursió a l’edat mitjana",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Explorem el castell d’Eramprunyà!",
@@ -1677,7 +1430,7 @@
         ],
         "observacions": "<ul>\n<li>\nPorteu roba i cal&ccedil;at c&ograve;modes que es puguin embrutar.</li>\n<li>\nActivitat a l&rsquo;aire lliure.</li>\n</ul>\n",
         "preu": "3,20 € / alumne (grup mínim 20 alumnes i màxim 30)",
-        "prioritat": "6",
+        "prioritat": "8",
         "subtitol": "L’emoció d’excavar un jaciment neolític",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "L’arqueòleg, un detectiu del passat",
@@ -1696,17 +1449,16 @@
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> (pla&ccedil;a de Dolors Clua, 13-14)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
         "nivellRecomanat": "P3, P4 i P5",
-        "nivellsEducatius": [
-        {
+        "nivellsEducatius": [{
             "id": "1",
             "nom": "Educació infantil"
-        }
-        ],
+        }],
         "preu": "2,70 € / alumne (grup mínim 20 alumnes)",
-        "prioritat": "10",
+        "prioritat": "9",
         "subtitol": "El Jardí Botànic del Museu de Gavà, una finestra al món de les plantes del delta del Llobregat i del Garraf",
         "telefonInformacioReserves": "<p>\n93 263 96 10</p>\n",
         "titol": "Introducció al món de les plantes",
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/83/getImage"
     }
 ]
+
