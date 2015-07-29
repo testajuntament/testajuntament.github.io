@@ -1,4 +1,4 @@
-(function () {
+
    'use strict';
 
 	var app = angular.module('app', ['ngRoute', 'caco.ClientPaginate', 'gettext', 'angularMoment', 'seo','ngSanitize', 'mgcrea.ngStrap']);
@@ -161,10 +161,10 @@
 
 	}]);
 
-	/*app.controller('ChangeViewCtrl',['$scope', '$location', 
+	app.controller('ChangeViewCtrl',['$scope', '$location', 
 		function($scope,   $location) {
-		//$scope.$location = $location;
-	}]);*/
+		$scope.$location = $location;
+	}]);
 
 	app.controller('ListCtrl', ['$scope', '$routeParams', '$rootScope', '$timeout', 'GavaAPI', 
 		function($scope, $routeParams, $rootScope, $timeout, GavaAPI) {
@@ -554,6 +554,3 @@
 	      return output;
 	  };
 	});
-
-
-}());
