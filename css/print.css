@@ -19,8 +19,8 @@ font-size: 12pt; }
 /* Headings */
 h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
 h1{
-    font-size: 16pt;
-    margin: 22pt 0 4pt 0;
+    font-size: 17pt;
+    margin: 9pt 0 7pt 0;
 }
 .titol-tallers{
     font-size: 16pt;
@@ -76,6 +76,12 @@ img,tr {page-break-inside: avoid;}
 */
 
 /**/
+.retol{
+    width: 100%;
+}
+.retol-2{
+    width: 100%;
+}
 
 span {
     margin: 0 4pt;
@@ -84,7 +90,9 @@ span.key-info {
     font-weight: bold;
 }
 
-
+.logo-Ajuntament {
+    display: none;
+}
 
 .home-back {
     display: none;
@@ -125,7 +133,8 @@ img#logotip {
 }
 .banner-info-left .banner-info-vertical p {
     float: left;
-    font-size: 14pt;
+    font-size: 12pt;
+    font-weight: bold;
 }
 .banner-info-vertical p {
     float: left;
@@ -177,6 +186,13 @@ img#logotip {
 /*Detail*/
 .arrow-up{
   display: none;
+}
+.titol-observacions{
+    font-weight: bold;
+}
+.text-observacions ul {
+    margin: 0;
+    padding: 0 0 0 15pt;
 }
 
 

@@ -221,6 +221,10 @@
 		
 		$window.scrollTo(0, 0);
 
+		$scope.print = function() {
+			$window.print();
+		}
+
 		GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
 			$scope.shareTitle = gettextCatalog.getString('Patrimoni Cultural i Natural de Gavà: ') + activitat[$rootScope.titolAttrKey];
 			$scope.shareDescription = activitat[$rootScope.descripcioAttrKey];

@@ -1087,7 +1087,7 @@ body {
       margin-top: 5px;
     }
   }
-  .navegacio-top a:hover {
+  .navegacio-top a:hover, .navegacio-top a:visited, .navegacio-top a:focus{
     text-decoration: none;
     color: #666;
   }

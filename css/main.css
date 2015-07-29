@@ -8547,7 +8547,7 @@ body {
       font-size: 14px;
       margin-right: 0px;
       margin-top: 5px; }
-  body .navegacio-top a:hover {
+  body .navegacio-top a:hover, body .navegacio-top a:visited, body .navegacio-top a:focus {
     text-decoration: none;
     color: #666; }
   body .navegacio-top
