@@ -57,7 +57,9 @@
 		$rootScope.bodyClass = 'graella-activitats';
 
 		$rootScope.$on('$locationChangeStart', function(event, next, current) {
-			 if (next.indexOf('fitxa') !== -1 ) {
+			 
+			 if (next.indexOf('/fitxa/') !== -1 ) {
+
 				if (current.indexOf('graella-activitats') !== -1 ) {
 					$rootScope.historyLink = 'graella-activitats';
 				} else if (current.indexOf('fitxa') !== -1 ) {
@@ -66,9 +68,21 @@
 					$rootScope.historyLink = 'materials-didactics';
 			    }
 			    $rootScope.bodyClass = 'fitxa';
-			    console.log('bodyClass', $rootScope.bodyClass);
+
+			 }else if (next.indexOf('materials-didactics') !== -1 ){
+
+				if (current.indexOf('graella-activitats') !== -1 ) {
+					$rootScope.historyLink = 'graella-activitats';
+				} else if (current.indexOf('fitxa') !== -1 ) {
+					$rootScope.historyLink = 'fitxa';
+				} else if (current.indexOf('materials-didactics') !== -1) {
+					$rootScope.historyLink = 'materials-didactics';
+			    }
+			    $rootScope.bodyClass = 'materials-didactics';
+
 			 }   
 		});
+	
 
 		$rootScope.$on('$locationChangeSuccess', function() {
 			var text = gettextCatalog.getString('Activitats per a escoles - Museu de Gavà - Ajuntament de Gavà');
@@ -77,15 +91,15 @@
 		});
 
 		$rootScope.goBack = function() {
-			console.log('goBack in DetailCtrls');
+			console.log('goBack in run');
 			
 			var path;
 			if ($rootScope.historyLink === 'graella-activitats'){ 
-				path = '/graella-activitats'; 
+				path = 'graella-activitats'; 
 			}else if ($rootScope.historyLink === 'materials-didactics'){ 
-				path = '/materials-didactics';
+				path = 'materials-didactics';
 			}else if ($rootScope.historyLink === 'fitxa') { 
-				path =  '/fitxa';
+				path =  'fitxa';
 			}
 
 	        $timeout(function(){ 
@@ -100,7 +114,7 @@
 	        
 	        $timeout(function(){ 
 	          $rootScope.bodyClass = 'graella-activitats';
-			  $location.path('/graella-activitats');
+			  $location.path('graella-activitats');
 			},100);
 		};
 
