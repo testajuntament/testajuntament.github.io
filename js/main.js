@@ -226,7 +226,7 @@
 		}
 
 		GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
-			$scope.shareTitle = gettextCatalog.getString('Patrimoni Cultural i Natural de Gavà: ') + activitat[$rootScope.titolAttrKey];
+			$scope.shareTitle = gettextCatalog.getString('Servei Pedagògic: ') + activitat.titol;
 			$scope.shareDescription = activitat[$rootScope.descripcioAttrKey];
 			$scope.shareURL = $window.location.href.replace('/#','');
 			$scope.activitat = activitat;
