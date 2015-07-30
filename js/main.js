@@ -385,8 +385,10 @@
 				//$http({
 				//	url: 'http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat'
 				//})
+				//$http.get('http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat?callback=JSON_CALLBACK')
 				$http.get('activitats.json')
 				.success(function(response) {
+					console.log('resppnse', response);
 					allActivitats = [];
 					angular.forEach(response, function(activitat) {
 						allActivitats.push(activitat);

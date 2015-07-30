@@ -1179,10 +1179,11 @@
         ],
         "nivellRecomanat": "Adreçada a grups amb necessitats especials.",
         "nivellsEducatius": [
-        {
-            "id": "24",
-            "nom": "Altres"
-        }],
+            {
+                "id": "24",
+                "nom": "Altres"
+            }
+        ],
         "preu": "6,90€/alumne (grup mínim 20 alumnes)",
         "prioritat": "10",
         "subtitol": "Una experiència sensorial plena de sorpreses per descobrir un jaciment únic!",
@@ -1448,7 +1449,7 @@
         "id": "83",
         "llocRealitzacio": "<p>\n<a href=\"https://www.google.es/maps/place/Museu+de+Gav%C3%A0/@41.3067232,2.0041385,17z/data=!3m1!4b1!4m2!3m1!1s0x12a49cdee87f136b:0x91fe346d2205a83a?hl=ca\" target=\"_blank\">Museu de Gav&agrave;</a> (pla&ccedil;a de Dolors Clua, 13-14)</p>\n",
         "mailInformacioReserves": "<p>\n<a href=\"mailto:museu@gava.cat\">museu@gava.cat</a></p>\n",
-        "nivellRecomanat": "P3, P4 i P5",
+        "nivellRecomanat": "Cicle inicial i mitjà d’EP",
         "nivellsEducatius": [{
             "id": "21",
             "nom": "Educació primària"
@@ -1461,4 +1462,3 @@
         "pathFoto": "/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat/83/getImage"
     }
 ]
-
