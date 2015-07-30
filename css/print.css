@@ -1,13 +1,13 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 body {
-  /*width:100% !important;*/
+  -webkit-print-color-adjust: exact;
   width: 670px !important;
   margin: 0 auto !important;
   padding: 0 !important;
   line-height: 1.45;
-  font-family: 'Open Sans', Garamond, "Times New Roman", serif;
+  font-family: 'Open Sans', Georgia, "Times New Roman", Times, serif;
   color: #000;
-  background: none;
+  /*background: none;*/
   font-size: 12pt; }
 
 * {
@@ -134,20 +134,24 @@ img, tr {
     .retol-2 .retol-text h1 {
       font-size: 13pt; }
 
-/*BANNER*/
+/*BANNER  */
 .banner-info.detail.hidden-xs {
+  display: none; }
+
+.banner-info.main.hidden-sm.hidden-md.hidden-lg.ng-hide {
+  display: block !important;
   float: left;
   width: 100%;
-  margin: 15pt 4pt 0pt;
+  margin: 7pt 0pt 6pt;
   font-weight: bold;
-  font-size: 11pt; }
-  .banner-info.detail.hidden-xs .banner-info-vertical {
+  font-size: 10pt; }
+  .banner-info.main.hidden-sm.hidden-md.hidden-lg.ng-hide .banner-info-vertical {
     width: 100%;
     float: left; }
-    .banner-info.detail.hidden-xs .banner-info-vertical p {
+    .banner-info.main.hidden-sm.hidden-md.hidden-lg.ng-hide .banner-info-vertical p {
       float: left;
-      margin: 2pt !important; }
-      .banner-info.detail.hidden-xs .banner-info-vertical p a {
+      margin: 0pt 5pt 2pt 0pt !important; }
+      .banner-info.main.hidden-sm.hidden-md.hidden-lg.ng-hide .banner-info-vertical p a {
         font-weight: bold;
         font-size: 11pt; }
 
@@ -157,20 +161,28 @@ span.valor-info.ng-binding p {
 
 /*DETALLS*/
 .detall-info.visible-xs {
-  display: none; }
+  display: block;
+  float: left;
+  width: 100%; }
 
 .data-info.ng-scope {
   margin: 0 0 7pt 0; }
 
-.detall-info.hidden-xs .titol {
-  background-color: #D20019 !important;
-  color: #fff;
-  padding: 3px 6pt 4pt;
-  float: left;
-  width: 100%;
-  font-size: 13pt;
-  font-weight: 600 !important;
-  margin: 27pt 0 6pt; }
+.detall-info.hidden-xs {
+  display: none; }
+
+.detall-info.visible-xs {
+  display: block; }
+  .detall-info.visible-xs .titol {
+    background: #D20019 !important;
+    background-color: #D20019 !important;
+    color: #fff !important;
+    padding: 3px 6pt 4pt;
+    float: left;
+    width: 100%;
+    font-size: 13pt;
+    font-weight: 600 !important;
+    margin: 0pt 0 6pt; }
 
 .subtitol {
   font-style: italic;
@@ -186,7 +198,9 @@ span.valor-info.ng-binding p {
   font-size: 10pt; }
 
 .titol-observacions {
+  background: #D20019 !important;
   background-color: #D20019 !important;
+  color: #fff !important;
   color: #fff;
   padding: 3px 6pt 4pt;
   float: left;
@@ -201,7 +215,9 @@ span.valor-info.ng-binding p {
   font-size: 10pt; }
 
 .wrap-text-materials {
-  font-size: 10pt; }
+  font-size: 10pt;
+  float: left;
+  width: 100%; }
   .wrap-text-materials .materials img {
     width: 164pt;
     display: none; }
@@ -216,7 +232,9 @@ span.valor-info.ng-binding p {
 
 /*TALLERS*/
 .titol-tallers {
+  background: #D20019 !important;
   background-color: #D20019 !important;
+  color: #fff !important;
   color: #fff;
   padding: 3px 6pt 4pt;
   float: left;
