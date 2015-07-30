@@ -207,6 +207,9 @@ span.valor-info.ng-binding p {
     float: left;
     margin: 7pt 0 20pt 0pt;
     padding: 0 0 0 4pt;
+    page-break-after  : avoid; 
+    page-break-before : avoid; 
+    page-break-inside : avoid;
     .taller-foto {
         float: left;
         width: 100%;
