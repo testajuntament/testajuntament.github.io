@@ -124,7 +124,7 @@ img, tr {
       font-size: 13pt; }
   .retol .logo-Ajuntament {
     float: left;
-    margin: 10px 0 0 13px; }
+    margin: 10px 0 0 16px; }
 
 .retol-2 {
   width: 40%;
@@ -138,7 +138,7 @@ img, tr {
 .banner-info.detail.hidden-xs {
   float: left;
   width: 100%;
-  margin: 10pt 0;
+  margin: 15pt 4pt 0pt;
   font-weight: bold;
   font-size: 11pt; }
   .banner-info.detail.hidden-xs .banner-info-vertical {
@@ -159,6 +159,9 @@ span.valor-info.ng-binding p {
 .detall-info.visible-xs {
   display: none; }
 
+.data-info.ng-scope {
+  margin: 0 0 7pt 0; }
+
 .detall-info.hidden-xs .titol {
   background-color: #D20019 !important;
   color: #fff;
@@ -173,7 +176,7 @@ span.valor-info.ng-binding p {
   font-style: italic;
   float: left;
   width: 100%;
-  padding: 10pt 0;
+  padding: 3pt 0 9pt;
   font-weight: 600;
   font-size: 10pt !important; }
 
@@ -280,7 +283,7 @@ img#logotip {
   display: none; }
 
 .logo-Ajuntament img {
-  width: 100pt; }
+  /* width: 100pt;*/ }
 
 /*Detail*/
 .arrow-up {
