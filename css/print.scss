@@ -1,33 +1,37 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 body { 
-/*width:100% !important;*/
-border: 1px solid grey;
-width:670px !important;
-margin:0 auto !important;
-padding:0 !important;
-line-height: 1.45; 
-font-family: 'Open Sans', Garamond, "Times New Roman", serif; 
-color: #000; 
-background: none; 
-font-size: 12pt; }
+    /*width:100% !important;*/
+    width:670px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    line-height: 1.45; 
+    font-family: 'Open Sans', Garamond, "Times New Roman", serif; 
+    color: #000; 
+    background: none; 
+    font-size: 12pt; 
+}
+*{
+  background-color: #fff;
+  box-sizing: border-box;
+}
 
 h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
 h1{
     font-size: 13pt;
     margin: 9pt 0 7pt 0;
 }
-.titol-tallers{
-    font-size: 16pt;
-    margin: 10pt 0 4pt 0;
-    page-break-after:avoid;
-    font-weight: 600;
-}
 h2{font-size:17pt;}
 h3{font-size:15pt;}
 h4,h5,h6{font-size:14pt;}
+p, h2, h3 { 
+    orphans: 2; 
+    widows: 2; 
+    margin: 0 4pt !important;
+}
+a{
+    margin: 0;    
+}
 
-
-p, h2, h3 { orphans: 2; widows: 2; margin: 0 4pt !important;}
 
 code { font: 12pt Courier, monospace; } 
 blockquote { margin: 1.2em; padding: 1em;  font-size: 12pt; }
@@ -35,8 +39,8 @@ hr { background-color: #ccc; }
 
 /* Images */
 img { 
-  float: left; 
-      margin: 0.5em 0.5em 0.5em 0;
+  float: left;
+  margin: 0.5em 0.5em 0.5em 0;
   max-width: 100% !important; 
 }
 a img { border: none; }
@@ -64,12 +68,12 @@ caption { background: #fff; margin-bottom:2em; text-align:left; }
 thead {display: table-header-group;}
 img,tr {page-break-inside: avoid;} 
 
-/* Hide various parts from the site
-#header, #footer, #navigation, #rightSideBar, #leftSideBar 
-{display:none;}
-*/
 
-/**/
+.container {
+    margin: 0 0 12pt 0;
+    float: left;
+    width: 100%;
+}
 .retol{
     width: 60%;
     float: left;
@@ -81,10 +85,9 @@ img,tr {page-break-inside: avoid;}
     }
     .logo-Ajuntament {
         float: left;
-        margin: 10px 0 0 20px;
+        margin: 10px 0 0 13px;
     }    
 }
-
 .retol-2{
     width: 40%;
     float: left;
@@ -96,19 +99,144 @@ img,tr {page-break-inside: avoid;}
     }    
 }
 
-.titol{
+/*BANNER*/
+.banner-info.detail.hidden-xs {
+    float: left;
+    width: 100%;
+    margin: 10pt 0;
+    font-weight: bold;
+    font-size: 11pt;
+    .banner-info-vertical {
+        width: 100%;
+        float: left;
+        p{
+            float: left;
+            margin: 2pt !important;
+            a{
+                font-weight: bold;
+                font-size: 11pt;                
+            }
+        }        
+    }
+}
+/*FIXES*/
+span.valor-info.ng-binding p {
+    margin: 0 !important;
+}
+
+/*DETALLS*/
+.detall-info.visible-xs{
     display: none;
+}
+.detall-info.hidden-xs {
+    .titol{
+        background-color: #D20019 !important;
+        color: #fff;
+        padding: 3px 6pt 4pt;
+        float: left;
+        width: 100%;
+        font-size: 13pt;
+        font-weight: 600 !important;
+        margin: 27pt 0 6pt;
+    }    
+}
+.subtitol {
+    font-style: italic;
+    float: left;
+    width: 100%;
+    padding: 10pt 0;
+    font-weight: 600;
+    font-size: 10pt !important;
+}
+.descripcio {
+    float: left;
+    width: 100%;
+    font-size: 10pt;
+}
+.titol-observacions {
+    background-color: #D20019 !important;
+    color: #fff;
+    padding: 3px 6pt 4pt;
+    float: left;
+    width: 100%;
+    font-size: 13pt;
+    font-weight: 600 !important;
+    margin: 27pt 0 6pt;
+}
+.text-observacions {
+    float: left;
+    width: 100%;
+    font-size: 10pt;
+}
+.wrap-text-materials {
+    font-size: 10pt;
+    .materials img{
+        width: 164pt;
+            display: none;
+    }
+    .text-materials {
+        p {
+            display: block;
+            float: left;
+            width: 100%;
+            line-height: 1.6;
+            a {
+                float: left;
+                color: #000 !important;
+            }            
+        }
+
+    }
+}
+/*TALLERS*/
+.titol-tallers {
+    background-color: #D20019 !important;
+    color: #fff;
+    padding: 3px 6pt 4pt;
+    float: left;
+    width: 100%;
+    font-size: 13pt;
+    font-weight: 600 !important;
+    margin: 27pt 0 6pt;
+}
+.taller-info {
+    width: 50%;
+    float: left;
+    margin: 7pt 0 20pt 0pt;
+    padding: 0 0 0 4pt;
+    .taller-foto {
+        float: left;
+        width: 100%;
+        img{
+            width: 75pt;
+            margin: 0pt 100% 0pt 0pt;
+        }
+        .taller-titol.ng-binding {
+            float: left;
+            padding: 4pt 0 0 0;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+    }
+    .taller-recomanat.ng-binding {
+        float: left;
+        width: 100%;
+        font-size: 10pt;
+    }
+}
+.taller-titol {
+    float: left;
+    font-size: 10pt;
 }
 
 
+
 span {
-    margin: 0 4pt;
+    margin: 0;
 }
 span.key-info {
     font-weight: bold;
 }
-
-
 
 .home-back {
     display: none;
@@ -131,36 +259,6 @@ img#logotip {
 
 
 
-.banner-info.main.hidden-sm.hidden-md.hidden-lg {
-    display: block;
-    float: left;
-    width: 100%;
-}
-.banner-info.detail.visible-xs {
-    margin: 12pt 0;
-}
-.banner-info.detail.hidden-xs {
-    display: none;
-}
-.banner-info-left {
-    display: block;
-    width: 100%;
-    float: left;
-}
-.banner-info-left .banner-info-vertical p {
-    float: left;
-    font-size: 12pt;
-    font-weight: bold;
-}
-.banner-info-vertical p {
-    float: left;
-}
-.banner-info-right > .banner-info-vertical > p > a{
-    font-size: 14pt;
-}
-
-
-
 
 
 .modul-filtres form {
@@ -177,85 +275,50 @@ img#logotip {
 .logo-Ajuntament img {
     width: 100pt;
 }
-.modul-obra img{
-    width: 75pt;
-    margin: 4pt 12pt 18pt 4pt;
-}
 
 
 
 
-.materials img{
-    width: 164pt;
-        display: none;
-}
-.text-materials.ng-scope p.ng-scope a.ng-binding {
-    color: #000 !important;
-}
 
 
-*{
-  background-color: #fff !important;
-}
+
+
 
 
 /*Detail*/
 .arrow-up{
   display: none;
 }
-.titol-observacions{
-    font-weight: bold;
-}
-.text-observacions ul {
-    margin: 0;
-    padding: 0 0 0 15pt;
-}
 
-
-
-
-
-.titol.ng-binding.ng-scope {
-    line-height: 16pt;
-    font-weight: bold;
-    margin: 14pt 0 0 0;
-}
-.titol.ng-binding.ng-scope {
-    line-height: 16pt;
-    font-weight: bold;
-    margin: 14pt 0 4pt 0;
-    font-size: 14pt;
-}
-.detall-info.visible-xs {
-    line-height: 12pt;
-    float: left;
-    margin: 14pt 0 0pt 0;
-    width: 100%;
-    font-size: 15pt;
-}
 .detall-img {
-    width: 100%;
-    float: left;
-}
-.detall-img img {
     width: 50%;
-}
-.data-info {
-    display: block;
-    width: 100%;
-    margin: 0pt;
-}
-.data-info p{
-  margin: 0;
-}
-.taller-info.modul-obra {
-    width: 49%;
     float: left;
+    .detall-img img {
+        width: 100%;
+    }
+}
+.detall-img-info {
+    width: 50%;
+    float: left;
+    padding: 6pt 6pt 6pt 12pt;
+    font-size: 10pt;
+    background-color: #fff !important;
+    box-sizing: border-box;
+}
+.banner-info.detail.visible-xs {
+    display: none;
 }
 
 
-.titol-observacions {
-    margin-top: 10pt;
+
+
+
+
+
+
+
+
+
+.peu {
+    display: none;
 }
-
-

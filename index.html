@@ -5,21 +5,18 @@
 <!--[if gt IE 8]><!--> 
 <html class="no-js" lang="" ng-app="app" id="ng-app" xmlns:ng="http://angularjs.org"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8">
         <title>Patrimoni Cultural i Natural de Gavà</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
         <link rel="shortcut icon" type="image/x-ico" href="img/favicon.ico"/>
         <link rel="stylesheet" href="css/main.css" media="screen" />
         <!--<link rel="stylesheet" href="css/print.css" media="screen"/>-->
         
-
         <link rel="stylesheet" href="css/print.css" media="print"/>
 
         <script>
-        
           if ((/\bSafari\//gi).test(window.navigator.userAgent) && (/\bVersion\/7/gi).test(window.navigator.userAgent)) {
               window.document.documentElement.removeAttribute('manifest');
           }
@@ -37,87 +34,101 @@
 
         <!--[if lt IE 9]>
             <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
-        <![endif]-->
-
-        <!--[if lte IE 9]>
             <script src="bower_components/xdomain/dist/xdomain.min.js" debug="true" slave="http://localhost/Escolesgava/proxy.html"></script>
-        <![endif]-->
-
-        <!--[if gte IE 9]
-          <style type="text/css">
-              .gradient {
-                  filter: none;
-              }
-          </style>
-        <![endif]-->               
+        <![endif]-->            
 
         <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
+
+
+
+
+
+    <!--[if lte IE 8]>
+        @Styles.Render("~/Content/iecss")
+        <script src="~/Scripts/Libs/respond.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+      <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+      </script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <script src="~/Scripts/Libs/json2.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script>
+        document.createElement('my-editor');
+        </script>
+    <![endif]-->
+
+    <script src="bower_components\es5-shim\es5-sham.js"></script>
     </head>
 
     <body ng-class="$root.bodyClass">
         
         <div class="capcalera-back">
             <div class=" container">  
-                <div class=""><!--row-->
-                    <div class="">
-                        <div class="retol white">
-                            <div class="home-back">
-                                <a href="http://www.patrimonigava.cat/" title="www.patrimonigava.cat">
-                                    <img src="img/home.png">
-                                </a>
-                            </div> 
-
-                            <div class="retol-text">
-                                <h1>Patrimoni Cultural i Natural de Gavà</h1>
-                            </div>  
-
-                            <div class="logo-Ajuntament">
-                                <a href="http://www.gavaciutat.cat" target="_blank" title="Ajuntament de Gavà">
-                                  <img id="logotip" src="img/gava.png" alt="logotip de l'Ajuntament de Gavà" class="img-responsive" >
-                                </a>
-                            </div>                             
-                        </div> 
-
-                        <div class="retol-2 red">
-                            <div class="retol-text text-center">
-                                <a href ng-click="goHome()" title="Servei Pedagògic - Patrimoni Cultural i Natural de Gavà">
-                                  <h1>Servei Pedagògic</h1>
-                                </a>
-                            </div>                               
-                        </div> 
-                    </div><!-- col12-->
-                </div> <!--row--> 
-
-                <div class=""><!--row-->
-                    <div class="">
-                      <div class="banner-info main hidden-sm hidden-md hidden-lg" ng-hide="bodyClass == 'fitxa'">
-                          <div class="banner-info-left">
-                              <div class="banner-info-round">
-                                <div class="banner-info-vertical">
-                                      <p>Informació</p>
-                                      <p>i</p>
-                                      <p>reserves</p>
-                                </div>
-                              </div>
-                          </div>
-
-                          <div class="banner-info-right">  
-                              <div class="banner-info-vertical">        
-                                  <p>
-                                    <a href="telto:+34932639610">
-                                       <i class="fa fa-phone hidden-sm"></i> 93 263 96 10
-                                     </a>
-                                  <p>
-                                  <p>&nbsp;</p>
-                                  <p>
-                                    <a href="mailto:museu@gava.cat">
-                                      <i class="fa fa-envelope hidden-sm"></i> museu@gava.cat
-                                    </a>
-                                  </p>
-                              </div>    
-                          </div>
-                      </div>
+                <div class="retol white">
+                    <div class="home-back">
+                        <a href="http://www.patrimonigava.cat/" title="www.patrimonigava.cat">
+                            <img src="img/home.png">
+                        </a>
                     </div> 
+
+                    <div class="retol-text">
+                        <h1>Patrimoni Cultural i Natural de Gavà</h1>
+                    </div>  
+
+                    <div class="logo-Ajuntament">
+                        <a href="http://www.gavaciutat.cat" target="_blank" title="Ajuntament de Gavà">
+                          <img id="logotip" src="img/gava.png" alt="logotip de l'Ajuntament de Gavà" class="img-responsive" >
+                        </a>
+                    </div>                             
+                </div> 
+
+                <div class="retol-2 red">
+                    <div class="retol-text text-center">
+                        <a href ng-click="goHome()" title="Servei Pedagògic - Patrimoni Cultural i Natural de Gavà">
+                          <h1>Servei Pedagògic</h1>
+                        </a>
+                    </div>                               
+                </div> 
+
+                <div class="banner-info main hidden-sm hidden-md hidden-lg" ng-hide="bodyClass == 'fitxa'">
+                    <div class="banner-info-left">
+                        <div class="banner-info-round">
+                          <div class="banner-info-vertical">
+                                <p>Informació</p>
+                                <p>i</p>
+                                <p>reserves</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="banner-info-right">  
+                        <div class="banner-info-vertical">        
+                            <p>
+                              <a href="telto:+34932639610">
+                                 <i class="fa fa-phone hidden-sm"></i> 93 263 96 10
+                               </a>
+                            <p>
+                            <p>&nbsp;</p>
+                            <p>
+                              <a href="mailto:museu@gava.cat">
+                                <i class="fa fa-envelope hidden-sm"></i> museu@gava.cat
+                              </a>
+                            </p>
+                        </div>    
+                    </div>
                 </div>
             </div><!--container-->
         </div><!--capcalera-->
@@ -143,7 +154,6 @@
 
         </div><!--container-->    
 
-
         <div ng-view class="animated-show ng-hide container" ng-show="$root.allActivitats"></div>   
         
         <div class="peu-back animated-show ng-hide" ng-show="$root.allActivitats">
@@ -161,7 +171,6 @@
 
         <a href="#" class="scrollToTop"><i class="fa fa-chevron-up"></i></a>
 
-  
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
         
