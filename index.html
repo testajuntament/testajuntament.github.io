@@ -45,14 +45,14 @@
             <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
             <script src="bower_components/xdomain/dist/xdomain.min.js" debug="true" slave="http://localhost/Escolesgava/proxy.html"></script>
         <![endif]--> 
-           
 
-        <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">Està fent servir una versió antiga del seu navegador. Li recomanem que <a href="http://browsehappy.com/">l’actualitzi</a> o canviï d’explorador per millorar la seva experiència al web.</p>
+        <![endif]-->
+           
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
         <!--[if IE 8]>
-
-            @Styles.Render("~/Content/iecss")
-
             <style>
                 .ng-hide {
                     display: none !important;
