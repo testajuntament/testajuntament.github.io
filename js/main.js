@@ -26,8 +26,8 @@
 			});
 	}]);
 
-	app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '$timeout', 
-		function($rootScope, $location, Paginator, gettextCatalog, amMoment, $timeout) {
+	app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '$timeout', '$window', 
+		function($rootScope, $location, Paginator, gettextCatalog, amMoment, $timeout, $window) {
 		
 		$rootScope.userAgent = function(){
 			var ua = navigator.userAgent;
@@ -91,7 +91,7 @@
 		});
 
 		$rootScope.goBack = function() {
-			console.log('goBack in run');
+			console.log('$window.history.back()');
 			
 			var path;
 			if ($rootScope.historyLink === 'graella-activitats'){ 
@@ -102,10 +102,12 @@
 				path =  'fitxa';
 			}
 
-	        $timeout(function(){ 
+	        /*$timeout(function(){ 
 	          $rootScope.bodyClass = 'graella-activitats';	
 			  $location.path(path).replace(); 
-			}, 100);
+			}, 100);*/
+			$window.history.back();
+
 		};
 
 
@@ -115,7 +117,7 @@
 	        $timeout(function(){ 
 	          $rootScope.bodyClass = 'graella-activitats';
 			  $location.path('graella-activitats');
-			},100);
+			},400);
 		};
 
 		$rootScope.getGridPath = function() {
