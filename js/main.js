@@ -102,11 +102,11 @@
 				path =  'fitxa';
 			}
 
-	        /*$timeout(function(){ 
+	        $timeout(function(){ 
 	          $rootScope.bodyClass = 'graella-activitats';	
 			  $location.path(path).replace(); 
-			}, 100);*/
-			$window.history.back();
+			}, 100);
+			//$window.history.back();
 
 		};
 

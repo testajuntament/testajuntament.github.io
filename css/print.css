@@ -5,10 +5,15 @@ body {
   margin: 0 auto !important;
   padding: 0 !important;
   line-height: 1.45;
-  font-family: 'Open Sans', Georgia, "Times New Roman", Times, serif;
   color: #000;
   /*background: none;*/
-  font-size: 12pt; }
+  font-size: 12pt;
+  font-family: 'Open Sans', "Trebuchet MS", Georgia, "Times New Roman", Times, serif; }
+
+@-moz-document url-prefix() {
+  body {
+    -webkit-print-color-adjust: economy;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important; } }
 
 * {
   background-color: #fff;

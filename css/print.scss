@@ -5,17 +5,29 @@ body {
     margin:0 auto !important;
     padding:0 !important;
     line-height: 1.45; 
-    font-family: 'Open Sans', Georgia, "Times New Roman", Times, serif; 
     color: #000; 
     /*background: none;*/ 
     font-size: 12pt; 
+    font-family: 'Open Sans', "Trebuchet MS", Georgia, "Times New Roman", Times, serif;
 }
+
+@-moz-document url-prefix() {
+
+    body{
+       -webkit-print-color-adjust: economy;        
+       font-family: "Trebuchet MS", Helvetica, sans-serif !important;  
+    }  
+}
+
+
 *{
   background-color: #fff;
   box-sizing: border-box;
 }
+h1,h2,h3,h4,h5,h6 { 
+    page-break-after:avoid; 
 
-h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
+}
 h1{
     font-size: 13pt;
     margin: 9pt 0 7pt 0;
