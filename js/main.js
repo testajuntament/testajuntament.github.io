@@ -107,7 +107,8 @@
 			  $location.path(path).replace(); 
 			}, 100);*/
 
-			$window.history.back();
+			$window.history.go(-1);
+			$window.scrollTo(0, 0);
 
 		};
 
