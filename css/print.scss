@@ -12,18 +12,17 @@ body {
 }
 
 @-moz-document url-prefix() {
-
     body{
        -webkit-print-color-adjust: economy;        
-       font-family: "Trebuchet MS", Helvetica, sans-serif !important;  
+       font-family: "Trebuchet MS", Helvetica, sans-serif !important;
     }  
 }
-
 
 *{
   background-color: #fff;
   box-sizing: border-box;
 }
+
 h1,h2,h3,h4,h5,h6 { 
     page-break-after:avoid; 
 

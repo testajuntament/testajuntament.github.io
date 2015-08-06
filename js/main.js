@@ -91,28 +91,28 @@
 		});
 
 		$rootScope.goBack = function() {
-			console.log('$window.history.back()');
+			console.log('$whb');
 			
-			var path;
+			/*var path;
 			if ($rootScope.historyLink === 'graella-activitats'){ 
 				path = 'graella-activitats'; 
 			}else if ($rootScope.historyLink === 'materials-didactics'){ 
 				path = 'materials-didactics';
 			}else if ($rootScope.historyLink === 'fitxa') { 
 				path =  'fitxa';
-			}
+			}*/
 
-	        $timeout(function(){ 
+	        /*$timeout(function(){ 
 	          $rootScope.bodyClass = 'graella-activitats';	
 			  $location.path(path).replace(); 
-			}, 100);
-			//$window.history.back();
+			}, 100);*/
+
+			$window.history.back();
 
 		};
 
-
 		$rootScope.goHome = function(){
-			console.log('goHome in DetailCtrls');
+			console.log('$lp');
 	        
 	        $timeout(function(){ 
 	          $rootScope.bodyClass = 'graella-activitats';
