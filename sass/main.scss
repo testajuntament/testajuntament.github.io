@@ -292,10 +292,13 @@ body {
         background-size: contain;
         background-position: center;
         background-image: url('../img/white-circle-np.png');
+        background-image /*\**/: none\9;
         .banner-info-vertical{
           @include vertical-align;
+          top /*\**/: 25%\9;
           p {
             color: #383838;
+            color /*\**/: #ffffff\9;
             font-weight: 700;
             text-align: center;
             margin: 0;
@@ -307,12 +310,14 @@ body {
      
     }
     .banner-info-right {
+      padding /*\**/: 9% 0 \9;
       width: 50%;
       float: left;
       position: relative;
       height: 100%;
       .banner-info-vertical{
         @include vertical-align;
+        top /*\**/: 4%\9;
         p {
           margin: 0;
           text-align: center;
@@ -364,11 +369,14 @@ body {
         background-size: contain;
         background-position: center;
         background-image: url('../img/white-circle-np.png');
+        background-image /*\**/: none\9;
       }
       .banner-info-vertical{
         @include vertical-align;
+        top /*\**/: 19%\9;
         p {
           color: #383838;
+          color /*\**/: #ffffff\9;
           font-weight: 700;
           text-align: center;
           margin: 0;
@@ -384,6 +392,7 @@ body {
       height: 100%;
       .banner-info-vertical{
         @include vertical-align;
+        top /*\**/: 25%\9;
         p {
           margin: 0;
           text-align: center;
@@ -420,7 +429,7 @@ body {
       input {
         font-size: 15px;
         font-weight: 500;
-        margin: 29px 0 0 0;
+        margin: 32px 0 0 0;
         width: 100%;
         border: 1px solid $soft-grey;
         background: #FFF url("../img/lupa.png") right 4px no-repeat;
@@ -447,20 +456,26 @@ body {
       }
       .banner{
         float: left;
+        width: 48px;
         background-color: $red-color; 
         margin-bottom: -99999px; 
         padding-bottom: 99999px;   
-        div span{
+        div.rota{
           color: #FFF;
+          font-size: 18px;
+          font-weight: 600;
           width: 107px;
           margin: 55px -30px 11px;
+          margin /*\**/: 15px 10px 11px \9;
+
           text-align: right;
-          font-size: 18px;
-          font-weight: bold;
+
           -webkit-transform: rotate(270deg);
           -moz-transform: rotate(270deg) ;
           -o-transform: rotate(270deg);
           -ms-transform: rotate(270deg); 
+          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+          -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
           transform: rotate(270deg);
         } 
       }
@@ -472,20 +487,6 @@ body {
           rotate(-90deg);
         width: 30px;
       }
-      p.vertical {
-        // -moz-transform: rotate(-90deg);
-        // -webkit-transform: rotate(-90deg);
-        // -o-transform: rotate(-90deg);
-        // -ms-transform: rotate(-90deg);
-        // transform: rotate(-90deg);  
-
-          
-        // -webkit-transform: rotate(270deg) ;
-        // -moz-transform: rotate(270deg) ;
-        // -o-transform: rotate(270deg) ;
-        // -ms-transform: rotate(270deg) ; 
-        // transform: rotate(270deg) ;       
-      }
 
       .filtre-seleccio{
           background-color: #FFF;
@@ -495,10 +496,9 @@ body {
 
           span {
             font-size: 18px;
-            color: #000;
             display: block;
             /*margin-bottom: 20px;*/
-            font-weight: 400;
+            font-weight: 600;
           }   
 
           ul {
@@ -510,17 +510,16 @@ body {
             float: left;
             li {
               list-style-type: none;
-              margin: 8px 0px 10px 10px;
+              margin: 8px 0px 9px 10px;
               label {
                 margin-top: 5px;
+                display: inline;
               }
             } 
           }
       }
 
-      .modul-filtres .form-group .filtre-seleccio ul li.mark-verd label {
-        padding-left: 55px!important;
-      }  
+ 
       .filtre-seleccio ul li [type="checkbox"]:not(:checked),
       .filtre-seleccio ul li [type="checkbox"]:checked {
         position: absolute;
@@ -535,6 +534,7 @@ body {
         font-weight: 600;
         margin: 0;
         padding-top: 3px;
+        display: inline;
       }
       .filtre-seleccio ul li [type="checkbox"]:not(:checked) + label:before,
       .filtre-seleccio ul li [type="checkbox"]:checked + label:before {
@@ -547,10 +547,11 @@ body {
         border: 2px solid $soft-grey;
         background: #fff;
         border-radius: 4px;
+        display: inline;
       }
       .filtre-seleccio ul li [type="checkbox"]:not(:checked) + label:after,
       .filtre-seleccio ul li [type="checkbox"]:checked + label:after {
-        display: inline-block;
+        display: inline;
         font: normal normal normal 18px/1 FontAwesome;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
@@ -566,13 +567,16 @@ body {
       .filtre-seleccio ul li [type="checkbox"]:not(:checked) + label:after {
         opacity: 0;
         transform: scale(0);
+        display: inline;
       }
       .filtre-seleccio ul li [type="checkbox"]:checked + label:after {
         opacity: 1;
         transform: scale(1);
+        display: inline;
       }
       .filtre-seleccio ul li label:hover:before {
         border: 2px solid #999!important;
+        display: inline;
       }
 
     }
@@ -1117,6 +1121,8 @@ body {
     display: none;
     background: rgba(56, 56, 56, 0.52);
     background-color: rgba(56, 56, 56, 0.46);
+    background /*\**/: #292929\9;
+    background-color /*\**/: #292929\9;
     border-radius: 3px 3px 3px 3px;
     z-index: 1000000;
   }
@@ -1174,6 +1180,7 @@ body {
         .banner-info-round {
           .banner-info-vertical{
             @include vertical-align;
+            top /*\**/: 25%\9;
             p{
               font-size: 13px;
               font-weight: 700;
@@ -1187,6 +1194,7 @@ body {
       .banner-info-right{
         .banner-info-vertical{
           @include vertical-align;
+          top /*\**/: 4%\9;
           p{
             font-size: 13px;
             font-weight: 700;
@@ -1245,6 +1253,7 @@ body {
           float: right; 
           .banner-info-vertical{
             @include vertical-align;
+            top /*\**/: 25%\9;
             p{
               font-size: 13px;
               font-weight: 700;
@@ -1258,6 +1267,7 @@ body {
       .banner-info-right{
         .banner-info-vertical{
           @include vertical-align;
+          top /*\**/: 4%\9;
           width: 56%;
           p{
             font-size: 13px;
@@ -1287,6 +1297,7 @@ body {
         height: 100%;
         .banner-info-vertical{
           @include vertical-align;
+          top /*\**/: 25%\9;
           p{
             font-size: 12px;
             a{
@@ -1385,6 +1396,7 @@ body {
         .banner-info-round{
           .banner-info-vertical{
             @include vertical-align;
+            top /*\**/: 25%\9;
             p{
               font-size: 14px;
             }          
@@ -1394,8 +1406,10 @@ body {
       .banner-info-right{
         height: 100%;
         width: 55%;
+        padding /*\**/: 9% 0 \9;
         .banner-info-vertical{
           @include vertical-align;
+          top /*\**/: 4%\9;
           p{
             font-size: 14px;
           }        
@@ -1457,7 +1471,8 @@ body {
         padding: 6% 0;
         .banner-info-round{
           .banner-info-vertical p{
-              font-size: 13px;        
+             color /*\**/: #ffffff\9;
+             font-size: 13px;        
           }        
         } 
       }

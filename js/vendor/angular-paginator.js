@@ -111,7 +111,7 @@ angular.module('caco.ClientPaginate', [])
 
 .directive('paginator', function factory() {
     return {
-        restrict: 'E',
+        restrict: 'A',
         controller: function($scope, Paginator) {
             $scope.paginator = Paginator;
         },

@@ -39,7 +39,10 @@
 			if( isiPad ){ return 'isiPad'; }
 
 		};
-
+		// febrero
+			//$rootScope.basePath =  'http://febreroeldocumental.com/testajuntament';  
+			//$rootScope.pathPhotoDefault = 'http://febreroeldocumental.com/testajuntament/fotos-activitats/LaVenus-color.jpg';
+		
 		// Github
 			$rootScope.basePath =  'http://testajuntament.github.io';  
 			$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/fotos-activitats/LaVenus-color.jpg';
@@ -91,7 +94,7 @@
 		});
 
 		$rootScope.goBack = function() {
-			console.log('$whb');
+			console.log('$wb');
 			
 			/*var path;
 			if ($rootScope.historyLink === 'graella-activitats'){ 
@@ -113,7 +116,7 @@
 		};
 
 		$rootScope.goHome = function(){
-			console.log('$lp');
+			console.log('$wh');
 	        
 	        $timeout(function(){ 
 	          $rootScope.bodyClass = 'graella-activitats';
@@ -253,9 +256,6 @@
 			$scope.htmlReady();
 		}, function() {/*console.error('No work');*/} );
 
-
- 
-
 		$scope.getDescription = function() {
 			if ($scope.activitat) {
 				return $sce.trustAsHtml($scope.activitat[$rootScope.descripcioAttrKey]);
@@ -286,8 +286,6 @@
 		});	
 
 	}]);
-
-
 
 	/*DIRECTIVES*/
 	app.directive('magnificpopup', function () {
@@ -335,7 +333,7 @@
 
 	app.directive('viewTitle', function() {
 		return {
-			restrict: 'E',
+			restrict: 'A',
 			link: function(scope, element) {
 				var text = element.text();
 				element.remove();
@@ -346,7 +344,7 @@
 
 	app.directive('viewDescription', function() {
 		return {
-			restrict: 'E',
+			restrict: 'A',
 			link: function(scope, element) {
 				var text = element.text();
 				element.remove();
@@ -354,19 +352,6 @@
 			}
 		};
 	});
-
-	/*app.directive('errSrc', function() {
-	  return {
-	    link: function(scope, element, attrs) {
-	      element.bind('error', function() {
-	        if (attrs.src != attrs.errSrc) {
-	          attrs.$set('src', attrs.errSrc);
-	        }
-	      });
-	    }
-	  }
-	});*/
-
 
 	/*SERVICES*/
 	app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootScope) {
@@ -391,7 +376,6 @@
 				//$http.get('http://portals.ajuntament.gava.cat/WS-RESTActivitatsMuseu/webresources/org.gava.model.activitat?callback=JSON_CALLBACK')
 				$http.get('activitats.json')
 				.success(function(response) {
-					console.log('resppnse', response);
 					allActivitats = [];
 					angular.forEach(response, function(activitat) {
 						allActivitats.push(activitat);
@@ -573,3 +557,5 @@
 	      return output;
 	  };
 	});
+
+	app.filter('unsafe', function($sce) { return $sce.trustAsHtml; });

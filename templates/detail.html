@@ -27,12 +27,12 @@
             
             <!-- only on xs-->
             <div class="detall-info visible-xs">
-                <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol"></div>
+                <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol | unsafe"></div>
             </div> 
             <!-- -->
 
             <div class="detall-img">
-                <div class="peu-info" ng-if="activitat.peuFoto" ng-bind-html="activitat.peuFoto"></div>
+                <div class="peu-info" ng-if="activitat.peuFoto" ng-bind-html="activitat.peuFoto | unsafe"></div>
                 <!--<img class="img-responsive" ng-src="{{$root.baseGavaPath}}{{activitat.pathFoto}}" />-->
                 <img class="img-responsive" ng-src="{{$root.baseGavaPath + activitat.pathFoto }}" err-src="{{$root.pathPhotoDefault}}" />
             </div>
@@ -44,27 +44,27 @@
                 
                 <div class="data-info" ng-if="activitat.nivellRecomanat">
                         <span class="key-info">Nivell recomanat:</span><br> 
-                        <span class="valor-info" ng-bind-html="activitat.nivellRecomanat"></span>
+                        <span class="valor-info" ng-bind-html="activitat.nivellRecomanat | unsafe"></span>
                 </div>
 
                 <div class="data-info" ng-if="activitat.durada">
                     <div>
                         <span class="key-info">Durada:</span> <br>
-                        <span class="valor-info" ng-bind-html="activitat.durada"></span>
+                        <span class="valor-info" ng-bind-html="activitat.durada | unsafe"></span>
                     </div>
                 </div>
                 
                 <div class="data-info" ng-if="activitat.preu">
                     <div>
                         <span class="key-info">Preu:</span><br> 
-                        <span class="valor-info" ng-bind-html="activitat.preu"></span>
+                        <span class="valor-info" ng-bind-html="activitat.preu | unsafe"></span>
                     </div>
                 </div>
                 
                 <div class="data-info" ng-if="activitat.llocRealitzacio">
                     <div>
                         <span class="key-info">Lloc de realització:</span> 
-                        <span class="valor-info" ng-bind-html="activitat.llocRealitzacio"></span>
+                        <span class="valor-info" ng-bind-html="activitat.llocRealitzacio | unsafe"></span>
                     </div>
                 </div>
               </div>
@@ -83,9 +83,9 @@
 
                 <div class="banner-info-right"> 
                     <div class="banner-info-vertical">
-                        <span ng-if="activitat.telefonInformacioReserves" ng-bind-html="activitat.telefonInformacioReserves"></span>
+                        <span ng-if="activitat.telefonInformacioReserves" ng-bind-html="activitat.telefonInformacioReserves | unsafe"></span>
                         <p>&nbsp;</p>
-                        <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves"></span>
+                        <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves | unsafe"></span>
                     </div>         
                 </div>
             </div>
@@ -94,15 +94,15 @@
         <!-- titol -->
         <div class="col-xs-12 col-is-6 col-sm-7 col-md-9 col-lg-9">
             <div class="detall-info hidden-xs">
-                <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol"></div>
+                <div class="titol" ng-if="activitat.titol"  ng-bind-html="activitat.titol | unsafe"></div>
             </div>    
         </div>
 
         <!-- descripcio -->
         <div class="col-xs-12 col-is-6 col-sm-7 col-md-6 col-lg-6">
             <div class="detall-info">
-                <div class="subtitol" ng-if="activitat.subtitol"><p ng-bind-html="activitat.subtitol"></p></div>
-                <div class="descripcio" ng-if="activitat.descripcio"><span ng-bind-html="activitat.descripcio"></span></div>
+                <div class="subtitol" ng-if="activitat.subtitol"><p ng-bind-html="activitat.subtitol | unsafe"></p></div>
+                <div class="descripcio" ng-if="activitat.descripcio"><span ng-bind-html="activitat.descripcio | unsafe"></span></div>
             </div>
                 
             <div class="taller">
@@ -161,7 +161,7 @@
                     Observacions
                 </div> 
                 <div class="text-observacions">
-                        <span ng-bind-html="activitat.observacions"></span>
+                        <span ng-bind-html="activitat.observacions | unsafe"></span>
                 </div>
             </div>
 
@@ -179,7 +179,7 @@
                             <a ng-style="{'color':'{{activitat.areaConeixement.color}}'}"  
                                href="{{material.url}}" 
                                target="_blank" 
-                               ng-bind-html="material.titol">
+                               ng-bind-html="material.titol | unsafe">
                             </a>
                         </p>
 
@@ -189,7 +189,7 @@
                                ng-style="{'color':'{{activitat.areaConeixement.color}}'}"
                                class="image-popup-vertical-fit" 
                                ng-href="{{baseGavaPath}}{{material.pathFoto}}" 
-                               ng-bind-html="material.titol">
+                               ng-bind-html="material.titol | unsafe">
                             </a> 
                         </p>
 
@@ -198,7 +198,7 @@
                             <a ng-style="{'color':'{{activitat.areaConeixement.color}}'}"
                                href="http://portals.ajuntament.gava.cat{{material.pathPdfInformacio}}" 
                                target="_blank" 
-                               ng-bind-html="material.titol">
+                               ng-bind-html="material.titol | unsafe">
                             </a>
                         </p>
 
@@ -219,9 +219,9 @@
 
                 <div class="banner-info-right"> 
                     <div class="banner-info-vertical">
-                        <span ng-if="activitat.telefonInformacioReserves" ng-bind-html="activitat.telefonInformacioReserves"></span>
+                        <span ng-if="activitat.telefonInformacioReserves" ng-bind-html="activitat.telefonInformacioReserves | unsafe"></span>
                         <p>&nbsp;</p>
-                        <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves"></span>
+                        <span ng-if="activitat.mailInformacioReserves" ng-bind-html="activitat.mailInformacioReserves | unsafe"></span>
                     </div>         
                 </div>
             </div> 

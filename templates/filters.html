@@ -34,20 +34,23 @@
     <div class="form-group">
       <div class="filtre-seleccio" ng-if="allNivells" >
           <div class="banner">
-            <div><span>Tria Nivell</span></div>
+            <div class="rota">Tria Nivell</div>
           </div>
       
           <ul>
               <li ng-repeat="nivell in allNivells track by $index">
-                  <input type="checkbox" 
-                         id="opcio-nivell-{{nivell.id}}" 
-                         name="" 
-                         value="" 
-                         ng-model="$root.nivellFilterModels[nivell.id]">
-                  <label for="opcio-nivell-{{nivell.id}}" 
-                         title="{{nivell[filterNivellAttrKey]}}">
-                         {{nivell.nom}}
-                  </label>           
+                  <span>
+                    <input type="checkbox" 
+                           id="opcio-nivell-{{nivell.id}}" 
+                           name="" 
+                           value="" 
+                           ng-model="$root.nivellFilterModels[nivell.id]">
+                    <label for="opcio-nivell-{{nivell.id}}" 
+                           title="{{nivell[filterNivellAttrKey]}}"
+                           ng-style="{'font-size': '15px'}"
+                           >{{nivell.nom}}
+                    </label> 
+                  </span>          
               </li>
           </ul>
       </div>
@@ -61,7 +64,7 @@
 
         <div class="filtre-seleccio" ng-if="allAreas" style="overflow: hidden">
             <div class="banner">
-              <div><span>Tria Àrea</span></div>
+              <div class="rota">Tria Àrea</div>
             </div>
 
             <ul>
@@ -74,7 +77,7 @@
                            ng-model="$root.areaFilterModels[area.id]">
                     <label for="opcio-area-{{area.id}}" 
                            title="{{area[filterAreaAttrKey]}}"
-                           ng-style="{'color': '{{ area.color }}'}"
+                           ng-style="{'color': '{{ area.color }}', 'font-size': '15px'}"
                            > {{area.nom}}
                     </label>  
                   </span>  

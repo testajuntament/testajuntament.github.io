@@ -3,7 +3,7 @@
         <div class="col-xs-12 col-is-6 col-sm-6 col-md-6 col-lg-4 matchcol" 
              ng-repeat="activitat in $parent.filteredWorks = (activitats | filter:activitatsFilter | orderBy: 'prioritat -1 ')  | paginate:rowsPerPage ">
       
-            <article class="modul-obra" ng-init="hover=false" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
+            <div class="modul-obra" ng-init="hover=false" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
                 <div style="position:relative; overflow: hidden;">
                   
                     <img ng-src="{{$root.baseGavaPath + activitat.pathFoto }}" err-src="{{$root.pathPhotoDefault}}"
@@ -13,7 +13,8 @@
                     
                     <div class="detalls-obra" 
                          ng-class="{'veure-detalls': hover}" 
-                         ng-style="{'background-color': mybgcolor }" ng-init="mybgcolor=$root.hexToRgba(activitat.areaConeixement.color, 70)"
+                         ng-style="{ 'background': activitat.areaConeixement.color, 'background-color': mybgcolor }" 
+                         ng-init="mybgcolor=$root.hexToRgba(activitat.areaConeixement.color, 70)"
                          >
                       <!--ng-style="{'background-color': '{{ $root.hexToRgba(activitat.areaConeixement.color, 70) }}'}"-->
                       <div class="detall-titol">
@@ -39,7 +40,7 @@
                     </div>       
 
               </div>
-          </article>
+          </div>
     
         </div><!--col--> 
     </div> <!--row-->
