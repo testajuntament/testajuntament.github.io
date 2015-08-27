@@ -47,7 +47,8 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '
 	};*/
 
 	// Github
-		$rootScope.basePath =  'http://testajuntament.github.io';  
+		$rootScope.basePath =  'http://testajuntament.github.io'; 
+		$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat'; 
 		$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/img/LaVenus-color.jpg';	
 
 	/* Local paths */
