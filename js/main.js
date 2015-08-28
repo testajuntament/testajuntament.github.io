@@ -46,10 +46,15 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '
 		if( isiPad ){ return 'isiPad'; }
 	};*/
 
-	// Github
-		$rootScope.basePath =  'http://testajuntament.github.io'; 
-		$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat'; 
-		$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/img/LaVenus-color.jpg';	
+	/* febrero */
+		// $rootScope.basePath =  'http://febreroeldocumental.com/testajuntament';  
+		// $rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat'; 
+		// $rootScope.pathPhotoDefault = 'http://febreroeldocumental.com/testajuntament/fotos-activitats/LaVenus-color.jpg';
+
+	/* Github */
+	$rootScope.basePath =  'http://testajuntament.github.io'; 
+	$rootScope.baseGavaPath = 'http://portals.ajuntament.gava.cat'; 
+	$rootScope.pathPhotoDefault = 'http://testajuntament.github.io/img/LaVenus-color.jpg';	
 
 	/* Local paths */
 	//$rootScope.basePath =  'http://localhost/testajuntament'; 
@@ -84,7 +89,7 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '
 				$rootScope.historyLink = 'materials-didactics';
 		    }
 		    $rootScope.bodyClass = 'materials-didactics';
-		 }   
+		 }  
 	});
 
 	$rootScope.$on('$locationChangeSuccess', function() {
@@ -103,16 +108,16 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '
 			path =  'fitxa';
 		}
 		$location.path(path);	
-
-        /*$timeout(function(){ 
-          $rootScope.bodyClass = 'graella-activitats';	
-		  $location.path(path).replace(); 
-		}, 100);*/
-
-		//For IOS7-8 history issue
-		//$window.history.go(-1);
-		//$window.scrollTo(0, 0);
 	};
+
+	//For IOS7-8 history issue
+	//$window.history.go(-1);
+	//$window.scrollTo(0, 0); 
+
+    /*$timeout(function(){ 
+      $rootScope.bodyClass = 'graella-activitats';	
+	  $location.path(path).replace(); 
+	}, 100);*/
 
 	$rootScope.goHome = function(){
         $timeout(function(){ 
@@ -199,7 +204,6 @@ app.run(['$rootScope', '$location', 'Paginator', 'gettextCatalog', 'amMoment', '
     	
     	return "#" + (0x1000000 + (R<255?R<1?0:R:255)*0x10000 + (G<255?G<1?0:G:255)*0x100 + (B<255?B<1?0:B:255)).toString(16).slice(1);
 	};
-
 }]);
 
 app.controller('ChangeViewCtrl',['$scope', '$location', 
@@ -213,7 +217,6 @@ app.controller('ListCtrl', ['$scope', '$routeParams', '$rootScope', '$timeout', 
 	GavaAPI.getAllActivitats().then(function(activitats) {
 		$scope.activitats = activitats;
 	});
-
 }]);
 
 app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$window', '$rootScope', '$timeout', 'GavaAPI',
@@ -230,7 +233,6 @@ app.controller('MaterialsCtrl', ['$scope', '$routeParams', '$location', '$window
 	GavaAPI.getAllCategorias().then(function(categorias) {
 		$scope.categorias = categorias;
 	});
-
 }]);
 
 app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', '$rootScope', '$timeout', 'GavaAPI', 'gettextCatalog',  '$sce' ,
@@ -238,9 +240,21 @@ app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', 
 	
 	$window.scrollTo(0, 0);
 
+	$scope.goBack = function() {
+		var path;
+		if ($rootScope.historyLink === 'graella-activitats'){ 
+			path = 'graella-activitats'; 
+		}else if ($rootScope.historyLink === 'materials-didactics'){ 
+			path = 'materials-didactics';
+		}else if ($rootScope.historyLink === 'fitxa') { 
+			path =  'fitxa';
+		}
+		$location.path(path);	
+	};
+
 	$scope.print = function() {
 		$window.print();
-	}
+	};
 
 	GavaAPI.getActivitatByCodi($routeParams.id).then(function(activitat) {
 		$scope.shareTitle = gettextCatalog.getString('Servei Pedagògic: ') + activitat.titol;
@@ -258,7 +272,6 @@ app.controller('DetailCtrl', ['$scope', '$routeParams', '$location', '$window', 
 			return $sce.trustAsHtml($scope.activitat[$rootScope.descripcioAttrKey]);
 		}
 	};
-
 }]);
 
 app.controller('FiltersCtrl', ['$scope', 'GavaAPI', 'gettextCatalog', '$rootScope',
@@ -281,7 +294,6 @@ app.controller('FiltersCtrl', ['$scope', 'GavaAPI', 'gettextCatalog', '$rootScop
 			});
 		}
 	});	
-
 }]);
 
 /*DIRECTIVES*/
@@ -463,14 +475,11 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 				angular.forEach(activitats, function(activitat) {
 					
 					if( angular.isArray(activitat.nivellsEducatius) ){
-						
 						angular.forEach(activitat.nivellsEducatius, function(nivellEducatiu){
 							allNivells[nivellEducatiu.id] = nivellEducatiu;
 						});
-
 					}
 					//else{
-
 						//angular.forEach(activitat.nivellsEducatius, function(value, key){
 						//	allNivells[activitat.nivellsEducatius.id] = key + ': ' + value;
 						//	console.log('nivellEducatiu si es objeto', value)
@@ -480,7 +489,6 @@ app.service('GavaAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootSc
 						  //allNivells.push(key + ': ' + value);
 						//});     
 					//}
-
 				});
 				defer.resolve(allNivells);
 			});

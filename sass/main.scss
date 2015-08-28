@@ -264,7 +264,7 @@ body {
 
   .banner-info.main {
     margin: 15px 0px;
-    color: #FFF;
+    // color: #FFF;
     height: 180px;
     float: left;
     width: 100%;
@@ -292,13 +292,10 @@ body {
         background-size: contain;
         background-position: center;
         background-image: url('../img/white-circle-np.png');
-        background-image /*\**/: none\9;
         .banner-info-vertical{
           @include vertical-align;
-          top /*\**/: 25%\9;
           p {
             color: #383838;
-            color /*\**/: #ffffff\9;
             font-weight: 700;
             text-align: center;
             margin: 0;
@@ -310,14 +307,12 @@ body {
      
     }
     .banner-info-right {
-      padding /*\**/: 9% 0 \9;
       width: 50%;
       float: left;
       position: relative;
       height: 100%;
       .banner-info-vertical{
         @include vertical-align;
-        top /*\**/: 4%\9;
         p {
           margin: 0;
           text-align: center;
@@ -369,21 +364,22 @@ body {
         background-size: contain;
         background-position: center;
         background-image: url('../img/white-circle-np.png');
-        background-image /*\**/: none\9;
+        
+        .banner-info-vertical{
+          @include vertical-align;
+          // top: 49%\9; 
+          p {
+            color: #383838;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            text-align: center;
+            font-size: 14px;        
+          }        
+        }
+
       }
-      .banner-info-vertical{
-        @include vertical-align;
-        top /*\**/: 19%\9;
-        p {
-          color: #383838;
-          color /*\**/: #ffffff\9;
-          font-weight: 700;
-          text-align: center;
-          margin: 0;
-          text-align: center;
-          font-size: 14px;        
-        }        
-      }
+
     }
     .banner-info-right {
       width: 55%;
@@ -392,7 +388,7 @@ body {
       height: 100%;
       .banner-info-vertical{
         @include vertical-align;
-        top /*\**/: 25%\9;
+        // top: 50%\9;
         p {
           margin: 0;
           text-align: center;
@@ -466,16 +462,12 @@ body {
           font-weight: 600;
           width: 107px;
           margin: 55px -30px 11px;
-          margin /*\**/: 15px 10px 11px \9;
 
           text-align: right;
-
           -webkit-transform: rotate(270deg);
           -moz-transform: rotate(270deg) ;
           -o-transform: rotate(270deg);
           -ms-transform: rotate(270deg); 
-          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-          -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
           transform: rotate(270deg);
         } 
       }
@@ -1003,8 +995,6 @@ body {
     color: #666;
   }
 
-
-
   .modul-paginacio {
     margin: 20px 0;
     padding-top: 0px;
@@ -1133,6 +1123,159 @@ body {
   }
 } 
 
+/*IE8*/
+html.ie8{
+
+  div.rota{
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+    width: 107px;
+    margin: 15px 10px 11px;
+    text-align: right;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg) ;
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg); 
+    filter : progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -ms-filter : progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    transform: rotate(270deg);
+  } 
+
+  .banner-info.main {
+    .banner-info-left {
+      width: 50%;
+      float: left;
+      position: relative;
+      height: 100%;
+      padding: 3% 0;
+      .banner-info-round{
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        // background-image: url('../img/white-circle-np.png');
+        background-image: none;
+        .banner-info-vertical{
+          @include vertical-align;
+          top: 25%;
+          p {
+            color: #ffffff;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            text-align: center;
+            font-size: 18px;        
+          }        
+        }         
+      }
+     
+    }
+    .banner-info-right {
+      padding /*\**/: 9% 0 \9;
+      width: 50%;
+      float: left;
+      position: relative;
+      height: 100%;
+      .banner-info-vertical{
+        @include vertical-align;
+        top /*\**/: 4%\9;
+        p {
+          margin: 0;
+          text-align: center;
+          font-weight: 700;
+          margin: 0;
+          font-size: 18px;
+          color: #fff;
+          a{
+            color:#fff;
+            i.fa.fa-phone {
+              font-size: 17px;
+            }
+            i.fa.fa-envelope {
+              font-size: 14px;
+              margin-right: 2px;
+            } 
+          }
+        }         
+      }
+    }
+  }
+
+  .banner-info.detail {
+    margin: 15px 0px;
+    color: #FFF;
+    height: 121px;
+    float: left;
+    width: 100%;
+    background-color: #4a4a4a;
+    background-image: -moz-linear-gradient(top,#535353,#3c3c3c);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#535353),to(#3c3c3c));
+    background-image: -webkit-linear-gradient(top,#535353,#3c3c3c);
+    background-image: -o-linear-gradient(top,#535353,#3c3c3c);
+    background-image: -ms-linear-gradient(top,#535353,#3c3c3c);
+    background-image: linear-gradient(to bottom,#535353,#3c3c3c);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff535353',endColorstr='#ff3c3c3c',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);    
+    
+    .banner-info-left {
+      width: 45%;
+      float: left;
+      position: relative;
+      height: 100%;
+      padding: 4% 0;
+      .banner-info-round{
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../img/white-circle-np.png');
+        background-image: none;
+
+      }
+      .banner-info-vertical{
+        @include vertical-align;
+        top: 19%;
+        p {
+          color: #383838;
+          color: #ffffff;
+          font-weight: 700;
+          text-align: center;
+          margin: 0;
+          text-align: center;
+          font-size: 14px;        
+        }        
+      }
+    }
+    .banner-info-right {
+      width: 55%;
+      float: left;
+      position: relative;
+      height: 100%;
+      .banner-info-vertical{
+        @include vertical-align;
+        top: 25%;
+        p {
+          margin: 0;
+          text-align: center;
+          font-weight: 700;
+          margin: 0;
+          font-size: 14px;
+          color: #fff;
+          a{
+            color:#fff;
+          }
+        }         
+      }
+    }
+  }
+
+
+}
+
 
 /*MEDIA QUERIES*/
 @media (min-width: 0px) and (max-width:479px){
@@ -1180,7 +1323,7 @@ body {
         .banner-info-round {
           .banner-info-vertical{
             @include vertical-align;
-            top /*\**/: 25%\9;
+
             p{
               font-size: 13px;
               font-weight: 700;
@@ -1194,7 +1337,7 @@ body {
       .banner-info-right{
         .banner-info-vertical{
           @include vertical-align;
-          top /*\**/: 4%\9;
+
           p{
             font-size: 13px;
             font-weight: 700;
@@ -1253,7 +1396,7 @@ body {
           float: right; 
           .banner-info-vertical{
             @include vertical-align;
-            top /*\**/: 25%\9;
+
             p{
               font-size: 13px;
               font-weight: 700;
@@ -1267,7 +1410,7 @@ body {
       .banner-info-right{
         .banner-info-vertical{
           @include vertical-align;
-          top /*\**/: 4%\9;
+
           width: 56%;
           p{
             font-size: 13px;
@@ -1297,7 +1440,7 @@ body {
         height: 100%;
         .banner-info-vertical{
           @include vertical-align;
-          top /*\**/: 25%\9;
+
           p{
             font-size: 12px;
             a{
@@ -1396,7 +1539,7 @@ body {
         .banner-info-round{
           .banner-info-vertical{
             @include vertical-align;
-            top /*\**/: 25%\9;
+
             p{
               font-size: 14px;
             }          
@@ -1409,7 +1552,7 @@ body {
         padding /*\**/: 9% 0 \9;
         .banner-info-vertical{
           @include vertical-align;
-          top /*\**/: 4%\9;
+
           p{
             font-size: 14px;
           }        
@@ -1440,7 +1583,6 @@ body {
       padding: 9px 15px;
     }     
   }
-
 }
 
 @media (min-width:992px) and (max-width:1199px){
@@ -1471,7 +1613,7 @@ body {
         padding: 6% 0;
         .banner-info-round{
           .banner-info-vertical p{
-             color /*\**/: #ffffff\9;
+             
              font-size: 13px;        
           }        
         } 

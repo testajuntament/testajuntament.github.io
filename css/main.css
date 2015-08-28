@@ -7941,7 +7941,6 @@ body {
     background-color: transparent; }
   body .banner-info.main {
     margin: 15px 0px;
-    color: #FFF;
     height: 180px;
     float: left;
     width: 100%;
@@ -7964,25 +7963,21 @@ body {
         height: 100%;
         background-size: contain;
         background-position: center;
-        background-image: url("../img/white-circle-np.png");
-        background-image: none\9; }
+        background-image: url("../img/white-circle-np.png"); }
         body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical {
           position: relative;
           top: 50%;
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          top: 25%\9; }
+          transform: translateY(-50%); }
           body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
             color: #383838;
-            color: #ffffff\9;
             font-weight: 700;
             text-align: center;
             margin: 0;
             text-align: center;
             font-size: 18px; }
     body .banner-info.main .banner-info-right {
-      padding: 9% 0 \9;
       width: 50%;
       float: left;
       position: relative;
@@ -7992,8 +7987,7 @@ body {
         top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 4%\9; }
+        transform: translateY(-50%); }
         body .banner-info.main .banner-info-right .banner-info-vertical p {
           margin: 0;
           text-align: center;
@@ -8033,23 +8027,20 @@ body {
         height: 100%;
         background-size: contain;
         background-position: center;
-        background-image: url("../img/white-circle-np.png");
-        background-image: none\9; }
-      body .banner-info.detail .banner-info-left .banner-info-vertical {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 19%\9; }
-        body .banner-info.detail .banner-info-left .banner-info-vertical p {
-          color: #383838;
-          color: #ffffff\9;
-          font-weight: 700;
-          text-align: center;
-          margin: 0;
-          text-align: center;
-          font-size: 14px; }
+        background-image: url("../img/white-circle-np.png"); }
+        body .banner-info.detail .banner-info-left .banner-info-round .banner-info-vertical {
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+          body .banner-info.detail .banner-info-left .banner-info-round .banner-info-vertical p {
+            color: #383838;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            text-align: center;
+            font-size: 14px; }
     body .banner-info.detail .banner-info-right {
       width: 55%;
       float: left;
@@ -8060,8 +8051,7 @@ body {
         top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 25%\9; }
+        transform: translateY(-50%); }
         body .banner-info.detail .banner-info-right .banner-info-vertical p {
           margin: 0;
           text-align: center;
@@ -8113,17 +8103,10 @@ body {
           font-weight: 600;
           width: 107px;
           margin: 55px -30px 11px;
-          margin: 15px 10px 11px \9;
           text-align: right;
           -webkit-transform: rotate(270deg);
-          -moz-transform: rotate(270deg);
-          -o-transform: rotate(270deg);
           -ms-transform: rotate(270deg);
-          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-          -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-          -webkit-transform: rotate(270deg);
-              -ms-transform: rotate(270deg);
-                  transform: rotate(270deg); }
+          transform: rotate(270deg); }
       body .modul-filtres .form-group div.rotate > div {
         -webkit-transform: translate(25px, 51px) rotate(-90deg);
             -ms-transform: translate(25px, 51px) rotate(-90deg);
@@ -8612,6 +8595,144 @@ body {
     background: #292929;
     background-color: #292929; }
 
+/*IE8*/
+html.ie8 div.rota {
+  color: green;
+  font-size: 18px;
+  font-weight: 600;
+  width: 107px;
+  margin: 15px 10px 11px;
+  text-align: right;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg); }
+
+html.ie8 .banner-info.main .banner-info-left {
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 100%;
+  padding: 3% 0; }
+  html.ie8 .banner-info.main .banner-info-left .banner-info-round {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-image: none; }
+    html.ie8 .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 25%; }
+      html.ie8 .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
+        color: #ffffff;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        text-align: center;
+        font-size: 18px; }
+
+html.ie8 .banner-info.main .banner-info-right {
+  padding: 9% 0 \9;
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 100%; }
+  html.ie8 .banner-info.main .banner-info-right .banner-info-vertical {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 4%\9; }
+    html.ie8 .banner-info.main .banner-info-right .banner-info-vertical p {
+      margin: 0;
+      text-align: center;
+      font-weight: 700;
+      margin: 0;
+      font-size: 18px;
+      color: #fff; }
+      html.ie8 .banner-info.main .banner-info-right .banner-info-vertical p a {
+        color: #fff; }
+        html.ie8 .banner-info.main .banner-info-right .banner-info-vertical p a i.fa.fa-phone {
+          font-size: 17px; }
+        html.ie8 .banner-info.main .banner-info-right .banner-info-vertical p a i.fa.fa-envelope {
+          font-size: 14px;
+          margin-right: 2px; }
+
+html.ie8 .banner-info.detail {
+  margin: 15px 0px;
+  color: #FFF;
+  height: 121px;
+  float: left;
+  width: 100%;
+  background-color: #4a4a4a;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#535353), to(#3c3c3c));
+  background-image: -webkit-linear-gradient(top, #535353, #3c3c3c);
+  background-image: linear-gradient(to bottom, #535353, #3c3c3c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff535353',endColorstr='#ff3c3c3c',GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+  html.ie8 .banner-info.detail .banner-info-left {
+    width: 45%;
+    float: left;
+    position: relative;
+    height: 100%;
+    padding: 4% 0; }
+    html.ie8 .banner-info.detail .banner-info-left .banner-info-round {
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../img/white-circle-np.png");
+      background-image: none; }
+    html.ie8 .banner-info.detail .banner-info-left .banner-info-vertical {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 19%; }
+      html.ie8 .banner-info.detail .banner-info-left .banner-info-vertical p {
+        color: #383838;
+        color: #ffffff;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        text-align: center;
+        font-size: 14px; }
+  html.ie8 .banner-info.detail .banner-info-right {
+    width: 55%;
+    float: left;
+    position: relative;
+    height: 100%; }
+    html.ie8 .banner-info.detail .banner-info-right .banner-info-vertical {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 25%; }
+      html.ie8 .banner-info.detail .banner-info-right .banner-info-vertical p {
+        margin: 0;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        font-size: 14px;
+        color: #fff; }
+        html.ie8 .banner-info.detail .banner-info-right .banner-info-vertical p a {
+          color: #fff; }
+
 /*MEDIA QUERIES*/
 @media (min-width: 0px) and (max-width: 479px) {
   body .capcalera-back .container {
@@ -8642,8 +8763,7 @@ body {
         top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 25%\9; }
+        transform: translateY(-50%); }
         body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
           font-size: 13px;
           font-weight: 700; }
@@ -8654,8 +8774,7 @@ body {
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      top: 4%\9; }
+      transform: translateY(-50%); }
       body .banner-info.main .banner-info-right .banner-info-vertical p {
         font-size: 13px;
         font-weight: 700; }
@@ -8694,8 +8813,7 @@ body {
           top: 50%;
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          top: 25%\9; }
+          transform: translateY(-50%); }
           body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
             font-size: 13px;
             font-weight: 700; }
@@ -8707,7 +8825,6 @@ body {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      top: 4%\9;
       width: 56%; }
       body .banner-info.main .banner-info-right .banner-info-vertical p {
         font-size: 13px;
@@ -8730,8 +8847,7 @@ body {
         top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 25%\9; }
+        transform: translateY(-50%); }
         body .banner-info.detail .banner-info-right .banner-info-vertical p {
           font-size: 12px; }
           body .banner-info.detail .banner-info-right .banner-info-vertical p a {
@@ -8793,8 +8909,7 @@ body {
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      top: 25%\9; }
+      transform: translateY(-50%); }
       body .banner-info.main .banner-info-left .banner-info-round .banner-info-vertical p {
         font-size: 14px; }
   body .banner-info.main .banner-info-right {
@@ -8806,8 +8921,7 @@ body {
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      top: 4%\9; }
+      transform: translateY(-50%); }
       body .banner-info.main .banner-info-right .banner-info-vertical p {
         font-size: 14px; }
   body .banner-info.detail {
@@ -8839,7 +8953,6 @@ body {
       height: 100%;
       padding: 6% 0; }
       body .banner-info.detail .banner-info-left .banner-info-round .banner-info-vertical p {
-        color: #ffffff\9;
         font-size: 13px; }
     body .banner-info.detail .banner-info-right {
       height: 100%; }
