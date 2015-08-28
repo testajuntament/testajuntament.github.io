@@ -17,6 +17,10 @@ $screen-xs-max: ($screen-is-min - 1);
   padding:0px;
 }
 
+a:hover{
+  cursor: pointer;
+}
+
 @import "_grids.scss";  
 @import "../bower_components/font-awesome/scss/font-awesome.scss";
 @import "../bower_components/magnific-popup/dist/magnific-popup.css";
@@ -776,6 +780,9 @@ body {
             right: 8%;
             font-size: 36px;
             z-index: 1000;
+            a:hover{
+              cursor: pointer;
+            }
             .glyphicon {
               position: relative;
               top: 1px;
